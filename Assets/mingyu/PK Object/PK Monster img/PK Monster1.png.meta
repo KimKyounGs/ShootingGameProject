@@ -139,6 +139,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -397,7 +423,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PK Monster1_0: -722934358647845245
+      PK Monster1_1: -2726470771217100098
+      PK Monster1_10: 3703533220403227562
+      PK Monster1_2: -2121924723420563609
+      PK Monster1_3: -2974654502339271695
+      PK Monster1_4: -7703667351371863758
+      PK Monster1_5: 939886122249250523
+      PK Monster1_6: -5002486026919082650
+      PK Monster1_7: 5282971120724948202
+      PK Monster1_8: -7793973005091109433
+      PK Monster1_9: -1789789662483504391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
