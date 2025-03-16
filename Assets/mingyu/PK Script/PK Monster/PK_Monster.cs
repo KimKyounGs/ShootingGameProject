@@ -5,6 +5,8 @@ public class PK_Monster : MonoBehaviour
 {
     public float Speed = 3;
     public float Delay = 1f;
+    public int M_HP = 1;
+
     public Transform ms1;
     public Transform ms2;
     public GameObject bullet;
@@ -54,8 +56,12 @@ public class PK_Monster : MonoBehaviour
     //미사일에 따른 데미지 입는 함수
     public void Damage(int attack)
     {
-        ItemDrop();
-        Destroy(gameObject);
+        M_HP -= attack;
+        if (M_HP <= 0)
+        {
+            ItemDrop();
+            Destroy(gameObject);
+        }
     }
 
 

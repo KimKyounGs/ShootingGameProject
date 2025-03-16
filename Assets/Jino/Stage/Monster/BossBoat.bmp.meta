@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BossBoat_0: 8382163035337123173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

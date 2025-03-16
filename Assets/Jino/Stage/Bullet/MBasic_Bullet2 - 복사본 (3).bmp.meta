@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "MBasic_Bullet2 - \uBCF5\uC0AC\uBCF8 (3)_0": 6310121464075515288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

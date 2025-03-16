@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      air_Monster4_0: -411643978883801341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

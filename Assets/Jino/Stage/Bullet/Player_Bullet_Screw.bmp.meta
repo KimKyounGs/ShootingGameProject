@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Player_Bullet_Screw_0: 4396913863457891966
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BojoBullet_0: 6366768569473071806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

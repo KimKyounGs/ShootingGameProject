@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MidAirPlan_0: -8748255612503774959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

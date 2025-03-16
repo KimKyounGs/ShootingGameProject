@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Energy - \uBCF5\uC0AC\uBCF8_0": -1183053355969740153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

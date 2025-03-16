@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8859591434635288086}
   - component: {fileID: 7867385905040563710}
-  - component: {fileID: 4788881434419054396}
+  - component: {fileID: 2927287061748328026}
   - component: {fileID: 6574004493652319413}
   - component: {fileID: 5611020416369908983}
-  m_Layer: 0
+  - component: {fileID: 4788881434419054396}
+  m_Layer: 6
   m_Name: PK Item Power1
   m_TagString: PK_Item
   m_Icon: {fileID: 0}
@@ -84,25 +85,34 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.23, y: 0.17}
+  m_Size: {x: 0.5, y: 0.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4788881434419054396
-MonoBehaviour:
+--- !u!95 &2927287061748328026
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051847277400686010}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f1b56471f7f3a49a78dd94588d0dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemVelocity: 100
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7defb590eaa0d944aa9051cc18835efc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!58 &6574004493652319413
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +148,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.14610714
+  m_Radius: 0.15210855
 --- !u!50 &5611020416369908983
 Rigidbody2D:
   serializedVersion: 5
@@ -166,3 +176,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4788881434419054396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051847277400686010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f1b56471f7f3a49a78dd94588d0dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemVelocity: 100

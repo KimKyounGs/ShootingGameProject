@@ -5,6 +5,8 @@ public class PK_Player : MonoBehaviour
 {
     public float Speed = 5.0f;
 
+    public int P_HP = 3;
+
     public GameObject[] bullet;
     public Transform[] pos = null;
 
@@ -54,13 +56,24 @@ public class PK_Player : MonoBehaviour
         if (collision.CompareTag("PK_Item"))
         {
             power += 1;
+            if (power > 1)
+            {
+                power = 1;
+                //아이템 먹은 처리
+                Destroy(collision.gameObject);
+            }
+        }
+    }
 
 
+    public void Damage(int attack)
+    {
+        P_HP -= attack;
 
 
-
-            //아이템 먹은 처리
-            Destroy(collision.gameObject);
+        if (P_HP <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 

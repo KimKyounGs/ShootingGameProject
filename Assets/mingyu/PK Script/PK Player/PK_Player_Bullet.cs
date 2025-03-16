@@ -38,8 +38,8 @@ public class PK_Player_Bullet : MonoBehaviour
             //1초뒤에 지우기
             Destroy(go, 1);
 
-            //몬스터삭제
-            collision.gameObject.GetComponent<PK_Monster>().Damage(1);
+            //몬스터 데미지 주기
+            collision.gameObject.GetComponent<PK_Monster>().Damage(+1);
 
             //미사일 삭제
             Destroy(gameObject);

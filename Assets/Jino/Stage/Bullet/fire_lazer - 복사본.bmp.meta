@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "fire_lazer - \uBCF5\uC0AC\uBCF8_0": 4392603388327704001
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

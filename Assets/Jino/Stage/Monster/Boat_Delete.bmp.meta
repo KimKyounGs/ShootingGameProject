@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boat_Delete_0: -6237408896962165761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

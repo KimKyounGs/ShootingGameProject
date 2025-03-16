@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Boss_head - \uBCF5\uC0AC\uBCF8_0": -7092117265102968339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

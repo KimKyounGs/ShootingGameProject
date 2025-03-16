@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Magic_Elec3_0: 381400118719196417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

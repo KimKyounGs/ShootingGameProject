@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Stage2_Bullet - \uBCF5\uC0AC\uBCF8_0": -1402261106339339647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
