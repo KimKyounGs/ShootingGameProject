@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: c3358bfeb9b892f4eb6133585d61d01d
+guid: 244fe3b1daaae461884cd7ccfe3969f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3740626451653842279
-    second: Bullet_Eg_a_0
+      213: 4965056493881722282
+    second: Helper-Photoroom_0
+  - first:
+      213: -7371375256217423469
+    second: Helper-Photoroom_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,56 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bullet_Eg_a_0
+      name: Helper-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 11
-        width: 8
-        height: 26
+        x: 0
+        y: 1
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 765d14860ff59e330800000000000000
-      internalID: 3740626451653842279
+      spriteID: aa5019f339c67e440800000000000000
+      internalID: 4965056493881722282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helper-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3917e0b724d93b990800000000000000
+      internalID: -7371375256217423469
       vertices: []
       indices: 
       edges: []
@@ -174,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bullet_Eg_a_0: 3740626451653842279
+      Helper-Photoroom_0: 4965056493881722282
+      Helper-Photoroom_1: -7371375256217423469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

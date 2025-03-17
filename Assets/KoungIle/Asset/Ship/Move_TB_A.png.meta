@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 2e86e5059400f774fac6a77bb287f35b
+guid: 4d5574ec6ea7e4f029d59b9fcfd69b0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -45340084828689344
-    second: Monster_5_0
+      213: 9021364706482705232
+    second: Move_TB_A-Photoroom_0
   - first:
-      213: 6002002122934377774
-    second: Monster_5_1
+      213: -7168412400539608911
+    second: Move_TB_A-Photoroom_1
   - first:
-      213: -8963128423109222814
-    second: Monster_5_2
+      213: -9196890589924054076
+    second: Move_TB_A-Photoroom_2
+  - first:
+      213: 1748918257850087537
+    second: Move_TB_A-Photoroom_3
+  - first:
+      213: 796107809545862678
+    second: Move_TB_A-Photoroom_4
+  - first:
+      213: 506309306314328419
+    second: Move_TB_A-Photoroom_5
+  - first:
+      213: 3221960990242224268
+    second: Move_TB_A-Photoroom_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,56 +114,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster_5_0
+      name: Move_TB_A-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 19
-        height: 34
+        x: 5
+        y: 43
+        width: 23
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +133,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04c23bdde6bee5ff0800000000000000
-      internalID: -45340084828689344
+      spriteID: 053d52f3763523d70800000000000000
+      internalID: 9021364706482705232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_5_1
+      name: Move_TB_A-Photoroom_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1
+        x: 37
+        y: 43
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8d45ec6eea48c90800000000000000
+      internalID: -7168412400539608911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_TB_A-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 43
         width: 25
-        height: 34
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2dd4ae71256b4350800000000000000
-      internalID: 6002002122934377774
+      spriteID: 4cba1755cb41e5080800000000000000
+      internalID: -9196890589924054076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster_5_2
+      name: Move_TB_A-Photoroom_3
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1
-        width: 19
-        height: 34
+        x: 101
+        y: 36
+        width: 24
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +199,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26e1e5810329c9380800000000000000
-      internalID: -8963128423109222814
+      spriteID: 178795ca3e7654810800000000000000
+      internalID: 1748918257850087537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_TB_A-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 22
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e35e6b5d75c0b00800000000000000
+      internalID: 796107809545862678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_TB_A-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 13
+        width: 23
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 369075da1a5c60700800000000000000
+      internalID: 506309306314328419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move_TB_A-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 23
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88bd8f2374b6bc20800000000000000
+      internalID: 3221960990242224268
       vertices: []
       indices: 
       edges: []
@@ -224,9 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Monster_5_0: -45340084828689344
-      Monster_5_1: 6002002122934377774
-      Monster_5_2: -8963128423109222814
+      Move_TB_A-Photoroom_0: 9021364706482705232
+      Move_TB_A-Photoroom_1: -7168412400539608911
+      Move_TB_A-Photoroom_2: -9196890589924054076
+      Move_TB_A-Photoroom_3: 1748918257850087537
+      Move_TB_A-Photoroom_4: 796107809545862678
+      Move_TB_A-Photoroom_5: 506309306314328419
+      Move_TB_A-Photoroom_6: 3221960990242224268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
