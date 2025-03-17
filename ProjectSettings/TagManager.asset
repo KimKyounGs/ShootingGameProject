@@ -7,6 +7,7 @@ TagManager:
   - PK_Monster
   - PK_Item
   - PK_Monster_Bullet
+  - PK_Boss
   layers:
   - Default
   - TransparentFX

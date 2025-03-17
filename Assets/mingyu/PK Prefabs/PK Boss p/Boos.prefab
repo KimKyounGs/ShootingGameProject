@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 5242737274978088743}
   m_Layer: 0
   m_Name: Boos
-  m_TagString: PK_Monster
+  m_TagString: PK_Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

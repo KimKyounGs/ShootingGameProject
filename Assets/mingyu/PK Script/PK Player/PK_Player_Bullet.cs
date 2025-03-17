@@ -23,7 +23,7 @@ public class PK_Player_Bullet : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        //ÀÚ±â ÀÚ½Å Áö¿ì±â
+        //ìê¸° ìì‹  ì§€ìš°ê¸°
         Destroy(gameObject);
     }
 
@@ -33,15 +33,30 @@ public class PK_Player_Bullet : MonoBehaviour
     {
         if (collision.CompareTag("PK_Monster"))
         {
-            //ÀÌÆåÆ®»ı¼º
+            //ì´í™íŠ¸ìƒì„±
             GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
-            //1ÃÊµÚ¿¡ Áö¿ì±â
+            //1ì´ˆë’¤ì— ì§€ìš°ê¸°
             Destroy(go, 1);
 
-            //¸ó½ºÅÍ µ¥¹ÌÁö ÁÖ±â
+            //ëª¬ìŠ¤í„° ë°ë¯¸ì§€ ì£¼ê¸°
             collision.gameObject.GetComponent<PK_Monster>().Damage(+1);
 
-            //¹Ì»çÀÏ »èÁ¦
+            //ë¯¸ì‚¬ì¼ ì‚­ì œ
+            Destroy(gameObject);
+
+        }
+
+        if (collision.CompareTag("PK_Boss"))
+        {
+            //ì´í™íŠ¸ìƒì„±
+            GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
+            //1ì´ˆë’¤ì— ì§€ìš°ê¸°
+            Destroy(go, 1);
+
+            //ëª¬ìŠ¤í„° ë°ë¯¸ì§€ ì£¼ê¸°
+            collision.gameObject.GetComponent<PK_Boss>().Damage(+1);
+
+            //ë¯¸ì‚¬ì¼ ì‚­ì œ
             Destroy(gameObject);
 
         }

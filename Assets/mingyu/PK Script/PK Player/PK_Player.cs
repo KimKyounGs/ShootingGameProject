@@ -34,7 +34,7 @@ public class PK_Player : MonoBehaviour
         {
             Instantiate(bullet[power], pos[power].position, Quaternion.identity);
         }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
+       else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Instantiate(Sward, Sward_pos.position, Quaternion.identity);
         }
@@ -44,10 +44,10 @@ public class PK_Player : MonoBehaviour
 
 
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
-        viewPos.x = Mathf.Clamp01(viewPos.x); //x°ªÀ» 0ÀÌ»ó, 1ÀÌÇÏ·Î Á¦ÇÑÇÑ´Ù.
-        viewPos.y = Mathf.Clamp01(viewPos.y); //y°ªÀ» 0ÀÌ»ó, 1ÀÌÇÏ·Î Á¦ÇÑÇÑ´Ù.
-        Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);//´Ù½Ã¿ùµåÁÂÇ¥·Î º¯È¯
-        transform.position = worldPos; //ÁÂÇ¥¸¦ Àû¿ëÇÑ´Ù.
+        viewPos.x = Mathf.Clamp01(viewPos.x); //xê°’ì„ 0ì´ìƒ, 1ì´í•˜ë¡œ ì œí•œí•œë‹¤.
+        viewPos.y = Mathf.Clamp01(viewPos.y); //yê°’ì„ 0ì´ìƒ, 1ì´í•˜ë¡œ ì œí•œí•œë‹¤.
+        Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);//ë‹¤ì‹œì›”ë“œì¢Œí‘œë¡œ ë³€í™˜
+        transform.position = worldPos; //ì¢Œí‘œë¥¼ ì ìš©í•œë‹¤.
     }
 
 
@@ -59,7 +59,7 @@ public class PK_Player : MonoBehaviour
             if (power > 1)
             {
                 power = 1;
-                //¾ÆÀÌÅÛ ¸ÔÀº Ã³¸®
+                //ì•„ì´í…œ ë¨¹ì€ ì²˜ë¦¬
                 Destroy(collision.gameObject);
             }
         }
