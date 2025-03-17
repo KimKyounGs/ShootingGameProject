@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3347056606497198668}
   - component: {fileID: 6075783156466342904}
   - component: {fileID: 5343965193731378369}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PK Monster5
   m_TagString: PK_Monster
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1523243646731396556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PK Monster Wapon5_2
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2027501421796352439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PK Monster Wapon5_1
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

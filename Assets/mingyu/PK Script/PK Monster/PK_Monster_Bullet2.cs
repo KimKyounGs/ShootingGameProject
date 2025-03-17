@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PK_Monster_Bullet2 : MonoBehaviour
 {
-    public GameObject target;   //ÇÃ·¹ÀÌ¾î Ã£±â
+    public GameObject target;   //í”Œë ˆì´ì–´ ì°¾ê¸°
     public float Speed = 3f;
     Vector2 dir;
     Vector2 dirNo;
@@ -10,12 +10,12 @@ public class PK_Monster_Bullet2 : MonoBehaviour
 
     void Start()
     {
-        //ÇÃ·¹ÀÌ¾î¸¦ Ã£¾Æ¼­ »ı¼ºµÈ ±× À§Ä¡¸¸ ¦i±â
-        //ÇÃ·¹ÀÌ¾î ÅÂ±×·Î Ã£±â
+        //í”Œë ˆì´ì–´ë¥¼ ì°¾ì•„ì„œ ìƒì„±ëœ ê·¸ ìœ„ì¹˜ë§Œ ì«’ê¸°
+        //í”Œë ˆì´ì–´ íƒœê·¸ë¡œ ì°¾ê¸°
         target = GameObject.FindGameObjectWithTag("Player");
-        //A - B A¸¦ ¹Ù¶óº¸´Â º¤ÅÍ      ÇÃ·¹ÀÌ¾î - ¹Ì»çÀÏ
+        //A - B Aë¥¼ ë°”ë¼ë³´ëŠ” ë²¡í„°      í”Œë ˆì´ì–´ - ë¯¸ì‚¬ì¼
         dir = target.transform.position - transform.position;
-        //¹æÇâº¤ÅÍ¸¸ ±¸ÇÏ±â ´ÜÀ§º¤ÅÍ Á¤±ÔÈ­ ³ë¸» 1ÀÇ Å©±â·Î ¸¸µç´Ù.
+        //ë°©í–¥ë²¡í„°ë§Œ êµ¬í•˜ê¸° ë‹¨ìœ„ë²¡í„° ì •ê·œí™” ë…¸ë§ 1ì˜ í¬ê¸°ë¡œ ë§Œë“ ë‹¤.
         dirNo = dir.normalized;
     }
 
@@ -25,22 +25,22 @@ public class PK_Monster_Bullet2 : MonoBehaviour
         transform.Translate(dirNo * Speed * Time.deltaTime);
 
 
-        //////Update¿¡´Ù°¡ ³ÖÀ¸¸é ÇÃ·¹ÀÌ¾î¸¦ °è¼Ó Ã£´Â´Ù
-        ////ÇÃ·¹ÀÌ¾î ÅÂ±×·Î Ã£±â
+        //////Updateì—ë‹¤ê°€ ë„£ìœ¼ë©´ í”Œë ˆì´ì–´ë¥¼ ê³„ì† ì°¾ëŠ”ë‹¤
+        ////í”Œë ˆì´ì–´ íƒœê·¸ë¡œ ì°¾ê¸°
         //target = GameObject.FindGameObjectWithTag("Player");
-        ////A - B A¸¦ ¹Ù¶óº¸´Â º¤ÅÍ      ÇÃ·¹ÀÌ¾î - ¹Ì»çÀÏ
+        ////A - B Aë¥¼ ë°”ë¼ë³´ëŠ” ë²¡í„°      í”Œë ˆì´ì–´ - ë¯¸ì‚¬ì¼
         //dir = target.transform.position - transform.position;
-        ////¹æÇâº¤ÅÍ¸¸ ±¸ÇÏ±â ´ÜÀ§º¤ÅÍ Á¤±ÔÈ­ ³ë¸» 1ÀÇ Å©±â·Î ¸¸µç´Ù.
+        ////ë°©í–¥ë²¡í„°ë§Œ êµ¬í•˜ê¸° ë‹¨ìœ„ë²¡í„° ì •ê·œí™” ë…¸ë§ 1ì˜ í¬ê¸°ë¡œ ë§Œë“ ë‹¤.
         //dirNo = dir.normalized;
 
 
-        ////À¯´ÏÆ¼°¡ Á¦°øÇÏ´Â À¯µµ      3D¿¡¼­´Â ´Ù¾çÇÏ°Ô ºÒ°¡´ÉÇÏ´Ï º¤ÅÍ¸¦ Àß ¾ËÀÚ!
+        ////ìœ ë‹ˆí‹°ê°€ ì œê³µí•˜ëŠ” ìœ ë„      3Dì—ì„œëŠ” ë‹¤ì–‘í•˜ê²Œ ë¶ˆê°€ëŠ¥í•˜ë‹ˆ ë²¡í„°ë¥¼ ì˜ ì•Œì!
         //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

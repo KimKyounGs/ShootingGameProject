@@ -28,7 +28,6 @@ public class PK_Boss_Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //미사일사용
             Destroy(gameObject);
         }
     }

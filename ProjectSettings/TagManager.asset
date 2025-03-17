@@ -8,6 +8,7 @@ TagManager:
   - PK_Item
   - PK_Monster_Bullet
   - PK_Boss
+  - Swould
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - item
   - monster
   - bullet
-  - 
+  - wall
   - 
   - 
   - 

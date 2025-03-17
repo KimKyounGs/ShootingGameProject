@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1569859824711261658}
   - component: {fileID: 4010336055249318619}
-  - component: {fileID: 6673394855795610503}
   - component: {fileID: 6635243120266492761}
   - component: {fileID: 7682804251471384589}
+  - component: {fileID: -4264645762625434353}
   m_Layer: 0
   m_Name: PK Swourd Test_0
-  m_TagString: Untagged
+  m_TagString: Swould
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,19 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6673394855795610503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709940310364118909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44602ee605f99644baf6c0ed53bdfca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 4
 --- !u!50 &6635243120266492761
 Rigidbody2D:
   serializedVersion: 5
@@ -176,3 +163,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9375, y: 0.5625}
   m_EdgeRadius: 0
+--- !u!114 &-4264645762625434353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709940310364118909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca2134fa604fb34fb9aedeb4bf4e4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  effect: {fileID: 7239333047390862218, guid: c9d782f3d9a0b49479c22d54370c39ff, type: 3}

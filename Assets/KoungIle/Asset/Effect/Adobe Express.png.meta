@@ -336,6 +336,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2134,7 +2147,88 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Adobe Express_0: 3282140224490042232
+      Adobe Express_1: 5859341391167641151
+      Adobe Express_10: 91675174152539255
+      Adobe Express_11: 5942274272121895518
+      Adobe Express_12: 4230978760178753843
+      Adobe Express_13: -535142130116261789
+      Adobe Express_14: 1941038751318273877
+      Adobe Express_15: -5923606065280031007
+      Adobe Express_16: -8670768574697802651
+      Adobe Express_17: 2479028504743430366
+      Adobe Express_18: 1144764977926432731
+      Adobe Express_19: -7317348564876912215
+      Adobe Express_2: 5061626867340660504
+      Adobe Express_20: -1283468986713599814
+      Adobe Express_21: 6473894765663967131
+      Adobe Express_22: -5910019227617738641
+      Adobe Express_23: -804689163078917096
+      Adobe Express_24: -3235052294195316514
+      Adobe Express_25: 1689541514986586685
+      Adobe Express_26: -3951350193650196552
+      Adobe Express_27: -6509944171200140014
+      Adobe Express_28: -1666608967789638027
+      Adobe Express_29: 7045107417031975158
+      Adobe Express_3: -5005877353153186754
+      Adobe Express_30: -4108706699790526534
+      Adobe Express_31: 5972003644102857077
+      Adobe Express_32: 5183695070631263905
+      Adobe Express_33: 6263700142208659297
+      Adobe Express_34: -1998893463677894485
+      Adobe Express_35: 7030733728960246436
+      Adobe Express_36: 139751183784373937
+      Adobe Express_37: 5806719083284149587
+      Adobe Express_38: 6396557674643577404
+      Adobe Express_39: 3741169834778849539
+      Adobe Express_4: -3530747334181613832
+      Adobe Express_40: -6120099508365932486
+      Adobe Express_41: 7935747822090460129
+      Adobe Express_42: -7407972073972775233
+      Adobe Express_43: -2674264672878567919
+      Adobe Express_44: -333127402631870659
+      Adobe Express_45: -1009635395022268459
+      Adobe Express_46: 5382269869683342132
+      Adobe Express_47: 3979125744052158249
+      Adobe Express_48: 849138157524289313
+      Adobe Express_49: 7859009165780996954
+      Adobe Express_5: -969333162178685978
+      Adobe Express_50: 9129383038690432911
+      Adobe Express_51: -6053667850590439753
+      Adobe Express_52: -1790708761432827410
+      Adobe Express_53: -8348033855024098737
+      Adobe Express_54: -4695030366408342141
+      Adobe Express_55: 751553618181928956
+      Adobe Express_56: -1667676844462901138
+      Adobe Express_57: -8159192474615675252
+      Adobe Express_58: 152359169876567415
+      Adobe Express_59: -143715755837495127
+      Adobe Express_6: -8240423830384175448
+      Adobe Express_60: 5259826498569184712
+      Adobe Express_61: -9166215459954750239
+      Adobe Express_62: 1103952568233012540
+      Adobe Express_63: 6435637781636480766
+      Adobe Express_64: 7616238624851397771
+      Adobe Express_65: -2411414772966355033
+      Adobe Express_66: -7250271926146463286
+      Adobe Express_67: -4017336630514330865
+      Adobe Express_68: -4678706872274507013
+      Adobe Express_69: -7747390490769673006
+      Adobe Express_7: 8226536279731210784
+      Adobe Express_70: -8536982109882138252
+      Adobe Express_71: 6989212029830172108
+      Adobe Express_72: 3797702750283318258
+      Adobe Express_73: 5988105444403900184
+      Adobe Express_74: -2764254893886162843
+      Adobe Express_75: -3056945142032805230
+      Adobe Express_76: 7134257814661830079
+      Adobe Express_77: 8982919975745107787
+      Adobe Express_78: -1403814537178584349
+      Adobe Express_79: 6097809717312469196
+      Adobe Express_8: 2882877785882771324
+      Adobe Express_80: 8228494200607317124
+      Adobe Express_9: -1015268969600297317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

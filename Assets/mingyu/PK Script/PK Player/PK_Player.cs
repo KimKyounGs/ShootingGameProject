@@ -12,6 +12,7 @@ public class PK_Player : MonoBehaviour
 
     public GameObject Sward;
     public Transform Sward_pos = null;
+    public float PK_Swould_Cooltime = 0;
 
     public int power = 0;
 
@@ -21,25 +22,34 @@ public class PK_Player : MonoBehaviour
 
     void Start()
     {
-        
+        PK_Swould_Cooltime = 4;
     }
-
 
     void Update()
     {
         float moveX = Speed * Time.deltaTime * Input.GetAxis("Horizontal");
         float moveY = Speed * Time.deltaTime * Input.GetAxis("Vertical");
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        PK_Swould_Cooltime += Time.deltaTime;
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            Instantiate(bullet[power], pos[power].position, Quaternion.identity);
-        }
-       else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            Instantiate(Sward, Sward_pos.position, Quaternion.identity);
+            if (PK_Swould_Cooltime >= 3)
+            {
+                Instantiate(Sward, Sward_pos.position, Quaternion.identity);   //칼
+                PK_Swould_Cooltime = 0;
+                
+            }
+
         }
 
-            transform.Translate(moveX, moveY, 0);
+        if (Input.GetKeyUp(KeyCode.Space) && (power == 0))
+        {
+            Instantiate(bullet[0], pos[0].position, Quaternion.identity);
+        }
+
+
+        transform.Translate(moveX, moveY, 0);
 
 
 

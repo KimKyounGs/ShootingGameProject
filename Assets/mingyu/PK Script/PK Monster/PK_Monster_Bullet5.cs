@@ -25,7 +25,7 @@ public class PK_Monster_Bullet5 : MonoBehaviour
         {
             collision.gameObject.GetComponent<PK_Player>().Damage(+1);
 
-            //¹Ì»çÀÏÁö¿ì±â
+            //ë¯¸ì‚¬ì¼ì§€ìš°ê¸°
             Destroy(gameObject);
         }
     }

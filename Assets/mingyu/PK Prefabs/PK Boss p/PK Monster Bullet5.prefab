@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1370320618693033048}
   - component: {fileID: 2807056091434612672}
   - component: {fileID: 4278801338286376365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PK Monster Bullet5
   m_TagString: PK_Monster_Bullet
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

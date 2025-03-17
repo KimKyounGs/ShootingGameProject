@@ -128,9 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   P_HP: 3
-  pos:
-  - {fileID: 1317609006100068337, guid: 20eba4047a037fe49b0a124b650fefe4, type: 3}
-  - {fileID: 2870915975479103339, guid: 963c2b5eee9db0444898753b11f7c4c4, type: 3}
+  bullet: []
+  pos: []
   Sward: {fileID: 709940310364118909, guid: 1700c45d3c32f5649ab169bcb1a7771c, type: 3}
   Sward_pos: {fileID: 2194342130654566482}
   power: 0
