@@ -12,9 +12,9 @@ public class PK_Player : MonoBehaviour
     public GameObject[] bullet;
     public Transform[] pos = null;
 
+    public GameObject swould;
+    public Transform swouldtos = null;
     public float PK_Swould_Cooltime = 0;
-    public GameObject sod;
-    public bool a = true;
 
     public int power = 0;
 
@@ -24,7 +24,6 @@ public class PK_Player : MonoBehaviour
 
     void Start()
     {
-        PK_Swould_Cooltime = 4;
     }
 
     void Update()
@@ -32,23 +31,12 @@ public class PK_Player : MonoBehaviour
         float moveX = Speed * Time.deltaTime * Input.GetAxis("Horizontal");
         float moveY = Speed * Time.deltaTime * Input.GetAxis("Vertical");
 
-        PK_Swould_Cooltime += Time.deltaTime;
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            if (PK_Swould_Cooltime >= 0.5)
-            {
-                    a = true;
-                    sod.SetActive(a);
-                    PK_Swould_Cooltime = -3;
-                Invoke(sod, 3);
-            }
 
+            Instantiate(swould, swouldtos.position, Quaternion.identity);
         }
-
-
-
-
 
 
 
