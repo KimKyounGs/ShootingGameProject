@@ -12,9 +12,5 @@ public class PK_S_Gage1 : MonoBehaviour
     }
 
 
-    public void S_Gage(int blood)
-    {
-        Gage += blood;
-        Swoard_Gage.fillAmount += Gage;
-    }
+
 }

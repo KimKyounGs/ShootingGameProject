@@ -12,9 +12,12 @@ public class PK_Player : MonoBehaviour
     public GameObject[] bullet;
     public Transform[] pos = null;
 
-    public GameObject swould;
+
     public Transform swouldtos = null;
     public float PK_Swould_Cooltime = 0;
+    public Image Swoard_Gage;
+    public GameObject Swould;
+
 
     public int power = 0;
 
@@ -22,21 +25,36 @@ public class PK_Player : MonoBehaviour
     private GameObject powerup;
 
 
+
     void Start()
     {
+        GetComponent<Player>();
     }
+
+
 
     void Update()
     {
         float moveX = Speed * Time.deltaTime * Input.GetAxis("Horizontal");
         float moveY = Speed * Time.deltaTime * Input.GetAxis("Vertical");
 
+        PK_Swould_Cooltime += Time.deltaTime;
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-
-            Instantiate(swould, swouldtos.position, Quaternion.identity);
+            if (PK_Swould_Cooltime >= 2)
+            {
+                Swould.gameObject.SetActive(true);
+                PK_Swould_Cooltime = -2;
+            }
         }
+
+        if (PK_Swould_Cooltime <= 1 && PK_Swould_Cooltime > -1)
+        {
+            Swould.gameObject.SetActive(false);
+        }
+
+
 
 
 
