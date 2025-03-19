@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 385a8e566b3a3a840af88ee7d61b59c0
+guid: a453a63d9abf283479ccbec5ceae8042
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 147316924086779331
-    second: Bullet_Eg_c_0
-  - first:
-      213: -8354254116718881772
-    second: Bullet_Eg_c_1
+      213: 8452760556053057431
+    second: Guide_Bullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,8 +109,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -128,7 +123,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -140,18 +135,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bullet_Eg_c_0
+      name: Guide_Bullet_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 7
-        width: 10
-        height: 35
+        x: 0
+        y: 0
+        width: 48
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,30 +154,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cd789146ff5b0200800000000000000
-      internalID: 147316924086779331
+      spriteID: 79fc9fae0fc3e4570800000000000000
+      internalID: 8452760556053057431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullet_Eg_c_1
+      name: Guide_Bullet_1
       rect:
         serializedVersion: 2
-        x: 25
-        y: 7
-        width: 10
-        height: 35
+        x: 48
+        y: 0
+        width: 48
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 41450a1c42abf0c80800000000000000
-      internalID: -8354254116718881772
+      spriteID: 2b911eb3c7d0e0f4c841492f7700c3fa
+      internalID: 1859274429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Bullet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328bee2986b48b547af274f29409b969
+      internalID: -899971267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Bullet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88af1a770c957d749a9729cdc53af8f6
+      internalID: 1676971249
       vertices: []
       indices: 
       edges: []
@@ -192,7 +230,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c157ec92a0ca2c3448e398f28d676fe1
     internalID: 0
     vertices: []
     indices: 
@@ -202,8 +240,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bullet_Eg_c_0: 147316924086779331
-      Bullet_Eg_c_1: -8354254116718881772
+      Guide_Bullet_0: 8452760556053057431
+      Guide_Bullet_1: 1859274429
+      Guide_Bullet_2: -899971267
+      Guide_Bullet_3: 1676971249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

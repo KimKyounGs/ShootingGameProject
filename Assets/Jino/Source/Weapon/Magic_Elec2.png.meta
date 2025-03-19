@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: f46da2d67be0b364582a8d22153bfd93
+guid: bafdb5373fa65b14281cbfe620653fb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3740626451653842279
-    second: Bullet_Eg_a_0
+      213: 2227519170026757494
+    second: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_0"
+  - first:
+      213: 3628846513436843073
+    second: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_1"
+  - first:
+      213: -8279534436005371431
+    second: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,8 +115,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -125,7 +129,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -137,28 +141,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bullet_Eg_a_0
+      name: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_0"
       rect:
         serializedVersion: 2
-        x: 20
-        y: 11
-        width: 8
-        height: 26
+        x: 0
+        y: 3
+        width: 31
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 1, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 765d14860ff59e330800000000000000
-      internalID: 3740626451653842279
+      spriteID: 67d51db12ecb9ee10800000000000000
+      internalID: 2227519170026757494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_1"
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 1, z: 0, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c51d17da04c5230800000000000000
+      internalID: 3628846513436843073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_2"
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1294c1c4f291d80800000000000000
+      internalID: -8279534436005371431
       vertices: []
       indices: 
       edges: []
@@ -167,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e90e11d79ae22b341b69a34ede2ad26c
     internalID: 0
     vertices: []
     indices: 
@@ -177,7 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bullet_Eg_a_0: 3740626451653842279
+      "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_0": 2227519170026757494
+      "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_1": 3628846513436843073
+      "Magic_Elec2 - \uBCF5\uC0AC\uBCF8_2": -8279534436005371431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

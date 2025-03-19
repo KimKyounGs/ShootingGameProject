@@ -1,13 +1,91 @@
 fileFormatVersion: 2
-guid: d4153e7097b37c5448258af6d2869060
+guid: 2ac06ef3d0eabc84eb89a69048a90808
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1025740691730275340
-    second: Boss_Left_0
+      213: -1429740460925162861
+    second: BombBullet_0
   - first:
-      213: 2132806619666398904
-    second: Boss_Left_1
+      213: -6599618305448925363
+    second: BombBullet_1
+  - first:
+      213: -694048194147836587
+    second: BombBullet_2
+  - first:
+      213: 6118655053651610620
+    second: BombBullet_3
+  - first:
+      213: -8500873764689410046
+    second: BombBullet_4
+  - first:
+      213: -4781246716874238651
+    second: BombBullet_5
+  - first:
+      213: 7411749218565291038
+    second: BombBullet_6
+  - first:
+      213: 4263972153107177385
+    second: BombBullet_7
+  - first:
+      213: -1773258367682648301
+    second: BombBullet_8
+  - first:
+      213: 4708160664336410440
+    second: BombBullet_9
+  - first:
+      213: 5993295570040763148
+    second: BombBullet_10
+  - first:
+      213: -4352866487928242409
+    second: BombBullet_11
+  - first:
+      213: -7348729129248604020
+    second: BombBullet_12
+  - first:
+      213: 8771341710889233678
+    second: BombBullet_13
+  - first:
+      213: 2480118354187150706
+    second: BombBullet_14
+  - first:
+      213: -5010818230096652769
+    second: BombBullet_15
+  - first:
+      213: -8616003388863721816
+    second: BombBullet_16
+  - first:
+      213: 3576715125599180851
+    second: BombBullet_17
+  - first:
+      213: 3765423447340838422
+    second: BombBullet_18
+  - first:
+      213: -8591748477197483518
+    second: BombBullet_19
+  - first:
+      213: -4084455237798107606
+    second: BombBullet_20
+  - first:
+      213: -744641783628502754
+    second: BombBullet_21
+  - first:
+      213: -490313429352235096
+    second: BombBullet_22
+  - first:
+      213: -3840274655885735273
+    second: BombBullet_23
+  - first:
+      213: -3468643159167600696
+    second: BombBullet_24
+  - first:
+      213: -1339147154656970589
+    second: BombBullet_25
+  - first:
+      213: -6631201197411550933
+    second: BombBullet_26
+  - first:
+      213: 6930306150826782477
+    second: BombBullet_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,8 +190,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -128,7 +204,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -140,18 +216,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_Left_0
+      name: BombBullet_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 74
-        height: 141
+        width: 20
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0c1f3a79b92c3e00800000000000000
-      internalID: 1025740691730275340
+      spriteID: 39a6d8930aa882ce0800000000000000
+      internalID: -1429740460925162861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Left_1
+      name: BombBullet_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 32
-        width: 68
-        height: 110
+        x: 20
+        y: 0
+        width: 20
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +257,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8be31db0250499d10800000000000000
-      internalID: 2132806619666398904
+      spriteID: d472d821e127964a0800000000000000
+      internalID: -6599618305448925363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBullet_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 20
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d11da38de3e56f0800000000000000
+      internalID: -694048194147836587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBullet_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb8d007a54d9e450800000000000000
+      internalID: 6118655053651610620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BombBullet_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 20
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208004fb954d60a80800000000000000
+      internalID: -8500873764689410046
       vertices: []
       indices: 
       edges: []
@@ -192,7 +333,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 32795072fccdb5e4da867e3e9faea479
     internalID: 0
     vertices: []
     indices: 
@@ -202,8 +343,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss_Left_0: 1025740691730275340
-      Boss_Left_1: 2132806619666398904
+      BombBullet_0: -1429740460925162861
+      BombBullet_1: -6599618305448925363
+      BombBullet_2: -694048194147836587
+      BombBullet_3: 6118655053651610620
+      BombBullet_4: -8500873764689410046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
