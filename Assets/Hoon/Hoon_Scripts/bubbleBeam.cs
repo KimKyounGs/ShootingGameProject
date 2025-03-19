@@ -20,7 +20,12 @@ public class bubbleBeam : MonoBehaviour
     {
         if(collision.CompareTag("Hoon_Enemy"))
         {
-            collision.gameObject.GetComponent<luvdisc>().Damage(1);
+            IDamageable enemy = collision.gameObject.GetComponent<IDamageable>();
+            if (enemy != null)
+            {
+            enemy.Damage(1);
+            }
+
             //SoundManager.instance.SoundDie();
             ani.SetBool("Destroy", true);
             StartCoroutine(BubblePop());

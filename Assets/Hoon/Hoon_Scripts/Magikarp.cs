@@ -15,10 +15,8 @@ public class Magikarp : MonoBehaviour
     public bool CanShoot = true;
     public int power = 0;
 
-    public int exp = 0;
-    public int level = 1;
-    public Image expUI;
-    public TMP_Text levelUI;
+
+
 
     public void Shoot()
     {
@@ -34,13 +32,7 @@ public class Magikarp : MonoBehaviour
         // else if (power > 9)
         //     Instantiate(Bullet[3], pos.transform.position, Quaternion.identity);
     }
-    IEnumerator ExpGain()
-    {
-        yield return new WaitForSeconds(1);
-        expUI.fillAmount += 0.1f;
 
-        StartCoroutine(ExpGain());
-    }
 
     IEnumerator BulletCooldown()
     {
@@ -50,8 +42,7 @@ public class Magikarp : MonoBehaviour
     void Start()
     {
         magikarpAni = GetComponent<Animator>();
-        expUI.fillAmount = 0;
-        StartCoroutine(ExpGain());
+
     }
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
@@ -127,12 +118,7 @@ public class Magikarp : MonoBehaviour
             // SoundManager.instance.SoundBullet();
             Shoot();
         }
-        if(expUI.fillAmount >= 1)
-        {
-            expUI.fillAmount = 0;
-            level ++;
-            levelUI.text = "Lv" + level.ToString();
-        }
+
                     
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);

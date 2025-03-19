@@ -1,15 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
-public class luvdisc : MonoBehaviour
+public class luvdisc : MonoBehaviour, IDamageable
 {
     public float moveSpeed = 2f;
     public float HP = 100;
+    public float exp = 0.2f;
     Animator ani;
+    public SpriteRenderer sr;
+
 
     void Start()
     {
         ani = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+
     }
 
     void Update()
@@ -20,14 +25,16 @@ public class luvdisc : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    public void Damage(int damage)
+    public void Damage(float attack)
     {
-        HP -= damage;
+        StartCoroutine(Hit());
+        HP -= attack;
 
         if(HP <= 0)
         {
             ani.SetBool("Destroy", true);
             StartCoroutine(monsterDie());
+            GameManager.instance.ExpGain(exp);
             //Instantiate(PowerItem, transform.position, Quaternion.identity);
         }
     }
@@ -35,6 +42,13 @@ public class luvdisc : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
+    }
+    
+    IEnumerator Hit()
+    {
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sr.color = Color.white;
     }
 }
 
