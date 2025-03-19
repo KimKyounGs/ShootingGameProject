@@ -7,7 +7,7 @@ public class KK_Player : MonoBehaviour
     private Vector2 maxBounds;
 
     // 총알
-    public GameObject[] bullet;  //총알 추후 4개 배열로 만들예정
+    public GameObject[] bullet;  //총알배열
     public Transform bulletPos = null;
     public int power = 0;
 
@@ -59,48 +59,6 @@ public class KK_Player : MonoBehaviour
         else
             ani.SetBool("right", false);
 
-
-        if(Input.GetAxis("Vertical")>=0.5f)
-        {
-            ani.SetBool("up", true);
-        }
-        else
-        {
-            ani.SetBool("up", false);
-        }
-
-        //스페이스
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //프리팹 위치 방향 넣고 생성
-            Instantiate(bullet[power], bulletPos.position, Quaternion.identity);
-        }
-        else if(Input.GetKey(KeyCode.Space))
-        {
-            gValue += Time.deltaTime;
-
-
-            if(gValue >=1)
-            {
-                GameObject go = Instantiate(lazer, bulletPos.position, Quaternion.identity);
-                Destroy(go, 3);
-                gValue = 0;
-            }
-        }
-        else
-        {
-            gValue -= Time.deltaTime;
-
-            if(gValue <=0)
-            {
-                gValue = 0;
-            }
-
-
-        }
-
-
-
         Vector3 newPosition = transform.position + new Vector3(moveX, moveY, 0);
 
         // 경계를 벗어나지 않도록 위치 제한
@@ -121,23 +79,23 @@ public class KK_Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Item"))
-        {
-            power += 1;
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if(collision.CompareTag("Item"))
+    //     {
+    //         power += 1;
 
-            if (power >= bullet.Length)
-                power = 3;
-            else
-            {
-                //파워업
-                GameObject go = Instantiate(powerUpEffect, transform.position, Quaternion.identity);
-                Destroy(go, 1);
-            }
+    //         if (power >= bullet.Length)
+    //             power = 3;
+    //         else
+    //         {
+    //             //파워업
+    //             GameObject go = Instantiate(powerUpEffect, transform.position, Quaternion.identity);
+    //             Destroy(go, 1);
+    //         }
 
-            //아이템 먹은 처리
-            Destroy(collision.gameObject);
-        }
-    }
+    //         //아이템 먹은 처리
+    //         Destroy(collision.gameObject);
+    //     }
+    // }
 }

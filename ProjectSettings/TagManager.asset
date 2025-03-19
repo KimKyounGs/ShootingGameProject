@@ -9,6 +9,10 @@ TagManager:
   - PK_Monster_Bullet
   - PK_Boss
   - Swould
+  - Monster
+  - PlayerBullet
+  - MonsterBullet
+  - Item
   layers:
   - Default
   - TransparentFX
