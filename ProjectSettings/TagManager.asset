@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - PK_Monster
-  - PK_Item
-  - PK_Monster_Bullet
-  - PK_Boss
-  - Swould
-  - Monster
-  - PlayerBullet
-  - MonsterBullet
-  - Item
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - item
-  - monster
-  - bullet
-  - wall
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

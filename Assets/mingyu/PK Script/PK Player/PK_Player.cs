@@ -16,7 +16,10 @@ public class PK_Player : MonoBehaviour
     public Transform swouldtos = null;
     public float PK_Swould_Cooltime = 0;
     public Image Swoard_Gage;
+    public Image Swoard_cool;
     public GameObject Swould;
+
+    public GameObject SPSwould;
 
 
     public int power = 0;
@@ -28,7 +31,7 @@ public class PK_Player : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Player>();
+        PK_Swould_Cooltime = 2;
     }
 
 
@@ -46,6 +49,7 @@ public class PK_Player : MonoBehaviour
             {
                 Swould.gameObject.SetActive(true);
                 PK_Swould_Cooltime = -2;
+                Swoard_cool.fillAmount = 1;
             }
         }
 
@@ -54,11 +58,23 @@ public class PK_Player : MonoBehaviour
             Swould.gameObject.SetActive(false);
         }
 
+        if (PK_Swould_Cooltime >= 2)
+        {
+            Swoard_cool.fillAmount = 0;
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.Z) && Swoard_Gage.fillAmount == 1)
+        {
+            SPSwould.gameObject.SetActive(true);
+            Swoard_Gage.fillAmount = 0;
+        }
 
 
 
 
-        if (Input.GetKeyUp(KeyCode.Space) && (power == 0))
+
+            if (Input.GetKeyUp(KeyCode.Space) && (power == 0))
         {
             Instantiate(bullet[0], pos[0].position, Quaternion.identity);
         }
