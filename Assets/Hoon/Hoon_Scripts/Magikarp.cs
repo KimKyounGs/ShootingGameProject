@@ -1,4 +1,8 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class Magikarp : MonoBehaviour
 {
@@ -11,28 +15,43 @@ public class Magikarp : MonoBehaviour
     public bool CanShoot = true;
     public int power = 0;
 
-    // public void Shoot()
-    // {
-    //     StartCoroutine(BulletCooldown());
-    //     CanShoot = false;
+    public int exp = 0;
+    public int level = 1;
+    public Image expUI;
+    public TMP_Text levelUI;
 
-    //     if (power <= 3)
-    //         Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
-    //     else if (power <= 6)
-    //         Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
-    //     else if (power <= 9)
-    //         Instantiate(Bullet[2], pos.transform.position, Quaternion.identity);
-    //     else if (power > 9)
-    //         Instantiate(Bullet[3], pos.transform.position, Quaternion.identity);
-    // }
-    // IEnumerator BulletCooldown()
-    // {
-    //     yield return new WaitForSeconds(0.25f);
-    //     CanShoot = true;
-    // }
+    public void Shoot()
+    {
+        StartCoroutine(BulletCooldown());
+        CanShoot = false;
+
+        // if (power <= 3)
+            Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
+        // else if (power <= 6)
+        //     Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
+        // else if (power <= 9)
+        //     Instantiate(Bullet[2], pos.transform.position, Quaternion.identity);
+        // else if (power > 9)
+        //     Instantiate(Bullet[3], pos.transform.position, Quaternion.identity);
+    }
+    IEnumerator ExpGain()
+    {
+        yield return new WaitForSeconds(1);
+        expUI.fillAmount += 0.1f;
+
+        StartCoroutine(ExpGain());
+    }
+
+    IEnumerator BulletCooldown()
+    {
+        yield return new WaitForSeconds(0.25f);
+        CanShoot = true;
+    }
     void Start()
     {
         magikarpAni = GetComponent<Animator>();
+        expUI.fillAmount = 0;
+        StartCoroutine(ExpGain());
     }
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
@@ -54,7 +73,10 @@ public class Magikarp : MonoBehaviour
     // }
     void Update()
     {
+
+
         magikarpAni.SetBool("Down", false);    
+
 
         // 플레이어 이동
         float moveX = Input.GetAxis("Horizontal") * magikarpSpeed * Time.deltaTime;
@@ -100,13 +122,18 @@ public class Magikarp : MonoBehaviour
 
         // }
 
-        // if(Input.GetKey(KeyCode.Space) && CanShoot == true)
-        // {
-        //     SoundManager.instance.SoundBullet();
-        //     Shoot();
-        // }
-        
-
+        if(Input.GetKey(KeyCode.Space) && CanShoot == true && magikarpAni.GetBool("Down") == false)
+        {
+            // SoundManager.instance.SoundBullet();
+            Shoot();
+        }
+        if(expUI.fillAmount >= 1)
+        {
+            expUI.fillAmount = 0;
+            level ++;
+            levelUI.text = "Lv" + level.ToString();
+        }
+                    
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
         viewPos.x = Mathf.Clamp01(viewPos.x); //x값을 0이상, 1이하로 제한한다.

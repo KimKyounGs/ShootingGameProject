@@ -10,12 +10,12 @@ public class PK_Monster : MonoBehaviour
     public Transform ms1;
     public Transform ms2;
     public GameObject bullet;
-    //¾ÆÀÌÅÛ °¡Á®¿À±â
+    //ì•„ì´í…œ ê°€ì ¸ì˜¤ê¸°
     public GameObject Item = null;
 
     void Start()
     {
-        //ÇÑ¹øÇÔ¼öÈ£Ãâ
+        //í•œë²ˆí•¨ìˆ˜í˜¸ì¶œ
         Invoke("CreateBullet", Delay);
     }
 
@@ -25,8 +25,8 @@ public class PK_Monster : MonoBehaviour
         Instantiate(bullet, ms1.position, Quaternion.identity);
         Instantiate(bullet, ms2.position, Quaternion.identity);
 
-        //Àç±ÍÈ£Ãâ
-        Invoke("CreateBullet", Delay);  //start´Â ÇÑ ¹ø È£ÃâµÇÁö¸¸ ÀÌ ¸í·É¾î¸¦ ÇÑ¹ø ´õ ¾¸À¸·Î ½á °è¼Ó ¹İº¹µÇ°Ô ÇÑ´Ù
+        //ì¬ê·€í˜¸ì¶œ
+        Invoke("CreateBullet", Delay);  //startëŠ” í•œ ë²ˆ í˜¸ì¶œë˜ì§€ë§Œ ì´ ëª…ë ¹ì–´ë¥¼ í•œë²ˆ ë” ì”€ìœ¼ë¡œ ì¨ ê³„ì† ë°˜ë³µë˜ê²Œ í•œë‹¤
     }
 
 
@@ -42,7 +42,7 @@ public class PK_Monster : MonoBehaviour
 
     void Update()
     {
-        //¾Æ·¡ ¹æÇâÀ¸·Î ¿òÁ÷¿©¶ó
+        //ì•„ë˜ ë°©í–¥ìœ¼ë¡œ ì›€ì§ì—¬ë¼
         transform.Translate(Vector3.down * Speed * Time.deltaTime);
     }
 
@@ -53,7 +53,7 @@ public class PK_Monster : MonoBehaviour
 
 
 
-    //¹Ì»çÀÏ¿¡ µû¸¥ µ¥¹ÌÁö ÀÔ´Â ÇÔ¼ö
+    //ë¯¸ì‚¬ì¼ì— ë”°ë¥¸ ë°ë¯¸ì§€ ì…ëŠ” í•¨ìˆ˜
     public void Damage(int attack)
     {
         M_HP -= attack;
@@ -73,7 +73,7 @@ public class PK_Monster : MonoBehaviour
 
     public void ItemDrop()
     {
-        //¾ÆÀÌÅÛ »ı¼º
+        //ì•„ì´í…œ ìƒì„±
         Instantiate(Item, transform.position, Quaternion.identity);
     }
 }

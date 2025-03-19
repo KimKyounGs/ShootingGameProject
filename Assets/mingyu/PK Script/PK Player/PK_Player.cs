@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PK_Player : MonoBehaviour
 {
@@ -10,9 +12,12 @@ public class PK_Player : MonoBehaviour
     public GameObject[] bullet;
     public Transform[] pos = null;
 
-    public GameObject Sward;
-    public Transform Sward_pos = null;
+
+    public Transform swouldtos = null;
     public float PK_Swould_Cooltime = 0;
+    public Image Swoard_Gage;
+    public GameObject Swould;
+
 
     public int power = 0;
 
@@ -20,10 +25,13 @@ public class PK_Player : MonoBehaviour
     private GameObject powerup;
 
 
+
     void Start()
     {
-        PK_Swould_Cooltime = 4;
+        GetComponent<Player>();
     }
+
+
 
     void Update()
     {
@@ -34,14 +42,21 @@ public class PK_Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            if (PK_Swould_Cooltime >= 3)
+            if (PK_Swould_Cooltime >= 2)
             {
-                Instantiate(Sward, Sward_pos.position, Quaternion.identity);   //칼
-                PK_Swould_Cooltime = 0;
-                
+                Swould.gameObject.SetActive(true);
+                PK_Swould_Cooltime = -2;
             }
-
         }
+
+        if (PK_Swould_Cooltime <= 1 && PK_Swould_Cooltime > -1)
+        {
+            Swould.gameObject.SetActive(false);
+        }
+
+
+
+
 
         if (Input.GetKeyUp(KeyCode.Space) && (power == 0))
         {
