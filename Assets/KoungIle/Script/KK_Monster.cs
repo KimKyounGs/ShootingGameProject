@@ -5,8 +5,7 @@ public class KK_Monster : MonoBehaviour
     public int HP = 100;
     public float Speed = 3;
     public float Delay = 1f;
-    public Transform ms1;
-    public Transform ms2;
+    public Transform bulletPos;
     public GameObject bullet;
     //아이템 가져오기
     public GameObject Item = null;
@@ -20,9 +19,7 @@ public class KK_Monster : MonoBehaviour
 
     void CreateBullet()
     {
-        Instantiate(bullet, ms1.position, Quaternion.identity);
-        Instantiate(bullet, ms2.position, Quaternion.identity);
-
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
         //재귀호출
         Invoke("CreateBullet", Delay);
     }
@@ -45,23 +42,15 @@ public class KK_Monster : MonoBehaviour
 
         if(HP <=0)
         {
-            ItemDrop();
+            // ItemDrop();
             Destroy(gameObject);
         }
-
-      
     }
 
-
-
-    public void ItemDrop()
-    {
-        //아이템 생성
-        Instantiate(Item, transform.position, Quaternion.identity);
-    }
-
-
-
-
+    // public void ItemDrop()
+    // {
+    //     //아이템 생성
+    //     Instantiate(Item, transform.position, Quaternion.identity);
+    // }
 
 }
