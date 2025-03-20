@@ -1,11 +1,26 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-guid: 50fdccd17bee03545ae3676c7fbdf73e
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+guid: 19d972dbf5ae6d840aef2bff56468ca5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4741256403221724141
-    second: monster_bullet1_0
+      213: -1225761722846916711
+    second: boos-test_0
+  - first:
+      213: -6999479931648067889
+    second: boos-test_1
+  - first:
+      213: 5088258043721018543
+    second: boos-test_2
+  - first:
+      213: 6431710404772709328
+    second: boos-test_3
+  - first:
+      213: -7605426797813278815
+    second: boos-test_4
+  - first:
+      213: -9021674648528696838
+    second: boos-test_5
 ========
 guid: 197a38cb439690342bfe90d1ff52affd
 TextureImporter:
@@ -63,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +136,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
 ========
   - serializedVersion: 4
     buildTarget: WebGL
@@ -154,8 +169,8 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      name: monster_bullet1_0
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+      name: boos-test_0
 ========
       name: Monster_4_0
 >>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
@@ -163,9 +178,9 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-        width: 15
-        height: 15
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+        width: 100
+        height: 100
 ========
         width: 240
         height: 120
@@ -178,9 +193,9 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      spriteID: 3144ce8eb6ca33eb0800000000000000
-      internalID: -4741256403221724141
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+      spriteID: 99f407a15383dfee0800000000000000
+      internalID: -1225761722846916711
 ========
       spriteID: b1bbf32b80df06a4cbd3dac2861989f5
       internalID: 1912833283
@@ -215,7 +230,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+    spriteID: 8b9be6ff42c7afd438cc0198d3f20b34
+========
     spriteID: d503115556eb0fc49b96511f28d65b28
+>>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -225,8 +244,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      monster_bullet1_0: -4741256403221724141
+<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/boos-test.png.meta
+      boos-test_0: -1225761722846916711
 ========
       Monster_4_0: 1912833283
       Monster_4_1: -77088493
