@@ -1,49 +1,46 @@
 fileFormatVersion: 2
-guid: fbacc566ab6ffec45838a1e7fd4f7137
+guid: 7b865424a3b475645a99892b304c5c20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8897885316163613959
-    second: lazer_head_0
+      213: -4497620760181296327
+    second: lazer_body_0
   - first:
-      213: -3994988105447799497
-    second: lazer_head_1
+      213: 2826542299200004742
+    second: lazer_body_1
   - first:
-      213: 6187740680891508938
-    second: lazer_head_2
+      213: -7792862909454042229
+    second: lazer_body_2
   - first:
-      213: 541367085879847605
-    second: lazer_head_3
+      213: -2915263447096025203
+    second: lazer_body_3
   - first:
-      213: 6598441694323206213
-    second: lazer_head_4
+      213: 4343837172741373015
+    second: lazer_body_4
   - first:
-      213: -4775536447063551072
-    second: lazer_head_5
+      213: 7707082211079500398
+    second: lazer_body_5
   - first:
-      213: -6258627020494737759
-    second: lazer_head_6
+      213: 7005267345707642014
+    second: lazer_body_6
   - first:
-      213: 5115984110063751348
-    second: lazer_head_7
+      213: -4788034837615544561
+    second: lazer_body_7
   - first:
-      213: 206886527165392043
-    second: lazer_head_8
+      213: 3713297436111179521
+    second: lazer_body_8
   - first:
-      213: -7616561326053979442
-    second: lazer_head_9
+      213: 2496403818786935667
+    second: lazer_body_9
   - first:
-      213: 4632163378848388068
-    second: lazer_head_10
+      213: 1747190099082540465
+    second: lazer_body_10
   - first:
-      213: -345142579184165063
-    second: lazer_head_11
+      213: -3465326393640992929
+    second: lazer_body_11
   - first:
-      213: -4110318830250958126
-    second: lazer_head_12
-  - first:
-      213: 8295596113557077938
-    second: lazer_head_13
+      213: 4347489293824094146
+    second: lazer_body_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -178,309 +175,309 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lazer_head_0
+      name: lazer_body_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 429
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05029474b4dbe34d9e0f56f5be57fea
+      internalID: -170453266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c031727cc36494786b40db08e7ed13
+      internalID: -1009697619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 363
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f5de927000ccd4cae2262607107f3e
+      internalID: 48089777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 330
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca9add6f6d02e740acf2aa05846ae09
+      internalID: 726654395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a420ff4cc20cc474d86cbeebafa57734
+      internalID: -1526389339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d7b450af647d2429cca7496247c2e0
+      internalID: 719618456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe52faabf280cc45987aef407f9f67c
+      internalID: 1051812265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff50caf7cf2bb140baffbe02c7373d4
+      internalID: 1166085190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41be26258b3a46448b1da0f459c95ad1
+      internalID: 476411185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f70eaf548417a34198f0a46fe1a599f
+      internalID: -776589474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c672200218739c479d3f71411b03569
+      internalID: -1792513502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b16e471b259c04b92304903302e7bc
+      internalID: 980627864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e51b3a75df76bb4abcb2a0570c4cdc3
+      internalID: 1638426555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lazer_body_13
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 38
+        width: 64
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 705b8125d83ab7b70800000000000000
-      internalID: 8897885316163613959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7358fd40c73fe88c0800000000000000
-      internalID: -3994988105447799497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac8a5ce7d554fd550800000000000000
-      internalID: 6187740680891508938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bae4fe0f72538700800000000000000
-      internalID: 541367085879847605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_4
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 548e24dc2cf529b50800000000000000
-      internalID: 6598441694323206213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_5
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a398dc37e2e9bdb0800000000000000
-      internalID: -4775536447063551072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_6
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1aeefbd62e3e429a0800000000000000
-      internalID: -6258627020494737759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_7
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b094e44170aff640800000000000000
-      internalID: 5115984110063751348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_8
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba4e18843320fd200800000000000000
-      internalID: 206886527165392043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_9
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eca039604d98c4690800000000000000
-      internalID: -7616561326053979442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_10
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e3d4d10d00c84040800000000000000
-      internalID: 4632163378848388068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_11
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93f9dd227aec53bf0800000000000000
-      internalID: -345142579184165063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_12
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d2ea412dc635f6c0800000000000000
-      internalID: -4110318830250958126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lazer_head_13
-      rect:
-        serializedVersion: 2
-        x: 429
-        y: 0
-        width: 33
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bf3eac96b0ef1370800000000000000
-      internalID: 8295596113557077938
+      spriteID: 49706f36df9c64b42816f65e9007342a
+      internalID: 1407789426
       vertices: []
       indices: 
       edges: []
@@ -489,7 +486,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 58279ab8c441de14fa5ac301054d5d3c
+    spriteID: 8db6961c8b190b64a9cfd5db1ae41b8e
     internalID: 0
     vertices: []
     indices: 
@@ -499,20 +496,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lazer_head_0: 8897885316163613959
-      lazer_head_1: -3994988105447799497
-      lazer_head_10: 4632163378848388068
-      lazer_head_11: -345142579184165063
-      lazer_head_12: -4110318830250958126
-      lazer_head_13: 8295596113557077938
-      lazer_head_2: 6187740680891508938
-      lazer_head_3: 541367085879847605
-      lazer_head_4: 6598441694323206213
-      lazer_head_5: -4775536447063551072
-      lazer_head_6: -6258627020494737759
-      lazer_head_7: 5115984110063751348
-      lazer_head_8: 206886527165392043
-      lazer_head_9: -7616561326053979442
+      lazer_body_0: -170453266
+      lazer_body_1: -1009697619
+      lazer_body_10: -1792513502
+      lazer_body_11: 980627864
+      lazer_body_12: 1638426555
+      lazer_body_13: 1407789426
+      lazer_body_2: 48089777
+      lazer_body_3: 726654395
+      lazer_body_4: -1526389339
+      lazer_body_5: 719618456
+      lazer_body_6: 1051812265
+      lazer_body_7: 1166085190
+      lazer_body_8: 476411185
+      lazer_body_9: -776589474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

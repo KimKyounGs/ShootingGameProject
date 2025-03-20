@@ -8,10 +8,15 @@ public class Jino_SpawnManager : MonoBehaviour
     public float es = 2f;
 
     public GameObject missile1;
+    public GameObject SideLazer_L;
+    public GameObject SideLazer_R;
 
     void Start()
     {
         Invoke("MissileLine", 0.5f);
+        Invoke("Lining_Enemy_L", 13f);
+        Invoke("Lining_Enemy_R", 13f);
+        Invoke("StartShake", 12.5f);
     }
 
     void MissileLine()
@@ -24,14 +29,44 @@ public class Jino_SpawnManager : MonoBehaviour
         
     }
 
-    IEnumerator FirstLine()
+    void Lining_Enemy_L()
     {
-        for (int i = 1; i <= 10; i++)
-        {
-            Debug.Log($"ss: {ss}, es: {es}");
-            Vector2 r = new Vector2(i, transform.position.y);
-            Instantiate(missile1, r, Quaternion.identity);
-            yield return null;
-        }
+        Vector2 start = new Vector2(-4f, -4.5f);
+        Instantiate(SideLazer_L, start, Quaternion.identity);
+        Instantiate(SideLazer_L, start + new Vector2(0, 1.5f), Quaternion.identity);
+        Instantiate(SideLazer_L, start + new Vector2(0, 3f), Quaternion.identity);
+    }
+
+    void Lining_Enemy_R()
+    {
+        Vector2 start = new Vector2(4f, -3.8f);
+        Instantiate(SideLazer_R, start, Quaternion.identity);
+        Instantiate(SideLazer_R, start + new Vector2(0, 1.5f), Quaternion.identity);
+        Instantiate(SideLazer_R, start + new Vector2(0, 3f), Quaternion.identity);
+    }
+
+    void StartShake()
+    {
+        StartCoroutine("Shake");
+    }
+
+    IEnumerator Shake()
+    {
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
+        yield return new WaitForSeconds(0.2f);
+        CameraShake.instance.CameraShakeShow();
     }
 }
