@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 9e65bde32cd3d7f4da5ddc821d432f0e
+guid: 197a38cb439690342bfe90d1ff52affd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4887425031337458210
-    second: Bullet_Eg_b_0
+      213: 1341942212093537260
+    second: Monster_4_0
+  - first:
+      213: -7443750298692901212
+    second: Monster_4_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,8 +112,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -125,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -137,28 +138,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bullet_Eg_b_0
+      name: Monster_4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 240
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22ab83bdb2f93d340800000000000000
-      internalID: 4887425031337458210
+      spriteID: b1bbf32b80df06a4cbd3dac2861989f5
+      internalID: 1912833283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster_4_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d0ed2d7cc819d459d74eff4bd6b617
+      internalID: -77088493
       vertices: []
       indices: 
       edges: []
@@ -167,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d503115556eb0fc49b96511f28d65b28
     internalID: 0
     vertices: []
     indices: 
@@ -177,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bullet_Eg_b_0: 4887425031337458210
+      Monster_4_0: 1912833283
+      Monster_4_1: -77088493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

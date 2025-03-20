@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 112751b279fd7644d9cf7d481017f509
+guid: 33b4d68dfec60de4295cf73e20a77189
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7883245661488523148
-    second: Boss_Bullet_0
+      213: -8748255612503774959
+    second: MidAirPlan_0
+  - first:
+      213: 1905298522491951623
+    second: MidAirPlan_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,8 +112,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -125,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -137,28 +138,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_Bullet_0
+      name: MidAirPlan_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 70
+        width: 310
+        height: 335
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c87a922792ae66d60800000000000000
-      internalID: 7883245661488523148
+      spriteID: 6c23ab4272faea14fbae166869094e8d
+      internalID: -645842764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MidAirPlan_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 310
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092c6c607d06da5479ac39b274ad9c16
+      internalID: 1173811739
       vertices: []
       indices: 
       edges: []
@@ -167,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f237996921caeaf4abb716cc03a987f1
     internalID: 0
     vertices: []
     indices: 
@@ -177,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss_Bullet_0: 7883245661488523148
+      MidAirPlan_0: -645842764
+      MidAirPlan_1: 1173811739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
