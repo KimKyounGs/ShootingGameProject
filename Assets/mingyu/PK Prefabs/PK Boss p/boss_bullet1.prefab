@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7173228937461085366}
   - component: {fileID: 3339170494581820141}
   m_Layer: 8
-  m_Name: monster_bullet1
+  m_Name: boss_bullet1
   m_TagString: PK_Monster_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4741256403221724141, guid: 50fdccd17bee03545ae3676c7fbdf73e, type: 3}
+  m_Sprite: {fileID: -7806970187208137992, guid: eadee24b916d80d49a92116c0a009ffa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -18,7 +18,7 @@ public class PK_Boss : MonoBehaviour
 
 
     public bool skill_1_move = false;
-    public float skill_1_speed = 100;
+    public float skill_1_speed = 50;
     public float skill_1_turn = 0;
 
     public float cool_time = 0;

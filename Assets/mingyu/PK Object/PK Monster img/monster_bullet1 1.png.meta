@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-guid: 07440125365bcf44cbd1732b046576b9
+guid: eadee24b916d80d49a92116c0a009ffa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8936815874360305566
-    second: monster_bullet2_0
-========
-guid: 33b4d68dfec60de4295cf73e20a77189
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -8748255612503774959
-    second: MidAirPlan_0
-  - first:
-      213: 1905298522491951623
-    second: MidAirPlan_1
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/MidAirPlan.png.meta
+      213: -7806970187208137992
+    second: monster_bullet1 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,93 +109,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-========
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/MidAirPlan.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-      name: monster_bullet2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 30
-        height: 28
-========
-      name: MidAirPlan_0
+      name: monster_bullet1 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 310
-        height: 335
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/MidAirPlan.png.meta
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-      spriteID: e97615e30b2f50c70800000000000000
-      internalID: 8936815874360305566
-========
-      spriteID: 6c23ab4272faea14fbae166869094e8d
-      internalID: -645842764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MidAirPlan_1
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 0
-        width: 310
-        height: 335
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 092c6c607d06da5479ac39b274ad9c16
-      internalID: 1173811739
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/MidAirPlan.png.meta
+      spriteID: 8f2e4635af118a390800000000000000
+      internalID: -7806970187208137992
       vertices: []
       indices: 
       edges: []
@@ -216,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f237996921caeaf4abb716cc03a987f1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -226,12 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-      monster_bullet2_0: 8936815874360305566
-========
-      MidAirPlan_0: -645842764
-      MidAirPlan_1: 1173811739
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/MidAirPlan.png.meta
+      monster_bullet1 1_0: -7806970187208137992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-guid: 50fdccd17bee03545ae3676c7fbdf73e
+guid: ee2b00abc53d87b4a9bdeae61ba930d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4741256403221724141
-    second: monster_bullet1_0
-========
-guid: 197a38cb439690342bfe90d1ff52affd
-TextureImporter:
-  internalIDToNameTable:
+      213: 513282747109479277
+    second: boos-test 1_0
   - first:
-      213: 1341942212093537260
-    second: Monster_4_0
+      213: -4402228007598593744
+    second: boos-test 1_1
   - first:
-      213: -7443750298692901212
-    second: Monster_4_1
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
+      213: 6757364600863156308
+    second: boos-test 1_2
+  - first:
+      213: 9221335430974046370
+    second: boos-test 1_3
+  - first:
+      213: 6361894979996954483
+    second: boos-test 1_4
+  - first:
+      213: -4537255176032530629
+    second: boos-test 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,92 +124,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-========
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      name: monster_bullet1_0
-========
-      name: Monster_4_0
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
+      name: boos-test 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-        width: 15
-        height: 15
-========
-        width: 240
-        height: 120
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      spriteID: 3144ce8eb6ca33eb0800000000000000
-      internalID: -4741256403221724141
-========
-      spriteID: b1bbf32b80df06a4cbd3dac2861989f5
-      internalID: 1912833283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster_4_1
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 240
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8d0ed2d7cc819d459d74eff4bd6b617
-      internalID: -77088493
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
+      spriteID: d631cc260fb8f1700800000000000000
+      internalID: 513282747109479277
       vertices: []
       indices: 
       edges: []
@@ -215,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d503115556eb0fc49b96511f28d65b28
+    spriteID: 725d26aa5d613764baff61d50d37c3a4
     internalID: 0
     vertices: []
     indices: 
@@ -225,12 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:Assets/mingyu/PK Object/PK Monster img/monster_bullet1.png.meta
-      monster_bullet1_0: -4741256403221724141
-========
-      Monster_4_0: 1912833283
-      Monster_4_1: -77088493
->>>>>>>> 06dcaff8fc3729a4cb8a67da3a1634b1621327da:Assets/min/Image/Monster/Monster_4.png.meta
+      boos-test 1_0: 513282747109479277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
