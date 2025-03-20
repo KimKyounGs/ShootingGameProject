@@ -41,7 +41,7 @@ public class PK_S_Damage : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.CompareTag("PK_Knift"))
+        if (collision.CompareTag("Swould"))
         {
             Destroy(collision.gameObject);
         }

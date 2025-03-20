@@ -2,7 +2,6 @@ using UnityEngine;
 
 using System.Collections;
 using System.Threading;
-using UnityEngine;
 
 public class PK_SP_Gage1 : MonoBehaviour
 {

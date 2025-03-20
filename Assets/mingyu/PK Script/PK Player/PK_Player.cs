@@ -67,6 +67,7 @@ public class PK_Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Z) && Swoard_Gage.fillAmount == 1)
         {
             SPSwould.gameObject.SetActive(true);
+            Instantiate(bullet[0], pos[0].position, Quaternion.identity);
             Swoard_Gage.fillAmount = 0;
         }
 
