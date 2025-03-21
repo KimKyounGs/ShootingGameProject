@@ -127,6 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   HP: 1
+  exp: 0.2
+  ani: {fileID: 0}
+  sr: {fileID: 0}
 --- !u!50 &2958750567204597983
 Rigidbody2D:
   serializedVersion: 5

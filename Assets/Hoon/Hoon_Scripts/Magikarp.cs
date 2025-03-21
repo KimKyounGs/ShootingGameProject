@@ -36,7 +36,7 @@ public class Magikarp : MonoBehaviour
 
     IEnumerator BulletCooldown()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.5f);
         CanShoot = true;
     }
     void Start()

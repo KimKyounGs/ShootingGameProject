@@ -216,10 +216,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.8
   HP: 5
+  exp: 0.5
+  ani: {fileID: 0}
   sr: {fileID: 0}
   bullet: {fileID: 5393759224806039370, guid: 90cdb19d3ccff4a2b9f0e1827ebca2f1, type: 3}
   pos1: {fileID: 3758662872393632167}
   pos2: {fileID: 171726775285107853}
+  delay: 1
 --- !u!1 &7190101183492221454
 GameObject:
   m_ObjectHideFlags: 0
