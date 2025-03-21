@@ -23,7 +23,7 @@ public class KK_Player : MonoBehaviour
 
     Animator ani; //애니메이터를 가져올 변수
 
-        //레이져
+    //레이져
     public GameObject lazer;
     public float gValue = 0;
 

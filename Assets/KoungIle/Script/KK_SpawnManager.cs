@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class KK_SpawnManaer : MonoBehaviour
@@ -14,64 +15,109 @@ public class KK_SpawnManaer : MonoBehaviour
     [SerializeField] private float spawnCenterEndY = 4.5f;
 
     [Header("스폰 시간")]
-    [SerializeField] private float StartTime = 1; //시작
-    [SerializeField] private float SpawnStop = 10; //스폰 끝나는시간
+    [SerializeField] private float spawnInterval = 2f; // 몬스터 생성 간격
+    [SerializeField] private float waveDuration = 60f; // 각 웨이브 지속 시간 (1분)
+    private float elapsedTime = 0f;
+
 
     [Header("Monster 프리팹")]
-    [SerializeField] private GameObject[] monster1;
-    [SerializeField] private GameObject[] monster2;
-    [SerializeField] private GameObject[] monster3;
-    [SerializeField] private GameObject Boss;
+    [SerializeField] private GameObject[] monster1; // 1~3분 몬스터
+    [SerializeField] private GameObject[] monster2; // 3~6분 몬스터
+    [SerializeField] private GameObject[] monster3; // 6~9분 몬스터
+    [SerializeField] private GameObject Boss; // 보스
+
+    [Header("BossWarning Text")]    
+    [SerializeField] GameObject textBossWarning;
+
+    private bool isBossSpawned = false;
 
 
-    [SerializeField]
-    GameObject textBossWarning;
-
-    bool swi = true;
-    bool swi2 = true;
-
-
-void Start()
-{
-    StartCoroutine(RandomSpawn(monster1, spawnUpStartX, spawnUpEndX, 5.5f, StartTime, true));
-    Invoke("Stop", SpawnStop);
-}
-
-// 랜덤 스폰을 하나의 코루틴으로 통합
-IEnumerator RandomSpawn(GameObject[] monsterPrefab, float startX, float endX, float yPos, float spawnDelay, bool isFirstWave)
-{
-    bool isRunning = true;
-
-    while (isRunning)
+    void Start()
     {
-        yield return new WaitForSeconds(spawnDelay);
-
-        float x = Random.Range(startX, endX);
-        Vector2 spawnPos = new Vector2(x, yPos);
-        //Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
-
-        // 첫 번째 웨이브 종료 시 flag 변경
-        if (!isFirstWave) isRunning = swi2;
-        else isRunning = swi;
+        StartCoroutine(ManageWaves());
     }
-}
 
-// 첫 번째 몬스터 웨이브 종료 & 두 번째 몬스터 웨이브 시작
-void Stop()
-{
-    swi = false;
+    void Update()
+    {
+        elapsedTime += Time.deltaTime;
+    }
 
-    //StartCoroutine(RandomSpawn(monster2, ss, es, transform.position.y, StartTime + 2, false));
-    Invoke("Stop2", SpawnStop + 20);
-}
+    IEnumerator ManageWaves()
+    {
+        // 1~3분: monster1 스폰
+        yield return StartCoroutine(SpawnWave(monster1, waveDuration));
 
-// 두 번째 몬스터 웨이브 종료 & 보스 등장
-void Stop2()
-{
-    swi2 = false;
+        // 3~6분: monster2 스폰
+        yield return StartCoroutine(SpawnWave(monster2, waveDuration));
 
-    textBossWarning.SetActive(true);
-    Vector3 pos = new Vector3(0, 2.97f, 0);
-    Instantiate(Boss, pos, Quaternion.identity);
-}
+        // 6~9분: monster3 스폰
+        yield return StartCoroutine(SpawnWave(monster3, waveDuration));
+
+        // 9~10분:  스폰
+        yield return StartCoroutine(SpawnRushWave(waveDuration));
+
+        SpawnBoss();
+    }
+
+    IEnumerator SpawnWave(GameObject[] monsterPrefabs, float duration)
+    {
+        float waveTime = 0f;
+
+        while (waveTime < duration)
+        {
+            GameObject prefab = monsterPrefabs[Random.Range(0, monsterPrefabs.Length)];
+            SpawnMonsterWithLocation(prefab);
+
+            waveTime += spawnInterval;
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+    IEnumerator SpawnRushWave(float duration)
+    {
+        float waveTime = 0f;
+        List<GameObject> allMonsters = new List<GameObject>();
+        allMonsters.AddRange(monster1);
+        allMonsters.AddRange(monster2);
+        allMonsters.AddRange(monster3);
+
+        while (waveTime < duration)
+        {
+            GameObject prefab = allMonsters[Random.Range(0, allMonsters.Count)];
+            SpawnMonsterWithLocation(prefab);
+
+            waveTime += spawnInterval * 0.5f; // 러쉬는 더 빠르게 생성
+            yield return new WaitForSeconds(spawnInterval * 0.5f);
+        }
+    }
+
+    void SpawnMonsterWithLocation(GameObject monsterPrefab)
+    {
+        int spawnLocation = monsterPrefab.GetComponent<KK_Monster>().spawnLocation;
+        Vector2 spawnPos = Vector2.zero;
+
+        if (spawnLocation == 1) // 위쪽
+        {
+            float x = Random.Range(spawnUpStartX, spawnUpEndX);
+            spawnPos = new Vector2(x, 5.5f); // 위 고정 위치
+        }
+        else if (spawnLocation == 2) // 중앙
+        {
+            float x = Random.Range(spawnCenterStartX, spawnCenterEndX);
+            float y = Random.Range(spawnCenterStartY, spawnCenterEndY);
+            spawnPos = new Vector2(x, y);
+        }
+
+        Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+    }
+
+    void SpawnBoss()
+    {
+        if (isBossSpawned) return;
+
+        isBossSpawned = true;
+        textBossWarning.SetActive(true);
+
+        Vector3 pos = new Vector3(0, 2.97f, 0);
+        Instantiate(Boss, pos, Quaternion.identity);
+    }
 }

@@ -3,10 +3,11 @@ using UnityEngine;
 public class KK_Monster : MonoBehaviour
 {
     public int HP = 100;
-    public float Speed = 3;
-    public float Delay = 1f;
+    public float speed = 3;
+    public float delay = 1f; // shoot delay
     public Transform bulletPos;
     public GameObject bullet;
+    public int spawnLocation;
     //아이템 가져오기
     public GameObject Item = null;
 
@@ -14,20 +15,20 @@ public class KK_Monster : MonoBehaviour
     void Start()
     {
         //한번함수호출
-        Invoke("CreateBullet", Delay);
+        Invoke("CreateBullet", delay);
     }
 
     void CreateBullet()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
         //재귀호출
-        Invoke("CreateBullet", Delay);
+        Invoke("CreateBullet", delay);
     }
 
     void Update()
     {
         //아래 방향으로 움직여라
-        transform.Translate(Vector3.down * Speed * Time.deltaTime);
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
     private void OnBecameInvisible()
