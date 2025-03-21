@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2014276756859112463}
   - component: {fileID: 2693939175753152855}
   - component: {fileID: 8915116362778864084}
+  - component: {fileID: 7679832365983646954}
   m_Layer: 0
   m_Name: Side_Lazer_L
   m_TagString: Untagged
@@ -104,6 +105,28 @@ MonoBehaviour:
   moveSpeed: 7
   Lazer1: {fileID: 8580645024179966952, guid: 18d284712c1e0d148b59e30deab579bb, type: 3}
   pos2: {fileID: 152414490212622325}
+--- !u!95 &7679832365983646954
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4141890956535779061}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b1111bdff896e641b89097f27967128, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5565961923704389840
 GameObject:
   m_ObjectHideFlags: 0
