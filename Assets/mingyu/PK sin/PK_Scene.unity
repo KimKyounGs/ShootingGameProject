@@ -772,6 +772,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: mb2
+      value: 
+      objectReference: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
     - target: {fileID: 6037713097317273826, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 0.1

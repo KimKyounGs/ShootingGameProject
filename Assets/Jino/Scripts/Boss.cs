@@ -17,10 +17,15 @@ public class Boss : MonoBehaviour
     {
         StartCoroutine("Move", 0);
         Invoke("CircleFire", 3f);
-        Invoke("SantanFire1", 5.5f);
-        Invoke("SantanFire2", 6.3f);
-        Invoke("SantanFire1", 7.5f);
-        Invoke("SantanFire2", 7.9f);
+        Invoke("SantanFireL", 5.5f);
+        Invoke("SantanFireR", 6.3f);
+        Invoke("SantanFireL", 7.5f);
+        Invoke("SantanFireR", 7.9f);
+        Invoke("SantanFireL", 15.5f);
+        Invoke("SantanFireR", 16f);
+        Invoke("SantanFireL", 16.8f);
+        Invoke("SantanFireR", 17.4f);
+        Invoke("SantanFireL", 19f);
     }
 
     
@@ -43,8 +48,8 @@ public class Boss : MonoBehaviour
         onpos = true; 
         while(onpos)
         {
-            transform.position = Vector2.Lerp(transform.position, new Vector2(-1, 2.9f), speed * Time.deltaTime);
-            if(transform.position.y <= 2.96f)
+            transform.position = Vector2.Lerp(transform.position, new Vector2(-1, 3.2f), speed * Time.deltaTime);
+            if(transform.position.y <= 3.26f)
             {
                 onpos = false;
                 StopCoroutine(Move());
@@ -69,7 +74,7 @@ public class Boss : MonoBehaviour
         }
     }
 
-    void SantanFire1()
+    void SantanFireL()
     {
         int count = 40;
 
@@ -84,7 +89,7 @@ public class Boss : MonoBehaviour
 
         }
     }
-    void SantanFire2()
+    void SantanFireR()
     {
         int count = 40;
 

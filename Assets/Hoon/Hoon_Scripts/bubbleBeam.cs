@@ -20,10 +20,11 @@ public class bubbleBeam : MonoBehaviour
     {
         if(collision.CompareTag("Hoon_Enemy"))
         {
-            IDamageable enemy = collision.gameObject.GetComponent<IDamageable>();
+            Hoon_Monster enemy = collision.GetComponent<Hoon_Monster>();
             if (enemy != null)
             {
             enemy.Damage(1);
+            Debug.Log("경험치 UI: " + GameManager.instance.expUI.fillAmount);
             }
 
             //SoundManager.instance.SoundDie();
@@ -39,34 +40,7 @@ public class bubbleBeam : MonoBehaviour
 
     IEnumerator BubblePop()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }
-
-
-//     public float bulletSpeed = 0.5f;
-//     public int damage = 10;
-//     public GameObject Explosion;
-//     public GameObject PowerItem;
-//     public bool ExplodeFin = false;
-//     
-
-//         else if(collision.CompareTag("Boss"))
-//         {
-//             GameObject go = Instantiate(Explosion, transform.position, Quaternion.identity);
-//             Destroy(go, 0.5f);
-//             SoundManager.instance.SoundDie();
-//         }
-//     }
-
-
-
-
-//     void Update()
-//     {
-//         transform.Translate(0, bulletSpeed * Time.deltaTime, 0);
-
-        
-//     }
-// }
