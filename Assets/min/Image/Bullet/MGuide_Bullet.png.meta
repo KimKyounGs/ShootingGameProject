@@ -348,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MGuide_Bullet_0: -1415320826645788700
+      MGuide_Bullet_1: 6143450391785694337
+      MGuide_Bullet_2: -4189032768347910164
+      MGuide_Bullet_3: 8272394914124155456
+      MGuide_Bullet_4: -4701548510779930617
+      MGuide_Bullet_5: 6680203758344343232
+      MGuide_Bullet_6: 6130235646231081602
+      MGuide_Bullet_7: 7326910425586907807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
