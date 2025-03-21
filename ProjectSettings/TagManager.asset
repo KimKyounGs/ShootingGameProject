@@ -10,6 +10,8 @@ TagManager:
   - PK_Boss
   - Swould
   - Hoon_Enemy
+  - Monster
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2581427925067662433}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 3435160172024750238}
   - component: {fileID: 2151337608918776982}
   - component: {fileID: 9076973119152255941}
+  - component: {fileID: 7154785777611908718}
   m_Layer: 0
   m_Name: Enemy7
   m_TagString: Monster
@@ -249,12 +250,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
-  speed: 3
-  delay: 1
-  bulletPos: {fileID: 2581427925067662433}
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
   spawnLocation: 2
   Item: {fileID: 0}
+--- !u!114 &7154785777611908718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093257328910207725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef312026a519f041aae7dd668277699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 8709899459354135059, guid: 8bab9a4013324264a971975e4dd7d9ef, type: 3}
+  firePoint: {fileID: 2581427925067662433}
+  chargeTime: 1
+  laserDuration: 2
+  fireInterval: 5
+  laserLength: 6
 --- !u!1 &4228898346679544916
 GameObject:
   m_ObjectHideFlags: 0
