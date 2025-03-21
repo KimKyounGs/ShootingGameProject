@@ -3,13 +3,25 @@ using UnityEngine;
 
 public class KK_SpawnManaer : MonoBehaviour
 {
-    public float ss = -2; //몬스터 생성 x값 처음
-    public float es = 2;  //몬스터 생성 x값 끝
-    public float StartTime = 1; //시작
-    public float SpawnStop = 10; //스폰끝나는시간
-    public GameObject monster;
-    public GameObject monster2;
-    public GameObject Boss;
+    [Header("Spawn1 포인트 위치 변수 값(위에)")]
+    [SerializeField] private float spawnUpStartX = -2; 
+    [SerializeField] private float spawnUpEndX = 2;  
+
+    [Header("Spawn2 포인트 위치 변수 값(중앙)")]
+    [SerializeField] private float spawnCenterStartX = -2.5f; 
+    [SerializeField] private float spawnCenterEndX = 2.5f;  
+    [SerializeField] private float spawnCenterStartY = 0f;
+    [SerializeField] private float spawnCenterEndY = 4.5f;
+
+    [Header("스폰 시간")]
+    [SerializeField] private float StartTime = 1; //시작
+    [SerializeField] private float SpawnStop = 10; //스폰 끝나는시간
+
+    [Header("Monster 프리팹")]
+    [SerializeField] private GameObject[] monster1;
+    [SerializeField] private GameObject[] monster2;
+    [SerializeField] private GameObject[] monster3;
+    [SerializeField] private GameObject Boss;
 
 
     [SerializeField]
@@ -18,61 +30,48 @@ public class KK_SpawnManaer : MonoBehaviour
     bool swi = true;
     bool swi2 = true;
 
-    void Start()
-    {
-        StartCoroutine("RandomSpawn");
-        Invoke("Stop", SpawnStop);
-    }
 
-    //코루틴으로 랜덤하게 생성하기
-    IEnumerator RandomSpawn()
-    {
-        while(swi)
-        {
-            //1초마다
-            yield return new WaitForSeconds(StartTime);
-            //x값 랜덤
-            float x = Random.Range(ss, es);
-            //x값은 랜덤 y값은 자기자신값
-            Vector2 r = new Vector2(x, transform.position.y);
-            //몬스터 생성
-            Instantiate(monster, r, Quaternion.identity);
-        }
-    }
-    //코루틴으로 랜덤하게 생성하기
-    IEnumerator RandomSpawn2()
-    {
-        while (swi2)
-        {
-            //1초마다
-            yield return new WaitForSeconds(StartTime+2);
-            //x값 랜덤
-            float x = Random.Range(ss, es);
-            //x값은 랜덤 y값은 자기자신값
-            Vector2 r = new Vector2(x, transform.position.y);
-            //몬스터 생성
-            Instantiate(monster2, r, Quaternion.identity);
-        }
-    }
-    void Stop()
-    {
-        swi = false;
-        StopCoroutine("RandomSpawn");
-        //두번째 몬스터 코루틴
-        StartCoroutine("RandomSpawn2");
+void Start()
+{
+    StartCoroutine(RandomSpawn(monster1, spawnUpStartX, spawnUpEndX, 5.5f, StartTime, true));
+    Invoke("Stop", SpawnStop);
+}
 
-        //30초뒤에 2번째 몬스터 호출멈추기
-        Invoke("Stop2", SpawnStop + 20);
+// 랜덤 스폰을 하나의 코루틴으로 통합
+IEnumerator RandomSpawn(GameObject[] monsterPrefab, float startX, float endX, float yPos, float spawnDelay, bool isFirstWave)
+{
+    bool isRunning = true;
 
-    }
-
-    void Stop2()
+    while (isRunning)
     {
-        swi2 = false;
-        StopCoroutine("RandomSpawn2");
-        textBossWarning.SetActive(true);
-        //보스
-        Vector3 pos = new Vector3(0, 2.97f, 0);
-        Instantiate(Boss, pos, Quaternion.identity);
+        yield return new WaitForSeconds(spawnDelay);
+
+        float x = Random.Range(startX, endX);
+        Vector2 spawnPos = new Vector2(x, yPos);
+        //Instantiate(monsterPrefab, spawnPos, Quaternion.identity);
+
+        // 첫 번째 웨이브 종료 시 flag 변경
+        if (!isFirstWave) isRunning = swi2;
+        else isRunning = swi;
     }
+}
+
+// 첫 번째 몬스터 웨이브 종료 & 두 번째 몬스터 웨이브 시작
+void Stop()
+{
+    swi = false;
+
+    //StartCoroutine(RandomSpawn(monster2, ss, es, transform.position.y, StartTime + 2, false));
+    Invoke("Stop2", SpawnStop + 20);
+}
+
+// 두 번째 몬스터 웨이브 종료 & 보스 등장
+void Stop2()
+{
+    swi2 = false;
+
+    textBossWarning.SetActive(true);
+    Vector3 pos = new Vector3(0, 2.97f, 0);
+    Instantiate(Boss, pos, Quaternion.identity);
+}
 }

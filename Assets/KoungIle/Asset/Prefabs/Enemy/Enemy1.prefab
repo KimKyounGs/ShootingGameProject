@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 379561492646924998}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,10 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  Speed: 3
+  Speed: 0.5
   Delay: 1
-  bulletPos: {fileID: 0}
-  bullet: {fileID: 0}
+  bulletPos: {fileID: 8977429903449793688}
+  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
   Item: {fileID: 0}
 --- !u!1 &8250493595715212202
 GameObject:
