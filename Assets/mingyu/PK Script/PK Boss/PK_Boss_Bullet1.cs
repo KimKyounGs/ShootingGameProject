@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PK_Boss_Bullet : MonoBehaviour
+public class PK_Boss_Bullet1 : MonoBehaviour
 {
     public float Speed = 3f;
     Vector2 vec2 = Vector2.down;

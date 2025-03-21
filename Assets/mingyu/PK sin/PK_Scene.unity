@@ -1038,9 +1038,37 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
-      propertyPath: mb2
+      propertyPath: mb
       value: 
       objectReference: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: mb1
+      value: 
+      objectReference: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: mb2
+      value: 
+      objectReference: {fileID: 9040495435885128795, guid: 0dff31623482d0a4087a34f6bd99a3bb, type: 3}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: mb3
+      value: 
+      objectReference: {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: Bullet_3
+      value: 
+      objectReference: {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: Bullet_3_1
+      value: 
+      objectReference: {fileID: 1020511285518648340, guid: f2bc4e55899338343afd994b8376881b, type: 3}
+    - target: {fileID: 5789961177903659936, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789961177903659936, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6037713097317273826, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 0.1
@@ -1102,7 +1130,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 586164732877908653, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}

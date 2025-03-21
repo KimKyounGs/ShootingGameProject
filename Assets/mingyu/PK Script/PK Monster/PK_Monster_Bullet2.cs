@@ -24,7 +24,6 @@ public class PK_Monster_Bullet2 : MonoBehaviour
     {
         transform.Translate(dirNo * Speed * Time.deltaTime);
 
-
         //////Update에다가 넣으면 플레이어를 계속 찾는다
         ////플레이어 태그로 찾기
         //target = GameObject.FindGameObjectWithTag("Player");

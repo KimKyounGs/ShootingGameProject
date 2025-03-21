@@ -7,10 +7,10 @@ public class PK_Boss : MonoBehaviour
 {
     float B_HP = 100;
 
-    public GameObject mb;
+    public GameObject mb1;
     public GameObject mb2;
+    
     public Transform pos1;
-    public Transform pos2;
 
     public bool boss_attack = true;
     public int attack_chose = 0;
@@ -25,6 +25,8 @@ public class PK_Boss : MonoBehaviour
     public bool skill_2_move1 = true;
     public bool skill_2_move2 = false;
 
+    public GameObject Bullet_3;
+    public bool skill_3 = true;
 
 
     public float cool_time = 0;
@@ -37,13 +39,12 @@ public class PK_Boss : MonoBehaviour
 
     private void Update()
     {
-
         cool_time += Time.deltaTime;
 
 
         if (boss_attack == true && cool_time >= 3)
         {
-            attack_chose = Random.Range(2, 2);
+            attack_chose = Random.Range(3, 3);
             Debug.LogWarning(attack_chose);
             if (attack_chose > 0)
             {
@@ -65,7 +66,12 @@ public class PK_Boss : MonoBehaviour
         {
             BossAttack2();
         }
-  
+
+
+        if (attack_chose == 3 && skill_2 == true)
+        {
+            BossAttack3();
+        }
 
         //if (attack_chose > 2)
         //{
@@ -94,7 +100,7 @@ public class PK_Boss : MonoBehaviour
 
         if (cool_time > 0.15 && cool_time < 2)
         {
-            Instantiate(mb2, pos2.position, Quaternion.identity);
+            Instantiate(mb1, pos1.position, Quaternion.identity);
             cool_time = 0;
         }
 
@@ -174,6 +180,7 @@ public class PK_Boss : MonoBehaviour
 
 
 
+
         IEnumerator CircleFire()
         {
             bool a = true;
@@ -205,7 +212,7 @@ public class PK_Boss : MonoBehaviour
                     float y = Mathf.Sin(angle * Mathf.Deg2Rad);
 
                     //발사체 이동 방향 설정
-                    clone.GetComponent<PK_Boss_Bullet>().Move(new Vector2(x, y));
+                    clone.GetComponent<PK_Boss_Bullet2>().Move(new Vector2(x, y));
                 }
                 //발사체가 생성되는 시작 각도 설정을 위한변수
                 weightAngle += 3;
@@ -234,11 +241,67 @@ public class PK_Boss : MonoBehaviour
 
 
 
+    public void BossAttack3()
+    {
+
+        int RandomY = Random.Range(-5, 6); //y
+        int RandomX = Random.Range(-3, 4); //x
+
+
+        Vector3 a = new Vector3(3, RandomY, 0); // 오른쪽
+        Vector3 b = new Vector3(-3, RandomY, 0);   //왼쪽
+        Vector3 c = new Vector3(RandomX, 5, 0);   //위쪽
+        Vector3 d = new Vector3(RandomX, -5, 0);   //아래쪽
 
 
 
+        if (cool_time >= 3)
+        {
+            cool_time = 0;
+        }
 
 
+        if (cool_time >= 0.5)
+        {
+            cool_time = 0;
+            GameObject bulletA = Instantiate(Bullet_3, a, Quaternion.identity);
+            GameObject bulletB = Instantiate(Bullet_3, b, Quaternion.identity);
+            GameObject bulletC = Instantiate(Bullet_3, c, Quaternion.identity);
+            GameObject bulletD = Instantiate(Bullet_3, d, Quaternion.identity);
+            bulletB.transform.localScale = new Vector3(-1, 1, 1);
+            bulletC.transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+
+
+    //public void BossAttack() 이걸로 폭죽처럼 만들수 있게 가능함
+    //{
+
+    //    Vector3 a = new Vector3(0, -5, 0);
+    //    Vector3 b = new Vector3(0, 4, 0);
+
+    //    if (skill_3_Attack_Head == true)
+    //    {
+    //        Instantiate(Bullet_3, a, Quaternion.identity);   //머리가 되는거 한개만 발사
+    //        skill_3_Attack_Head = false;
+    //    }
+    //    Vector3 LastPosition = Bullet_3.transform.position;
+
+
+    //    if (cool_time >= 3)
+    //    {
+    //        cool_time = 0;
+    //    }
+
+    //    if (cool_time >= 0.1)
+    //    {
+
+    //        Instantiate(Bullet_3_1, LastPosition, Quaternion.identity);
+    //        cool_time = 0;
+    //    }
+
+    //}
 
 
 

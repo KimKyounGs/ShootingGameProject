@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 600e64c70a825b64d894c1a5c686c2d8
+guid: 4be1e9fac30e4594e94ffbc94dbaaf10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5179666300309619644
-    second: monster_bullet2 1_0
+      213: -4118290728378770403
+    second: monster_bullet3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monster_bullet2 1_0
+      name: monster_bullet3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 30
-        height: 28
+        x: 13
+        y: 7
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44cbbf261f02e18b0800000000000000
-      internalID: -5179666300309619644
+      spriteID: d1cd235f664e8d6c0800000000000000
+      internalID: -4118290728378770403
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      monster_bullet2 1_0: -5179666300309619644
+      monster_bullet3_0: -4118290728378770403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
