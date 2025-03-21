@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class bubbleBeam : MonoBehaviour
 {
     public float bulletSpeed = 0.5f;
+    public GameObject bubblePop;
     Animator ani;
 
     void Start()
@@ -24,23 +25,16 @@ public class bubbleBeam : MonoBehaviour
             if (enemy != null)
             {
             enemy.Damage(1);
-            Debug.Log("경험치 UI: " + GameManager.instance.expUI.fillAmount);
             }
 
-            //SoundManager.instance.SoundDie();
-            ani.SetBool("Destroy", true);
-            StartCoroutine(BubblePop());
-            //Destroy(collision.gameObject);
+            Hoon_AudioManager.instance.SFXBubblePop();
+            Destroy(gameObject);
+            GameObject go = Instantiate(bubblePop, collision.transform.position, Quaternion.identity);
+            Destroy(go, 0.2f);
         }
     }
     private void OnBecameInvisible()
     {
         Destroy(gameObject);       
-    }
-
-    IEnumerator BubblePop()
-    {
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
     }
 }

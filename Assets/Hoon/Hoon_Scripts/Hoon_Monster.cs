@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Hoon_Monster : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class Hoon_Monster : MonoBehaviour
     public float exp;
     public Animator ani;
     public SpriteRenderer sr;
-
+    public GameObject hit;
+        
     protected virtual void Start()
     {
         ani = GetComponent<Animator>();
@@ -31,16 +33,12 @@ public class Hoon_Monster : MonoBehaviour
 
         if(HP <= 0)
         {
-            ani.SetBool("Destroy", true);
-            StartCoroutine(monsterDie());
+            GameObject go = Instantiate(hit, transform.position, Quaternion.identity);
+            Destroy(go, 0.2f);
+            Destroy(gameObject);
             GameManager.instance.ExpGain(exp);
             //Instantiate(PowerItem, transform.position, Quaternion.identity);
         }
-    }
-    protected virtual IEnumerator monsterDie()
-    {
-        yield return new WaitForSeconds(0.3f);
-        Destroy(gameObject);
     }
     
     protected virtual IEnumerator Hit()

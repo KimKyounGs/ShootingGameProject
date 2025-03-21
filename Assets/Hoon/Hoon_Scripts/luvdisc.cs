@@ -6,9 +6,9 @@ public class luvdisc : Hoon_Monster
     protected override void Start()
     {
         base.Start();
-        moveSpeed = 2f;
+        moveSpeed = 2.5f;
         HP = 1;
-        exp = 0.2f;
+        exp = 0.5f;
     }
 
     protected override void Move()

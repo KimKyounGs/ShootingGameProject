@@ -25,6 +25,7 @@ public class EnemyBullet : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Vector3 vec = new Vector3(0,-0.2f,0);
+            Hoon_AudioManager.instance.CryRemoraid();
             GameObject go = Instantiate(hitEffect, transform.position + vec, Quaternion.identity);
             Destroy(go,0.2f);
             Destroy(gameObject);

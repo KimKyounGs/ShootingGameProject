@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 880f56a0dd1f947358b027ab9e6fb378
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bubblePop: {fileID: 2733146826521546949, guid: cee6b31c48948429998c179dd5e3810e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

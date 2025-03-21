@@ -190,3 +190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   HP: 1
+  exp: 0.1
+  ani: {fileID: 0}
+  sr: {fileID: 0}
+  hit: {fileID: 8545387462505232231, guid: f5be26e3e3f2e4e70a98c83f86e386b6, type: 3}
+  bite: {fileID: 6521915664412522922, guid: dd9d7d9faac744e82a17a85fef70ea6f, type: 3}
+  attack: {fileID: 6117626857136593050, guid: 787f2cbc9bfaa4786a16645a75760a02, type: 3}

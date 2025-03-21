@@ -219,6 +219,7 @@ MonoBehaviour:
   exp: 0.5
   ani: {fileID: 0}
   sr: {fileID: 0}
+  hit: {fileID: 5016089624711569800, guid: 0c93148bda77d4d648d745c2e5a59779, type: 3}
   bullet: {fileID: 5393759224806039370, guid: 90cdb19d3ccff4a2b9f0e1827ebca2f1, type: 3}
   pos1: {fileID: 3758662872393632167}
   pos2: {fileID: 171726775285107853}

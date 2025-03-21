@@ -24,7 +24,9 @@ public class Magikarp : MonoBehaviour
         CanShoot = false;
 
         // if (power <= 3)
+            Hoon_AudioManager.instance.SFXBubbleShoot();
             Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
+
         // else if (power <= 6)
         //     Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
         // else if (power <= 9)

@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
     public void ExpGain(float num)
     {
         exp += num;
-        Debug.Log("경험치 + " + num * 100);
-        Debug.Log($"현재 경험치: {exp}, 남은 경험치: {expLeft}");
+        Debug.Log($"경험치 + {num*100}! 현재 경험치: {exp / expLeft * 100}%");
 
         while (exp >= expLeft)
         {

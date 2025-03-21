@@ -6,11 +6,13 @@ public class SpawnManager : MonoBehaviour
     public GameObject luvdisc;
     public GameObject carvanha;
     public GameObject mantine;
+    public GameObject sharpedo;
     void Start()
     {
-        InvokeRepeating("SpawnLuvdisc", 1, 1);
+        InvokeRepeating("SpawnLuvdisc", 10, 15f);
         InvokeRepeating("SpawnCarvanha", 1, 3f);
         InvokeRepeating("SpawnMantine", 5, 6f);
+        InvokeRepeating("SpawnSharpedo", 10, 10f);
     }
 
     void Update()
@@ -34,6 +36,12 @@ public class SpawnManager : MonoBehaviour
     {
         float randomX = Random.Range(-2f, 2f);
         Instantiate(mantine, new Vector3(randomX, transform.position.y, 0f), Quaternion.identity);
+    }
+
+    void SpawnSharpedo()
+    {
+        float randomX = Random.Range(-2f, 2f);
+        Instantiate(sharpedo, new Vector3(randomX, transform.position.y, 0f), Quaternion.identity);
     }
 }
 
