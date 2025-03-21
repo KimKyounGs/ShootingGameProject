@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9100790360566868041}
   - component: {fileID: 7220657540198772150}
   - component: {fileID: 3069514627202801456}
+  - component: {fileID: -3652081703708252482}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Monster
@@ -164,11 +165,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.22813916, y: 0.14798236}
+    - - {x: -0.20955658, y: 0.13088632}
       - {x: -0.1552695, y: -0.08240008}
-      - {x: 0.015695453, y: -0.16984344}
+      - {x: 0.003802538, y: -0.14234138}
       - {x: 0.17713034, y: -0.04904771}
-      - {x: 0.21356511, y: 0.15526938}
+      - {x: 0.19646907, y: 0.1329701}
   m_UseDelaunayMesh: 0
 --- !u!114 &3069514627202801456
 MonoBehaviour:
@@ -183,12 +184,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
-  speed: 3
-  delay: 1
-  bulletPos: {fileID: 7296215068009923678}
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  speed: 1
   spawnLocation: 1
   Item: {fileID: 0}
+--- !u!114 &-3652081703708252482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7525389934139739809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf5ce95f77a026468b8d1f49a584028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bulletPos: {fileID: 7296215068009923678}
+  delay: 1
+  target: {fileID: 0}
 --- !u!1 &8983461849364428761
 GameObject:
   m_ObjectHideFlags: 0

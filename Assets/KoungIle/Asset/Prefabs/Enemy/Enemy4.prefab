@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7158597707878809470}
   - component: {fileID: 7085224965353154978}
   - component: {fileID: 4465158175769740347}
+  - component: {fileID: -1973084623560320339}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Monster
@@ -183,11 +184,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 30
   speed: 3
-  delay: 1
-  bulletPos: {fileID: 2789926163086268897}
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
   spawnLocation: 2
   Item: {fileID: 0}
+--- !u!114 &-1973084623560320339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606844308827324250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd50ec09cf4b294a9613080c70c2667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  explosionEffect: {fileID: 186041240039189289, guid: 6172800bbe53b9b4dbbbe206fd043800, type: 3}
 --- !u!1 &7508889747883531372
 GameObject:
   m_ObjectHideFlags: 0
