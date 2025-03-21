@@ -30,6 +30,7 @@ public class MJ_Spawner : MonoBehaviour
             Vector2 r = new Vector2(x, transform.position.y);
             //몬스터 생성
             Instantiate(monster, r, Quaternion.identity);
+            //Debug.Log("몬스터 생성");
 
             yield return new WaitForSeconds(RespawnCycle);
         }
@@ -39,5 +40,6 @@ public class MJ_Spawner : MonoBehaviour
     {
         swi = false;
         StopCoroutine("RandomSpawn");
+        //Debug.Log("몬스터 생성 끄기");
     }
 }
