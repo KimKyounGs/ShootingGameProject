@@ -21,6 +21,11 @@ public class MonsterCrossR : MonoBehaviour
         {
             CrossComing();
         }
+
+        if(isLazerFired)
+        {
+            CrossDown();
+        }
     }
 
     private void OnBecameInvisible()
@@ -35,12 +40,15 @@ public class MonsterCrossR : MonoBehaviour
 
     void CrossDown()
     {
-        Vector2 end = new Vector2(-3.4f, -7.4f);
+        Vector2 end = new Vector2(-5.1f, -11.1f);
+        transform.position = Vector2.Lerp(transform.position, end, 0.5f * Time.deltaTime);
     }
 
     void Gaging()
     {
         GameObject go = Instantiate(Gage1, pos1.position, Quaternion.identity);
-        //Destroy(go, 0.5f);
+        Destroy(go, 1f);
+        isCrossComing = false;
+        isLazerFired = true;
     }
 }

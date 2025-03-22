@@ -9,10 +9,10 @@ public class MonsterCrossL : MonoBehaviour
     bool isCrossComing = true;
     bool isLazerFired = false;
 
-
     void Start()
     {
         Invoke("Gaging", 1.5f);
+        Invoke("FireLazer", 2.5f);
     }
 
     
@@ -21,6 +21,11 @@ public class MonsterCrossL : MonoBehaviour
         if(isCrossComing)
         {
             CrossComing();
+        }
+
+        if(isLazerFired)
+        {
+            CrossDown();
         }
     }
 
@@ -36,12 +41,22 @@ public class MonsterCrossL : MonoBehaviour
     
     void CrossDown()
     {
-        Vector2 end = new Vector2(3.4f, -7.4f);
+        Vector2 end = new Vector2(5.1f, -11.1f);
+        transform.position = Vector2.Lerp(transform.position, end, 0.5f * Time.deltaTime);
     }
 
     void Gaging()
     {
         GameObject go = Instantiate(Gage1, pos1.position, Quaternion.identity);
-        //Destroy(go, 0.5f);
+        Destroy(go, 1f);
+        isCrossComing = false;
+        isLazerFired = true;
+    }
+
+    void FireLazer()
+    {
+        Quaternion rotation = Quaternion.Euler(0, 0, 25);
+        GameObject fire = Instantiate(Lazer1, pos1.position, rotation);
+        Destroy(fire, 1.2f);
     }
 }
