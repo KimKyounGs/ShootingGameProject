@@ -12,7 +12,6 @@ TagManager:
   - Hoon_Enemy
   - Monster
   - PlayerBullet
-  - Head
   layers:
   - Default
   - TransparentFX

@@ -7,29 +7,18 @@ public class PK_Boss : MonoBehaviour
 {
     float B_HP = 100;
 
-    public GameObject mb1;
-    public GameObject mb2;
-    
+    public GameObject Bullet_1;
+    public GameObject Bullet_2;
+    public GameObject Bullet_3;
+    public GameObject Bullet_4;
+    public GameObject Bullet_5;
+
     public Transform pos1;
 
     public bool boss_attack = true;
     public int attack_chose = 0;
-
-    public bool skill_1 = true;
-    public float skill_1_speed = 9;
-    public float skill_1_target = -2;
-    public float skill_1_turn = 0;
-
-
-    public bool skill_2 = true;
-    public bool skill_2_move1 = true;
-    public bool skill_2_move2 = false;
-
-    public GameObject Bullet_3;
-    public bool skill_3 = true;
-
-
-    public float cool_time = 0;
+    public float cool_time1 = 0;
+    public float cool_time2 = 0;
 
 
     private void Start()
@@ -39,40 +28,52 @@ public class PK_Boss : MonoBehaviour
 
     private void Update()
     {
-        cool_time += Time.deltaTime;
+        cool_time1 += Time.deltaTime;
+        cool_time2 += Time.deltaTime;
 
 
-        if (boss_attack == true && cool_time >= 3)
+        if (boss_attack == true && cool_time1 >= 3)
         {
-            attack_chose = Random.Range(3, 3);
-            Debug.LogWarning(attack_chose);
+            attack_chose = Random.Range(5, 5);
+
             if (attack_chose > 0)
             {
+                cool_time1 = 0;
+                cool_time2 = 0;
                 boss_attack = false;
             }
         }
 
 
 
-        if (attack_chose == 1 && skill_1 == true)
+        if (attack_chose == 1)
         {
             BossAttack1();
         }
 
 
-
-
-        if (attack_chose == 2 && skill_2 == true)
+        if (attack_chose == 2)
         {
             BossAttack2();
         }
 
 
-        if (attack_chose == 3 && skill_2 == true)
+        if (attack_chose == 3)
         {
             BossAttack3();
         }
 
+
+        if (attack_chose == 4)
+        {
+            BossAttack4();
+        }
+
+
+        if (attack_chose == 5)
+        {
+            BossAttack5();
+        }
         //if (attack_chose > 2)
         //{
         //    cool_time = 0;
@@ -85,23 +86,19 @@ public class PK_Boss : MonoBehaviour
 
 
 
-
+    public float skill_1_speed = 9;
+    public float skill_1_target = -2;
+    public float skill_1_turn = 0;
     public void BossAttack1()
     {
 
         transform.Translate(skill_1_target * skill_1_speed * Time.deltaTime, 0, 0);
 
 
-        if (cool_time > 3)
+        if (cool_time1 > 0.15 && cool_time1 < 2)
         {
-            cool_time = 0;
-        }
-
-
-        if (cool_time > 0.15 && cool_time < 2)
-        {
-            Instantiate(mb1, pos1.position, Quaternion.identity);
-            cool_time = 0;
+            Instantiate(Bullet_1, pos1.position, Quaternion.identity);
+            cool_time1 = 0;
         }
 
 
@@ -120,7 +117,7 @@ public class PK_Boss : MonoBehaviour
 
         if (skill_1_turn == 2 && transform.position.x >= 3)
         {
-                skill_1_speed = 10f;
+            skill_1_speed = 10f;
             skill_1_target = -3;
         }
 
@@ -129,7 +126,7 @@ public class PK_Boss : MonoBehaviour
             attack_chose = 0;
             skill_1_turn = 0;
             skill_1_speed = 9f;
-            cool_time = 0;
+            cool_time1 = 0;
             boss_attack = true;
         }
 
@@ -137,9 +134,12 @@ public class PK_Boss : MonoBehaviour
 
 
 
+    public bool skill_2_move1 = true;
+    public bool skill_2_move2 = false;
+    public float skill_2_speed = 2;
+
     public void BossAttack2()
     {
-        float skill_2_speed = 2;
         float skill_2_target = -2;
         bool skill_2_bullet = false;
 
@@ -158,8 +158,13 @@ public class PK_Boss : MonoBehaviour
         if (skill_2_bullet == true)    //공격 한번만 반복되게 하기
         {
             StartCoroutine(CircleFire());
-            cool_time = 0;
+            cool_time1 = 0;
             skill_2_bullet = false; //공격 끔
+        }
+
+        if (cool_time1 >= 10)        //10초가 지나면 발사를 멈추고 제자리에 돌아가서 공격 뭐할지 정하게 하기
+        {
+            skill_2_move2 = true;   //제자리로 이동시키기
         }
 
 
@@ -170,10 +175,10 @@ public class PK_Boss : MonoBehaviour
 
             if (transform.position.y >= 4f) //원래 위치로 이동했다면
             {
-                cool_time = 0;
                 skill_2_move2 = false;  //움직임 멈추기
                 skill_2_move1 = true;
                 attack_chose = 0;
+                cool_time1 = 0;
                 boss_attack = true; //보스 주사위 굴리기
             }
         }
@@ -201,7 +206,7 @@ public class PK_Boss : MonoBehaviour
                 for (int i = 0; i < count; ++i)
                 {
                     //발사체 생성
-                    GameObject clone = Instantiate(mb2, transform.position, Quaternion.identity);
+                    GameObject clone = Instantiate(Bullet_2, transform.position, Quaternion.identity);
 
                     //발사체 이동 방향(각도)
                     float angle = weightAngle + intervalAngle * i;
@@ -220,7 +225,7 @@ public class PK_Boss : MonoBehaviour
                 //3초마다 미사일 발사
                 yield return new WaitForSeconds(attackRate);
 
-                if (cool_time >= 10)        //10초가 지나면 발사를 멈추고 제자리에 돌아가서 공격 뭐할지 정하게 하기
+                if (cool_time1 >= 10)        //10초가 지나면 발사를 멈추고 제자리에 돌아가서 공격 뭐할지 정하게 하기
                 {
                     a = false;  //총알 발사 멈추기
                     skill_2_move2 = true;   //제자리로 이동시키기
@@ -243,7 +248,7 @@ public class PK_Boss : MonoBehaviour
 
     public void BossAttack3()
     {
-
+        //활성화가 되어있다면 계속 랜덤 돌림
         int RandomY = Random.Range(-5, 6); //y
         int RandomX = Random.Range(-3, 4); //x
 
@@ -254,16 +259,9 @@ public class PK_Boss : MonoBehaviour
         Vector3 d = new Vector3(RandomX, -5, 0);   //아래쪽
 
 
-
-        if (cool_time >= 3)
+        if (cool_time1 >= 0.5)   //발사 속도
         {
-            cool_time = 0;
-        }
-
-
-        if (cool_time >= 0.5)
-        {
-            cool_time = 0;
+            cool_time1 = 0;
             GameObject bulletA = Instantiate(Bullet_3, a, Quaternion.identity);
             GameObject bulletB = Instantiate(Bullet_3, b, Quaternion.identity);
             GameObject bulletC = Instantiate(Bullet_3, c, Quaternion.identity);
@@ -271,37 +269,70 @@ public class PK_Boss : MonoBehaviour
             bulletB.transform.localScale = new Vector3(-1, 1, 1);
             bulletC.transform.localScale = new Vector3(-1, 1, 1);
         }
+
+        if (cool_time2 >= 10)   //10초 지나면 공격 멈추고 보스 주사위 굴리기
+        {
+            cool_time1 = 0;
+            cool_time2 = 0;
+            attack_chose = 0;   //보스 주사위 값 초기화
+            boss_attack = true; //보스 주사위 굴리기
+        }
     }
 
 
 
-    //public void BossAttack() 이걸로 폭죽처럼 만들수 있게 가능함
-    //{
-
-    //    Vector3 a = new Vector3(0, -5, 0);
-    //    Vector3 b = new Vector3(0, 4, 0);
-
-    //    if (skill_3_Attack_Head == true)
-    //    {
-    //        Instantiate(Bullet_3, a, Quaternion.identity);   //머리가 되는거 한개만 발사
-    //        skill_3_Attack_Head = false;
-    //    }
-    //    Vector3 LastPosition = Bullet_3.transform.position;
 
 
-    //    if (cool_time >= 3)
-    //    {
-    //        cool_time = 0;
-    //    }
 
-    //    if (cool_time >= 0.1)
-    //    {
 
-    //        Instantiate(Bullet_3_1, LastPosition, Quaternion.identity);
-    //        cool_time = 0;
-    //    }
 
-    //}
+
+
+
+    public void BossAttack4() //이걸로 폭죽처럼 만들수 있게 가능함
+    {
+        if (cool_time1 >= 4)
+        {
+
+        Instantiate(Bullet_4, transform.position, Quaternion.identity);
+        cool_time1 = 0;
+        }
+
+
+        if (cool_time2 >= 30)   //10초 지나면 보스 멈추고 주사위 굴리기
+        {
+            cool_time1 = 0;
+            cool_time2 = 0;
+            attack_chose = 0;   //보스 주사위 값 초기화
+            boss_attack = true; //보스 주사위 굴리기
+        }
+    }
+
+
+
+
+
+    public void BossAttack5() //이걸로 폭죽처럼 만들수 있게 가능함
+    {
+        if (cool_time1 >= 0.3)
+        {
+
+            Instantiate(Bullet_5, transform.position, Quaternion.identity);
+            cool_time1 = 0;
+        }
+
+
+        if (cool_time2 >= 20)   //10초 지나면 보스 멈추고 주사위 굴리기
+        {
+            cool_time1 = 0;
+            cool_time2 = 0;
+            attack_chose = 0;   //보스 주사위 값 초기화
+            boss_attack = true; //보스 주사위 굴리기
+        }
+    }
+
+
+
 
 
 

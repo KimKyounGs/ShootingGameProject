@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1281032116627877956
+--- !u!1 &8240788215690239647
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4222652621249203986}
-  - component: {fileID: 1413782631562132343}
-  - component: {fileID: 2189144440204023781}
-  - component: {fileID: 6888796735024149253}
-  - component: {fileID: 3321735731038285490}
+  - component: {fileID: 380622481436291846}
+  - component: {fileID: 5478140927773130463}
+  - component: {fileID: 8723391556251564994}
+  - component: {fileID: 2152004774079575378}
+  - component: {fileID: 3876782947479973596}
   m_Layer: 8
-  m_Name: boss_bullet3
+  m_Name: boss_bullet5
   m_TagString: PK_Monster_Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4222652621249203986
+--- !u!4 &380622481436291846
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281032116627877956}
+  m_GameObject: {fileID: 8240788215690239647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,13 +35,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1413782631562132343
+--- !u!212 &5478140927773130463
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281032116627877956}
+  m_GameObject: {fileID: 8240788215690239647}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,25 +79,25 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4118290728378770403, guid: 4be1e9fac30e4594e94ffbc94dbaaf10, type: 3}
+  m_Sprite: {fileID: -7806970187208137992, guid: eadee24b916d80d49a92116c0a009ffa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.28}
+  m_Size: {x: 0.3, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2189144440204023781
+--- !u!50 &8723391556251564994
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281032116627877956}
+  m_GameObject: {fileID: 8240788215690239647}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -117,13 +117,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6888796735024149253
+--- !u!58 &2152004774079575378
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281032116627877956}
+  m_GameObject: {fileID: 8240788215690239647}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -147,23 +147,26 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.0860191
---- !u!114 &3321735731038285490
+  m_Radius: 0.15
+--- !u!114 &3876782947479973596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281032116627877956}
+  m_GameObject: {fileID: 8240788215690239647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa30d3f8c9effc3448034909c34cb5b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e06d6a8fe8186e45ba11ad13637f312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  Bullet: {fileID: 4918774290787687026, guid: 776f90fb8a104d34db77f3476cc988cc, type: 3}
   Speed: 6
+  cool_time: 0
+  a: 1
