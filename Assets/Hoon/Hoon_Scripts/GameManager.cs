@@ -2,15 +2,19 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Playables;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public PlayableDirector evolutionTimeline;
     public float exp = 0;
     public int level = 1;
     public float expLeft = 1f;
+    public Vector3 centerPos = new Vector3(0, 0, 0);
 
     public Image expUI;
     public TMP_Text levelUI;
+    public TMP_Text nameUI;
 
     public void Awake()
     {
@@ -24,6 +28,7 @@ public class GameManager : MonoBehaviour
     {
         expUI.fillAmount = 0;
         levelUI.text = "Lv" + level;
+        nameUI.text = "잉어킹";
     }
 
     public void Update()
@@ -49,9 +54,36 @@ public class GameManager : MonoBehaviour
         level ++;
         levelUI.text = "Lv" + level;
         expLeft += expLeft / 10f; //10% 더 채워야 레벨업.
+
+        if (level >= 2 && !Magikarp.instance.isEvolved)
+        {            
+            Magikarp.instance.isEvolved = true;
+            StartCoroutine(moveCenter());
+            evolutionTimeline.Play();
+            Time.timeScale = 0;
+        }
         
     }
+    public void EndTimeline()
+    {
+        Time.timeScale = 1;
+        nameUI.text = "갸라도스";
+    }
 
+    IEnumerator moveCenter()
+    {
+        float moveDuration = 0.8f;
+        float elapsed = 0f;
+        Vector3 startPos = Magikarp.instance.GetComponent<Transform>().position;
 
+        while (elapsed < moveDuration)
+        {
+            Magikarp.instance.GetComponent<Transform>().position = Vector3.Lerp(startPos, centerPos, elapsed / moveDuration);
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        Magikarp.instance.GetComponent<Transform>().position = centerPos;
+    }
 
 }

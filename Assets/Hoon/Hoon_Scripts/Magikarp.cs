@@ -6,17 +6,26 @@ using TMPro;
 
 public class Magikarp : MonoBehaviour
 {
+    public static Magikarp instance;
     public float magikarpSpeed = 3f;
     private Vector2 minBounds;
     private Vector2 maxBounds;
+
     Animator magikarpAni; //애니메이터를 가져올 변수
     public GameObject[] Bullet;
     public Transform pos = null;
     public bool CanShoot = true;
     public int power = 0;
+    public bool isEvolved = false;
 
-
-
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Destroy(gameObject);
+    }
 
     public void Shoot()
     {
