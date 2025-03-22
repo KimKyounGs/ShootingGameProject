@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: ac78b458ce993dd47a86d50109ce36e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2311133905355031754
+    second: Cross_fire_effect_R_0
+  - first:
+      213: -681981232769796423
+    second: Cross_fire_effect_R_1
+  - first:
+      213: -5149256788817403024
+    second: Cross_fire_effect_R_2
+  - first:
+      213: 1716626465942893845
+    second: Cross_fire_effect_R_3
+  - first:
+      213: -8200503299397629346
+    second: Cross_fire_effect_R_4
+  - first:
+      213: -5281214855648795993
+    second: Cross_fire_effect_R_5
+  - first:
+      213: -8355652064201334479
+    second: Cross_fire_effect_R_6
+  - first:
+      213: 6593173392112864890
+    second: Cross_fire_effect_R_7
+  - first:
+      213: -8115710891202140760
+    second: Cross_fire_effect_R_8
+  - first:
+      213: 6665870653947204855
+    second: Cross_fire_effect_R_9
+  - first:
+      213: -3924661318082335387
+    second: Cross_fire_effect_R_10
+  - first:
+      213: 1297341141553635520
+    second: Cross_fire_effect_R_11
+  - first:
+      213: 8316225801663743206
+    second: Cross_fire_effect_R_12
+  - first:
+      213: 7912538958518316529
+    second: Cross_fire_effect_R_13
+  - first:
+      213: -4479644986646821561
+    second: Cross_fire_effect_R_14
+  - first:
+      213: 5898708086172555249
+    second: Cross_fire_effect_R_15
+  - first:
+      213: -2085590647336216496
+    second: Cross_fire_effect_R_16
+  - first:
+      213: -2364040943826396020
+    second: Cross_fire_effect_R_17
+  - first:
+      213: 969177717943050797
+    second: Cross_fire_effect_R_18
+  - first:
+      213: 7919594217169622118
+    second: Cross_fire_effect_R_19
+  - first:
+      213: -6904162477884398213
+    second: Cross_fire_effect_R_20
+  - first:
+      213: 3410907997872343755
+    second: Cross_fire_effect_R_21
+  - first:
+      213: -6319310706135916510
+    second: Cross_fire_effect_R_22
+  - first:
+      213: -7243441089869822302
+    second: Cross_fire_effect_R_23
+  - first:
+      213: 1411485875065882768
+    second: Cross_fire_effect_R_24
+  - first:
+      213: -7065154504201355518
+    second: Cross_fire_effect_R_25
+  - first:
+      213: 2586876312091004332
+    second: Cross_fire_effect_R_26
+  - first:
+      213: 653325331970742023
+    second: Cross_fire_effect_R_27
+  - first:
+      213: 3983760409340487316
+    second: Cross_fire_effect_R_28
+  - first:
+      213: -9175410620340751604
+    second: Cross_fire_effect_R_29
+  - first:
+      213: 3090556443570455526
+    second: Cross_fire_effect_R_30
+  - first:
+      213: -2104354295117849771
+    second: Cross_fire_effect_R_31
+  - first:
+      213: 8079280737526450294
+    second: Cross_fire_effect_R_32
+  - first:
+      213: -6784312125244774452
+    second: Cross_fire_effect_R_33
+  - first:
+      213: -4759064027618667914
+    second: Cross_fire_effect_R_34
+  - first:
+      213: 3491071212825655861
+    second: Cross_fire_effect_R_35
+  - first:
+      213: 5340727555288793781
+    second: Cross_fire_effect_R_36
+  - first:
+      213: -2801591714641126272
+    second: Cross_fire_effect_R_37
+  - first:
+      213: 8402169345464897188
+    second: Cross_fire_effect_R_38
+  - first:
+      213: -3898791179018653689
+    second: Cross_fire_effect_R_39
+  - first:
+      213: -332105828956764188
+    second: Cross_fire_effect_R_40
+  - first:
+      213: -5997319190326812476
+    second: Cross_fire_effect_R_41
+  - first:
+      213: -4448368636801385758
+    second: Cross_fire_effect_R_42
+  - first:
+      213: 6569424302465628411
+    second: Cross_fire_effect_R_43
+  - first:
+      213: 5003627872203713114
+    second: Cross_fire_effect_R_44
+  - first:
+      213: 1354081708185016551
+    second: Cross_fire_effect_R_45
+  - first:
+      213: -4077259910914119119
+    second: Cross_fire_effect_R_46
+  - first:
+      213: 4049815120424778244
+    second: Cross_fire_effect_R_47
+  - first:
+      213: -3750545520403293854
+    second: Cross_fire_effect_R_48
+  - first:
+      213: -7761835231938908052
+    second: Cross_fire_effect_R_49
+  - first:
+      213: -5962772179342874
+    second: Cross_fire_effect_R_50
+  - first:
+      213: -7297644711241297866
+    second: Cross_fire_effect_R_51
+  - first:
+      213: -6930257319895194077
+    second: Cross_fire_effect_R_52
+  - first:
+      213: -4639713249508702363
+    second: Cross_fire_effect_R_53
+  - first:
+      213: -1247524173694046545
+    second: Cross_fire_effect_R_54
+  - first:
+      213: -4422421837470482464
+    second: Cross_fire_effect_R_55
+  - first:
+      213: -8521405833932594956
+    second: Cross_fire_effect_R_56
+  - first:
+      213: 107281955430294542
+    second: Cross_fire_effect_R_57
+  - first:
+      213: 8223273916747537487
+    second: Cross_fire_effect_R_58
+  - first:
+      213: -6253432479623691253
+    second: Cross_fire_effect_R_59
+  - first:
+      213: -5979902913970421220
+    second: Cross_fire_effect_R_60
+  - first:
+      213: 6270281611385561729
+    second: Cross_fire_effect_R_61
+  - first:
+      213: 1119033632294719455
+    second: Cross_fire_effect_R_62
+  - first:
+      213: 4590742587388175611
+    second: Cross_fire_effect_R_63
+  - first:
+      213: -6339684522172896903
+    second: Cross_fire_effect_R_64
+  - first:
+      213: 1835730040420836759
+    second: Cross_fire_effect_R_65
+  - first:
+      213: 6784374025934713742
+    second: Cross_fire_effect_R_66
+  - first:
+      213: 8505005956056385004
+    second: Cross_fire_effect_R_67
+  - first:
+      213: -4839045927700956472
+    second: Cross_fire_effect_R_68
+  - first:
+      213: -6663571171240026317
+    second: Cross_fire_effect_R_69
+  - first:
+      213: -4663423025697922710
+    second: Cross_fire_effect_R_70
+  - first:
+      213: -6378864448213331815
+    second: Cross_fire_effect_R_71
+  - first:
+      213: 5998581534814802174
+    second: Cross_fire_effect_R_72
+  - first:
+      213: -820004517792468244
+    second: Cross_fire_effect_R_73
+  - first:
+      213: -6144226585326656382
+    second: Cross_fire_effect_R_74
+  - first:
+      213: -4647617241978521762
+    second: Cross_fire_effect_R_75
+  - first:
+      213: -931160138545645862
+    second: Cross_fire_effect_R_76
+  - first:
+      213: 1203945573515544458
+    second: Cross_fire_effect_R_77
+  - first:
+      213: -6417155167062021638
+    second: Cross_fire_effect_R_78
+  - first:
+      213: -2172939532057260801
+    second: Cross_fire_effect_R_79
+  - first:
+      213: 4389922670973869426
+    second: Cross_fire_effect_R_80
+  - first:
+      213: 1057224648332785953
+    second: Cross_fire_effect_R_81
+  - first:
+      213: -6332982297948487421
+    second: Cross_fire_effect_R_82
+  - first:
+      213: -8397429840009028269
+    second: Cross_fire_effect_R_83
+  - first:
+      213: 2515096260809391391
+    second: Cross_fire_effect_R_84
+  - first:
+      213: -3493552251914774598
+    second: Cross_fire_effect_R_85
+  - first:
+      213: 1780352491744262223
+    second: Cross_fire_effect_R_86
+  - first:
+      213: 3921575374665525062
+    second: Cross_fire_effect_R_87
+  - first:
+      213: 7870243874664908205
+    second: Cross_fire_effect_R_88
+  - first:
+      213: 4197517469573113643
+    second: Cross_fire_effect_R_89
+  - first:
+      213: 8491084526118533167
+    second: Cross_fire_effect_R_90
+  - first:
+      213: -5620488174140748703
+    second: Cross_fire_effect_R_91
+  - first:
+      213: -1771701276374418763
+    second: Cross_fire_effect_R_92
+  - first:
+      213: -7724371666502203733
+    second: Cross_fire_effect_R_93
+  - first:
+      213: 2652587782506728209
+    second: Cross_fire_effect_R_94
+  - first:
+      213: 6396476695157540780
+    second: Cross_fire_effect_R_95
+  - first:
+      213: 9085010773200406549
+    second: Cross_fire_effect_R_96
+  - first:
+      213: -1551772757765146427
+    second: Cross_fire_effect_R_97
+  - first:
+      213: -4541060426101207511
+    second: Cross_fire_effect_R_98
+  - first:
+      213: 8158741037588233007
+    second: Cross_fire_effect_R_99
+  - first:
+      213: 6087349261373395269
+    second: Cross_fire_effect_R_100
+  - first:
+      213: 2827849862589894337
+    second: Cross_fire_effect_R_101
+  - first:
+      213: -5170132375349155272
+    second: Cross_fire_effect_R_102
+  - first:
+      213: -6283558576012865264
+    second: Cross_fire_effect_R_103
+  - first:
+      213: 4754029704764101320
+    second: Cross_fire_effect_R_104
+  - first:
+      213: 7126983625303792798
+    second: Cross_fire_effect_R_105
+  - first:
+      213: -6546313518131407803
+    second: Cross_fire_effect_R_106
+  - first:
+      213: 8042925568263199989
+    second: Cross_fire_effect_R_107
+  - first:
+      213: -7145759479339435953
+    second: Cross_fire_effect_R_108
+  - first:
+      213: 4947220224771008263
+    second: Cross_fire_effect_R_109
+  - first:
+      213: -6168608600643452995
+    second: Cross_fire_effect_R_110
+  - first:
+      213: -1190276651753090665
+    second: Cross_fire_effect_R_111
+  - first:
+      213: -4116599070787115485
+    second: Cross_fire_effect_R_112
+  - first:
+      213: -4322327975098467531
+    second: Cross_fire_effect_R_113
+  - first:
+      213: 2379399017770091667
+    second: Cross_fire_effect_R_114
+  - first:
+      213: -813347247918558565
+    second: Cross_fire_effect_R_115
+  - first:
+      213: 4016229580057010675
+    second: Cross_fire_effect_R_116
+  - first:
+      213: 7010855552776009971
+    second: Cross_fire_effect_R_117
+  - first:
+      213: 6549917130157755478
+    second: Cross_fire_effect_R_118
+  - first:
+      213: 7807410426312256555
+    second: Cross_fire_effect_R_119
+  - first:
+      213: 3949437017234043013
+    second: Cross_fire_effect_R_120
+  - first:
+      213: 819040570181767734
+    second: Cross_fire_effect_R_121
+  - first:
+      213: -6043622944641821922
+    second: Cross_fire_effect_R_122
+  - first:
+      213: -5046788188044951821
+    second: Cross_fire_effect_R_123
+  - first:
+      213: -3301406090816988755
+    second: Cross_fire_effect_R_124
+  - first:
+      213: 2646234403795943491
+    second: Cross_fire_effect_R_125
+  - first:
+      213: 5740966807991239738
+    second: Cross_fire_effect_R_126
+  - first:
+      213: 7366305823400490661
+    second: Cross_fire_effect_R_127
+  - first:
+      213: 2450925206630092287
+    second: Cross_fire_effect_R_128
+  - first:
+      213: -5979997640270909314
+    second: Cross_fire_effect_R_129
+  - first:
+      213: 4589729792534041447
+    second: Cross_fire_effect_R_130
+  - first:
+      213: -8571516070879372623
+    second: Cross_fire_effect_R_131
+  - first:
+      213: 4127041645974770393
+    second: Cross_fire_effect_R_132
+  - first:
+      213: 1715326269472291162
+    second: Cross_fire_effect_R_133
+  - first:
+      213: -8360203939712402023
+    second: Cross_fire_effect_R_134
+  - first:
+      213: 4403504254796824417
+    second: Cross_fire_effect_R_135
+  - first:
+      213: -6724023079271244243
+    second: Cross_fire_effect_R_136
+  - first:
+      213: -1834238906462720314
+    second: Cross_fire_effect_R_137
+  - first:
+      213: 3999967502511411807
+    second: Cross_fire_effect_R_138
+  - first:
+      213: 5691327837171433672
+    second: Cross_fire_effect_R_139
+  - first:
+      213: -1324125414270638140
+    second: Cross_fire_effect_R_140
+  - first:
+      213: 8763495878562838941
+    second: Cross_fire_effect_R_141
+  - first:
+      213: 3160337196158366026
+    second: Cross_fire_effect_R_142
+  - first:
+      213: 6943160947095546383
+    second: Cross_fire_effect_R_143
+  - first:
+      213: -5706540542541417310
+    second: Cross_fire_effect_R_144
+  - first:
+      213: 2201413391570753594
+    second: Cross_fire_effect_R_145
+  - first:
+      213: 1966920207000175059
+    second: Cross_fire_effect_R_146
+  - first:
+      213: 7272075825871639013
+    second: Cross_fire_effect_R_147
+  - first:
+      213: -5077219409462199112
+    second: Cross_fire_effect_R_148
+  - first:
+      213: -3827731474779101501
+    second: Cross_fire_effect_R_149
+  - first:
+      213: 1714753069504224833
+    second: Cross_fire_effect_R_150
+  - first:
+      213: 1590273730663360753
+    second: Cross_fire_effect_R_151
+  - first:
+      213: -3727242812561267954
+    second: Cross_fire_effect_R_152
+  - first:
+      213: 4423333553998990144
+    second: Cross_fire_effect_R_153
+  - first:
+      213: 4246096482283455108
+    second: Cross_fire_effect_R_154
+  - first:
+      213: 5807776912091825258
+    second: Cross_fire_effect_R_155
+  - first:
+      213: -2328108762009911801
+    second: Cross_fire_effect_R_156
+  - first:
+      213: -3475831058841052256
+    second: Cross_fire_effect_R_157
+  - first:
+      213: 394224064767111778
+    second: Cross_fire_effect_R_158
+  - first:
+      213: 5311395818368076575
+    second: Cross_fire_effect_R_159
+  - first:
+      213: -5443610091427208863
+    second: Cross_fire_effect_R_160
+  - first:
+      213: -3465132443037013508
+    second: Cross_fire_effect_R_161
+  - first:
+      213: 4814297060068239885
+    second: Cross_fire_effect_R_162
+  - first:
+      213: 5294314953433389548
+    second: Cross_fire_effect_R_163
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faac3e66ea8f70743a391af1fa946cdb
+      internalID: -301336979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_1
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0db4d8ea1e0424b9ff7d228789e2e6
+      internalID: -1198488587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_2
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f55b54fff658c41b6211e1f720f724
+      internalID: 1099617758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_3
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c088d42ebb53e1942ba3ff51024925ef
+      internalID: 840133781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_4
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc34c079bd8bdb43ac4fc6d98f4e679
+      internalID: 1797356416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_5
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 564
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfafd8abda2fb2240a539dea67a2e737
+      internalID: -892736353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3e96a6c39680746ab3f9863efd6018
+      internalID: -2081875735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_7
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14efc97b1f5f3340ab920132f89e1db
+      internalID: 1250202806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_8
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7321813ff8cc8b74085a1d1c56ba92de
+      internalID: -1949183615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_9
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c3435192778714bb13912eee22a9b2
+      internalID: 1480368406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_10
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1066ffa3f4fb876408802b168fc1331a
+      internalID: -54758550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cross_fire_effect_R_11
+      rect:
+        serializedVersion: 2
+        x: 3480
+        y: 0
+        width: 696
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d24996dc534ea45a5ba8e5c297bca3
+      internalID: -1318348067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 90c205610cc3aeb4e931dba44de08a17
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cross_fire_effect_R_0: -301336979
+      Cross_fire_effect_R_1: -1198488587
+      Cross_fire_effect_R_10: -54758550
+      Cross_fire_effect_R_11: -1318348067
+      Cross_fire_effect_R_2: 1099617758
+      Cross_fire_effect_R_3: 840133781
+      Cross_fire_effect_R_4: 1797356416
+      Cross_fire_effect_R_5: -892736353
+      Cross_fire_effect_R_6: -2081875735
+      Cross_fire_effect_R_7: 1250202806
+      Cross_fire_effect_R_8: -1949183615
+      Cross_fire_effect_R_9: 1480368406
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
