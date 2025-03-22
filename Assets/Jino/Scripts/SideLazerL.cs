@@ -5,7 +5,6 @@ public class SideLazerL : MonoBehaviour
     public float moveSpeed = 7f;
     public GameObject Lazer1;
     public Transform pos2 = null;
-    Vector2 vec;
     bool isSidecoming = true;
     bool isLazerFired = false;
 
