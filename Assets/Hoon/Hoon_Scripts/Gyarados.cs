@@ -8,12 +8,13 @@ public class Gyarados : MonoBehaviour
     public float Speed = 5f;
     private Vector2 minBounds;
     private Vector2 maxBounds;
-    Animator ani; //애니메이터를 가져올 변수
+    Animator ani;
     public GameObject[] Bullet;
     public Transform pos = null;
     public bool CanShoot = true;
     public int power = 0;
     public bool isEvolved = true;
+    public bool Firing = false;
 
     public void Shoot()
     {
@@ -35,13 +36,12 @@ public class Gyarados : MonoBehaviour
 
     IEnumerator BulletCooldown()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         CanShoot = true;
     }
     void Start()
     {
         ani = GetComponent<Animator>();
-
     }
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
@@ -63,11 +63,7 @@ public class Gyarados : MonoBehaviour
     // }
     void Update()
     {
-
-
         ani.SetBool("Down", false);    
-
-
         // 플레이어 이동
         float moveX = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
         float moveY = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
@@ -112,11 +108,19 @@ public class Gyarados : MonoBehaviour
 
         // }
 
-        if(Input.GetKey(KeyCode.Space) && CanShoot == true && ani.GetBool("Down") == false)
+        if(Input.GetKey(KeyCode.Space) && CanShoot == true)
         {
-            // SoundManager.instance.SoundBullet();
+            ani.SetBool("Firing", true);
+            ani.SetBool("Down", false);
+            ani.SetBool("Right", false);
+            ani.SetBool("Left", false);
             Shoot();
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            ani.SetBool("Firing", true);
+        }
+        else    ani.SetBool("Firing", false);
 
                     
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
