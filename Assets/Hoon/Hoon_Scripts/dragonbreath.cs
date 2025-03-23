@@ -21,7 +21,7 @@ public class dragonbreath : MonoBehaviour
             Hoon_Monster enemy = collision.GetComponent<Hoon_Monster>();
             if (enemy != null)
             {
-            enemy.Damage(1);
+            enemy.Damage(0.5f);
             }
             //Hoon_AudioManager.instance.SFXBubblePop();
             Destroy(gameObject);

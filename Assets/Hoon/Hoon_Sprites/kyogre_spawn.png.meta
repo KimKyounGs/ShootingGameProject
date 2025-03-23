@@ -1,10 +1,46 @@
 fileFormatVersion: 2
-guid: 8c1bcc2d0a4b5472694d54e27912b85a
+guid: 13ce06b41373b4417a80316bd74396dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9044852162645894431
-    second: KyorgeIdle_0
+      213: -7649239277787481341
+    second: kyogre_spawn_0
+  - first:
+      213: -5259943463268548126
+    second: kyogre_spawn_1
+  - first:
+      213: 341278252979294283
+    second: kyogre_spawn_2
+  - first:
+      213: 5165239044712932880
+    second: kyogre_spawn_3
+  - first:
+      213: -2439333118349926255
+    second: kyogre_spawn_4
+  - first:
+      213: -6627600880604624516
+    second: kyogre_spawn_5
+  - first:
+      213: -927807290736170239
+    second: kyogre_spawn_6
+  - first:
+      213: -9216169823805292218
+    second: kyogre_spawn_7
+  - first:
+      213: 4985714463030860632
+    second: kyogre_spawn_8
+  - first:
+      213: 6887855690064624211
+    second: kyogre_spawn_9
+  - first:
+      213: -2776523691023245213
+    second: kyogre_spawn_10
+  - first:
+      213: 326027185657317371
+    second: kyogre_spawn_11
+  - first:
+      213: -722624610549976729
+    second: kyogre_spawn_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +175,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KyorgeIdle_0
+      name: kyogre_spawn_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 8
-        width: 86
-        height: 63
+        x: 12
+        y: 0
+        width: 76
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,52 +190,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ea519731ea3a7280800000000000000
-      internalID: -9044852162645894431
+      spriteID: 30bf28d776178d590800000000000000
+      internalID: -7649239277787481341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyorgeIdle_1
+      name: kyogre_spawn_1
       rect:
         serializedVersion: 2
         x: 90
-        y: 8
-        width: 80
-        height: 61
+        y: 0
+        width: 70
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c12a32c9368ea45b0be4b8543409c43a
-      internalID: -304202092
+      spriteID: 2e18d3dd94de007b0800000000000000
+      internalID: -5259943463268548126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KyorgeIdle_2
+      name: kyogre_spawn_2
       rect:
         serializedVersion: 2
-        x: 172
-        y: 8
+        x: 162
+        y: 0
         width: 88
-        height: 64
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e6899a0f3858d4d5385279cd3087a120
-      internalID: 235862505
+      spriteID: b40956e43c67cb400800000000000000
+      internalID: 341278252979294283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kyogre_spawn_3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 88
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 016a7186b8d9ea740800000000000000
+      internalID: 5165239044712932880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kyogre_spawn_4
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 86
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19028e7f37fb52ed0800000000000000
+      internalID: -2439333118349926255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kyogre_spawn_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 80
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79ce761d180604a0800000000000000
+      internalID: -6627600880604624516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kyogre_spawn_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 88
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b27af4f24cf13f0800000000000000
+      internalID: -927807290736170239
       vertices: []
       indices: 
       edges: []
@@ -208,7 +332,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 27d8c20a02e974bc5bd43e59663d1c26
+    spriteID: 0b54b40222a1d4faa80dfa12544cc321
     internalID: 0
     vertices: []
     indices: 
@@ -218,9 +342,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KyorgeIdle_0: -9044852162645894431
-      KyorgeIdle_1: -304202092
-      KyorgeIdle_2: 235862505
+      kyogre_spawn_0: -7649239277787481341
+      kyogre_spawn_1: -5259943463268548126
+      kyogre_spawn_2: 341278252979294283
+      kyogre_spawn_3: 5165239044712932880
+      kyogre_spawn_4: -2439333118349926255
+      kyogre_spawn_5: -6627600880604624516
+      kyogre_spawn_6: -927807290736170239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -55,12 +55,16 @@ public class GameManager : MonoBehaviour
         levelUI.text = "Lv" + level;
         expLeft += expLeft / 10f; //10% 더 채워야 레벨업.
 
-        if (level >= 2 && !Magikarp.instance.isEvolved)
-        {            
-            Magikarp.instance.isEvolved = true;
-            StartCoroutine(moveCenter());
-            evolutionTimeline.Play();
-            Time.timeScale = 0;
+        // if (level >= 2 && !Magikarp.instance.isEvolved)
+        // {            
+        //     Magikarp.instance.isEvolved = true;
+        //     StartCoroutine(moveCenter());
+        //     evolutionTimeline.Play();
+        //     Time.timeScale = 0;
+        // }
+        if (level >= 2)
+        {
+            BossBGM.instance.StartBossTimeline();
         }
         
     }

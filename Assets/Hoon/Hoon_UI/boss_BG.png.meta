@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 68cdcbdac87084bd9a1c738f88f7417e
+guid: 85b19907f14a940d4b2e7d5acef881e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7330166760390915680
-    second: Kyorge1_0
+      213: 582701071104125402
+    second: boss_BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,23 +139,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kyorge1_0
+      name: boss_BG_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 608
-        height: 80
+        width: 360
+        height: 336
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0a906861b24064a90800000000000000
-      internalID: -7330166760390915680
+      spriteID: ba9cdcd0034a54fa39b2489c2085d966
+      internalID: -138181758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_BG_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 24
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4da608052e3499abdc2bbac1964103
+      internalID: 753182302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_BG_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 360
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d0144f66aec4a2b99ceb75e4c12e35
+      internalID: -598379150
       vertices: []
       indices: 
       edges: []
@@ -164,7 +208,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9f40949c6d3ee4ec887b0f1276704c8e
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +218,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kyorge1_0: -7330166760390915680
+      boss_BG_0: -138181758
+      boss_BG_1: 753182302
+      boss_BG_2: -598379150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
