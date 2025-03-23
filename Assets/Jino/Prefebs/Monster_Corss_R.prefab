@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 2231543298893009760}
   - component: {fileID: 3097354513926151302}
   - component: {fileID: 4964542872806535775}
+  - component: {fileID: 6868741208432621141}
   m_Layer: 0
   m_Name: Monster_Corss_R
   m_TagString: Untagged
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 6841032637171725423, guid: 352e4e230bcbfc74dac3891b2f471814, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -136,3 +137,25 @@ MonoBehaviour:
   Gage1: {fileID: 9001567982951755510, guid: 321307130816c034194317583d9c8c0d, type: 3}
   Lazer1: {fileID: 4681879998975477259, guid: 48dc67b5a82536e48971d15918076988, type: 3}
   pos1: {fileID: 1723143433445428026}
+--- !u!95 &6868741208432621141
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000770862023179103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c5a7bc5f8288784aaf20e461d72829c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
