@@ -78,11 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-<<<<<<< Updated upstream
   m_SortingOrder: 4
-=======
-  m_SortingOrder: 1
->>>>>>> Stashed changes
   m_Sprite: {fileID: -1491258773, guid: c5c1b058dd3a145cea4d509a290f04d4, type: 3}
   m_Color: {r: 0.766, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
@@ -165,7 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 1.5
-<<<<<<< Updated upstream
   bubblePop: {fileID: 2733146826521546949, guid: cee6b31c48948429998c179dd5e3810e, type: 3}
-=======
->>>>>>> Stashed changes

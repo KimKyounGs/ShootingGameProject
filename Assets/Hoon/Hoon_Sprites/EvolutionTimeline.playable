@@ -226,25 +226,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -734,13 +716,13 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: -7597336718921294337}
   - {fileID: 6952363788538129941}
-  - {fileID: -2775551850622439632}
   - {fileID: -7051997341140320395}
   - {fileID: 5396042534260733198}
   - {fileID: 891221696448578964}
   - {fileID: -8654129275774706373}
   - {fileID: 4424738321102589534}
   - {fileID: 4423746373631151188}
+  - {fileID: -2775551850622439632}
   - {fileID: 6266325741541405985}
   m_FixedDuration: 0
   m_EditorSettings:

@@ -18,7 +18,6 @@ public class Magikarp : MonoBehaviour
     public int power = 0;
     public bool isEvolved = false;
 
-<<<<<<< Updated upstream
     void Awake()
     {
         if (instance == null)
@@ -27,12 +26,11 @@ public class Magikarp : MonoBehaviour
         }
         else Destroy(gameObject);
     }
-=======
+
     public int exp = 0;
     public int level = 1;
     public Image expUI;
     public TMP_Text levelUI;
->>>>>>> Stashed changes
 
     public void Shoot()
     {
@@ -40,13 +38,8 @@ public class Magikarp : MonoBehaviour
         CanShoot = false;
 
         // if (power <= 3)
-<<<<<<< Updated upstream
             Hoon_AudioManager.instance.SFXBubbleShoot();
             Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
-
-=======
-            Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
->>>>>>> Stashed changes
         // else if (power <= 6)
         //     Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
         // else if (power <= 9)
@@ -54,36 +47,15 @@ public class Magikarp : MonoBehaviour
         // else if (power > 9)
         //     Instantiate(Bullet[3], pos.transform.position, Quaternion.identity);
     }
-<<<<<<< Updated upstream
-
-
     IEnumerator BulletCooldown()
     {
         yield return new WaitForSeconds(0.5f);
-=======
-    IEnumerator ExpGain()
-    {
-        yield return new WaitForSeconds(1);
-        expUI.fillAmount += 0.1f;
-
-        StartCoroutine(ExpGain());
-    }
-
-    IEnumerator BulletCooldown()
-    {
-        yield return new WaitForSeconds(0.25f);
->>>>>>> Stashed changes
         CanShoot = true;
     }
     void Start()
     {
         magikarpAni = GetComponent<Animator>();
-<<<<<<< Updated upstream
-
-=======
         expUI.fillAmount = 0;
-        StartCoroutine(ExpGain());
->>>>>>> Stashed changes
     }
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
@@ -159,16 +131,6 @@ public class Magikarp : MonoBehaviour
             // SoundManager.instance.SoundBullet();
             Shoot();
         }
-<<<<<<< Updated upstream
-
-=======
-        if(expUI.fillAmount >= 1)
-        {
-            expUI.fillAmount = 0;
-            level ++;
-            levelUI.text = "Lv" + level.ToString();
-        }
->>>>>>> Stashed changes
                     
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
