@@ -35,7 +35,7 @@ public class PK_Player : MonoBehaviour
         PK_Swould_Cooltime = 2;
     }
 
-
+    public bool swould_sound = true;
 
     void Update()
     {
@@ -50,10 +50,13 @@ public class PK_Player : MonoBehaviour
             {
                 Swould.gameObject.SetActive(true);
                 Swould_Ani.SetBool("Swould", true);
+                PK_SoundManager.instance.PlayerSwould();
                 PK_Swould_Cooltime = -2;
+                swould_sound = true;
                 Swoard_cool.fillAmount = 1;
             }
         }
+
 
         if (PK_Swould_Cooltime <= 1f && PK_Swould_Cooltime > -1.1f)
         {
