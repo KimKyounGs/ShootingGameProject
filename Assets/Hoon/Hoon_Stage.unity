@@ -2171,7 +2171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &408241501
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4977,25 +4977,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gyarados_6
       objectReference: {fileID: 0}
-    - target: {fileID: 6258332483055012233, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901624712862626156, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7400656378730927343, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
-      propertyPath: Speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7874803015937085427, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7874803015937085427, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7874803015937085427, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5754,7 +5742,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "...\uC624\uC789!?\n\uC789\uC5B4\uD0B9\uC758 \uBAA8\uC2B5\uC774...! "
+  m_text: "\uCD95\uD558\uD569\uB2C8\uB2E4!\n\uC789\uC5B4\uD0B9\uC740 \uAC38\uB77C\uB3C4\uC2A4\uB85C
+    \uC9C4\uD654\uD588\uC2B5\uB2C8\uB2E4!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b9ff756af61f4aca8b22bb8abaf6ff7, type: 2}
   m_sharedMaterial: {fileID: -2471143997869850530, guid: 3b9ff756af61f4aca8b22bb8abaf6ff7, type: 2}
