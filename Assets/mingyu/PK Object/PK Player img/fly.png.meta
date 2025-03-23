@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: ee2b00abc53d87b4a9bdeae61ba930d4
+guid: cc11725638b1b2f4683c499f72b5b5bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 513282747109479277
-    second: boos-test 1_0
+      213: 5352286359449648278
+    second: fly_0
   - first:
-      213: -4402228007598593744
-    second: boos-test 1_1
-  - first:
-      213: 6757364600863156308
-    second: boos-test 1_2
-  - first:
-      213: 9221335430974046370
-    second: boos-test 1_3
-  - first:
-      213: 6361894979996954483
-    second: boos-test 1_4
-  - first:
-      213: -4537255176032530629
-    second: boos-test 1_5
+      213: 6843129032921346866
+    second: fly_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,56 +112,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/boos-test 1.png.meta
-=======
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_Left.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boos-test 1_0
+      name: fly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d631cc260fb8f1700800000000000000
-      internalID: 513282747109479277
+      spriteID: 376eba5c1424a1b47b741867291f1f63
+      internalID: 2039583879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82df883b407ee0f44a2fa906e85e1f0e
+      internalID: -1941036202
       vertices: []
       indices: 
       edges: []
@@ -182,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 725d26aa5d613764baff61d50d37c3a4
+    spriteID: 55bdfa0032d87d944bee7e6805ebc171
     internalID: 0
     vertices: []
     indices: 
@@ -192,12 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/boos-test 1.png.meta
-      boos-test 1_0: 513282747109479277
-=======
-      Boss_Left_0: 1025740691730275340
-      Boss_Left_1: 2132806619666398904
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_Left.png.meta
+      fly_0: 2039583879
+      fly_1: -1941036202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

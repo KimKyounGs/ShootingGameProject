@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -253799134, guid: da4efefbb4b8709448e50875a45242ea, type: 3}
+  m_Sprite: {fileID: 2039583879, guid: cc11725638b1b2f4683c499f72b5b5bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,8 +130,13 @@ MonoBehaviour:
   P_HP: 3
   bullet: []
   pos: []
-  Sward: {fileID: 709940310364118909, guid: 1700c45d3c32f5649ab169bcb1a7771c, type: 3}
-  Sward_pos: {fileID: 2194342130654566482}
+  swouldtos: {fileID: 0}
+  PK_Swould_Cooltime: 0
+  Swoard_Gage: {fileID: 0}
+  Swoard_cool: {fileID: 0}
+  Swould: {fileID: 0}
+  Swould_Ani: {fileID: 0}
+  SPSwould: {fileID: 0}
   power: 0
   powerup: {fileID: 2051847277400686010, guid: 7f1444a8ce61bf94ebb5f31b037f604f, type: 3}
 --- !u!50 &4781365192731190512

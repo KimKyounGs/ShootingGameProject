@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: da4efefbb4b8709448e50875a45242ea
+guid: b29369f09b662dd4b85f96db00cb5da5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5352286359449648278
-    second: fly_0
+      213: -1225761722846916711
+    second: boos-test_0
   - first:
-      213: 6843129032921346866
-    second: fly_1
+      213: -6999479931648067889
+    second: boos-test_1
+  - first:
+      213: 5088258043721018543
+    second: boos-test_2
+  - first:
+      213: 6431710404772709328
+    second: boos-test_3
+  - first:
+      213: -7605426797813278815
+    second: boos-test_4
+  - first:
+      213: -9021674648528696838
+    second: boos-test_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,78 +124,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Player img/PK_Player.png.meta
-=======
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_d.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PK_Player_0
+      name: boos-test_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 84fa8faffef5da84194651c102874875
-      internalID: -253799134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PK_Player_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 892f008f056346a4992d41b7458039e5
-      internalID: 974168521
+      spriteID: 99f407a15383dfee0800000000000000
+      internalID: -1225761722846916711
       vertices: []
       indices: 
       edges: []
@@ -192,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b3fe4ab02ce98e34698683d403f8ad3c
+    spriteID: 766f5b1dbbb70ff40989c390a2509238
     internalID: 0
     vertices: []
     indices: 
@@ -202,13 +163,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Player img/PK_Player.png.meta
-      PK_Player_0: -253799134
-      PK_Player_1: 974168521
-=======
-      Bullet_Eg_d_0: 7036295500315667958
-      Bullet_Eg_d_1: 4233807863627969779
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_d.png.meta
+      boos-test_0: -1225761722846916711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

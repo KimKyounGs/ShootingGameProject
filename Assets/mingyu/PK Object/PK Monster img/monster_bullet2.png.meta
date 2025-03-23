@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 600e64c70a825b64d894c1a5c686c2d8
+guid: f189675a83ad82d4c96a4d34d021899a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -109,35 +109,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
-=======
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Boss_Bullet.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -177,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/monster_bullet2.png.meta
       monster_bullet2 1_0: -5179666300309619644
-=======
-      Boss_Bullet_0: 7883245661488523148
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Boss_Bullet.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
