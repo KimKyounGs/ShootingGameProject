@@ -124,6 +124,35 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/boos-test 1.png.meta
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_Left.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -163,7 +192,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/boos-test 1.png.meta
       boos-test 1_0: 513282747109479277
+=======
+      Boss_Left_0: 1025740691730275340
+      Boss_Left_1: 2132806619666398904
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_Left.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

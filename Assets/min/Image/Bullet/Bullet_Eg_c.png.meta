@@ -126,7 +126,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream:Assets/min/Image/Bullet/Bullet_Eg_c.png.meta
     buildTarget: WindowsStoreApps
+=======
+    buildTarget: iOS
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_c.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -178,6 +182,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Bullet_Eg_c_0: 147316924086779331
+<<<<<<< Updated upstream:Assets/min/Image/Bullet/Bullet_Eg_c.png.meta
+=======
+      Bullet_Eg_c_1: -8354254116718881772
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_c.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

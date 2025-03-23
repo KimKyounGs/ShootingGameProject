@@ -144,7 +144,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream:Assets/min/Image/Bullet/MGuide_Bullet.png.meta
     buildTarget: WindowsStoreApps
+=======
+    buildTarget: iOS
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/MGuide_Bullet.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1

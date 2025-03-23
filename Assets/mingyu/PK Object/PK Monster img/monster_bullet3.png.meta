@@ -109,6 +109,35 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/monster_bullet3.png.meta
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_a.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -148,7 +177,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Monster img/monster_bullet3.png.meta
       monster_bullet3_0: -4118290728378770403
+=======
+      Bullet_Eg_a_0: 3740626451653842279
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_a.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

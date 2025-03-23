@@ -112,6 +112,35 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Player img/PK_Player.png.meta
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_d.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -173,8 +202,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/mingyu/PK Object/PK Player img/PK_Player.png.meta
       PK_Player_0: -253799134
       PK_Player_1: 974168521
+=======
+      Bullet_Eg_d_0: 7036295500315667958
+      Bullet_Eg_d_1: 4233807863627969779
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_d.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

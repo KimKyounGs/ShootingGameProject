@@ -151,6 +151,35 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< Updated upstream
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -432,6 +461,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       Effect_1_0: 26613706
       Effect_1_1: 385344220
       Effect_1_10: 119698009
@@ -444,6 +474,23 @@ TextureImporter:
       Effect_1_7: -816389485
       Effect_1_8: 924307482
       Effect_1_9: 1734759301
+=======
+      Effect_1_0: 7804507693618471803
+      Effect_1_1: 1900847438843248427
+      Effect_1_10: 2189587669487683963
+      Effect_1_11: 5225884694318647281
+      Effect_1_12: -8688935912940515472
+      Effect_1_13: -6545480832792171055
+      Effect_1_14: -8578919017628224510
+      Effect_1_2: 7666704972312477794
+      Effect_1_3: 795301357266074275
+      Effect_1_4: -6242229374507020571
+      Effect_1_5: 5336224736863034679
+      Effect_1_6: 4780621253200865888
+      Effect_1_7: 1924199025482961911
+      Effect_1_8: -7819861597427018027
+      Effect_1_9: -4132364910295039899
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

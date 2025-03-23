@@ -297,6 +297,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.38855243
+<<<<<<< Updated upstream
 --- !u!1 &189297108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +1951,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+=======
+>>>>>>> Stashed changes
 --- !u!1 &204723627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2257,10 @@ MonoBehaviour:
   pos: {fileID: 32420094}
   CanShoot: 1
   power: 0
+  exp: 0
+  level: 1
+  expUI: {fileID: 2129349945}
+  levelUI: {fileID: 1848638476}
 --- !u!50 &408241506
 Rigidbody2D:
   serializedVersion: 5
@@ -2360,6 +2367,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &487463900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,6 +2514,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> Stashed changes
 --- !u!1 &492405332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,7 +2596,11 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
+<<<<<<< Updated upstream
   m_SortingOrder: 6
+=======
+  m_SortingOrder: 0
+>>>>>>> Stashed changes
   m_TargetDisplay: 0
 --- !u!224 &492405336
 RectTransform:
@@ -4762,9 +4776,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luvdisc: {fileID: 4015187805111944352, guid: 46ea1c39d1fa24ce38c6372f045ab0c8, type: 3}
+<<<<<<< Updated upstream
   carvanha: {fileID: 138741629244990977, guid: 3f77ea1a65d764424a1c49a6d65942ad, type: 3}
   mantine: {fileID: 6464502036668634894, guid: 88a8280099f824b58bf12bdd5740048a, type: 3}
   sharpedo: {fileID: 9175943797708736923, guid: d65ccaa2119dd4825b55e21a38bf970a, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1309808675
 Transform:
   m_ObjectHideFlags: 0
@@ -4774,7 +4791,11 @@ Transform:
   m_GameObject: {fileID: 1309808673}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 3.045, y: 5.23, z: 0}
+=======
+  m_LocalPosition: {x: 3, y: 2.5, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5091,6 +5112,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571401051}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1697170976
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,6 +5164,8 @@ MonoBehaviour:
   tilemaps:
   - {fileID: 604265229}
   - {fileID: 189297109}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1848638474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5280,6 +5304,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848638474}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
 --- !u!1 &1875005102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,6 +5354,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2064743824
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,6 +5449,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!82 &2064743828
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5519,6 +5547,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2129349943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,6 +5640,9 @@ SceneRoots:
   - {fileID: 492405336}
   - {fileID: 464468529}
   - {fileID: 1309808675}
+<<<<<<< Updated upstream
   - {fileID: 1875005104}
   - {fileID: 487463902}
   - {fileID: 975876460}
+=======
+>>>>>>> Stashed changes

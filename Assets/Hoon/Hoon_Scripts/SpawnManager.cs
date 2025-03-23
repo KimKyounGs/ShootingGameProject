@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject luvdisc;
+<<<<<<< Updated upstream
     public GameObject carvanha;
     public GameObject mantine;
     public GameObject sharpedo;
@@ -13,6 +14,11 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnCarvanha", 1, 3f);
         InvokeRepeating("SpawnMantine", 5, 6f);
         InvokeRepeating("SpawnSharpedo", 10, 10f);
+=======
+    void Start()
+    {
+        InvokeRepeating("SpawnLuvdisc", 1, 1);
+>>>>>>> Stashed changes
     }
 
     void Update()
@@ -26,6 +32,7 @@ public class SpawnManager : MonoBehaviour
         Instantiate(luvdisc, new Vector3(transform.position.x,randomY,0f), Quaternion.identity);
 
     }
+<<<<<<< Updated upstream
 
     void SpawnCarvanha()
     {
@@ -43,6 +50,8 @@ public class SpawnManager : MonoBehaviour
         float randomX = Random.Range(-2f, 2f);
         Instantiate(sharpedo, new Vector3(randomX, transform.position.y, 0f), Quaternion.identity);
     }
+=======
+>>>>>>> Stashed changes
 }
 
 //     public float ss = -2;

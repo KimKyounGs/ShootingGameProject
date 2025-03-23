@@ -159,7 +159,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream:Assets/Jino/Source/Weapon/Lazer_R/lazer_body.png.meta
     buildTarget: WindowsStoreApps
+=======
+    buildTarget: iOS
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_propeller.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -496,6 +500,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/Jino/Source/Weapon/Lazer_R/lazer_body.png.meta
       lazer_body_0: -4497620760181296327
       lazer_body_1: 2826542299200004742
       lazer_body_10: 1747190099082540465
@@ -510,6 +515,24 @@ TextureImporter:
       lazer_body_7: -4788034837615544561
       lazer_body_8: 3713297436111179521
       lazer_body_9: 2496403818786935667
+=======
+      Boss_propeller_0: -1402673726238237314
+      Boss_propeller_1: 5925226018228665192
+      Boss_propeller_10: -7265906715710868521
+      Boss_propeller_11: 7799663917736319884
+      Boss_propeller_12: -6044121550889285162
+      Boss_propeller_13: -6405881739940661211
+      Boss_propeller_14: 925606742111920576
+      Boss_propeller_15: 557728903272698274
+      Boss_propeller_2: -5687253349893216373
+      Boss_propeller_3: 4985649396477603258
+      Boss_propeller_4: -4868387752931124877
+      Boss_propeller_5: 1533820369654886602
+      Boss_propeller_6: -8355502586468513464
+      Boss_propeller_7: 7397073477994708810
+      Boss_propeller_8: -593745585642480417
+      Boss_propeller_9: -1487427625190061552
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_propeller.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

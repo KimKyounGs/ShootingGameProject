@@ -7,11 +7,15 @@ TagManager:
   - PK_Monster
   - PK_Item
   - PK_Monster_Bullet
+<<<<<<< Updated upstream
   - PK_Boss
   - Swould
   - Hoon_Enemy
   - Monster
   - PlayerBullet
+=======
+  - Hoon_Enemy
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

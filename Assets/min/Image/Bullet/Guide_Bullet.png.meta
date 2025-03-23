@@ -123,7 +123,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< Updated upstream:Assets/min/Image/Bullet/Guide_Bullet.png.meta
     buildTarget: WindowsStoreApps
+=======
+    buildTarget: iOS
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_head.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -174,7 +178,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< Updated upstream:Assets/min/Image/Bullet/Guide_Bullet.png.meta
       Guide_Bullet_0: 8452760556053057431
+=======
+      Boss_head_0: 2297100179062592671
+      Boss_head_1: 4205941002673464193
+      Boss_head_2: 4968463528099649995
+>>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_head.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
