@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Hoon_Enemy
+  - Swould
+  - PK_Item
+  - PK_Boss
+  - PK_Monster
+  - PK_Monster_Bullet
+  - Monster
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public float exp = 0;
     public int level = 1;
     public float expLeft = 1f;
+    public bool BossBattle = false;
     public Vector3 centerPos = new Vector3(0, 0, 0);
 
     public Image expUI;
@@ -55,15 +56,16 @@ public class GameManager : MonoBehaviour
         levelUI.text = "Lv" + level;
         expLeft += expLeft / 10f; //10% 더 채워야 레벨업.
 
-        // if (level >= 2 && !Magikarp.instance.isEvolved)
-        // {            
-        //     Magikarp.instance.isEvolved = true;
-        //     StartCoroutine(moveCenter());
-        //     evolutionTimeline.Play();
-        //     Time.timeScale = 0;
-        // }
-        if (level >= 2)
+        if (level >= 20 && !Magikarp.instance.isEvolved)
+        {            
+            Magikarp.instance.isEvolved = true;
+            StartCoroutine(moveCenter());
+            evolutionTimeline.Play();
+            Time.timeScale = 0;
+        }
+        if (level >= 2 && !BossBattle)
         {
+            BossBattle = true;          
             BossBGM.instance.StartBossTimeline();
         }
         

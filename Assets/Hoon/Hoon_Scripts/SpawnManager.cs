@@ -17,7 +17,10 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
-
+        if (GameManager.instance.BossBattle == true)
+        {
+            CancelInvoke();
+        }
     }
 
     void SpawnLuvdisc()
