@@ -9,14 +9,14 @@ public class mantine : Hoon_Monster
     public GameObject bullet;
     public Transform pos1;
     public Transform pos2;
-    public float delay = 0.5f;
+    public float delay = 2.5f;
 
     protected override void Start()
     {
         base.Start();
         moveSpeed = 0.8f;
         HP = 5;
-        exp = 0.5f;
+        exp = 0.8f;
         Invoke("CreateBullet", delay);
     }
     void CreateBullet()

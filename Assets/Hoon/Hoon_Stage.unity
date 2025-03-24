@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossTimeline: {fileID: 551842154}
+  centerPos: {x: 0, y: 0, z: 0}
   VSKyogre: {fileID: 8300000, guid: b7c8de1b67f284add91a176c3cd9b5dd, type: 3}
 --- !u!114 &46109118
 MonoBehaviour:
@@ -198,12 +199,54 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 7b7ca01ef93544628895c4cdfa8cdd35, type: 2}
+    - {fileID: 11400000, guid: fedff16f8b5db4268a803bcbd677d780, type: 2}
+    - {fileID: 11400000, guid: ba5ea3cce103c4a648d8c0d49f7e7a43, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 46109117}
           m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
           m_MethodName: PlayBGM
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46109117}
+          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
+          m_MethodName: EndTimeline
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46109117}
+          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
+          m_MethodName: BGMOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 46109117}
+          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
+          m_MethodName: MoveToBoss
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2346,7 +2389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &408241501
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2395,7 +2438,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7cf35dc354371490987d057d0f801722, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2986,6 +3029,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &592723103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592723104}
+  m_Layer: 0
+  m_Name: pos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592723104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592723103}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220700921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604265228
 GameObject:
@@ -5370,9 +5444,10 @@ GameObject:
   - component: {fileID: 1220700919}
   - component: {fileID: 1220700922}
   - component: {fileID: 1220700923}
+  - component: {fileID: 1220700924}
   m_Layer: 0
   m_Name: KyorgeIdle_0
-  m_TagString: Untagged
+  m_TagString: Hoon_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5463,10 +5538,11 @@ Transform:
   m_GameObject: {fileID: 1220700918}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 592723104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1220700922
@@ -5532,6 +5608,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1220700924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220700918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0240de94a63964d72bed108189899291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1000000
+  waterRing: {fileID: 2801101688884629912, guid: db52dc2f544544f8f8b5f3da84fb2bf5, type: 3}
+  pos1: {fileID: 592723104}
 --- !u!1 &1309808673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,6 +5656,7 @@ MonoBehaviour:
   carvanha: {fileID: 138741629244990977, guid: 3f77ea1a65d764424a1c49a6d65942ad, type: 3}
   mantine: {fileID: 6464502036668634894, guid: 88a8280099f824b58bf12bdd5740048a, type: 3}
   sharpedo: {fileID: 9175943797708736923, guid: d65ccaa2119dd4825b55e21a38bf970a, type: 3}
+  bossSpawn: 0
 --- !u!4 &1309808675
 Transform:
   m_ObjectHideFlags: 0
@@ -5588,9 +5680,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974459834628823322, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6258332483055012233, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_Name
       value: Gyarados_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258332483055012233, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7874803015937085427, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_LocalPosition.x

@@ -11,7 +11,7 @@ public class sharpedo : Hoon_Monster
         base.Start();
         moveSpeed = 0.5f;
         HP = 3;
-        exp = 1f;
+        exp = 2f;
         isSpawn = true;
     }
 
@@ -30,7 +30,7 @@ public class sharpedo : Hoon_Monster
         }
         else
         {
-            moveSpeed = 4f;
+            moveSpeed = 6f;
             transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
         }
 

@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
+
 
 public class SpawnManager : MonoBehaviour
 {
@@ -7,17 +9,34 @@ public class SpawnManager : MonoBehaviour
     public GameObject carvanha;
     public GameObject mantine;
     public GameObject sharpedo;
+    public bool bossSpawn = false;
+    private float elapsedTime = 0f;
+
     void Start()
     {
         InvokeRepeating("SpawnLuvdisc", 10, 15f);
-        InvokeRepeating("SpawnCarvanha", 1, 3f);
-        InvokeRepeating("SpawnMantine", 5, 6f);
-        InvokeRepeating("SpawnSharpedo", 10, 10f);
+        InvokeRepeating("SpawnCarvanha", 1, 1f);
+        InvokeRepeating("SpawnMantine", 10, 6f);
+        InvokeRepeating("SpawnSharpedo", 25, 10f);
     }
 
     void Update()
     {
+        if (bossSpawn) return;
+        elapsedTime += Time.deltaTime;
 
+        if (elapsedTime >= 90)
+        {
+            CancelInvoke();
+            bossSpawn = true;
+            StartCoroutine(BossSpawn());
+        }
+    }
+
+    public IEnumerator BossSpawn()
+    {
+        yield return new WaitForSeconds(6.5f);
+        BossBGM.instance.StartBossTimeline();
     }
 
     void SpawnLuvdisc()

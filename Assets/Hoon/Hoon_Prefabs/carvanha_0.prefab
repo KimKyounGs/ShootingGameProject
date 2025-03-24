@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91a352e687634eefb8505cc2a8da992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 2
   HP: 1
-  exp: 0.1
+  exp: 0.2
   ani: {fileID: 0}
   sr: {fileID: 0}
   hit: {fileID: 8545387462505232231, guid: f5be26e3e3f2e4e70a98c83f86e386b6, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public float Speed = 3f;
+    public float Speed = 5.5f;
     public GameObject hitEffect;
     void Start()
     {
