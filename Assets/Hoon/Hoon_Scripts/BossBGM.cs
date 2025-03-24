@@ -34,8 +34,8 @@ public class BossBGM : MonoBehaviour
     public void StartBossTimeline()
     {
         StartCoroutine(MoveBeyond());
-        Time.timeScale = 0;
         BossTimeline.Play();        
+        Time.timeScale = 0;
     }
 
     public void BGMOff()
@@ -50,22 +50,24 @@ public class BossBGM : MonoBehaviour
 
     IEnumerator MoveBeyond()
     {
-        float moveDuration = 4f;
+        float moveDuration = 2f;
         float elapsed = 0f;
         Vector3 startPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+        Vector3 TopPos = new Vector3(0, 6.5f, 0);
+        Vector3 BottomPos = new Vector3(0, -6.5f, 0);
 
         while (elapsed < moveDuration)
         {
-            GameObject.FindWithTag("Player").GetComponent<Transform>().position = startPos + Vector3.up;
+            GameObject.FindWithTag("Player").GetComponent<Transform>().position = Vector3.Lerp(startPos, TopPos, elapsed / moveDuration);
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
-        GameObject.FindWithTag("Player").GetComponent<Transform>().position = new Vector3(0, -6.5f, 0);
+        GameObject.FindWithTag("Player").GetComponent<Transform>().position = BottomPos;
     }
 
     IEnumerator MoveCenter() // 필요할까?
     {
-        float moveDuration = 1.2f;
+        float moveDuration = 2f;
         float elapsed = 0f;
         Vector3 startPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
         
@@ -79,13 +81,12 @@ public class BossBGM : MonoBehaviour
     }
     public void DestroyForBoss()
     {
-        
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach (GameObject obj in allObjects)
         {
             if (obj.tag == "Hoon_Monster")
                 DestroyImmediate(obj);
-            else if (obj.tag == "Enemy_Bullet")
+            if (obj.tag == "Enemy_Bullet")
                 DestroyImmediate(obj);
         }
     }

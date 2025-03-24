@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 7b7ca01ef93544628895c4cdfa8cdd35, type: 2}
-    - {fileID: 11400000, guid: dcf9dbbeb3674407ab83b8fa41c7b19d, type: 2}
     - {fileID: 11400000, guid: fedff16f8b5db4268a803bcbd677d780, type: 2}
+    - {fileID: 11400000, guid: ba5ea3cce103c4a648d8c0d49f7e7a43, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -216,6 +216,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 46109117}
+          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
+          m_MethodName: EndTimeline
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 46109117}
           m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
           m_MethodName: BGMOff
@@ -228,37 +244,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 46109117}
           m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
           m_MethodName: MoveToBoss
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 46109117}
-          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
-          m_MethodName: DestroyForBoss
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 46109117}
-          m_TargetAssemblyTypeName: BossBGM, Assembly-CSharp
-          m_MethodName: EndTimeline
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2450,7 +2438,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7cf35dc354371490987d057d0f801722, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -5427,7 +5415,7 @@ GameObject:
   - component: {fileID: 1220700923}
   m_Layer: 0
   m_Name: KyorgeIdle_0
-  m_TagString: Untagged
+  m_TagString: Hoon_Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5643,6 +5631,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 974459834628823322, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6258332483055012233, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_Name
       value: Gyarados_6
