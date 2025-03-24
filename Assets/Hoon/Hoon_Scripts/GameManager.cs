@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public float exp = 0;
     public int level = 1;
     public float expLeft = 1f;
-    public bool BossBattle = false;
     public Vector3 centerPos = new Vector3(0, 0, 0);
 
     public Image expUI;
@@ -62,11 +61,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(moveCenter());
             evolutionTimeline.Play();
             Time.timeScale = 0;
-        }
-        if (level >= 2 && !BossBattle)
-        {
-            BossBattle = true;          
-            BossBGM.instance.StartBossTimeline();
         }
         
     }

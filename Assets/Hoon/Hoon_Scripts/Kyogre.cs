@@ -6,24 +6,23 @@ using UnityEngine;
 
 public class Kyogre : MonoBehaviour
 {
+    public float HP = 1000000;
+    //public Animator ani;
+    //public SpriteRenderer sr;
+    //public GameObject hit;
     public GameObject waterRing;
-    public GameObject pulse;
-    public float ringScale = 0f;
+    //public GameObject pulse;
+    public Transform pos1;
     Vector3 scale = new Vector3(0f,0f,0f);
     void Start()
     {
-        waterRing.GetComponent<Transform>().localScale = scale;
-        pulse = Instantiate(waterRing, transform.position, Quaternion.identity);
+        InvokeRepeating("CastWaterRing", 3, 10);
     }
-
-    void Update()
+    void CastWaterRing()
     {
-        while(true)
-        {
-            float a = 0f;
-            a = a + 0.1f;
-            pulse.GetComponent<Transform>().localScale = new Vector3(a,a,a);
-        }
-        
+        Instantiate(waterRing, pos1.position, Quaternion.identity);
+    }
+    void Update()
+    {   
     }
 }

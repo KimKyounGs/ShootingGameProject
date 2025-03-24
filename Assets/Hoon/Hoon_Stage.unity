@@ -3030,6 +3030,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &592723103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592723104}
+  m_Layer: 0
+  m_Name: pos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592723104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592723103}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1220700921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604265228
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,6 +5444,7 @@ GameObject:
   - component: {fileID: 1220700919}
   - component: {fileID: 1220700922}
   - component: {fileID: 1220700923}
+  - component: {fileID: 1220700924}
   m_Layer: 0
   m_Name: KyorgeIdle_0
   m_TagString: Hoon_Enemy
@@ -5509,7 +5541,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 592723104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1220700922
@@ -5575,6 +5608,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1220700924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220700918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0240de94a63964d72bed108189899291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1000000
+  waterRing: {fileID: 2801101688884629912, guid: db52dc2f544544f8f8b5f3da84fb2bf5, type: 3}
+  pos1: {fileID: 592723104}
 --- !u!1 &1309808673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,6 +5656,7 @@ MonoBehaviour:
   carvanha: {fileID: 138741629244990977, guid: 3f77ea1a65d764424a1c49a6d65942ad, type: 3}
   mantine: {fileID: 6464502036668634894, guid: 88a8280099f824b58bf12bdd5740048a, type: 3}
   sharpedo: {fileID: 9175943797708736923, guid: d65ccaa2119dd4825b55e21a38bf970a, type: 3}
+  bossSpawn: 0
 --- !u!4 &1309808675
 Transform:
   m_ObjectHideFlags: 0
@@ -6389,7 +6438,6 @@ MonoBehaviour:
   exp: 0
   level: 1
   expLeft: 1
-  BossBattle: 0
   centerPos: {x: 0, y: 0, z: 0}
   expUI: {fileID: 2129349945}
   levelUI: {fileID: 1848638476}
