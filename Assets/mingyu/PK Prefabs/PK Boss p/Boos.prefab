@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &586164732877908653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 850725974581148390}
-  m_Layer: 7
-  m_Name: PK Monster Wapon5_2
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &850725974581148390
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586164732877908653}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2186, y: -0.0313, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8080627121380128544}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4372870278642044910
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4372870278642044910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2186, y: -0.0313, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8080627121380128544}
   - component: {fileID: 1142569795492918250}
+  - component: {fileID: 4122027554729589304}
   - component: {fileID: 3943878690576666566}
   - component: {fileID: 6037713097317273826}
   - component: {fileID: 5242737274978088743}
@@ -81,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8080627121380128544
 Transform:
   m_ObjectHideFlags: 0
@@ -96,7 +66,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5789961177903659936}
-  - {fileID: 850725974581148390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1142569795492918250
@@ -143,17 +112,39 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1225761722846916711, guid: b29369f09b662dd4b85f96db00cb5da5, type: 3}
+  m_Sprite: {fileID: -2424553518018739129, guid: 914f8d4776e96714a91a61f4324e36bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.4285715, y: 1.4285715}
+  m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4122027554729589304
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089836224278622839}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b81f9a8eb0dfbbc45a69fae2befaeb03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &3943878690576666566
 Rigidbody2D:
   serializedVersion: 5
@@ -219,8 +210,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4285715, y: 1.4285715}
-    newSize: {x: 1.4285715, y: 1.4285715}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -239,11 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0528459111200ad469beffe2493bbc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet_1: {fileID: 0}
-  Bullet_2: {fileID: 0}
-  Bullet_3: {fileID: 0}
-  Bullet_4: {fileID: 0}
-  Bullet_5: {fileID: 0}
+  Bullet_1: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
+  Bullet_2: {fileID: 9040495435885128795, guid: 0dff31623482d0a4087a34f6bd99a3bb, type: 3}
+  Bullet_3: {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}
+  Bullet_4: {fileID: 7412264983643448580, guid: 7432f30018702ad48aa01750d40f4208, type: 3}
+  Bullet_5: {fileID: 8240788215690239647, guid: 7059ccface39e274d9ab8ccbf1ba84ef, type: 3}
   pos1: {fileID: 5789961177903659936}
   boss_attack: 1
   attack_chose: 0

@@ -34,7 +34,7 @@ public class PK_Boss : MonoBehaviour
 
         if (boss_attack == true && cool_time1 >= 3)
         {
-            attack_chose = Random.Range(5, 5);
+            attack_chose = Random.Range(1, 6);
 
             if (attack_chose > 0)
             {
@@ -291,7 +291,7 @@ public class PK_Boss : MonoBehaviour
 
     public void BossAttack4() //이걸로 폭죽처럼 만들수 있게 가능함
     {
-        if (cool_time1 >= 4)
+        if (cool_time1 >= 2.5f)
         {
 
         Instantiate(Bullet_4, transform.position, Quaternion.identity);
