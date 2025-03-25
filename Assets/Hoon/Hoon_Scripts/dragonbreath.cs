@@ -12,7 +12,7 @@ public class dragonbreath : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime);
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 0.75f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,7 +23,6 @@ public class dragonbreath : MonoBehaviour
             {
             enemy.Damage(0.5f);
             }
-            //Hoon_AudioManager.instance.SFXBubblePop();
             Destroy(gameObject);
         }
     }

@@ -14,21 +14,6 @@ TextureImporter:
   - first:
       213: -8367815946728548904
     second: rainEffect_3
-  - first:
-      213: 834962514386664276
-    second: rainEffect_4
-  - first:
-      213: -1790521284493314385
-    second: rainEffect_5
-  - first:
-      213: 178304524752255715
-    second: rainEffect_6
-  - first:
-      213: 4755905533329995715
-    second: rainEffect_7
-  - first:
-      213: 5832179656378693048
-    second: rainEffect_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -176,10 +161,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 09a5503a4b431bbf0800000000000000
-      internalID: -310408948878058864
+      spriteID: 3492098ba7d0e4c5fbd5aca060de0ac6
+      internalID: 12931336
       vertices: []
       indices: 
       edges: []
@@ -198,10 +183,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4131ed7a47af6b180800000000000000
-      internalID: -9099810618116009196
+      spriteID: 10cdeb6eb7d4e4a0bb4c960783cc744d
+      internalID: -536626503
       vertices: []
       indices: 
       edges: []
@@ -220,10 +205,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 97ea18c1b96b495a0800000000000000
-      internalID: -6515381983583818119
+      spriteID: cf5ce0c51961f49d2912a8af8059c6f1
+      internalID: 1228664871
       vertices: []
       indices: 
       edges: []
@@ -242,10 +227,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d555652bbb8fdb80800000000000000
-      internalID: -8367815946728548904
+      spriteID: 6e4f5ecb40e87476aa51b8082e023c72
+      internalID: 1659022474
       vertices: []
       indices: 
       edges: []
@@ -264,10 +249,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 45bb8c6abf1669b00800000000000000
-      internalID: 834962514386664276
+      spriteID: 672101b214372446f96e1b91e21c92fc
+      internalID: -592761198
       vertices: []
       indices: 
       edges: []
@@ -286,10 +271,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fa6fffad06ac627e0800000000000000
-      internalID: -1790521284493314385
+      spriteID: b79708eec7bd3461392252e124d92349
+      internalID: 1955681062
       vertices: []
       indices: 
       edges: []
@@ -308,10 +293,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3eaf3b34507797200800000000000000
-      internalID: 178304524752255715
+      spriteID: 80e95cb1c100e402b9b429725a7e5a40
+      internalID: -2015410858
       vertices: []
       indices: 
       edges: []
@@ -320,7 +305,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0e3ebecfa275a45e0b605d468baae521
+    spriteID: c3873e0e57f6f45ccbd93a15f57e4707
     internalID: 0
     vertices: []
     indices: 
@@ -330,13 +315,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rainEffect_0: -310408948878058864
-      rainEffect_1: -9099810618116009196
-      rainEffect_2: -6515381983583818119
-      rainEffect_3: -8367815946728548904
-      rainEffect_4: 834962514386664276
-      rainEffect_5: -1790521284493314385
-      rainEffect_6: 178304524752255715
+      rainEffect_0: 12931336
+      rainEffect_1: -536626503
+      rainEffect_2: 1228664871
+      rainEffect_3: 1659022474
+      rainEffect_4: -592761198
+      rainEffect_5: 1955681062
+      rainEffect_6: -2015410858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

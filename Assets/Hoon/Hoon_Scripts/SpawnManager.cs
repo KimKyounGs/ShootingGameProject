@@ -10,6 +10,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject mantine;
     public GameObject sharpedo;
     public bool bossSpawn = false;
+
+    public float gameDuration = 90;
     private float elapsedTime = 0f;
 
     void Start()
@@ -25,7 +27,7 @@ public class SpawnManager : MonoBehaviour
         if (bossSpawn) return;
         elapsedTime += Time.deltaTime;
 
-        if (elapsedTime >= 90)
+        if (elapsedTime >= gameDuration)
         {
             CancelInvoke();
             bossSpawn = true;

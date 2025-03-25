@@ -7,8 +7,6 @@ public class BossBGM : MonoBehaviour
 {
     public static BossBGM instance;
     public PlayableDirector BossTimeline;
-    public Vector3 centerPos = new Vector3(0, 0, 0);
-
 
 
     AudioSource myAudio;
@@ -34,7 +32,7 @@ public class BossBGM : MonoBehaviour
     public void StartBossTimeline()
     {
         StartCoroutine(MoveBeyond());
-        BossTimeline.Play();        
+        BossTimeline.Play();
         Time.timeScale = 0;
     }
 
@@ -70,7 +68,8 @@ public class BossBGM : MonoBehaviour
         float moveDuration = 2f;
         float elapsed = 0f;
         Vector3 startPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
-        
+        Vector3 centerPos = new Vector3(0, -1.5f, 0);
+
         while (elapsed < moveDuration)
         {
             GameObject.FindWithTag("Player").GetComponent<Transform>().position = Vector3.Lerp(startPos, centerPos, elapsed / moveDuration);
@@ -84,9 +83,7 @@ public class BossBGM : MonoBehaviour
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
         foreach (GameObject obj in allObjects)
         {
-            if (obj.tag == "Hoon_Monster")
-                DestroyImmediate(obj);
-            if (obj.tag == "Enemy_Bullet")
+            if (obj.tag == "PlayerBullet")
                 DestroyImmediate(obj);
         }
     }
