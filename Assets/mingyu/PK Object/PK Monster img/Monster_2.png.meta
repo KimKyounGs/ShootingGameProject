@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: a04426d0252436940a5db4d74d75e61d
+guid: f67d672592933024ebad5cf520c38264
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4400442642108703699
-    second: PK Monster Bullet2_0
+      213: -657376115467598392
+    second: Monster_2_0
   - first:
-      213: -3104424211873039037
-    second: PK Monster Bullet2_1
+      213: 4958486653662968965
+    second: Monster_2_1
   - first:
-      213: -4985441799289632812
-    second: PK Monster Bullet2_2
+      213: -5446758056893192313
+    second: Monster_2_2
+  - first:
+      213: 5036569478107663158
+    second: Monster_2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PK Monster Bullet2_0
+      name: Monster_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 41
-        height: 41
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d3ee59b443811d30800000000000000
-      internalID: 4400442642108703699
+      spriteID: 8c54ab9e7e780e6f0800000000000000
+      internalID: -657376115467598392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PK Monster Bullet2_1
+      name: Monster_2_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 50
         y: 0
-        width: 41
-        height: 41
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34d7f2390aedae4d0800000000000000
-      internalID: -3104424211873039037
+      spriteID: 58cb81f175510d440800000000000000
+      internalID: 4958486653662968965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PK Monster Bullet2_2
+      name: Monster_2_2
       rect:
         serializedVersion: 2
-        x: 82
+        x: 100
         y: 0
-        width: 41
-        height: 41
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,30 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d705f8f81720dab0800000000000000
-      internalID: -4985441799289632812
+      spriteID: 7876269c76a3964b0800000000000000
+      internalID: -5446758056893192313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PK Monster Bullet2_3
+      name: Monster_2_3
       rect:
         serializedVersion: 2
-        x: 123
+        x: 150
         y: 0
-        width: 41
-        height: 41
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ad533b88ea1c1474aa6ecaf277105ab5
-      internalID: -985163623
+      spriteID: 63b8e25614d75e540800000000000000
+      internalID: 5036569478107663158
       vertices: []
       indices: 
       edges: []
@@ -210,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 67b0abd624a2c094a8e1931a3a250ada
+    spriteID: c482a49ab18ee864095195d6cb8601be
     internalID: 0
     vertices: []
     indices: 
@@ -220,10 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PK Monster Bullet2_0: 4400442642108703699
-      PK Monster Bullet2_1: -3104424211873039037
-      PK Monster Bullet2_2: -4985441799289632812
-      PK Monster Bullet2_3: -985163623
+      Monster_2_0: -657376115467598392
+      Monster_2_1: 4958486653662968965
+      Monster_2_2: -5446758056893192313
+      Monster_2_3: 5036569478107663158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

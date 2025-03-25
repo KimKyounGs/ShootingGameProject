@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 014445d5581a62d478b613c1967aa726
+guid: bb1dbcf3a80eee145886f3927edc5a44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2624384183978625735
-    second: PK Monster5_0
+      213: 1453210893535345519
+    second: Monster_1_0
   - first:
-      213: 4951614451839886742
-    second: PK Monster5_1
+      213: -4866309598625018053
+    second: Monster_1_1
   - first:
-      213: -9137999892134275438
-    second: PK Monster5_2
+      213: -1062459106954124080
+    second: Monster_1_2
+  - first:
+      213: -6455514634214636999
+    second: Monster_1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PK Monster5_0
+      name: Monster_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 27
-        height: 39
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ca0330c28fab6420800000000000000
-      internalID: 2624384183978625735
+      spriteID: f6bf6e4bb97da2410800000000000000
+      internalID: 1453210893535345519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PK Monster5_1
+      name: Monster_1_1
       rect:
         serializedVersion: 2
-        x: 27
+        x: 50
         y: 0
-        width: 27
-        height: 39
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6956b92fb1ba7b440800000000000000
-      internalID: 4951614451839886742
+      spriteID: b3fc1eee335677cb0800000000000000
+      internalID: -4866309598625018053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PK Monster5_2
+      name: Monster_1_2
       rect:
         serializedVersion: 2
-        x: 54
+        x: 100
         y: 0
-        width: 27
-        height: 39
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29657c7638d4f2180800000000000000
-      internalID: -9137999892134275438
+      spriteID: 0d4ee9542136141f0800000000000000
+      internalID: -1062459106954124080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster_1_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9320d4994a76966a0800000000000000
+      internalID: -6455514634214636999
       vertices: []
       indices: 
       edges: []
@@ -188,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1c914aa93b4d8ba48bcc9ca258a0adc7
+    spriteID: 57a613edc666bd64bbfe638b2b9d4667
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PK Monster5_0: 2624384183978625735
-      PK Monster5_1: 4951614451839886742
-      PK Monster5_2: -9137999892134275438
+      Monster_1_0: 1453210893535345519
+      Monster_1_1: -4866309598625018053
+      Monster_1_2: -1062459106954124080
+      Monster_1_3: -6455514634214636999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
