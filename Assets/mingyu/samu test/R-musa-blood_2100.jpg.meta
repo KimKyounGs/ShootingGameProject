@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      R-musa-blood_2100_0: 8820329515873068276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
