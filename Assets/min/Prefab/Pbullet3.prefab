@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3069476111861353693}
   - component: {fileID: 5837710256039976447}
   - component: {fileID: 963035056679877594}
+  - component: {fileID: -1117952931054695268}
   m_Layer: 0
   m_Name: Pbullet3
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 987735077234792010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -3.32, z: 0}
+  m_LocalPosition: {x: 0, y: -3.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 147316924086779331, guid: c8357f68503580f4d9537a53d1c47a8e, type: 3}
+  m_Sprite: {fileID: 66352720, guid: c8357f68503580f4d9537a53d1c47a8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,17 +124,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.024059713, y: -0.014435649}
+  m_Offset: {x: 0.0069649518, y: 0.0069650114}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.66272557, y: 1.0284317}
+  m_Size: {x: 0.5403103, y: 0.73533016}
   m_EdgeRadius: 0
 --- !u!50 &963035056679877594
 Rigidbody2D:
@@ -162,3 +163,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1117952931054695268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987735077234792010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f937e6061bc9b6348bfdc652a113aa59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 4
+  Attack: 0
+  effect: {fileID: 3935052839128713271, guid: a156394a13f43d0469738482d2632189, type: 3}

@@ -25,4 +25,18 @@ public class MJ_Monster : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //미사일에 따른 데미지 입는 함수
+    public void Damage(int attack)
+    {
+        HP -= attack;
+
+        if (HP <= 0)
+        {
+            //ItemDrop();
+            Destroy(gameObject);
+        }
+    }
+
+
+
 }

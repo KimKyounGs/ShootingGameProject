@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1180906550535180174}
   m_Layer: 0
   m_Name: Monster_5
-  m_TagString: Untagged
+  m_TagString: MJ_Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   Speed: 1
-  Delay: 1
   x: 0
   y: -1

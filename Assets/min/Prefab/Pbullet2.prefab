@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3995222767332659247}
   - component: {fileID: 7383838462020954160}
   - component: {fileID: 569177955141170030}
+  - component: {fileID: 8020978380048940979}
   m_Layer: 0
   m_Name: Pbullet2
   m_TagString: Untagged
@@ -123,17 +124,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.02062489, y: -0.0029814243}
+  m_Offset: {x: -0.013018981, y: -0.010587335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.40720102, y: 0.865602}
+  m_Size: {x: 0.3007178, y: 0.6070001}
   m_EdgeRadius: 0
 --- !u!50 &569177955141170030
 Rigidbody2D:
@@ -162,3 +163,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8020978380048940979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986319417188402831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f937e6061bc9b6348bfdc652a113aa59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 4
+  Attack: 0
+  effect: {fileID: 3935052839128713271, guid: a156394a13f43d0469738482d2632189, type: 3}

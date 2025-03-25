@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,11 +126,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< Updated upstream:Assets/min/Image/Bullet/Bullet_Eg_c.png.meta
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WindowsStoreApps
-=======
-    buildTarget: iOS
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_c.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -159,10 +168,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3cd789146ff5b0200800000000000000
-      internalID: 147316924086779331
+      spriteID: dba8e9aa8df26d74cba2af93dec2a3e1
+      internalID: 66352720
       vertices: []
       indices: 
       edges: []
@@ -171,7 +180,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 868224f254ec8e94da216a80a9fec3ed
+    spriteID: 6276d3c2b1255094e9c84afc081d57eb
     internalID: 0
     vertices: []
     indices: 
@@ -181,11 +190,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bullet_Eg_c_0: 147316924086779331
-<<<<<<< Updated upstream:Assets/min/Image/Bullet/Bullet_Eg_c.png.meta
-=======
-      Bullet_Eg_c_1: -8354254116718881772
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Bullet/Bullet_Eg_c.png.meta
+      Bullet_Eg_c_0: 66352720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

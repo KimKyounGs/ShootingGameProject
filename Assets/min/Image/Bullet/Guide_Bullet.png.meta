@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -123,11 +123,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-<<<<<<< Updated upstream:Assets/min/Image/Bullet/Guide_Bullet.png.meta
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WindowsStoreApps
-=======
-    buildTarget: iOS
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_head.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -148,7 +157,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
+        width: 48
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,10 +165,76 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79fc9fae0fc3e4570800000000000000
-      internalID: 8452760556053057431
+      spriteID: 8df9bf63723ae2d43845825859e21ba5
+      internalID: -360670843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Bullet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f156974e24e98764fb6c0c7d1b14e974
+      internalID: -1739783413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Bullet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411b769362dd827479e62d07ad0b0420
+      internalID: 1773197331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guide_Bullet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2321070718f2364693da603823c5bbf
+      internalID: -1108109726
       vertices: []
       indices: 
       edges: []
@@ -168,7 +243,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dea2d9d6d2430e74db5e7ce0c1353be5
     internalID: 0
     vertices: []
     indices: 
@@ -178,13 +253,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream:Assets/min/Image/Bullet/Guide_Bullet.png.meta
-      Guide_Bullet_0: 8452760556053057431
-=======
-      Boss_head_0: 2297100179062592671
-      Boss_head_1: 4205941002673464193
-      Boss_head_2: 4968463528099649995
->>>>>>> Stashed changes:Assets/KoungIle/Asset/Ship/Boss_head.png.meta
+      Guide_Bullet_0: -360670843
+      Guide_Bullet_1: -1739783413
+      Guide_Bullet_2: 1773197331
+      Guide_Bullet_3: -1108109726
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
