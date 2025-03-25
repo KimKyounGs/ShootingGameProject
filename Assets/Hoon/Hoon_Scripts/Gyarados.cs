@@ -5,6 +5,8 @@ using TMPro;
 
 public class Gyarados : MonoBehaviour
 {
+    public static Gyarados instance;
+
     public float Speed = 5f;
     private Vector2 minBounds;
     private Vector2 maxBounds;
@@ -15,12 +17,20 @@ public class Gyarados : MonoBehaviour
     public int power = 0;
     public bool isEvolved = true;
     public bool Firing = false;
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Destroy(gameObject);
+    }
 
     public void Shoot()
     {
         StartCoroutine(BulletCooldown());
         CanShoot = false;
-
+        
         // if (power <= 3)
             Hoon_AudioManager.instance.SFXDragonBreath();
             Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
@@ -36,7 +46,7 @@ public class Gyarados : MonoBehaviour
 
     IEnumerator BulletCooldown()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         CanShoot = true;
     }
     void Start()
@@ -63,8 +73,11 @@ public class Gyarados : MonoBehaviour
     // }
     void Update()
     {
-        ani.SetBool("Down", false);    
-        // 플레이어 이동
+        ani.SetBool("Down", false);
+
+        if(Time.timeScale == 1)
+        {
+            // 플레이어 이동
         float moveX = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
         float moveY = Input.GetAxis("Vertical") * Speed * Time.deltaTime;
 
@@ -121,6 +134,9 @@ public class Gyarados : MonoBehaviour
             ani.SetBool("Firing", true);
         }
         else    ani.SetBool("Firing", false);
+        }
+        
+        
 
                     
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.

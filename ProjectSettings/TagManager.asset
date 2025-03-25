@@ -13,6 +13,9 @@ TagManager:
   - Monster
   - PlayerBullet
   - EnemyBullet
+  - MJ_Monster
+  - MJ_Monster_Boss
+  - MJ_Player
   layers:
   - Default
   - TransparentFX

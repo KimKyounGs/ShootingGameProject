@@ -8,6 +8,11 @@ public class MJ_Pllayer : MonoBehaviour
 
     Animator animator; //애니메이터 생성
 
+    public GameObject[] bullet;  //총알 4개 배열
+    public Transform pos = null;
+
+    public int power = 0;
+
     void Start()
     {
         animator = GetComponent<Animator>(); //GetComponet로 애니메이터 가져오기
@@ -42,7 +47,19 @@ public class MJ_Pllayer : MonoBehaviour
         else
             animator.SetBool("up", false);
 
-        transform.Translate(moveX, moveY, 0); //움직임
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bullet[power], pos.position, Quaternion.identity);
+        }
+
+        transform.Translate(moveX, moveY, 0); //움직임 표현
+
+        //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
+        Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+        viewPos.x = Mathf.Clamp01(viewPos.x); //x값을 0이상, 1이하로 제한한다.
+        viewPos.y = Mathf.Clamp01(viewPos.y); //y값을 0이상, 1이하로 제한한다.
+        Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);//다시월드좌표로 변환
+        transform.position = worldPos; //좌표를 적용한다.
 
     }
 }

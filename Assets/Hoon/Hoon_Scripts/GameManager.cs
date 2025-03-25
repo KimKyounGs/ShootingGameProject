@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public float expLeft = 1f;
     public Vector3 centerPos = new Vector3(0, 0, 0);
+    public int evolutionLevel = 5;
 
     public Image expUI;
     public TMP_Text levelUI;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
         levelUI.text = "Lv" + level;
         expLeft += expLeft / 10f; //10% 더 채워야 레벨업.
 
-        if (level >= 20 && !Magikarp.instance.isEvolved)
+        if (level >= evolutionLevel && !Magikarp.instance.isEvolved)
         {            
             Magikarp.instance.isEvolved = true;
             StartCoroutine(moveCenter());

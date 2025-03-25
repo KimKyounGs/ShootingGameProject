@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MJ_Bullet : MonoBehaviour
+public class MJ_MBullet : MonoBehaviour
 {
     
     void Start()

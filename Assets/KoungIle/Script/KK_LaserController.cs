@@ -1,8 +1,9 @@
 using UnityEngine;
+using System.Collections;
 
 public class KK_LaserController : MonoBehaviour
 {
-public Transform laserHead;
+    public Transform laserHead;
     public Transform laserBody;
     public Transform laserTail;
 
@@ -24,18 +25,28 @@ public Transform laserHead;
                 Destroy(child.gameObject);
         }
 
-        // 4. 방향 벡터 기준 offset 계산
-        Vector3 offset = direction.normalized * bodySegmentLength;
+        // 4. 회전된 기준의 오른쪽 방향 기준으로 쌓음
+        Vector3 offset = transform.right * bodySegmentLength;
 
-        // 5. 몸통 복제 및 배치
-        for (int i = 0; i < bodyCount; i++)
-        {
-            GameObject segment = Instantiate(laserBody.GetChild(0).gameObject, laserBody);
-            segment.transform.localPosition = offset * (i + 1);
-        }
+        // 5. 몸통 복제 및 배치.
+        StartCoroutine(GrowLaser(bodyCount, offset));
 
         // 6. 머리 위치 설정
         laserHead.localPosition = offset * (bodyCount + 1);
+
+    }
+
+    public IEnumerator GrowLaser(int bodyCount, Vector3 offset)
+    {
+        for (int i = 0; i < bodyCount; i++)
+        {
+            GameObject segment = Instantiate(laserBody.GetChild(0).gameObject, laserBody);
+            Vector3 worldPos = transform.position + offset * (i + 1);
+            segment.transform.position = worldPos;
+            segment.transform.rotation = transform.rotation; // 세그먼트도 회전 정렬
+
+            yield return new WaitForSeconds(0.005f); // 0.005초 간격으로 생성
+        }
     }
 
     public void DestroyAfter(float duration)
