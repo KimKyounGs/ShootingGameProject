@@ -2,6 +2,8 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+//using System.Numerics;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,6 +20,10 @@ public class Kyogre : Hoon_Monster
     public GameObject rainEffect;
     List<GameObject> rain = new List<GameObject>();	
 
+    // 번개 패턴
+    public GameObject thunder;
+    public bool thunderOn = false;
+    Vector3 thunderVec = new Vector3(0, 4.5f, 0);
 
     protected override void Start()
     {
@@ -31,16 +37,39 @@ public class Kyogre : Hoon_Monster
 
     void CastWaterRing()
     {
+        Hoon_AudioManager.instance.SFXSurf();
         Instantiate(waterRing, pos1.position, Quaternion.identity);
     }
 
     protected override void Update()
     {
         BossHPUI.fillAmount = HP / 1000;
-        if (HP < 990)
+
+        if (HP < 990 && !thunderOn)
         {
-            StartCoroutine(raindrop());
+            InvokeRepeating("CastThunder", 1, 5);
+            thunderOn = true;
         }
+    }
+
+    public void CastThunder()
+    {
+        float thunderX = Random.Range(-2.8f, 2.8f);
+        thunderVec = new Vector3(thunderX, 4.5f, 0);
+        Hoon_AudioManager.instance.SFXThunder();
+        StartCoroutine(thunderTail());
+    }
+
+    IEnumerator thunderTail()
+    {
+        for(int i = 0; i < 21; i++)
+        {
+            Vector3 tailPos = new Vector3(0, i * -0.5f, 0);
+            yield return new WaitForSeconds(0.05f);
+            GameObject go = Instantiate(thunder, thunderVec + tailPos, Quaternion.identity);
+            Destroy(go, 0.4f);
+        }
+        
     }
 
     IEnumerator raindrop()
@@ -65,6 +94,10 @@ public class Kyogre : Hoon_Monster
         
     }
 }
+
+
+
+
 
         //  잔상 지우기
         // else if(direction.x == 0)

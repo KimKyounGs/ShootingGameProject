@@ -10,6 +10,8 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip bubble_pop;
     public AudioClip cryRemoraid;
     public AudioClip dragonBreath;
+    public AudioClip surf;
+    public AudioClip thunder;
 
     private void Awake()
     {
@@ -39,6 +41,16 @@ public class Hoon_AudioManager : MonoBehaviour
      public void SFXDragonBreath()
     {
         myAudio.PlayOneShot(dragonBreath);
+    }
+
+    public void SFXSurf()
+    {
+        myAudio.PlayOneShot(surf);
+    }
+
+    public void SFXThunder()
+    {
+        myAudio.PlayOneShot(thunder);
     }
 
     public void CryRemoraid()
