@@ -304,8 +304,8 @@ Transform:
   - {fileID: 850212354318568673}
   - {fileID: 8349926988559930690}
   - {fileID: 468989448084556526}
-  - {fileID: 2920157440403231013}
   - {fileID: 8048996230575159844}
+  - {fileID: 2920157440403231013}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7686203644014581140
@@ -401,8 +401,12 @@ MonoBehaviour:
   P_HP: 3
   bullet:
   - {fileID: 8393644635260138630, guid: da7462bb77d71b345bb5a885c71f6344, type: 3}
+  - {fileID: 8393644635260138630, guid: da7462bb77d71b345bb5a885c71f6344, type: 3}
   pos:
   - {fileID: 8667198992381152536}
+  - {fileID: 850212354318568673}
+  - {fileID: 8349926988559930690}
+  Player_LV2: {fileID: 8336799123440692870}
   swouldtos: {fileID: 2708035861164827570}
   PK_Swould_Cooltime: 0
   Swoard_Gage: {fileID: 0}
@@ -551,7 +555,7 @@ GameObject:
   - component: {fileID: 1579540753714534326}
   - component: {fileID: 5055497396129019393}
   m_Layer: 0
-  m_Name: UPGRADE_3_0
+  m_Name: UPGRADE_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,7 +764,7 @@ GameObject:
   - component: {fileID: 4622122528826345775}
   - component: {fileID: 2233612848237611052}
   m_Layer: 0
-  m_Name: UPGRADE_1_0
+  m_Name: UPGRADE_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

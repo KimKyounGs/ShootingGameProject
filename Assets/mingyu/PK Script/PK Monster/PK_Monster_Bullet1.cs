@@ -7,6 +7,7 @@ public class PK_Monster_Bullet1 : MonoBehaviour
     Vector2 dir;
     Vector2 dirNo;
 
+    float angle;
 
     void Start()
     {
@@ -16,13 +17,16 @@ public class PK_Monster_Bullet1 : MonoBehaviour
         dir = target.transform.position - transform.position;
 
         dirNo = dir.normalized;
+
+
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
     }
 
 
     void Update()
     {
         transform.Translate(dirNo * Speed * Time.deltaTime);
-
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,5 +35,12 @@ public class PK_Monster_Bullet1 : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+
+    private void OnBecameInvisible()
+    {
+        //자기 자신 지우기
+        Destroy(gameObject);
     }
 }
