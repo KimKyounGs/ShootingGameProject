@@ -119,6 +119,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &116985538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7171606194169621344, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+  m_PrefabInstance: {fileID: 719751834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &116985539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116985538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2322821fb2ea0341854b491495da223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlySpeed: 0.3
+  Radius: 3.1
 --- !u!1 &181524118
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +998,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &719751834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768011350595639967, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171606194169621344, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      propertyPath: m_Name
+      value: air_Monster_G
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7171606194169621344, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116985539}
+  m_SourcePrefab: {fileID: 100100000, guid: ca23d1ddf48964e4ca131c120c0a51bb, type: 3}
 --- !u!1 &732735166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1697,10 @@ MonoBehaviour:
   SideLazer_R: {fileID: 6723511163800874949, guid: e0ed76fe99522d040b17e8bed1f8bc4d, type: 3}
   CrossLazer_L: {fileID: 466151810261024563, guid: 43c259dbabd548b4ab466565f5d68bec, type: 3}
   CrossLazer_R: {fileID: 9000770862023179103, guid: e9b5f764c98e2a94daf15d7388d11e9b, type: 3}
+  Circling_Missile_L: {fileID: 1449988405309882311, guid: 20b02a99af1ce944fb831342922acb81, type: 3}
+  Circling_Missile_R: {fileID: 4038047762922200119, guid: dce947cc9c6e31b4bbe42b02ca089cf2, type: 3}
+  Circling_Missile_LD: {fileID: 1788099519752157922, guid: 66988d94ac89f9c4e991c2faa485bf92, type: 3}
+  Circling_Missile_RD: {fileID: 2083391183320131515, guid: 88fd8ea62b16c714bb335dec34406d64, type: 3}
 --- !u!4 &1533887289
 Transform:
   m_ObjectHideFlags: 0
@@ -2490,3 +2573,4 @@ SceneRoots:
   - {fileID: 2050321312}
   - {fileID: 1517883751}
   - {fileID: 556810420}
+  - {fileID: 719751834}

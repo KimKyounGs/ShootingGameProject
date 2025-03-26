@@ -12,10 +12,21 @@ public class Jino_SpawnManager : MonoBehaviour
     public GameObject SideLazer_R;
     public GameObject CrossLazer_L;
     public GameObject CrossLazer_R;
+    public GameObject Circling_Missile_L;
+    public GameObject Circling_Missile_R;
+    public GameObject Circling_Missile_LD;
+    public GameObject Circling_Missile_RD;
+    
 
     void Start()
     {
-        Invoke("MissileLine", 0.5f);
+        //Invoke("Circling_Missile_r", 0.1f);
+        //Invoke("Circling_Missile_l", 0.3f);
+        //Invoke("Circling_Missile_ld", 0.5f);
+        //Invoke("Circling_Missile_rd", 0.7f);
+        //StartCoroutine("Triple_Circling_R", 2f);
+        //StartCoroutine("Triple_Circling_L", 2.5f);
+        //Invoke("MissileLine", 0.5f);
         Invoke("Lining_Enemy_L", 13f);
         Invoke("Lining_Enemy_R", 13f);
         Invoke("StartShake", 12.5f);
@@ -61,6 +72,59 @@ public class Jino_SpawnManager : MonoBehaviour
         Instantiate(CrossLazer_R, start, Quaternion.identity);
     }
 
+    void Circling_Missile_l()
+    {
+        Circling_Missile_L missile = Instantiate(Circling_Missile_L).GetComponent<Circling_Missile_L>();
+        missile.SetStartpos(new Vector3(-2.8f, 0, 0));
+    }
+
+    IEnumerator Triple_Circling_L(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Circling_Missile_L missile1 = Instantiate(Circling_Missile_L).GetComponent<Circling_Missile_L>();
+        missile1.SetStartpos(new Vector3(-2.8f, 0, 0));
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_L missile2 = Instantiate(Circling_Missile_L).GetComponent<Circling_Missile_L>();
+        missile2.SetStartpos(new Vector3(-2.8f, -2f, 0));
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_L missile3 = Instantiate(Circling_Missile_L).GetComponent<Circling_Missile_L>();
+        missile3.SetStartpos(new Vector3(-2.8f, -4f, 0));
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    void Circling_Missile_ld()
+    {
+        Circling_Missile_L missile = Instantiate(Circling_Missile_LD).GetComponent<Circling_Missile_L>();
+        missile.SetDown(true);
+        missile.SetStartpos(new Vector3(-2.8f, 0, 0));
+    }
+
+    void Circling_Missile_r()
+    {
+        Circling_Missile_R missile = Instantiate(Circling_Missile_R).GetComponent<Circling_Missile_R>();
+        missile.SetStartpos(new Vector3(2.8f, 0, 0));
+    }
+
+    IEnumerator Triple_Circling_R(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Circling_Missile_R missile1 = Instantiate(Circling_Missile_R).GetComponent<Circling_Missile_R>();
+        missile1.SetStartpos(new Vector3(2.8f, 0, 0));
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_R missile2 = Instantiate(Circling_Missile_R).GetComponent<Circling_Missile_R>();
+        missile2.SetStartpos(new Vector3(2.8f, -2f, 0));
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_R missile3 = Instantiate(Circling_Missile_R).GetComponent<Circling_Missile_R>();
+        missile3.SetStartpos(new Vector3(2.8f, -4f, 0));
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    void Circling_Missile_rd()
+    {
+        Circling_Missile_R missile = Instantiate(Circling_Missile_RD).GetComponent<Circling_Missile_R>();
+        missile.SetDown(true);
+        missile.SetStartpos(new Vector3(2.8f, 0, 0));
+    }
     void StartShake()
     {
         StartCoroutine("Shake");

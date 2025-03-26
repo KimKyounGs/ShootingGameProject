@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3495617002610509418}
   - component: {fileID: 4664645157825493465}
   - component: {fileID: 2639970700169270453}
+  - component: {fileID: 2017043865673890706}
   m_Layer: 0
   m_Name: circling_Missile_R
   m_TagString: Untagged
@@ -110,3 +111,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2017043865673890706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449988405309882311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4576c8ad0d8dede42a3eadb4ca7eec7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlySpeed: 0.3
+  Radius: 4
