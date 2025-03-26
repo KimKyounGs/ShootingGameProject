@@ -1,31 +1,34 @@
 using UnityEngine;
 
-public class PK_Monster_Bullet5 : MonoBehaviour
+public class PK_Monster_Bullet1 : MonoBehaviour
 {
-    public float Speed = 3f;
+    public GameObject target;   //플레이어 찾기
+    public float Speed = 8f;
+    Vector2 dir;
+    Vector2 dirNo;
+
+
     void Start()
     {
 
+        target = GameObject.FindGameObjectWithTag("Player");
+
+        dir = target.transform.position - transform.position;
+
+        dirNo = dir.normalized;
     }
 
 
     void Update()
     {
-        transform.Translate(Vector2.down * Speed * Time.deltaTime);
-    }
+        transform.Translate(dirNo * Speed * Time.deltaTime);
 
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PK_Player>().Damage(+1);
-
-            //미사일지우기
             Destroy(gameObject);
         }
     }

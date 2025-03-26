@@ -1,50 +1,59 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class PK_Monster : MonoBehaviour
 {
     public float Speed = 3;
     public float Delay = 1f;
-    public int M_HP = 1;
+    public int M_HP = 5;
 
     public Transform ms1;
-    public Transform ms2;
     public GameObject bullet;
     //아이템 가져오기
     public GameObject Item = null;
 
+    public float delay = 0;
+
+    Animator pAnimator;
+
     void Start()
     {
-        //한번함수호출
-        Invoke("CreateBullet", Delay);
+        pAnimator = GetComponent<Animator>();
     }
-
-
-    void CreateBullet()
-    {
-        Instantiate(bullet, ms1.position, Quaternion.identity);
-        Instantiate(bullet, ms2.position, Quaternion.identity);
-
-        //재귀호출
-        Invoke("CreateBullet", Delay);  //start는 한 번 호출되지만 이 명령어를 한번 더 씀으로 써 계속 반복되게 한다
-    }
-
-
-
-
-
-
-
-
-
-
 
 
     void Update()
     {
         //아래 방향으로 움직여라
         transform.Translate(Vector3.down * Speed * Time.deltaTime);
+
+        delay += Time.deltaTime;
+
+        if (delay > 1f)
+        {
+            pAnimator.SetBool("Attack", true);
+
+            if (delay > 1.5f)
+            {
+                pAnimator.SetBool("Attack", false);
+
+                delay = 0;
+            }
+        }
+
+
     }
+
+
+
+    public void Shoot()
+    {
+        Instantiate(bullet, ms1.position, Quaternion.identity);
+    }
+
+
+
+
+
 
     private void OnBecameInvisible()
     {
@@ -69,11 +78,16 @@ public class PK_Monster : MonoBehaviour
 
 
 
-
+    public int item_Random = 0;
 
     public void ItemDrop()
     {
-        //아이템 생성
-        Instantiate(Item, transform.position, Quaternion.identity);
+        item_Random = Random.Range(0, 11);
+
+        if (item_Random >= 7)
+        {
+            //아이템 생성
+            Instantiate(Item, transform.position, Quaternion.identity);
+        }
     }
 }
