@@ -3,7 +3,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-//using System.Numerics;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -22,8 +21,13 @@ public class Kyogre : Hoon_Monster
 
     // 번개 패턴
     public GameObject thunder;
+    public GameObject thunderCloud;
     public bool thunderOn = false;
+    public bool Cloud = false;
     Vector3 thunderVec = new Vector3(0, 4.5f, 0);
+
+    public GameObject whirl;
+    public Vector3 WhirlPos = new Vector3();
 
     protected override void Start()
     {
@@ -33,6 +37,7 @@ public class Kyogre : Hoon_Monster
         exp = 0;
 
         InvokeRepeating("CastWaterRing", 1, 10);
+        Invoke("WhirlPool", 5);
     }
 
     void CastWaterRing()
@@ -44,14 +49,28 @@ public class Kyogre : Hoon_Monster
     protected override void Update()
     {
         BossHPUI.fillAmount = HP / 1000;
+        
 
         if (HP < 990 && !thunderOn)
         {
-            InvokeRepeating("CastThunder", 1, 5);
+            Hoon_AudioManager.instance.CryKyogre();
+            InvokeRepeating("CastThunder", 1, 7);
             thunderOn = true;
+            if (thunderOn == true && Cloud == false);
+            {
+                Invoke("ThunderCloud", 1);
+                Cloud = true;
+            }
         }
+
+            
+          
     }
 
+    void ThunderCloud()
+    {
+        Instantiate(thunderCloud, Vector3.zero, Quaternion.identity);
+    }
     public void CastThunder()
     {
         float thunderX = Random.Range(-2.8f, 2.8f);
@@ -65,7 +84,7 @@ public class Kyogre : Hoon_Monster
         for(int i = 0; i < 21; i++)
         {
             Vector3 tailPos = new Vector3(0, i * -0.5f, 0);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
             GameObject go = Instantiate(thunder, thunderVec + tailPos, Quaternion.identity);
             Destroy(go, 0.4f);
         }
@@ -93,16 +112,39 @@ public class Kyogre : Hoon_Monster
         }
         
     }
+
+    void WhirlPool()
+    {
+        StartCoroutine(CircleShoot());
+    }
+    IEnumerator CircleShoot()
+    {
+        float weightAngle = 0f;
+        float attackRate = 4.5f;
+        float intervalAngle = 360 / 16;
+
+        while(true)
+        {
+            for(int i = 0; i< 16; i++)
+            {
+                Hoon_AudioManager.instance.SFXWhirlpool();
+                //WhirlPos = GameObject.FindWithTag("Player").transform.position;
+                GameObject clone = Instantiate(whirl, pos1.transform.position, Quaternion.identity);
+                //발사체 이동 방향(각도)
+                float angle = weightAngle + intervalAngle * i;
+                //발사체 이동 방향(벡터)
+                // cos(각도) 라디안 단위의 각도 표현을 위해 pi/180을 곱함
+                float x = Mathf.Cos(angle * Mathf.Deg2Rad);
+                // sin(각도) 라디안 단위의 각도 표현을 위해 pi/180을 곱함
+                float y = Mathf.Sin(angle * Mathf.Deg2Rad);
+
+                clone.GetComponent<Whirl>().Move(new Vector2(x,y));
+                yield return new WaitForSeconds(0.05f);
+            }
+
+            weightAngle += 1;
+
+            yield return new WaitForSeconds(attackRate);
+        }
+    }
 }
-
-
-
-
-
-        //  잔상 지우기
-        // else if(direction.x == 0)
-        // {
-        //     pAnimator.SetBool("Run", false);
-
-
-        // }
