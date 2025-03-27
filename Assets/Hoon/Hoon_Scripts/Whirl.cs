@@ -15,7 +15,7 @@ public class Whirl : MonoBehaviour
         transform.Translate(vec2 * Speed * Time.deltaTime);
     }
 
-    public void Move(Vector2 vec)
+    public void Move(Vector3 vec)
     {
         vec2 = vec;
     }
