@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5906918427618312387}
   - component: {fileID: 1993005488518518025}
   - component: {fileID: 3445268919592640757}
+  - component: {fileID: 8732682785658007653}
   m_Layer: 0
   m_Name: air_Monster_R
   m_TagString: Untagged
@@ -110,3 +111,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8732682785658007653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474817579049490522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aed156c4b013ed4898ac0b308d7ecf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlySpeed: 0.282
+  Radius: 2.8

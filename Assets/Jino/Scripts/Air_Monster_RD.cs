@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Air_Monster_G : MonoBehaviour
+public class Air_Monster_RD : MonoBehaviour
 {
     public float FlySpeed = 0.282f;
     public float Radius = 2.8f;
@@ -11,7 +11,7 @@ public class Air_Monster_G : MonoBehaviour
     void Start()
     {
         half = false;
-        angle = -90f;
+        angle = 90f;
         startPosition = transform.position;
         Invoke("Afterhalf", 1f);
         Destroy(gameObject, 2f);
@@ -19,11 +19,11 @@ public class Air_Monster_G : MonoBehaviour
 
     void Update()
     {
-        if(!half)
+        if (!half)
         {
             MoveInSineWave();
         }
-        else if(half)
+        else if (half)
         {
             MoveInCosineWave();
         }
@@ -60,7 +60,7 @@ public class Air_Monster_G : MonoBehaviour
     void Afterhalf()
     {
         startPosition = -startPosition;
-        angle = 0;
+        angle = 180;
         half = true;
     }
 }
