@@ -1003,11 +1003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d859a390c160a4c957b0fe8ad7904e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ss: -2
-  es: 2
-  spawnInterval: 6
-  monster: {fileID: 8656930644919244661, guid: 85c1f768571d4154bbef58a1798c0a28, type: 3}
-  monster2: {fileID: 6421097003410215311, guid: c4e19304ba304984f85f3ea6f0f8dd0d, type: 3}
 --- !u!114 &864001458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1052,10 @@ PrefabInstance:
       propertyPath: Boss_Spawn
       value: 
       objectReference: {fileID: 864001455}
+    - target: {fileID: 5242737274978088743, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
+      propertyPath: skill_1_speed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7089836224278622839, guid: aac4965d2c0ea234399a9d9a4e8b1e39, type: 3}
       propertyPath: m_Name
       value: Boos

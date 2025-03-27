@@ -6,6 +6,8 @@ using UnityEngine;
 public class PK_Boss : MonoBehaviour
 {
     float B_HP = 100;
+    public bool Boos_Blood = false; //보스 피가 반이하로 떨어지면 true로 바뀜
+
 
     public GameObject Bullet_1;
     public GameObject Bullet_2;
@@ -23,6 +25,7 @@ public class PK_Boss : MonoBehaviour
     public float cool_time1 = 0;
     public float cool_time2 = 0;
 
+    float boss_attack_time = 3; //보스 공격 주기
 
     private void Update()
     {
@@ -31,12 +34,15 @@ public class PK_Boss : MonoBehaviour
 
 
 
+        if(Boos_Blood == true)
+        {
+            boss_attack_time = 1.5f; //보스 공격 주기
+        }
 
 
 
 
-
-        if (boss_attack == true && cool_time1 >= 3)
+        if (boss_attack == true && cool_time1 >= boss_attack_time)
         {
             attack_chose = Random.Range(1, 6);
 
@@ -82,6 +88,7 @@ public class PK_Boss : MonoBehaviour
 
         if (B_HP <= 50)
         {
+            Boos_Blood = true;
             Boss_Spawn.gameObject.SetActive(true);
         }
 
@@ -90,16 +97,26 @@ public class PK_Boss : MonoBehaviour
 
 
 
-    public float skill_1_speed = 9;
+    public float skill_1_speed = 7;
     public float skill_1_target = -2;
     public float skill_1_turn = 0;
+
+    float skill_1_SP_cool_time = 0.15f;
+    int skill_1_SP_Turn = 2;
+
     public void BossAttack1()
     {
 
         transform.Translate(skill_1_target * skill_1_speed * Time.deltaTime, 0, 0);
 
+        if (Boos_Blood == true)
+        {
+            skill_1_SP_cool_time = 0.08f;
+            skill_1_SP_Turn = 6;
+        }
 
-        if (cool_time1 > 0.15 && cool_time1 < 2)
+
+        if (cool_time1 > skill_1_SP_cool_time && cool_time1 < 2)
         {
             Instantiate(Bullet_1, pos1.position, Quaternion.identity);
             cool_time1 = 0;
@@ -119,13 +136,13 @@ public class PK_Boss : MonoBehaviour
             skill_1_turn += 1;
         }
 
-        if (skill_1_turn == 2 && transform.position.x >= 3)
+        if (skill_1_turn == skill_1_SP_Turn && transform.position.x >= 3)
         {
             skill_1_speed = 10f;
             skill_1_target = -3;
         }
 
-        if (skill_1_turn == 2 && transform.position.x <= 0)
+        if (skill_1_turn == skill_1_SP_Turn && transform.position.x <= 0)
         {
             attack_chose = 0;
             skill_1_turn = 0;
@@ -146,6 +163,7 @@ public class PK_Boss : MonoBehaviour
     {
         float skill_2_target = -2;
         bool skill_2_bullet = false;
+
 
         if (skill_2_move1 == true)  // 플레이어 중앙 이동후 움직임 멈추기
         {
@@ -188,16 +206,22 @@ public class PK_Boss : MonoBehaviour
         }
 
 
-
+        
 
         IEnumerator CircleFire()
         {
+            int skill_2_SP_bullet = 3;
             bool a = true;
+
+            if (Boos_Blood == true)
+        {
+            skill_2_SP_bullet  = 5;
+        }
 
             //공격주기
             float attackRate = 0.01f;
             //발사체 생성갯수
-            int count = 3;
+            int count = skill_2_SP_bullet;
             //발사체 사이의 각도
             float intervalAngle = 360 / count;
             //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정
@@ -249,7 +273,7 @@ public class PK_Boss : MonoBehaviour
 
 
 
-
+    float Skill_3_SP_Speed = 1f; //스킬 발사 속도
     public void BossAttack3()
     {
         //활성화가 되어있다면 계속 랜덤 돌림
@@ -262,8 +286,12 @@ public class PK_Boss : MonoBehaviour
         Vector3 c = new Vector3(RandomX, 5, 0);   //위쪽
         Vector3 d = new Vector3(RandomX, -5, 0);   //아래쪽
 
+        if (Boos_Blood == true)
+        {
+            Skill_3_SP_Speed = 0.5f; //스킬 발사 속도
+        }
 
-        if (cool_time1 >= 0.5)   //발사 속도
+        if (cool_time1 >= Skill_3_SP_Speed)   //발사 속도
         {
             cool_time1 = 0;
             GameObject bulletA = Instantiate(Bullet_3, a, Quaternion.identity);
@@ -293,9 +321,17 @@ public class PK_Boss : MonoBehaviour
 
 
 
+    float skill_4_SP_Speed = 2.5f; //스킬 발사 속도
+
     public void BossAttack4() //이걸로 폭죽처럼 만들수 있게 가능함
     {
-        if (cool_time1 >= 2.5f)
+
+        if (Boos_Blood == true)
+        {
+            skill_4_SP_Speed = 2f; //스킬 발사 속도
+        }
+
+        if (cool_time1 >= skill_4_SP_Speed)
         {
 
         Instantiate(Bullet_4, transform.position, Quaternion.identity);
@@ -314,13 +350,18 @@ public class PK_Boss : MonoBehaviour
 
 
 
-
+    float skill_5_SP_Speed = 0.3f; //스킬 발사 속도
 
     public void BossAttack5() //이걸로 폭죽처럼 만들수 있게 가능함
     {
-        if (cool_time1 >= 0.3)
-        {
 
+        if (Boos_Blood == true)
+        {
+            skill_5_SP_Speed = 0.2f; //스킬 발사 속도
+        }
+
+        if (cool_time1 >= skill_5_SP_Speed) //발사 속도
+        {
             Instantiate(Bullet_5, transform.position, Quaternion.identity);
             cool_time1 = 0;
         }
