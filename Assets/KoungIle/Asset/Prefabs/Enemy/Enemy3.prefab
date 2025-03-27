@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
-  speed: 1
   spawnLocation: 1
   Item: {fileID: 0}
 --- !u!114 &-3652081703708252482
@@ -199,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf5ce95f77a026468b8d1f49a584028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bulletPrefab: {fileID: 800371539382878632, guid: 92a05fc77f168f54da3bedbbe45407de, type: 3}
   bulletPos: {fileID: 7296215068009923678}
   delay: 1
   target: {fileID: 0}

@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dcb745f4ae34e4599cf2482a137fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bullet: {fileID: 2335239205237704121, guid: 2b000feff614bf749b9c0e41af50cd4b, type: 3}
   bulletCount: 16
   delay: 1.5
 --- !u!114 &6640460581013968550
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6311a5dd809278f4e83c63b896e01ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.6
 --- !u!1 &8137325411729895618
 GameObject:
   m_ObjectHideFlags: 0

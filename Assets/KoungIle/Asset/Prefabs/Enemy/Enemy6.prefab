@@ -219,8 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
-  speed: 1
-  spawnLocation: 1
+  spawnLocation: 2
   Item: {fileID: 0}
 --- !u!114 &7050476070735092506
 MonoBehaviour:
@@ -234,12 +233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842238b8e6d89e14ab0fe441989d27e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bullet: {fileID: 3688791456832532666, guid: 6fcb9019a6c121d4b8b0731233b76fa2, type: 3}
   bulletPos: {fileID: 9194801279758584418}
   delay: 1
   spreadAngle: 45
   startCount: 3
-  maxCount: 10
   incrementStep: 1
 --- !u!1 &2498887562287996070
 GameObject:

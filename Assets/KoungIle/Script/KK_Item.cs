@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KK_IItem : MonoBehaviour
+public class KK_Item : MonoBehaviour
 {
     public float itemVelocity = 20f;
     Rigidbody2D rigid;

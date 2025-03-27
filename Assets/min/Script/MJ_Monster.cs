@@ -4,13 +4,27 @@ public class MJ_Monster : MonoBehaviour
 {
     public int HP = 100;
     public float Speed = 3;
-    //public float Delay = 1f;
+    public float Delay = 1f;
     public int x = 1;
     public int y = 1;
-    
+    public Transform ms1;
+    public Transform ms2;
+    public GameObject bullet;
+
     void Start()
     {
-       
+        Invoke("CreateBullet", Delay);
+    }
+    void CreateBullet()
+    {
+        Instantiate(bullet, ms1.position, Quaternion.identity);
+        if (ms2 != null)
+        {
+            Instantiate(bullet, ms2.position, Quaternion.identity);
+        }
+
+        //재귀호출
+        Invoke("CreateBullet", Delay);
     }
 
     void Update()

@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 7473783880610698017}
   m_Layer: 0
   m_Name: LaserRoot
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

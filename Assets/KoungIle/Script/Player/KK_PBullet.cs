@@ -30,11 +30,11 @@ public class KK_PBullet : MonoBehaviour
 
         }
 
-        // if(collision.CompareTag("Boss"))
-        // {
-            
-        //     //미사일 삭제
-        //     Destroy(gameObject);
-        // }
+        if(collision.CompareTag("Boss"))
+        {
+            collision.gameObject.GetComponent<KK_Boss>().TakeDamage(attack);
+            //미사일 삭제
+            Destroy(gameObject);
+        }
     }
 }

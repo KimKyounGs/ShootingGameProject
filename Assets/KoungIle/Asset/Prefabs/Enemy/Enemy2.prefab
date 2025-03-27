@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dcb745f4ae34e4599cf2482a137fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bullet: {fileID: 800371539382878632, guid: 92a05fc77f168f54da3bedbbe45407de, type: 3}
   bulletCount: 8
   delay: 2
 --- !u!114 &-113770551399510555

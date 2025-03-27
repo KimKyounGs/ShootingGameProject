@@ -3,101 +3,98 @@ using UnityEngine;
 
 public class KK_Boss : MonoBehaviour
 {
-    int flag = 1;
-    int speed = 2;
+    [Header("보스 체력")]
+    public int maxHP = 1000;
+    private int currentHP;
 
-    public GameObject mb;
-    public GameObject mb2;
-    public Transform pos1;
-    public Transform pos2;
+    [Header("공격 쿨타임")]
+    public float patternCooldown = 3f;
 
+    [Header("페이즈 체력 비율")]
+    public float phase2Threshold = 0.7f; // 70%
+    public float phase3Threshold = 0.4f; // 40%
 
+    private int currentPhase = 1;
+    private bool isDead = false;
+
+    private IMonsterAttack[] attackPatterns;
+    private bool isAttacking = false;
 
     void Start()
     {
-        Invoke("Hide", 2); //1초뒤에 보스워닝 꺼줘
-        StartCoroutine(BossMissle());
-        StartCoroutine(CircleFire());
+        currentHP = maxHP;
 
+        // 모든 공격 패턴 자동 수집
+        attackPatterns = GetComponents<IMonsterAttack>();
+
+        StartCoroutine(PatternRoutine());
     }
 
-    void Hide()
+    IEnumerator PatternRoutine()
     {
-        GameObject.Find("TextBossWarning").SetActive(false);
-    }
+        yield return new WaitForSeconds(1f); // 시작 전 약간 대기
 
-    IEnumerator BossMissle()
-    {
-        while(true)
+        while (!isDead)
         {
-            //미사일 두개
-            Instantiate(mb, pos1.position, Quaternion.identity);
-            Instantiate(mb, pos2.position, Quaternion.identity);
-
-            yield return new WaitForSeconds(0.5f);
-        }
-    }
-
-      //원방향으로 미사일 발사
-     IEnumerator CircleFire()
-    {
-        //공격주기
-        float attackRate = 3;
-        //발사체 생성갯수
-        int count = 30;
-        //발사체 사이의 각도
-        float intervalAngle = 360 / count;
-        //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정
-        float weightAngle = 0f;
-
-        //원 형태로 방사하는 발사체 생성(count 갯수 만큼)
-        while(true)
-        {
-
-            for(int i =0; i<count; ++i )
+            if (!isAttacking)
             {
-                //발사체 생성
-                GameObject clone = Instantiate(mb2, transform.position, Quaternion.identity);
+                isAttacking = true;
 
-                //발사체 이동 방향(각도)
-                float angle = weightAngle + intervalAngle * i;
-                //발사체 이동 방향(벡터)
-                //Cos(각도)라디안 단위의 각도 표현을 위해 pi/180을 곱함
-                float x = Mathf.Cos(angle * Mathf.Deg2Rad);
-                //sin(각도)라디안 단위의 각도 표현을 위해 pi/180을 곱함
-                float y = Mathf.Sin(angle * Mathf.Deg2Rad);
+                // 랜덤 공격 선택
+                // int rand = Random.Range(0, attackPatterns.Length);
+                int rand = 3;
+                attackPatterns[rand].StartAttack();
 
-                //발사체 이동 방향 설정
-                clone.GetComponent<KK_BossBullet>().Move(new Vector2(x, y));
+                yield return new WaitForSeconds(patternCooldown);
+                isAttacking = false;
             }
-            //발사체가 생성되는 시작 각도 설정을 위한변수
-            weightAngle += 1;
 
-            //3초마다 미사일 발사
-            yield return new WaitForSeconds(attackRate);
+            yield return null;
+        }
+    }
 
+    public void TakeDamage(int damage)
+    {
+        if (isDead) return;
+
+        currentHP -= damage;
+
+        if (currentHP <= 0)
+        {
+            currentHP = 0;
+            Die();
         }
 
-
-
-
+        UpdatePhase();
     }
 
-
-
-    private void Update()
+    void UpdatePhase()
     {
-        if (transform.position.x >= 1)
-            flag *= -1;
-        if (transform.position.x <= -1)
-            flag *= -1;
+        float hpRatio = (float)currentHP / maxHP;
 
-
-        transform.Translate(flag * speed * Time.deltaTime,0,0);
+        if (hpRatio < phase3Threshold && currentPhase < 3)
+        {
+            currentPhase = 3;
+            Debug.Log("Phase 3 돌입!");
+            // 패턴 속도 증가, 추가 공격 등
+        }
+        else if (hpRatio < phase2Threshold && currentPhase < 2)
+        {
+            currentPhase = 2;
+            Debug.Log("Phase 2 돌입!");
+        }
     }
 
+    void Die()
+    {
+        isDead = true;
+        Debug.Log("보스 사망!");
+        // 폭발 이펙트, 클리어 UI 등 처리
+        Destroy(gameObject);
+    }
 
-
-
-
+    public int GetPhase()
+    {
+        return currentPhase;
+    }
 }
