@@ -13,6 +13,9 @@ public class PK_Boss : MonoBehaviour
     public GameObject Bullet_4;
     public GameObject Bullet_5;
 
+    public GameObject Boss_Spawn;
+
+
     public Transform pos1;
 
     public bool boss_attack = true;
@@ -21,15 +24,16 @@ public class PK_Boss : MonoBehaviour
     public float cool_time2 = 0;
 
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         cool_time1 += Time.deltaTime;
         cool_time2 += Time.deltaTime;
+
+
+
+
+
+
 
 
         if (boss_attack == true && cool_time1 >= 3)
@@ -74,12 +78,12 @@ public class PK_Boss : MonoBehaviour
         {
             BossAttack5();
         }
-        //if (attack_chose > 2)
-        //{
-        //    cool_time = 0;
-        //    boss_attack = false;
-        //}
 
+
+        if (B_HP <= 50)
+        {
+            Boss_Spawn.gameObject.SetActive(true);
+        }
 
     }
 
@@ -342,6 +346,7 @@ public class PK_Boss : MonoBehaviour
         B_HP -= attack;
         if (B_HP <= 0)
         {
+            Boss_Spawn.gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }

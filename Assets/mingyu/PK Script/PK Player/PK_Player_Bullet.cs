@@ -6,12 +6,11 @@ public class PK_Player_Bullet : MonoBehaviour
     public float Speed = 4.0f;
 
     public GameObject effect;
-
+    
 
 
     void Start()
     {
-
     }
 
 

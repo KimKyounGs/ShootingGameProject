@@ -44,4 +44,9 @@ public class PK_Boss_Bullet3 : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
