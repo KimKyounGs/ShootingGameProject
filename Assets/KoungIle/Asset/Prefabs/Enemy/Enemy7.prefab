@@ -270,7 +270,7 @@ MonoBehaviour:
   chargeTime: 1
   laserDuration: 2
   fireInterval: 5
-  laserLength: 6
+  laserLength: 11
 --- !u!1 &4228898346679544916
 GameObject:
   m_ObjectHideFlags: 0

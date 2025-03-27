@@ -16,6 +16,7 @@ TagManager:
   - MJ_Monster
   - MJ_Monster_Boss
   - MJ_Player
+  - Boss
   layers:
   - Default
   - TransparentFX

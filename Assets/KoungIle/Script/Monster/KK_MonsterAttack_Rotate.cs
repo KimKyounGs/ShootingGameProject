@@ -25,10 +25,10 @@ public class KK_MonsterAttack_Rotate : MonoBehaviour, IMonsterAttack
                 Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 bullet.GetComponent<KK_MBullet>().Move(dir);
+                yield return new WaitForSeconds(fireRate);
             }
 
             currentAngle += rotationSpeed;
-            yield return new WaitForSeconds(fireRate);
         }
     }
 
