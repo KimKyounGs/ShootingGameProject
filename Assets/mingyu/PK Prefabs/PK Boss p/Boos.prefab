@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8080627121380128544
 Transform:
   m_ObjectHideFlags: 0
@@ -230,15 +230,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0528459111200ad469beffe2493bbc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  B_HP: 100
-  Bullets:
-  - {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
-  - {fileID: 9040495435885128795, guid: 0dff31623482d0a4087a34f6bd99a3bb, type: 3}
-  - {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}
-  - {fileID: 7412264983643448580, guid: 7432f30018702ad48aa01750d40f4208, type: 3}
-  - {fileID: 8240788215690239647, guid: 7059ccface39e274d9ab8ccbf1ba84ef, type: 3}
+  Boos_Blood: 0
+  Bullet_1: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
+  Bullet_2: {fileID: 9040495435885128795, guid: 0dff31623482d0a4087a34f6bd99a3bb, type: 3}
+  Bullet_3: {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}
+  Bullet_4: {fileID: 7412264983643448580, guid: 7432f30018702ad48aa01750d40f4208, type: 3}
+  Bullet_5: {fileID: 8240788215690239647, guid: 7059ccface39e274d9ab8ccbf1ba84ef, type: 3}
+  Boss_Spawn: {fileID: 0}
   pos1: {fileID: 5789961177903659936}
   boss_attack: 1
   attack_chose: 0
   cool_time1: 0
   cool_time2: 0
+  skill_1_speed: 7
+  skill_1_target: -2
+  skill_1_turn: 0
+  skill_2_move1: 1
+  skill_2_move2: 0
+  skill_2_speed: 2
