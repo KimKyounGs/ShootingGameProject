@@ -19,6 +19,7 @@ public class dragonRage : MonoBehaviour
             {
             enemy.Damage(45f);
             }
+            Destroy(gameObject);
             
             for(int i = 0; i < 6; i++)
             {
@@ -27,7 +28,7 @@ public class dragonRage : MonoBehaviour
                 GameObject go = Instantiate(dragonRageEffect, explosionPos, Quaternion.identity);
                 Destroy(go, 0.5f);
             }
-            Destroy(gameObject);
+            
         }
     }
 

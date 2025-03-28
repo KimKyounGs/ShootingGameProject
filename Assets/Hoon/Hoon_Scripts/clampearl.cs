@@ -9,7 +9,7 @@ public class clampearl : Hoon_Monster
         moveSpeed = 0.01f;
         HP = 10;
         exp = 0.5f;
-        droprate = 100;
+        droprate = 2;
     }
 
 

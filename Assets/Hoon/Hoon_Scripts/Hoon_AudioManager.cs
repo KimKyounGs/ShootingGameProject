@@ -13,16 +13,24 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip dragonRage1;
     public AudioClip dragonRage2;
     public AudioClip waterfall;
+    public AudioClip waterfall2;
+    public AudioClip splash;
+    public AudioClip iceBeam;
+    public AudioClip sheerCold;
     public AudioClip cryClampearl;
     public AudioClip cryHuntail;
     public AudioClip cryGoreByss;
     public AudioClip cryGyarados;
-
+    public AudioClip protect;
     public AudioClip surf;
     public AudioClip thunder;
+    public AudioClip hit1;
+    public AudioClip hit2;
 
     public AudioClip whirlpool;
     public AudioClip cryKyogre;
+
+    public AudioClip getItem;
 
     private void Awake()
     {
@@ -108,5 +116,41 @@ public class Hoon_AudioManager : MonoBehaviour
     {
         myAudio.PlayOneShot(cryGyarados);
     }
+    public void SFXProtect()
+    {
+        myAudio.PlayOneShot(protect);
+    }
+
+    public void SFXWaterfall2()
+    {
+        myAudio.PlayOneShot(waterfall2);
+    }
+
+    public void SFXGetItem()
+    {
+        myAudio.PlayOneShot(getItem);
+    }
+
+    public void SFXIceBeam()
+    {
+        myAudio.PlayOneShot(iceBeam);
+    }
+    public void SFXSheerCold()
+    {
+        myAudio.PlayOneShot(sheerCold);
+    }
+    public void SFXSplash()
+    {
+        myAudio.PlayOneShot(splash);
+    }
+    public void SFXHit1()
+    {
+        myAudio.PlayOneShot(hit1);
+    }
+    public void SFXHit2()
+    {
+        myAudio.PlayOneShot(hit2);
+    }
+
 }
 

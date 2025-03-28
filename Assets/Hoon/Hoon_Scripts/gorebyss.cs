@@ -19,6 +19,7 @@ public class gorebyss : MonoBehaviour
             // 플레이어의 SpriteRenderer와 Collider2D 컴포넌트 가져오기
             playerSprite = player.GetComponent<SpriteRenderer>();
             playerCollider = player.GetComponent<CapsuleCollider2D>();
+            Hoon_AudioManager.instance.SFXProtect();
             
             // 플레이어 스프라이트 색상을 핑크색으로 변경
             if (playerSprite != null)

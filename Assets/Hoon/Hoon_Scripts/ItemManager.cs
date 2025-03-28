@@ -71,9 +71,17 @@ public class ItemManager : MonoBehaviour
         {
             CanHuntail = true;
         }
+        else
+        {
+            CanHuntail = false;
+        }
         if (deepseaScaleBag >= 1)
         {
             CanGorebyss = true;
+        }
+        else
+        {
+            CanGorebyss = false;
         }
 
         if(Time.timeScale == 1)
@@ -109,10 +117,10 @@ public class ItemManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            Gyarados gyarados = player.GetComponent<Gyarados>();
-            if (gyarados != null && gyarados.pos != null)
+            Hoon_Player player1 = player.GetComponent<Hoon_Player>();
+            if (player1 != null && player1.pos != null)
             {
-                Instantiate(huntail, gyarados.pos.position, Quaternion.identity);
+                Instantiate(huntail, player1.pos.position, Quaternion.identity);
             }
         }
         yield return new WaitForSeconds(0.5f);

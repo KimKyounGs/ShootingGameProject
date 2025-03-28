@@ -23,7 +23,7 @@ public class deepseaTooth : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Destroy(gameObject);
-            //Hoon_AudioManager.instance.SFXCrunch();
+            Hoon_AudioManager.instance.SFXGetItem();
             ItemManager.instance.ObtainItem("Deep Sea Tooth");
         }
 

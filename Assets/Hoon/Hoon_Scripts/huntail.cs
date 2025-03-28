@@ -3,6 +3,7 @@ using UnityEngine;
 public class huntail : MonoBehaviour
 {
     public float bulletSpeed = 6f;
+    public GameObject waterfallEffect;
 
     void Start()
     {
@@ -21,9 +22,15 @@ public class huntail : MonoBehaviour
             Hoon_Monster enemy = collision.GetComponent<Hoon_Monster>();
             if (enemy != null)
             {
-            enemy.Damage(70f);
+                Hoon_AudioManager.instance.SFXWaterfall2();
+                enemy.Damage(70f);
+                for(int i = 0; i < 3; i++)
+                {
+                    GameObject go = Instantiate(waterfallEffect, transform.position + new Vector3(Random.Range(-0.4f, 0.4f), Random.Range(0, 0.5f), 0), Quaternion.identity);
+                    Destroy(go, 0.5f);
+                }
             }
-            Destroy(gameObject);
+            Destroy(gameObject, 0.5f);
         }
     }
     private void OnBecameInvisible()

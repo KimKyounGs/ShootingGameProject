@@ -35,18 +35,20 @@ public class Hoon_Monster : MonoBehaviour
         if(HP <= 0)
         {
             Vector3 hitPos = transform.position;
-            GameObject go = Instantiate(hit, hitPos, Quaternion.identity);
+            if (hit != null)
+            {
+                GameObject go = Instantiate(hit, hitPos, Quaternion.identity);
+                Destroy(go, 0.2f);
+            }
             
             if(droprate > 0)
             {
                 ItemManager.instance.ItemDrop(hitPos);
             }
-            
-            Destroy(go, 0.2f);
+
             Destroy(gameObject);
             GameManager.instance.ExpGain(exp);
-            
-
+        
         }
     }
     
