@@ -43,6 +43,7 @@ public class Kyogre : Hoon_Monster
 
         InvokeRepeating("CastWaterRing", 1, 10);
         Invoke("WhirlPool", 5);
+        Invoke("WhirlPool2", 12);
     }
 
     void CastWaterRing()
@@ -56,7 +57,7 @@ public class Kyogre : Hoon_Monster
         BossHPUI.fillAmount = HP / 1000;
         
 
-        if (HP < 950 && !thunderOn)
+        if (HP < 650 && !thunderOn)
         {
             Hoon_AudioManager.instance.CryKyogre();
             InvokeRepeating("CastThunder", 1, 4);
@@ -67,26 +68,21 @@ public class Kyogre : Hoon_Monster
                 Cloud = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.E) && !Pattern2)
-        {
-            Invoke("WhirlPool2", 1);
-            Pattern2 = true; 
-        }
         if (Input.GetKeyDown(KeyCode.Q) && !Pattern3)
         {
             Invoke("WhirlPool3", 1);
             Pattern3 = true; 
         } 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !Pattern4)
-        {
-            Invoke("WhirlPool4", 1);
-            Pattern4 = true; 
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !Pattern5)
-        {
-            Invoke("WhirlPool5", 1);
-            Pattern5 = true; 
-        }
+        // if (Input.GetKeyDown(KeyCode.Alpha1) && !Pattern4)
+        // {
+        //     Invoke("WhirlPool4", 1);
+        //     Pattern4 = true; 
+        // }
+        // if (Input.GetKeyDown(KeyCode.Alpha2) && !Pattern5)
+        // {
+        //     Invoke("WhirlPool5", 1);
+        //     Pattern5 = true; 
+        // }
 
           
     }
@@ -177,65 +173,63 @@ public class Kyogre : Hoon_Monster
 
         while(true)
         {
+            Hoon_AudioManager.instance.SFXWhirlpool();
             for(int i = 0; i< 24; i++)
             {
-                Hoon_AudioManager.instance.SFXWhirlpool();
-                //WhirlPos = GameObject.FindWithTag("Player").transform.position;
                 GameObject clone = Instantiate(whirl, pos1.transform.position, Quaternion.identity);
-                //발사체 이동 방향(각도)
                 float angle = weightAngle + intervalAngle * i;
-                //발사체 이동 방향(벡터)
-                // cos(각도) 라디안 단위의 각도 표현을 위해 pi/180을 곱함
                 float x = Mathf.Cos(angle * Mathf.Deg2Rad);
-                // sin(각도) 라디안 단위의 각도 표현을 위해 pi/180을 곱함
                 float y = Mathf.Sin(angle * Mathf.Deg2Rad);
 
                 clone.GetComponent<Whirl>().Move(new Vector2(x,y));
                 yield return new WaitForSeconds(0.05f);
             }
-
-            weightAngle += 1;
-
+            weightAngle += 5;
             yield return new WaitForSeconds(attackRate);
         }
     }
+
     IEnumerator CircleShoot()
     {
         float weightAngle = 0f;
-        float attackRate = 1f;
-        float intervalAngle = 360 / 12;
+        float attackRate = 12f;
+        float intervalAngle = 360 / 18;
 
         while(true)
         {
             Hoon_AudioManager.instance.SFXWhirlpool();
-            for(int i = 0; i< 12; i++)
-            {            
-                GameObject clone = Instantiate(whirl, pos1.transform.position, Quaternion.identity);
-                float angle = weightAngle + intervalAngle * i;
-                
-                float x = Mathf.Cos(angle * Mathf.Deg2Rad);
-                float y = Mathf.Sin(angle * Mathf.Deg2Rad);
+            
+            for(int j = 0; j < 5; j++)
+            {
+                for(int i = 0; i< 18; i++)
+                {            
+                    GameObject clone = Instantiate(whirl, pos1.transform.position, Quaternion.identity);
+                    float angle = weightAngle + intervalAngle * i;
+                    
+                    float x = Mathf.Cos(angle * Mathf.Deg2Rad);
+                    float y = Mathf.Sin(angle * Mathf.Deg2Rad);
 
-                clone.GetComponent<Whirl>().Move(new Vector2(x, y));
+                    clone.GetComponent<Whirl>().Move(new Vector2(x, y));
+                }
+
+                if (weightAngle >= 360)
+                    weightAngle = 0;
+                else { weightAngle += 15; } 
+                yield return new WaitForSeconds(1);
             }
-
-            if (weightAngle >= 360)
-                weightAngle = 0;
-            else { weightAngle += 6; }
-                
+ 
             yield return new WaitForSeconds(attackRate);
-
         }
     }
     
     IEnumerator WaveBarrage()
     {
-        float frequency = 0.2f;
-        float amplitude = 0.35f;
-        float speed = 0.35f;
+        float frequency = 0.4f;
+        float amplitude = 0.4f;
+        float speed = 0.5f;
         while (true)
         {
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 36; i++)
             {
                 float x = Mathf.Sin((Time.time + i) * frequency) * amplitude;
                 Shoot(new Vector2(x, -speed));

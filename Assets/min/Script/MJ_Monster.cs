@@ -8,6 +8,7 @@ public class MJ_Monster : MonoBehaviour
     public int x = 1;
     public int y = 1;
     public int item_max_pb = 100;
+    public AudioClip death;
 
 
     public Transform ms1;

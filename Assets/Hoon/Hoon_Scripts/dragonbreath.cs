@@ -26,7 +26,6 @@ public class dragonbreath : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void OnBecameInvisible()
     {
         Destroy(gameObject);

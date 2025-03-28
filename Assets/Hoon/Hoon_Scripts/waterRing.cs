@@ -7,7 +7,7 @@ public class waterRing : MonoBehaviour
     public float scaleSpeed = 1.5f; // 커지는 속도 조절
     public float maxScale = 4.5f;
     public bool destroyWave = false;
-    public float pushForce = 2f; // 밀어내는 힘 조절
+    public float pushForce = 1f; // 밀어내는 힘 조절
 
     void Start()
     {

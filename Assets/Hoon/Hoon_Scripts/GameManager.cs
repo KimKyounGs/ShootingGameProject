@@ -56,9 +56,9 @@ public class GameManager : MonoBehaviour
         levelUI.text = "Lv" + level;
         expLeft += expLeft / 10f; //10% 더 채워야 레벨업.
 
-        if (level >= evolutionLevel && !Magikarp.instance.isEvolved)
+        if (level >= evolutionLevel && !Hoon_Player.instance.isEvolved)
         {            
-            Magikarp.instance.isEvolved = true;
+            Hoon_Player.instance.isEvolved = true;
             StartCoroutine(moveCenter());
             evolutionTimeline.Play();
             Time.timeScale = 0;
@@ -75,16 +75,16 @@ public class GameManager : MonoBehaviour
     {
         float moveDuration = 0.8f;
         float elapsed = 0f;
-        Vector3 startPos = Magikarp.instance.GetComponent<Transform>().position;
+        Vector3 startPos = Hoon_Player.instance.GetComponent<Transform>().position;
 
         while (elapsed < moveDuration)
         {
-            Magikarp.instance.GetComponent<Transform>().position = Vector3.Lerp(startPos, centerPos, elapsed / moveDuration);
+            Hoon_Player.instance.GetComponent<Transform>().position = Vector3.Lerp(startPos, centerPos, elapsed / moveDuration);
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
 
-        Magikarp.instance.GetComponent<Transform>().position = centerPos;
+        Hoon_Player.instance.GetComponent<Transform>().position = centerPos;
     }
 
 }
