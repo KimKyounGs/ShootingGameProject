@@ -136,9 +136,6 @@ public class Magikarp : MonoBehaviour
                 Shoot();
             }
         }
-
-
-        
                     
         //캐릭터의 월드 좌표를 뷰포트 좌표계로 변환해준다.
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);

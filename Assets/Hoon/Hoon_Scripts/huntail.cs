@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class dragonbreath : MonoBehaviour
+public class huntail : MonoBehaviour
 {
-    public float bulletSpeed = 4f;
+    public float bulletSpeed = 6f;
 
     void Start()
     {
@@ -12,8 +12,8 @@ public class dragonbreath : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime);
-        Destroy(gameObject, 0.75f);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Hoon_Enemy"))
@@ -21,7 +21,7 @@ public class dragonbreath : MonoBehaviour
             Hoon_Monster enemy = collision.GetComponent<Hoon_Monster>();
             if (enemy != null)
             {
-            enemy.Damage(0.5f);
+            enemy.Damage(70f);
             }
             Destroy(gameObject);
         }

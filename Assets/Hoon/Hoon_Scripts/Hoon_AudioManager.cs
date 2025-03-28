@@ -10,6 +10,14 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip bubble_pop;
     public AudioClip cryRemoraid;
     public AudioClip dragonBreath;
+    public AudioClip dragonRage1;
+    public AudioClip dragonRage2;
+    public AudioClip waterfall;
+    public AudioClip cryClampearl;
+    public AudioClip cryHuntail;
+    public AudioClip cryGoreByss;
+    public AudioClip cryGyarados;
+
     public AudioClip surf;
     public AudioClip thunder;
 
@@ -59,6 +67,19 @@ public class Hoon_AudioManager : MonoBehaviour
     {
         myAudio.PlayOneShot(whirlpool);
     }
+    public void SFXDragonRage1()
+    {
+        myAudio.PlayOneShot(dragonRage1);
+    }
+    public void SFXDragonRage2()
+    {
+        myAudio.PlayOneShot(dragonRage2);
+    }
+
+    public void SFXWaterfall()
+    {
+        myAudio.PlayOneShot(waterfall);
+    }
 
     public void CryRemoraid()
     {
@@ -68,6 +89,24 @@ public class Hoon_AudioManager : MonoBehaviour
     public void CryKyogre()
     {
         myAudio.PlayOneShot(cryKyogre);
+    }
+
+    public void CryClampearl()
+    {
+        myAudio.PlayOneShot(cryClampearl);
+    }
+
+    public void CryHuntail()
+    {
+        myAudio.PlayOneShot(cryHuntail);
+    }
+    public void CryGoreByss()
+    {
+        myAudio.PlayOneShot(cryGoreByss);
+    }
+    public void CryGyarados()
+    {
+        myAudio.PlayOneShot(cryGyarados);
     }
 }
 

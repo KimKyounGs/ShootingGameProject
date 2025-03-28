@@ -7,6 +7,7 @@ public class Hoon_Monster : MonoBehaviour
     public float moveSpeed;
     public float HP;
     public float exp;
+    public float droprate = 0;
     public Animator ani;
     public SpriteRenderer sr;
     public GameObject hit;
@@ -33,11 +34,19 @@ public class Hoon_Monster : MonoBehaviour
 
         if(HP <= 0)
         {
-            GameObject go = Instantiate(hit, transform.position, Quaternion.identity);
+            Vector3 hitPos = transform.position;
+            GameObject go = Instantiate(hit, hitPos, Quaternion.identity);
+            
+            if(droprate > 0)
+            {
+                ItemManager.instance.ItemDrop(hitPos);
+            }
+            
             Destroy(go, 0.2f);
             Destroy(gameObject);
             GameManager.instance.ExpGain(exp);
-            //Instantiate(PowerItem, transform.position, Quaternion.identity);
+            
+
         }
     }
     
