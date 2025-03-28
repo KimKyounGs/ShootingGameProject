@@ -7,6 +7,8 @@ public class MJ_Pllayer : MonoBehaviour
     public float moveSpeed = 5f;
 
     Animator animator; //애니메이터 생성
+    public AudioClip missile;
+    AudioSource audioSource;
 
     public GameObject[] bullet;  //총알 4개 배열
     public Transform pos;
@@ -18,6 +20,7 @@ public class MJ_Pllayer : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>(); //GetComponet로 애니메이터 가져오기
+        audioSource = GetComponent<AudioSource>();
     }
 
     
@@ -52,6 +55,7 @@ public class MJ_Pllayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bullet[power], pos.position, Quaternion.identity);
+            audioSource.PlayOneShot(missile);
         }
 
         transform.Translate(moveX, moveY, 0); //움직임 표현
