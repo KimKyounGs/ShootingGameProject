@@ -66,7 +66,7 @@ public class PK_Boss_Bullet4 : MonoBehaviour
         //공격주기
         float attackRate = 1f;
         //발사체 생성갯수
-        int count = 12;
+        int count = 11;
         //발사체 사이의 각도
         float intervalAngle = 360 / count;
         //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정

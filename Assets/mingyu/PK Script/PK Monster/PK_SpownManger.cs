@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PK_SpownManger : MonoBehaviour
+public class PK_Boss_SpownManger : MonoBehaviour
 {
     public float ss = -2; //몬스터 생성 x값 처음
     public float es = 2;  //몬스터 생성 x값 끝

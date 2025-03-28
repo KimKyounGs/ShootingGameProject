@@ -13,6 +13,9 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip surf;
     public AudioClip thunder;
 
+    public AudioClip whirlpool;
+    public AudioClip cryKyogre;
+
     private void Awake()
     {
         if(Hoon_AudioManager.instance == null) //인스턴스 있는지 검사
@@ -52,10 +55,19 @@ public class Hoon_AudioManager : MonoBehaviour
     {
         myAudio.PlayOneShot(thunder);
     }
+    public void SFXWhirlpool()
+    {
+        myAudio.PlayOneShot(whirlpool);
+    }
 
     public void CryRemoraid()
     {
         myAudio.PlayOneShot(cryRemoraid);
+    }
+
+    public void CryKyogre()
+    {
+        myAudio.PlayOneShot(cryKyogre);
     }
 }
 

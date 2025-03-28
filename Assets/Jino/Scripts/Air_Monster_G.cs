@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Air_Monster_G : MonoBehaviour
 {
-    public float FlySpeed = 1f;
-    public float Radius = 5f;
+    public float FlySpeed = 0.282f;
+    public float Radius = 2.8f;
     private float angle;
     private Vector3 startPosition;
     bool half;
@@ -12,9 +12,9 @@ public class Air_Monster_G : MonoBehaviour
     {
         half = false;
         angle = -90f;
-        startPosition = transform.position; // 초기 위치 설정
+        startPosition = transform.position;
         Invoke("Afterhalf", 1f);
-        //Destroy(gameObject, 2f);
+        Destroy(gameObject, 2f);
     }
 
     void Update()
@@ -59,7 +59,7 @@ public class Air_Monster_G : MonoBehaviour
 
     void Afterhalf()
     {
-        startPosition = new Vector3(2.8f, 0, 0);
+        startPosition = -startPosition;
         angle = 0;
         half = true;
     }

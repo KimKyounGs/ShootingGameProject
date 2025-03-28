@@ -12,6 +12,7 @@ public class Circling_Missile_R : MonoBehaviour
     void Start()
     {
         angle = -90f;
+        startPosition = transform.position;
         Destroy(gameObject, 2f);
     }
 
@@ -57,11 +58,6 @@ public class Circling_Missile_R : MonoBehaviour
         float y = Mathf.Sin(radian) * -Radius + startPosition.y;
 
         transform.position = new Vector3(x, y, transform.position.z);
-    }
-
-    public void SetStartpos(Vector3 position)
-    {
-        startPosition = position;
     }
 
     public void SetDown(bool Down)

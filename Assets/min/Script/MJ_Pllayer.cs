@@ -9,7 +9,9 @@ public class MJ_Pllayer : MonoBehaviour
     Animator animator; //애니메이터 생성
 
     public GameObject[] bullet;  //총알 4개 배열
-    public Transform pos = null;
+    public Transform pos;
+
+    public GameObject powerup;
 
     public int power = 0;
 
@@ -61,5 +63,22 @@ public class MJ_Pllayer : MonoBehaviour
         Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);//다시월드좌표로 변환
         transform.position = worldPos; //좌표를 적용한다.
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MJ_Item"))
+        {
+            
+            if (power < 3)
+            {
+                //파워업
+                GameObject go = Instantiate(powerup, transform.position, Quaternion.identity);
+                Destroy(go, 1);
+                power += 1;
+            }
+
+            //아이템 먹은 처리
+            Destroy(collision.gameObject);
+        }
     }
 }

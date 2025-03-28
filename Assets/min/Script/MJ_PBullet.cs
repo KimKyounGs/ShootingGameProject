@@ -36,7 +36,6 @@ public class MJ_PBullet : MonoBehaviour
 
             //몬스터삭제
             collision.gameObject.GetComponent<MJ_Monster>().Damage(Attack);
-            //PoolManager.Instance.Return(collision.gameObject);
             //미사일 삭제
             Destroy(gameObject);
 
@@ -53,10 +52,22 @@ public class MJ_PBullet : MonoBehaviour
 
             //미사일 삭제
             Destroy(gameObject);
+        }
 
+        if (collision.CompareTag("MJ_BossCircle"))
+        {
+
+            //이펙트생성
+            GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
+            //1초뒤에 지우기
+            Destroy(go, 1);
+
+            //몬스터삭제
+            collision.gameObject.GetComponent<MJ_Mbullet_Circle>().Damage(Attack);
+
+            //미사일 삭제
+            Destroy(gameObject);
         }
     }
-
-
 }
 
