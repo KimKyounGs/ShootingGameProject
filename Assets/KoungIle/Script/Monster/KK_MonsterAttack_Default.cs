@@ -11,8 +11,14 @@ public class KK_MonsterAttack_Default : MonoBehaviour, IMonsterAttack
         InvokeRepeating("Shoot", delay, delay);
     }
 
+    public void StopAttack()
+    {
+        CancelInvoke("Shoot");
+    }
+
     void Shoot()
     {
-        Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
+        GameObject tempBullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
+        tempBullet.transform.rotation = Quaternion.Euler(0, 0, -90);
     }
 }

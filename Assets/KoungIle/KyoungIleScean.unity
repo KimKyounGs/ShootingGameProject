@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &673374367
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3141783369136940227, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_Name
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.877
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6698269351135201144, guid: e71da83e487d37a4492982b9682f2050, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e71da83e487d37a4492982b9682f2050, type: 3}
 --- !u!1 &767329231
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 1049140897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,7 +336,7 @@ MonoBehaviour:
   spawnCenterStartY: 0
   spawnCenterEndY: 4.5
   spawnInterval: 2
-  waveDuration: 10
+  waveDuration: 2
   monster1:
   - {fileID: 6325114936403666484, guid: d22e43d0bc61c7d45ba2deb962934630, type: 3}
   - {fileID: 1124840899345371462, guid: 3bad482f3eccf0041bd3e79dbb48ae13, type: 3}
@@ -404,7 +347,7 @@ MonoBehaviour:
   monster3:
   - {fileID: 1646679751698142223, guid: 1dbcccbccdbbd72409a8e98b9eebab6d, type: 3}
   - {fileID: 1093257328910207725, guid: aa9f7aa0e424dd14f8d7a417c073a028, type: 3}
-  Boss: {fileID: 6325114936403666484, guid: d22e43d0bc61c7d45ba2deb962934630, type: 3}
+  Boss: {fileID: 3141783369136940227, guid: e71da83e487d37a4492982b9682f2050, type: 3}
   textBossWarning: {fileID: 767329231}
 --- !u!4 &1057745050
 Transform:
@@ -738,11 +681,14 @@ MonoBehaviour:
   speed: 5
   bullet:
   - {fileID: 6016131284976059385, guid: ed8b9fd9a323c5845a5e129252a09bf1, type: 3}
+  - {fileID: 8415371731247899648, guid: 18f42428ef37d1e4a9bb49d55c4e5ad6, type: 3}
+  - {fileID: 1303420086821370207, guid: 17f9d0b3f02aba44c9397fb6bc06b98f, type: 3}
+  - {fileID: 273073717969827183, guid: c371876d8a3d787449aca53a2e32fd98, type: 3}
+  - {fileID: 1895271940688161506, guid: 31c5506c4cc576d4db55f50bb7e734a1, type: 3}
   bulletPos: {fileID: 1049140898}
-  power: 0
+  power: 1
   attackCoolTime: 0
-  attackMaxCoolTime: 0.15
-  powerUpEffect: {fileID: 0}
+  attackMaxCoolTime: 0.2
   lazer: {fileID: 0}
   gValue: 0
 --- !u!60 &1882523783
@@ -1009,4 +955,3 @@ SceneRoots:
   - {fileID: 1882523787}
   - {fileID: 1986600017}
   - {fileID: 1579894743}
-  - {fileID: 673374367}

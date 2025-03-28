@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6420f5bb20cc69d418f7ab2b7ed45ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   direction: {x: 0, y: -1}
 --- !u!114 &346677722110357985
 MonoBehaviour:
@@ -180,4 +180,5 @@ MonoBehaviour:
   speed: 3
   explodeDelay: 2.5
   explodeCount: 8
-  explodeDistance: 0.1
+  explodeDistance: 0.5
+  targetPos: {x: 0, y: 0}

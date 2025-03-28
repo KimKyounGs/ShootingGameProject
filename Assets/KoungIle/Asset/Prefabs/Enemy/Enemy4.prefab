@@ -183,9 +183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
-  speed: 3
   spawnLocation: 2
-  Item: {fileID: 0}
+  item: {fileID: 9018872545914227838, guid: 0c1a614ac88c7194ebf986da3f25a165, type: 3}
+  dropChance: 0.3
 --- !u!114 &-1973084623560320339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  explosionEffect: {fileID: 186041240039189289, guid: 6172800bbe53b9b4dbbbe206fd043800, type: 3}
+  explosionEffect: {fileID: 2419612842217309790, guid: e1a6fe48933560b4a98ae42b9522c7ca, type: 3}
 --- !u!1 &7508889747883531372
 GameObject:
   m_ObjectHideFlags: 0

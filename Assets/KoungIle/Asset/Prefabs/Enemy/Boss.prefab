@@ -127,12 +127,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6698269351135201144}
+  - component: {fileID: 8385588655973004624}
   - component: {fileID: 1736325599520825541}
   - component: {fileID: 7456968125868322639}
   - component: {fileID: 5818734218846461219}
   - component: {fileID: 1544467916585196467}
   - component: {fileID: 5602764222451867966}
   - component: {fileID: 270726426803090801}
+  - component: {fileID: -6659404738632793424}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -160,6 +162,33 @@ Transform:
   - {fileID: 5849277523151465091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &8385588655973004624
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141783369136940227}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &1736325599520825541
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -226,7 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 1000
-  patternCooldown: 3
+  canAttack: 00000000
+  attackCount: 2
   phase2Threshold: 0.7
   phase3Threshold: 0.4
 --- !u!114 &5818734218846461219
@@ -259,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3608887515924841787, guid: 97a9e2a767c34bb488fe29c1e74df7ac, type: 3}
   bulletCount: 10
-  fireRate: 2
+  fireRate: 3
 --- !u!114 &5602764222451867966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4722249399462664180, guid: ce43f215db7eeae41b2d1119702f0642, type: 3}
   bulletPerBurst: 6
-  fireRate: 0.6
+  fireRate: 1.5
 --- !u!114 &270726426803090801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,8 +319,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6360376275549348902, guid: 0be63b1137324254b8ba585c468694bb, type: 3}
   bulletPos: {fileID: 5849277523151465091}
-  delay: 1
-  target: {fileID: 0}
+  delay: 1.5
+--- !u!114 &-6659404738632793424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141783369136940227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e866dec4e99f94ebfba4d1e66d0b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  moveRange: 2
 --- !u!1 &5171249236676392292
 GameObject:
   m_ObjectHideFlags: 0

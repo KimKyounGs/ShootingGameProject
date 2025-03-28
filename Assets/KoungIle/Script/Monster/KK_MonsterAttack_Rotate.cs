@@ -14,6 +14,11 @@ public class KK_MonsterAttack_Rotate : MonoBehaviour, IMonsterAttack
         StartCoroutine(RotateFire());
     }
 
+    public void StopAttack()
+    {
+        StopCoroutine(RotateFire());
+    }
+
     IEnumerator RotateFire()
     {
         while(true)
@@ -24,7 +29,9 @@ public class KK_MonsterAttack_Rotate : MonoBehaviour, IMonsterAttack
                 float rad = angle * Mathf.Deg2Rad;
                 Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<KK_MBullet>().Move(dir);
+                float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                bullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
+                // bullet.GetComponent<KK_MBullet>().Move(dir);
                 yield return new WaitForSeconds(fireRate);
             }
 
