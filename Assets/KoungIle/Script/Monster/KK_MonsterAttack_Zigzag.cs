@@ -14,6 +14,11 @@ public class KK_MonsterAttack_Zigzag : MonoBehaviour, IMonsterAttack
         StartCoroutine(ZigzagFire());
     }
 
+    public void StopAttack()
+    {
+        StopCoroutine(ZigzagFire());
+    }   
+
     IEnumerator ZigzagFire()
     {
         bool flag = false;
@@ -27,12 +32,14 @@ public class KK_MonsterAttack_Zigzag : MonoBehaviour, IMonsterAttack
             for (int i = 0; i < bulletCount; i ++)
             {
                 float angle;
-                if (flag) angle = baseAngle + i * 5f; 
-                else angle = baseAngle + i * -5f; // 5f는 간격
+                if (flag) angle = baseAngle + i * 10f; 
+                else angle = baseAngle + i * -10f; // 5f는 간격
                 float rad = angle * Mathf.Deg2Rad;
                 Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                bullet.GetComponent<KK_MBullet>().Move(dir); 
+                GameObject tempBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                tempBullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
+                tempBullet.GetComponent<KK_MBullet>().SetSpeed(Random.Range(3f, 5f)); 
             }
             flag = !flag;
             yield return new WaitForSeconds(fireRate);

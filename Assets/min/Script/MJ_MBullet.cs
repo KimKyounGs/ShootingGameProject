@@ -3,6 +3,7 @@ using UnityEngine;
 public class MJ_MBullet : MonoBehaviour
 {
     public float Speed = 3f;
+    public GameObject effect;
     void Update()
     {
         transform.Translate(Vector3.down * Speed * Time.deltaTime);
@@ -19,8 +20,8 @@ public class MJ_MBullet : MonoBehaviour
     {
         if (collision.CompareTag("MJ_Player"))
         {
-            //플레이어 지우기
-
+            GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(go, 1);
 
             //미사일지우기
             Destroy(gameObject);

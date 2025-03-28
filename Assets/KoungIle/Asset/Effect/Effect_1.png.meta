@@ -151,35 +151,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -199,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5295b8319d876ec41acbddd5fea38208
-      internalID: 26613706
+      spriteID: fb05154ed8d9a434ca4751fcccd63a0b
+      internalID: -414905522
       vertices: []
       indices: 
       edges: []
@@ -221,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02eea89eb44c6945b63510d022f5a66
-      internalID: 385344220
+      spriteID: 5405216e5bbadfe44ab19b23f50eca1a
+      internalID: -139480353
       vertices: []
       indices: 
       edges: []
@@ -243,8 +214,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 167fb0e4cf67a8a44844af348f8fc283
-      internalID: 1275278845
+      spriteID: 9a5ce4fa5a0f84f46b17e44d6eaa2041
+      internalID: -371923864
       vertices: []
       indices: 
       edges: []
@@ -265,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 850bf997cdcc9554b9f5bb2f15baa070
-      internalID: 17805650
+      spriteID: b5900e7e0db0ddb438368e5e28000efa
+      internalID: 1075779330
       vertices: []
       indices: 
       edges: []
@@ -287,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18a2a1059f16d9e409fc99eb0c2a188c
-      internalID: 231942820
+      spriteID: b6458e1b31305994d996e496851259f2
+      internalID: 984230853
       vertices: []
       indices: 
       edges: []
@@ -309,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1436b7fa4d00ee4b97907c8fac680c3
-      internalID: 891273641
+      spriteID: 49c1ada33a1d5ae44beada6b63c0913d
+      internalID: -2028198091
       vertices: []
       indices: 
       edges: []
@@ -331,8 +302,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e490dfd7e1b3bd6408919baf96119069
-      internalID: 1032686273
+      spriteID: 5ab5e18d42d155a429a895f99541b70e
+      internalID: -1032498386
       vertices: []
       indices: 
       edges: []
@@ -353,8 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b20131bbfc3178d4fa8ae69701d0d6bd
-      internalID: -816389485
+      spriteID: 15dfad33f77ed7549b84631173b404aa
+      internalID: 881126992
       vertices: []
       indices: 
       edges: []
@@ -375,8 +346,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a0f5def3c5cb964b979f7d097bb1e38
-      internalID: 924307482
+      spriteID: 7ed7f72b4099e1e41a458add9811d09f
+      internalID: -837784733
       vertices: []
       indices: 
       edges: []
@@ -397,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85539c3d21c2c0e44a4af2f3b83c6cab
-      internalID: 1734759301
+      spriteID: 6264c8a8f25c9b842a06dce5f5d189f2
+      internalID: 2092764156
       vertices: []
       indices: 
       edges: []
@@ -419,8 +390,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 602ff98a1095dac49a3388a8b7639fc1
-      internalID: 119698009
+      spriteID: 091bc82c7652a9544885c08f82a105c9
+      internalID: 2005688619
       vertices: []
       indices: 
       edges: []
@@ -441,8 +412,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc188d27972dd64478b1175c9d31c0c9
-      internalID: -68931224
+      spriteID: 6715567e2a365904381ed26cc6dc6dda
+      internalID: -1823762801
       vertices: []
       indices: 
       edges: []
@@ -451,7 +422,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1988e1ceb36f2af46b62124630366d6b
+    spriteID: 8d7923a502eee504c9f3f1f4fdbaaae9
     internalID: 0
     vertices: []
     indices: 
@@ -461,36 +432,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<< Updated upstream
-      Effect_1_0: 26613706
-      Effect_1_1: 385344220
-      Effect_1_10: 119698009
-      Effect_1_11: -68931224
-      Effect_1_2: 1275278845
-      Effect_1_3: 17805650
-      Effect_1_4: 231942820
-      Effect_1_5: 891273641
-      Effect_1_6: 1032686273
-      Effect_1_7: -816389485
-      Effect_1_8: 924307482
-      Effect_1_9: 1734759301
-=======
-      Effect_1_0: 7804507693618471803
-      Effect_1_1: 1900847438843248427
-      Effect_1_10: 2189587669487683963
-      Effect_1_11: 5225884694318647281
-      Effect_1_12: -8688935912940515472
-      Effect_1_13: -6545480832792171055
-      Effect_1_14: -8578919017628224510
-      Effect_1_2: 7666704972312477794
-      Effect_1_3: 795301357266074275
-      Effect_1_4: -6242229374507020571
-      Effect_1_5: 5336224736863034679
-      Effect_1_6: 4780621253200865888
-      Effect_1_7: 1924199025482961911
-      Effect_1_8: -7819861597427018027
-      Effect_1_9: -4132364910295039899
->>>>>>> Stashed changes
+      Effect_1_0: -414905522
+      Effect_1_1: -139480353
+      Effect_1_10: 2005688619
+      Effect_1_11: -1823762801
+      Effect_1_2: -371923864
+      Effect_1_3: 1075779330
+      Effect_1_4: 984230853
+      Effect_1_5: -2028198091
+      Effect_1_6: -1032498386
+      Effect_1_7: 881126992
+      Effect_1_8: -837784733
+      Effect_1_9: 2092764156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

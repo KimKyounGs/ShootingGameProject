@@ -16,7 +16,12 @@ public class KK_MonsterAttack_Laser : MonoBehaviour, IMonsterAttack
     public void StartAttack()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        InvokeRepeating(nameof(TriggerLaser), 0f, fireInterval);
+        InvokeRepeating("TriggerLaser", 0f, fireInterval);
+    }
+
+    public void StopAttack()
+    {
+        CancelInvoke("TriggerLaser");
     }
 
     void TriggerLaser()
@@ -33,19 +38,19 @@ public class KK_MonsterAttack_Laser : MonoBehaviour, IMonsterAttack
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-        // 1. 조준선 생성
-        GameObject aim = Instantiate(aimLinePrefab, firePoint.position, rotation);
-        LineRenderer line = aim.GetComponent<LineRenderer>();
-        if (line != null)
-        {
-            line.SetPosition(0, firePoint.position);
-            line.SetPosition(1, firePoint.position + (Vector3)(direction * laserLength));
-        }
+        // // 1. 조준선 생성
+        // GameObject aim = Instantiate(aimLinePrefab, firePoint.position, rotation);
+        // LineRenderer line = aim.GetComponent<LineRenderer>();
+        // if (line != null)
+        // {
+        //     line.SetPosition(0, firePoint.position);
+        //     line.SetPosition(1, firePoint.position + (Vector3)(direction * laserLength));
+        // }
 
         // 2. 조준선 유지
         yield return new WaitForSeconds(chargeTime);
      
-        Destroy(aim);
+        // Destroy(aim);
 
         // 3. 레이저 생성
         GameObject laser = Instantiate(laserPrefab, firePoint.position, rotation);

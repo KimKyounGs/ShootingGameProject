@@ -5,8 +5,8 @@ public class KK_Monster : MonoBehaviour
     public int HP = 100; // 체력
     public int spawnLocation;
     //아이템 가져오기
-    public GameObject Item = null;
-
+    public GameObject item = null;
+    [Range(0f, 1f)]public float dropChance = 0.3f;
 
     private IMonsterAttack attackPattern;
     private IMonsterMove movePattern;
@@ -35,7 +35,7 @@ public class KK_Monster : MonoBehaviour
 
         if(HP <=0)
         {
-            // ItemDrop();
+            ItemDrop();
             Destroy(gameObject);
         }
     }
@@ -45,17 +45,20 @@ public class KK_Monster : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // public void ItemDrop()
-    // {
-    //     //아이템 생성
-    //     Instantiate(Item, transform.position, Quaternion.identity);
-    // }
+    public void ItemDrop()
+    {
+        if (item != null && Random.value < dropChance)
+        {
+            Instantiate(item, transform.position, Quaternion.identity);
+        }
+    }
 
 }
 
 public interface IMonsterAttack
 {
     void StartAttack();
+    void StopAttack();
 }
 
 public interface IMonsterMove

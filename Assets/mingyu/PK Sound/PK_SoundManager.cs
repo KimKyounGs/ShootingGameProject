@@ -11,7 +11,19 @@ public class PK_SoundManager : MonoBehaviour
     public AudioClip S_Gage_C;
     public AudioClip S_Gage_F;
 
+    public AudioClip M_Gage_F;
 
+    public AudioClip Upgrade;
+
+    public AudioClip P_bullet;
+
+    public AudioClip P_missile;
+
+    public AudioClip B_bullet3;
+
+    public AudioClip M_bullet1;
+
+    public AudioClip M_bullet2;
 
     public void Awake()
     {
@@ -40,5 +52,42 @@ public class PK_SoundManager : MonoBehaviour
     public void S_Gage_Full()
     {
         myAudio.PlayOneShot(S_Gage_F);
+    }
+
+    public void M_Gage_Full()
+    {
+        myAudio.PlayOneShot(M_Gage_F);
+    }
+
+    public void UPGRADE()
+    {
+        myAudio.PlayOneShot(Upgrade);
+    }
+
+    public void P_Bullet()
+    {
+        float volumeScale = 0.1f; // 볼륨을 50%로 설정 (0.0 ~ 1.0)
+        myAudio.PlayOneShot(P_bullet, volumeScale);
+    }
+
+    public void P_Missile()
+    {
+        float volumeScale = 0.5f;
+        myAudio.PlayOneShot(P_missile, volumeScale);
+    }
+
+    public void B_Bullet3()
+    {
+        myAudio.PlayOneShot(B_bullet3);
+    }
+
+    public void M_Bullet1()
+    {
+        myAudio.PlayOneShot(M_bullet1);
+    }
+
+    public void M_Bullet2()
+    {
+        myAudio.PlayOneShot(M_bullet2);
     }
 }

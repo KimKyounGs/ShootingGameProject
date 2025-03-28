@@ -3,6 +3,7 @@ using UnityEngine;
 public class MJ_Mbullet_Homing : MonoBehaviour
 {
     public GameObject target;  //플레이어
+    public GameObject effect;
     public float Speed = 3f;
     Vector2 dir;
     Vector2 dirNo;
@@ -31,6 +32,9 @@ public class MJ_Mbullet_Homing : MonoBehaviour
     {
         if (collision.tag == "MJ_Player")
         {
+            GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(go, 1);
+
             Destroy(gameObject);
         }
     }

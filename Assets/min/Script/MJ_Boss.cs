@@ -5,20 +5,28 @@ public class MJ_Boss : MonoBehaviour
 {
     int flag = 1;
     public float speed = 2f;
+    public float fire_delay_nom = 0.5f;
+    public float fire_delay_hom = 8f;
+    public float fire_delay_cir = 8f;
 
     public GameObject ms;
     public GameObject ms2;
+    public GameObject ms3;
+    public GameObject ms4;
 
     public Transform pos1;
     public Transform pos2;
+    public Transform pos3;
+    public Transform pos4;
 
 
     void Start()
     {
         StartCoroutine(BossMissle());
         StartCoroutine(CircleFire());
+        StartCoroutine(BossHoming());
+        StartCoroutine(BossCircle());
     }
-
     IEnumerator BossMissle()
     {
         while (true)
@@ -27,9 +35,29 @@ public class MJ_Boss : MonoBehaviour
             Instantiate(ms, pos1.position, Quaternion.identity);
             Instantiate(ms, pos2.position, Quaternion.identity);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(fire_delay_nom);
         }
     }
+    IEnumerator BossHoming()
+    {
+        while (true)
+        {
+            Instantiate(ms3, pos3.position, Quaternion.identity);
+
+            yield return new WaitForSeconds(fire_delay_hom);
+        }
+    }
+
+    IEnumerator BossCircle()
+    {
+        while (true)
+        {
+            Instantiate(ms4, pos4.position, Quaternion.identity);
+
+            yield return new WaitForSeconds(fire_delay_hom);
+        }
+    }
+    
     IEnumerator CircleFire()
     {
         //공격주기
@@ -70,9 +98,6 @@ public class MJ_Boss : MonoBehaviour
         }
 
     }
-
-
-
     void Update()
     {
         //보스 좌우로 움직이게 하기

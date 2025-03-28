@@ -29,7 +29,7 @@ public class KK_MBoom : MonoBehaviour
             if (distance <= explodeDistance)
             {
                 // 도착 시 정지 + 타이머 시작
-                GetComponent<KK_MBullet>().Move(Vector2.zero);
+                GetComponent<KK_MBullet>().SetSpeed(0);
                 state = BombState.Waiting;
                 Invoke("Explode", explodeDelay);
             }
@@ -56,6 +56,8 @@ public class KK_MBoom : MonoBehaviour
             float rad = angle * Mathf.Deg2Rad;
             Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
             GameObject bullet = Instantiate(explosionBulletPrefab, transform.position, Quaternion.identity);
+            float visiualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            bullet.transform.rotation = Quaternion.Euler(0, 0, visiualAngle);
             bullet.GetComponent<KK_MBullet>().Move(dir);
         }
 

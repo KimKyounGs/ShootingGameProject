@@ -187,7 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   spawnLocation: 2
-  Item: {fileID: 0}
+  item: {fileID: 9018872545914227838, guid: 0c1a614ac88c7194ebf986da3f25a165, type: 3}
+  dropChance: 0.3
 --- !u!114 &2290521128833003356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 800371539382878632, guid: 92a05fc77f168f54da3bedbbe45407de, type: 3}
   bulletCount: 8
-  delay: 2
+  delay: 1.5
 --- !u!114 &-113770551399510555
 MonoBehaviour:
   m_ObjectHideFlags: 0

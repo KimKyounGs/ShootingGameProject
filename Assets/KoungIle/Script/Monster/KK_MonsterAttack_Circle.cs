@@ -12,6 +12,11 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
         InvokeRepeating("ShootCircle", delay, delay);
     }
 
+    public void StopAttack()
+    {
+        CancelInvoke("ShootCircle");
+    }
+
     void ShootCircle()
     {
         for (int i = 0; i < bulletCount; i ++)
@@ -21,9 +26,11 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
             float rad = angle * Mathf.Deg2Rad;
 
             // 방향 벡터 계산
-            Vector2 direction = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
-            GameObject b = Instantiate(bullet, transform.position, Quaternion.identity);
-            b.GetComponent<KK_MBullet>().Move(direction);
+            Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
+            GameObject tempBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            tempBullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
+            //tempBullet.GetComponent<KK_MBullet>().Move(dir);
         }
         weightAngle += 1;
     }

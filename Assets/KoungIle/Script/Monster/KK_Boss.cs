@@ -7,8 +7,9 @@ public class KK_Boss : MonoBehaviour
     public int maxHP = 1000;
     private int currentHP;
 
-    [Header("공격 쿨타임")]
-    public float patternCooldown = 3f;
+    [Header("공격 활성화 1.회전 2.지그재그 3.랜덤 4.플레이어 추적")]
+    public bool[] canAttack = {false, false, false, false};
+    public int attackCount = 2;
 
     [Header("페이즈 체력 비율")]
     public float phase2Threshold = 0.7f; // 70%
@@ -18,7 +19,7 @@ public class KK_Boss : MonoBehaviour
     private bool isDead = false;
 
     private IMonsterAttack[] attackPatterns;
-    private bool isAttacking = false;
+    private IMonsterMove movePattern;
 
     void Start()
     {
@@ -26,31 +27,51 @@ public class KK_Boss : MonoBehaviour
 
         // 모든 공격 패턴 자동 수집
         attackPatterns = GetComponents<IMonsterAttack>();
-
+        movePattern = GetComponent<IMonsterMove>();
         StartCoroutine(PatternRoutine());
+    }
+
+    void Update()
+    {
+        if (movePattern != null)
+        {
+            movePattern.Move();
+        }
     }
 
     IEnumerator PatternRoutine()
     {
-        yield return new WaitForSeconds(1f); // 시작 전 약간 대기
-
         while (!isDead)
         {
-            if (!isAttacking)
+            yield return new WaitForSeconds(1.5f); // 공격 전 약간 대기
+            int cnt = 0;
+            while(cnt < attackCount)
             {
-                isAttacking = true;
-
-                // 랜덤 공격 선택
-                // int rand = Random.Range(0, attackPatterns.Length);
-                int rand = 3;
-                attackPatterns[rand].StartAttack();
-
-                yield return new WaitForSeconds(patternCooldown);
-                isAttacking = false;
+                int idx = Random.Range(0, 4);
+                if (canAttack[idx]) continue;
+                canAttack[idx] = true;
+                cnt ++;
+            }
+            for (int i = 0; i < 4; i ++)
+            {
+                if (canAttack[i])
+                {
+                    attackPatterns[i].StartAttack();
+                }
             }
 
-            yield return null;
+            yield return new WaitForSeconds(10f); // 10초간 공격
+
+            for (int i = 0; i < 4; i ++)
+            {
+                if (canAttack[i])
+                {
+                    attackPatterns[i].StopAttack();
+                    canAttack[i] = false;
+                }
+            }
         }
+        yield return null;
     }
 
     public void TakeDamage(int damage)
@@ -75,12 +96,13 @@ public class KK_Boss : MonoBehaviour
         if (hpRatio < phase3Threshold && currentPhase < 3)
         {
             currentPhase = 3;
+            attackCount = 4;
             Debug.Log("Phase 3 돌입!");
-            // 패턴 속도 증가, 추가 공격 등
         }
         else if (hpRatio < phase2Threshold && currentPhase < 2)
         {
             currentPhase = 2;
+            attackCount = 3;
             Debug.Log("Phase 2 돌입!");
         }
     }

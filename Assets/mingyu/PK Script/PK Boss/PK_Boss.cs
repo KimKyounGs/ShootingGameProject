@@ -44,7 +44,7 @@ public class PK_Boss : MonoBehaviour
 
         if (boss_attack == true && cool_time1 >= boss_attack_time)
         {
-            attack_chose = Random.Range(1, 6);
+            attack_chose = Random.Range(3, 3);
 
             if (attack_chose > 0)
             {
@@ -300,6 +300,7 @@ public class PK_Boss : MonoBehaviour
             GameObject bulletD = Instantiate(Bullet_3, d, Quaternion.identity);
             bulletB.transform.localScale = new Vector3(-1, 1, 1);
             bulletC.transform.localScale = new Vector3(-1, 1, 1);
+            PK_SoundManager.instance.B_Bullet3(); // 총알 발사 소리 재생
         }
 
         if (cool_time2 >= 10)   //10초 지나면 공격 멈추고 보스 주사위 굴리기

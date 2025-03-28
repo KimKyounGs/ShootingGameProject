@@ -170,7 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 30
   spawnLocation: 1
-  Item: {fileID: 0}
+  item: {fileID: 9018872545914227838, guid: 0c1a614ac88c7194ebf986da3f25a165, type: 3}
+  dropChance: 0.3
 --- !u!114 &5626017450998566031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07851f69774a20647ba4034ac303ff3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3690971542904428544, guid: 72117a13af4412543b9897b2206684ab, type: 3}
+  bulletPrefab: {fileID: 800371539382878632, guid: 92a05fc77f168f54da3bedbbe45407de, type: 3}
   bulletPos: {fileID: 8977429903449793688}
   delay: 1
 --- !u!114 &1509409868029741906

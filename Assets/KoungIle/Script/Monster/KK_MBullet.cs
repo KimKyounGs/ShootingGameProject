@@ -3,11 +3,11 @@ using UnityEngine;
 public class KK_MBullet : MonoBehaviour
 {
     public float speed = 3f;
-    public Vector2 direction = Vector2.down;
+    public Vector2 direction;
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
     void OnBecameInvisible()
@@ -26,5 +26,10 @@ public class KK_MBullet : MonoBehaviour
     public void Move(Vector2 vector2)
     {
         direction = vector2;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
     }
 }

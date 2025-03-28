@@ -20,6 +20,11 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
         InvokeRepeating("ShootSpread", 0f, delay);
     }
 
+    public void StopAttack()
+    {
+        CancelInvoke("ShootSpread");
+    }
+
     void ShootSpread()
     {
         if (player == null) return;
@@ -37,14 +42,14 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
 
             float angle = baseAngle + offset;
             float rad = angle * Mathf.Deg2Rad;
-
             Vector2 dir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad));
+
             GameObject tempBullet = Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            tempBullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
             tempBullet.GetComponent<KK_MBullet>().Move(dir); 
         }
-
         // 탄 수 증가
         currentCount += incrementStep;
-
     }
 }

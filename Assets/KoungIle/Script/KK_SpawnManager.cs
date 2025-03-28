@@ -45,13 +45,13 @@ public class KK_SpawnManaer : MonoBehaviour
     IEnumerator ManageWaves()
     {
         // 1~3분: monster1 스폰
-        yield return StartCoroutine(SpawnWave(monster1, waveDuration));
+        yield return StartCoroutine(SpawnWave(monster1, waveDuration*3));
 
         // 3~6분: monster2 스폰
-        yield return StartCoroutine(SpawnWave(monster2, waveDuration));
+        yield return StartCoroutine(SpawnWave(monster2, waveDuration*3));
 
         // 6~9분: monster3 스폰
-        yield return StartCoroutine(SpawnWave(monster3, waveDuration));
+        yield return StartCoroutine(SpawnWave(monster3, waveDuration*3));
 
         // 9~10분:  스폰
         yield return StartCoroutine(SpawnRushWave(waveDuration));
@@ -116,6 +116,7 @@ public class KK_SpawnManaer : MonoBehaviour
 
         isBossSpawned = true;
         textBossWarning.SetActive(true);
+        Destroy(textBossWarning, 2.5f);
 
         Vector3 pos = new Vector3(0, 2.97f, 0);
         Instantiate(Boss, pos, Quaternion.identity);

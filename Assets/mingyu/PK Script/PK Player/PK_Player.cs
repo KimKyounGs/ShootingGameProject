@@ -43,6 +43,8 @@ public class PK_Player : MonoBehaviour
 
     // 검 소리 재생 여부
     public bool swould_sound = true;
+    // 미사일 소리 재생 여부
+    public bool Missile_sound = true;
 
     void Start()
     {
@@ -53,6 +55,12 @@ public class PK_Player : MonoBehaviour
     void Update()
     {
         Missile_Gage.fillAmount += Time.deltaTime / 20; // 미사일 게이지 증가
+
+        if (Missile_Gage.fillAmount >= 1 && Missile_sound == true) // 미사일 게이지가 1 이상일 때
+        {
+            PK_SoundManager.instance.M_Gage_Full(); // 미사일 준비완료 소리 재생
+            Missile_sound = false; // 소리 재생 플래그 해제
+        }
 
         HandleMovement(); // 플레이어 이동 처리
         HandleSwould(); // 검 스킬 처리
@@ -112,12 +120,15 @@ public class PK_Player : MonoBehaviour
         {
             Missile.gameObject.SetActive(true);
             Missile_Gage.fillAmount -= 0.5f;
+            PK_SoundManager.instance.P_Missile();
+            Missile_sound = true; // 미사일 소리 재생 플래그 설정
         }
 
         // 기본 총알 발사
         if (Input.GetKeyUp(KeyCode.Space))
         {
             Instantiate(bullet[0], pos[0].position, Quaternion.identity);
+            PK_SoundManager.instance.P_Bullet(); // 총알 발사 소리 재생
 
             // 파워가 3 이상일 때 추가 총알 발사
             if (power >= 3)
@@ -148,6 +159,7 @@ public class PK_Player : MonoBehaviour
 
             if (power > 1)
             {
+                PK_SoundManager.instance.UPGRADE();
                 Destroy(collision.gameObject); // 아이템 제거
             }
         }

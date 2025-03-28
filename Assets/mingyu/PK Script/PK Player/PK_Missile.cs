@@ -14,7 +14,7 @@ public class PK_Missile : MonoBehaviour
     
     void Start()
     {
-       
+       PK_SoundManager.instance.P_Missile();
     }
 
     void Update()

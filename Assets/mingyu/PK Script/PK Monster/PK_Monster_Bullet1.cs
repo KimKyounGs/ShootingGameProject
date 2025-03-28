@@ -10,6 +10,8 @@ public class PK_Monster_Bullet1 : MonoBehaviour
 
     void Start()
     {
+        PK_SoundManager.instance.M_Bullet1(); // 총알 소리 재생
+
         // 플레이어 태그로 대상 찾기
         target = GameObject.FindGameObjectWithTag("Player");
 
