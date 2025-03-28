@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: 30c92c3fb52e5af47812f83658b9e625
+guid: a59495e2ff73f3b44a1c7e15509eb344
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 442103771643077519
-    second: BossBullet_0
+      213: 3968703321132492839
+    second: Item_Power_0
+  - first:
+      213: -2920545442936650619
+    second: Item_Power_1
+  - first:
+      213: 1158482639929761716
+    second: Item_Power_2
+  - first:
+      213: -5706430973581632013
+    second: Item_Power_3
+  - first:
+      213: 3843638439612713876
+    second: Item_Power_4
+  - first:
+      213: -4166873042425860597
+    second: Item_Power_5
+  - first:
+      213: 4032420903927055443
+    second: Item_Power_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,45 +157,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossBullet_0
+      name: Item_Power_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 52
-        height: 51
+        width: 25
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f8365a6b90ba22600800000000000000
-      internalID: 442103771643077519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BossBullet_1
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 0
-        width: 52
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 553802977faf8194bb9eccc9a858fe97
-      internalID: 2097139547
+      spriteID: a8ec583e1bf716e42b4a006170d12dea
+      internalID: 2081504358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Power_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c9e082239a7d044ba9a557f48461a0
+      internalID: -2127047540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Power_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82af5a4f7671bdc41897ef99501fbc14
+      internalID: 1518006335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Power_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc108f46d563127429225b468beaf117
+      internalID: 123521414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Power_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbc997d58d223f418c5a82a5d90f18b
+      internalID: 1073446398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item_Power_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e126de9543130844806338ae6f5f41d
+      internalID: -887162581
       vertices: []
       indices: 
       edges: []
@@ -186,7 +292,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3d59be9e41c46c94c87b9ef17c8680e1
+    spriteID: 8564bdbf37c6f2e459c8c6c051165d64
     internalID: 0
     vertices: []
     indices: 
@@ -196,8 +302,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BossBullet_0: 442103771643077519
-      BossBullet_1: 2097139547
+      Item_Power_0: 2081504358
+      Item_Power_1: -2127047540
+      Item_Power_2: 1518006335
+      Item_Power_3: 123521414
+      Item_Power_4: 1073446398
+      Item_Power_5: -887162581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

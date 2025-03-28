@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MJ_Boss_bullet : MonoBehaviour
 {
+    public GameObject effect;
     public float Speed = 3f;
     Vector2 vec2 = Vector2.down;
 
@@ -25,7 +26,9 @@ public class MJ_Boss_bullet : MonoBehaviour
     {
         if (collision.CompareTag("MJ_Player"))
         {
-            //미사일지움
+            GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(go, 1);
+
             Destroy(gameObject);
         }
     }

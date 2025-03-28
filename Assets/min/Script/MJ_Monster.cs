@@ -7,9 +7,13 @@ public class MJ_Monster : MonoBehaviour
     public float Delay = 1f;
     public int x = 1;
     public int y = 1;
+    public int item_max_pb = 100;
+
+
     public Transform ms1;
     public Transform ms2;
     public GameObject bullet;
+    public GameObject item = null;
 
     void Start()
     {
@@ -23,14 +27,13 @@ public class MJ_Monster : MonoBehaviour
             Instantiate(bullet, ms2.position, Quaternion.identity);
         }
 
-        //재귀호출
         Invoke("CreateBullet", Delay);
     }
 
     void Update()
     {
         Vector3 vector = new Vector3(x, y, 0);
-        //아래 방향으로 움직여라
+
         transform.Translate(vector * Speed * Time.deltaTime);
     }
 
@@ -46,11 +49,19 @@ public class MJ_Monster : MonoBehaviour
 
         if (HP <= 0)
         {
-            //ItemDrop();
+            ItemDrop();
             Destroy(gameObject);
         }
     }
 
+    public void ItemDrop()
+    {
+        int prob = Random.Range(1, 101);
 
+        if (prob < item_max_pb)
+        {
+            Instantiate(item, transform.position, Quaternion.identity);
+        }
+    }
 
 }

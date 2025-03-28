@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class MJ_Mbullet_Homing : MonoBehaviour
+public class MJ_Mbullet_Circle : MonoBehaviour
 {
-    public GameObject target;  //플레이어
+    public int HP = 100;
+    public GameObject target;
     public GameObject effect;
-    public float Speed = 3f;
+    public float speed = 3f;
     Vector2 dir;
     Vector2 dirNo;
-    void Start()
+    void Update()
     {
         //플레이어 태그로 찾기
         target = GameObject.FindGameObjectWithTag("MJ_Player");
@@ -17,20 +18,24 @@ public class MJ_Mbullet_Homing : MonoBehaviour
         //방향벡터만 구하기 단위벡터 정규화 노말 1의 크기로 만든다.
         dirNo = dir.normalized;
 
+        transform.Translate(dirNo * speed * Time.deltaTime);
+    }
+
+    public void Damage(int attack)
+    {
+        HP -= attack;
+
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
-    void Update()
+    // 충돌 처리 (예: 플레이어와 충돌 시)
+    private void OnTriggerEnter(Collider collision)
     {
-
-        transform.Translate(dirNo * Speed * Time.deltaTime);
-
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "MJ_Player")
+        if (collision.CompareTag("MJ_Player"))
         {
             GameObject go = Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(go, 1);
@@ -43,4 +48,5 @@ public class MJ_Mbullet_Homing : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
