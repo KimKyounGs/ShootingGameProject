@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 
 public class Gyarados : Hoon_Player
@@ -43,7 +44,7 @@ public class Gyarados : Hoon_Player
         {
             elapsedTime += Time.deltaTime;
             float fillAmount = elapsedTime / skillCooldown;
-            dashUI.fillAmount = fillAmount;
+            skillUI.fillAmount = fillAmount;
             yield return null;
         }
          

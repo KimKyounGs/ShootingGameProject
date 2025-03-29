@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     public int level = 1;
     public float expLeft = 1f;
     public Vector3 centerPos = new Vector3(0, 0, 0);
-    public int evolutionLevel = 5;
+    public int evolutionLevel = 20;
 
     public Image expUI;
     public TMP_Text levelUI;
     public TMP_Text nameUI;
     public TMP_Text dashNameUI;
+    public GameObject gyarados;
+    public GameObject magikarp;
 
     public void Awake()
     {
@@ -65,15 +67,13 @@ public class GameManager : MonoBehaviour
             StartCoroutine(moveCenter());
             evolutionTimeline.Play();
             Time.timeScale = 0;
-        }
-        
+        }   
     }
     public void EndTimeline()
     {
         Time.timeScale = 1;
         nameUI.text = "갸라도스";
         dashNameUI.text = "폭포오르기";
-
     }
 
     IEnumerator moveCenter()

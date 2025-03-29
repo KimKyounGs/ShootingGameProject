@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Hoon_Player : MonoBehaviour
 {
+    
     public static Hoon_Player instance;
     public CapsuleCollider2D CapsuleCollider;
     public Vector2 horizontalSize = new Vector2(1.7f, 1.1f);  // 가로로 긴 히트박스
@@ -18,9 +19,9 @@ public class Hoon_Player : MonoBehaviour
     public float effectDashInterval = 0.2f; // 이펙트 생성 간격
 
     [Header("캐릭터 설정")]
-    public float speed = 5f; // 잉어킹은 3f
-    public float bulletCooldown = 0.15f;
-    public float dashCooldown = 5f;
+    public float speed = 3f;
+    public float bulletCooldown = 0.5f;
+    public float dashCooldown = 8f;
     
     public bool CanShoot = true;
     public bool CanDash = true;
@@ -34,11 +35,10 @@ public class Hoon_Player : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (instance == null || instance == this)  // 현재 객체가 instance이면 유지
         {
             instance = this;
         }
-        else Destroy(gameObject);       
     }
     protected virtual void Shoot()
     {
@@ -57,7 +57,7 @@ public class Hoon_Player : MonoBehaviour
 
     IEnumerator BulletCooldown()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(bulletCooldown);
         CanShoot = true;
     }
 
@@ -100,12 +100,11 @@ public class Hoon_Player : MonoBehaviour
         CapsuleCollider.direction = CapsuleDirection2D.Vertical;
         CapsuleCollider.size = verticalSize;
     }
-    void Start()
+    protected virtual void Start()
     {
         ani = GetComponent<Animator>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
         sr = GetComponent<SpriteRenderer>();
-
     }
 
     protected virtual void Update()
