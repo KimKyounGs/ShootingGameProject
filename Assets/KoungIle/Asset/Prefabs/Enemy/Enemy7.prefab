@@ -269,8 +269,8 @@ MonoBehaviour:
   laserPrefab: {fileID: 8709899459354135059, guid: 8bab9a4013324264a971975e4dd7d9ef, type: 3}
   aimLinePrefab: {fileID: 8789156935232947152, guid: c7cfe3e7424574afcaad20d2d116bc67, type: 3}
   firePoint: {fileID: 2581427925067662433}
-  chargeTime: 1
-  laserDuration: 2
+  chargeTime: 2
+  laserDuration: 1.2
   fireInterval: 5
   laserLength: 11
 --- !u!1 &4228898346679544916

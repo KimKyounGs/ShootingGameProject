@@ -31,23 +31,20 @@ public class KK_MonsterAttack_Laser : MonoBehaviour, IMonsterAttack
 
     IEnumerator FireLaser()
     {
-        if (player == null) yield break;
-
+        if (player == null) 
+        {
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+            yield break;
+        }
         // 방향 계산
         Vector2 direction = (player.position - firePoint.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-        // // 1. 조준선 생성
-        // GameObject aim = Instantiate(aimLinePrefab, firePoint.position, rotation);
-        // LineRenderer line = aim.GetComponent<LineRenderer>();
-        // if (line != null)
-        // {
-        //     line.SetPosition(0, firePoint.position);
-        //     line.SetPosition(1, firePoint.position + (Vector3)(direction * laserLength));
-        // }
+        // 1.효과음 생성
+        KK_SoundManager.Instance.PlayFX(11);
 
-        // 2. 조준선 유지
+        // 2. 효과음 유지
         yield return new WaitForSeconds(chargeTime);
      
         // Destroy(aim);
@@ -59,6 +56,7 @@ public class KK_MonsterAttack_Laser : MonoBehaviour, IMonsterAttack
         KK_LaserController controller = laser.GetComponent<KK_LaserController>();
         if (controller != null)
         {
+            KK_SoundManager.Instance.PlayFX(12);
             controller.laserLength = laserLength;
             controller.SetupLaser(direction); // 방향도 전달해줌
             controller.DestroyAfter(laserDuration);

@@ -33,6 +33,7 @@ public class KK_Monster : MonoBehaviour
     //미사일에 따른 데미지 입는 함수
     public void Damage(int attack)
     {
+        // KK_SoundManager.Instance.PlayFX(4); // 피격 효과음
         HP -= attack;
 
         if(HP <=0)

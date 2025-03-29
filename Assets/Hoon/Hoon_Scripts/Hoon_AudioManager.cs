@@ -38,7 +38,7 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip heal;
     public AudioClip waterPusle;
     public AudioClip danger;
-
+    public AudioClip sharpedo;
 
     private void Awake()
     {
@@ -215,6 +215,11 @@ public class Hoon_AudioManager : MonoBehaviour
     public void SFXDanger()
     {
         myAudio.PlayOneShot(danger);
+    }
+
+    public void CrySharpedo()
+    {
+        myAudio.PlayOneShot(sharpedo);
     }
 }
 

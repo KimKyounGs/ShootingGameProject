@@ -21,6 +21,7 @@ public class KK_MonsterAttack_Random : MonoBehaviour, IMonsterAttack
     {
         while(true)
         {
+            KK_SoundManager.Instance.PlayFX(8); // 발사 효과음
             for (int i = 0; i < bulletPerBurst; i ++)
             {
                 float angle = Random.Range(-180, 0);

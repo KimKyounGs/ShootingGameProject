@@ -240,7 +240,7 @@ MonoBehaviour:
   delay: 1
   spreadAngle: 45
   startCount: 3
-  incrementStep: 1
+  incrementStep: 2
 --- !u!1 &2498887562287996070
 GameObject:
   m_ObjectHideFlags: 0

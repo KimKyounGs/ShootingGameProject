@@ -3,8 +3,9 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class KK_Player : MonoBehaviour
-{   public float speed = 5f;
-
+{   
+    public int life = 3; // 플레이어 생명
+    public float speed = 5f;
     public GameObject[] bullet;  // 총알배열
     public Transform bulletPos = null; // 총알 발사 위치
     public int power = 1; // 현재 총알 강화 단계
@@ -47,12 +48,29 @@ public class KK_Player : MonoBehaviour
             { 9, new int[] { 3, 4, 3} },
             { 10, new int[] { 4, 4, 4} }
         };
+
+        // UI 업데이트
+        KK_UIManager.Instance.UpdateLifeUI(life); 
+        KK_UIManager.Instance.UpdatePowerUI(power); 
     }
 
     void Update()
     {
         Move();
         Shoot();
+
+        // 무적 모드
+        if (Input.GetKeyDown(KeyCode.I) && !bplayerInvincibility)
+        {
+            // 파워업
+            for (int i = 0; i < 10; i++)
+            {
+                IncreasePower();
+            }
+
+            // 무적 상태
+            bplayerInvincibility = true;
+        }
     }
 
     void Move()
@@ -114,15 +132,29 @@ public class KK_Player : MonoBehaviour
         power = Mathf.Min(power + 1, 10);
         KK_SoundManager.Instance.PlayFX(2, 1f); // 레벨업 효과음
         // 파워업 이팩트!
+        KK_UIManager.Instance.UpdatePowerUI(power);
     }
 
     public void PlayerDie()
     {
         gameObject.SetActive(false); // 비활성화 후
-        Invoke("PlayerRevive", 2f); // 2초 후에 PlayerRevive 호출
         GameObject effct = Instantiate(playerDieEffect, transform.position, Quaternion.identity); // 사망 이펙트 생성
         Destroy(effct, 1f); // 1초 후에 이펙트 삭제
         KK_SoundManager.Instance.PlayFX(3, 1f); // 사망 효과음
+
+        power = 1; // 파워 초기화
+        KK_UIManager.Instance.UpdatePowerUI(power);
+        life--; // 생명 감소
+        KK_UIManager.Instance.UpdateLifeUI(life);
+
+        if (life <= 0)
+        {
+            // 게임 오버 처리
+            // KK_SoundManager.Instance.PlayFX(4, 1f); // 게임 오버 효과음
+            gameObject.SetActive(false); // 비활성화 후
+            return;
+        }
+        Invoke("PlayerRevive", 2f); // 2초 후에 PlayerRevive 호출
     }
 
     public void PlayerRevive()
@@ -130,7 +162,6 @@ public class KK_Player : MonoBehaviour
         transform.position = new Vector3(0, -4, 0); // 초기 위치로 이동
         gameObject.SetActive(true); // 활성화 후
         
-        power = 1; // 파워 초기화
         StartCoroutine(InvincibilityCoroutine()); // 무적 상태 시작
     }
 
