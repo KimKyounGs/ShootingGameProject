@@ -22,10 +22,9 @@ public class KK_MBullet : MonoBehaviour
             if (player.bplayerInvincibility == false)
             {
                 player.PlayerDie();
+                if (GetComponentInParent<KK_LaserController>()) return;
+                Destroy(gameObject);
             }
-
-            //미사일지우기
-            Destroy(gameObject);
         }
     }
 

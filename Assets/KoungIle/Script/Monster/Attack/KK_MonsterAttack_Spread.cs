@@ -10,12 +10,12 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
     public int incrementStep = 1;
 
     private int currentCount;
-    private Transform player;
+    private GameObject player;
 
     public void StartAttack()
     {
         currentCount = startCount;
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        player = GameObject.FindGameObjectWithTag("Player");
 
         InvokeRepeating("ShootSpread", 0f, delay);
     }
@@ -27,10 +27,15 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
 
     void ShootSpread()
     {
-        if (player == null) return;
-
+        if (player == null || !player.activeInHierarchy) // 
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            // 플레이어가 없으면 공격 안함
+            return;
+        }
+        
         // 중심 방향 : 플레이어를 바라보는 벡터
-        Vector2 baseDir = (player.position - transform.position).normalized;
+        Vector2 baseDir = (player.transform.position - transform.position).normalized;
 
         // 중심 각도
         float baseAngle = Mathf.Atan2(baseDir.y, baseDir.x) * Mathf.Rad2Deg;
@@ -50,6 +55,6 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
             tempBullet.GetComponent<KK_MBullet>().Move(dir); 
         }
         // 탄 수 증가
-        currentCount += incrementStep;
+        currentCount = Mathf.Min(currentCount + incrementStep, 10); // 최대 10발까지 증가
     }
 }

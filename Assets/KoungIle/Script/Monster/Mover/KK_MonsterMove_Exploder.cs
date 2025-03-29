@@ -4,21 +4,25 @@ public class KK_MonsterMove_Explore : MonoBehaviour, IMonsterMove
 {
     public float speed = 3f;
     public GameObject explosionEffect;
-    private Transform player;
+    public GameObject target;
     
-
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player");
         // 플레이어가 죽었을 때 바꾸기.
     }
 
     public void Move()
     {
-        if (player != null)
+        if (target != null)
         {
-            Vector3 direction = (player.transform.position - transform.position).normalized;
+            Vector3 direction = (target.transform.position - transform.position).normalized;
             transform.Translate(direction * speed * Time.deltaTime);
+        }
+        else
+        {
+            Debug.Log("플레이어 찾는중~");
+            target = GameObject.FindGameObjectWithTag("Player");
         }
     }
 

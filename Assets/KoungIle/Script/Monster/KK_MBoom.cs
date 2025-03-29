@@ -50,6 +50,8 @@ public class KK_MBoom : MonoBehaviour
             Destroy(effect, 1f);
         }
 
+        KK_SoundManager.Instance.PlayFX(13); // 발사 효과음
+
         for (int i = 0; i < explodeCount; i ++)
         {
             float angle = baseAngle + (i * 360 / explodeCount);

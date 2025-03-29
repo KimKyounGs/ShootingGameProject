@@ -10,7 +10,7 @@ public class KK_MonsterAttack_Homing : MonoBehaviour, IMonsterAttack
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     public void StartAttack()
@@ -25,6 +25,13 @@ public class KK_MonsterAttack_Homing : MonoBehaviour, IMonsterAttack
 
     void Shoot()
     {
+        // activeInHierarchy : 게임오브젝트가 씬에서 "실제로 활성화되어 있는가"를 알려주는 bool 속성 
+        if (target == null || !target.activeInHierarchy) // 
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+            // 플레이어가 없으면 공격 안함
+            return;
+        }
         GameObject tempBullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
         Vector2 dir = target.transform.position - transform.position; // 쏠 때마다 방향 갱신
         // 플레이어가 죽엇을 때 바꾸기.

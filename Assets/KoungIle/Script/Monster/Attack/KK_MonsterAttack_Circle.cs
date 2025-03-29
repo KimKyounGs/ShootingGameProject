@@ -19,6 +19,7 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
 
     void ShootCircle()
     {
+        KK_SoundManager.Instance.PlayFX(9); // 발사 효과음
         for (int i = 0; i < bulletCount; i ++)
         {
             // 각도를 균등하게 나누고, 보정 각도 추가
@@ -30,7 +31,6 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
             GameObject tempBullet = Instantiate(bullet, transform.position, Quaternion.identity);
             float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             tempBullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
-            //tempBullet.GetComponent<KK_MBullet>().Move(dir);
         }
         weightAngle += 1;
         
