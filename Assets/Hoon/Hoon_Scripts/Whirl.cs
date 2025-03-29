@@ -20,6 +20,19 @@ public class Whirl : MonoBehaviour
         vec2 = vec;
     }
     
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            Hoon_Player player = collision.gameObject.GetComponent<Hoon_Player>();
+            if (player != null)
+            {
+                player.Damage(2);
+            }
+            Destroy(gameObject);
+        }
+
+    }
     void OnBecameInvisible()
     {
         Destroy(gameObject);

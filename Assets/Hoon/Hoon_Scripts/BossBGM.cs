@@ -10,7 +10,6 @@ public class BossBGM : MonoBehaviour
 
 
     AudioSource myAudio;
-    public AudioClip VSKyogre;
 
     private void Awake()
     {
@@ -26,7 +25,7 @@ public class BossBGM : MonoBehaviour
 
     public void PlayBGM()
     {
-        myAudio.PlayOneShot(VSKyogre);
+        myAudio.Play();
     }
 
     public void StartBossTimeline()

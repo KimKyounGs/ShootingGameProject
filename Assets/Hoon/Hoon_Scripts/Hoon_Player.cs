@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 public class Hoon_Player : MonoBehaviour
 {
     
@@ -19,6 +20,9 @@ public class Hoon_Player : MonoBehaviour
     public float effectDashInterval = 0.2f; // 이펙트 생성 간격
 
     [Header("캐릭터 설정")]
+    public float HP = 20;
+    public bool HPDanger = false;
+    public float maxHP = 20;
     public float speed = 3f;
     public float bulletCooldown = 0.5f;
     public float dashCooldown = 8f;
@@ -31,7 +35,9 @@ public class Hoon_Player : MonoBehaviour
 
     [Header("UI")]
     public Image dashUI;
+    public Image HPUI;
     public TMP_Text dashNameUI;
+    public TMP_Text HPLeftUI;
 
     void Awake()
     {
@@ -151,6 +157,8 @@ public class Hoon_Player : MonoBehaviour
     {
         ani.SetBool("Down", false);
         VerticalHitbox();
+        HPUI.fillAmount = 1 - HP / maxHP;
+        if (HPUI.fillAmount <= 0) {HPUI.fillAmount = 0;}
 
         if(Time.timeScale == 1)
         {
@@ -220,33 +228,32 @@ public class Hoon_Player : MonoBehaviour
 
 
     
+
+
     public void Damage(float attack)
     {
-    StartCoroutine(Hit());
-    // HP -= attack;
+        StartCoroutine(Hit());
+        HP -= attack;
+        HPLeftUI.text = ($"{HP} / {maxHP}");
 
-    // if(HP <= 0)
-    // {
-    //     Vector3 hitPos = transform.position;
-    //     if (hit != null)
-    //     {
-    //         GameObject go = Instantiate(hit, hitPos, Quaternion.identity);
-    //         Destroy(go, 0.2f);
-    //     }
-        
-    //     if(droprate > 0)
-    //     {
-    //         ItemManager.instance.ItemDrop(hitPos);
-    //     }
+        if(HP <= 0)
+        {
+            HPLeftUI.text = ($"DEAD: {HP} / {maxHP}");
+        }
 
-    //     Destroy(gameObject);
-    //     GameManager.instance.ExpGain(exp);
-    // }    
+        if(HP <= HP*0.2f && HPDanger == false )
+        {
+            Hoon_AudioManager.instance.SFXDanger();
+            HPDanger = true;
+        }
     }
     protected virtual IEnumerator Hit()
     {
+        Hoon_AudioManager.instance.SFXHit1();
         sr.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
+        DisableHitbox();
+        yield return new WaitForSeconds(0.5f);
         sr.color = Color.white;
+        EnableHitbox();
     }
 }

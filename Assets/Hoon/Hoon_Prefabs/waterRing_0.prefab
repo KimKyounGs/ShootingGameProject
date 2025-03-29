@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8920867765045372902}
   - component: {fileID: 4787772270511821341}
   - component: {fileID: 8701495653719279832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: waterRing_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,6 @@ MonoBehaviour:
   scaleSpeed: 2.5
   maxScale: 4.5
   destroyWave: 0
-  i: 0
   pushForce: 5
 --- !u!50 &8701495653719279832
 Rigidbody2D:

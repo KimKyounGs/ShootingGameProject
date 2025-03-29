@@ -1,13 +1,17 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class huntail : MonoBehaviour
 {
     public float bulletSpeed = 6f;
     public GameObject waterfallEffect;
+    public GameObject waterfall;
 
     void Start()
     {
-        
+        InvokeRepeating("bubbles", 0, 0.1f);
+        Hoon_AudioManager.instance.SFXWaterPusle();
     }
 
     void Update()
@@ -30,11 +34,20 @@ public class huntail : MonoBehaviour
                     Destroy(go, 0.5f);
                 }
             }
-            Destroy(gameObject, 0.5f);
         }
+        
+ 
+
     }
     private void OnBecameInvisible()
     {
+        CancelInvoke("bubbles");
         Destroy(gameObject);
+    }
+
+    private void bubbles()
+    {
+        GameObject effect = Instantiate(waterfall, transform.position + new Vector3(Random.Range(-0.25f, 0.25f), Random.Range(-0.25f, 0.25f), 0), Quaternion.identity);
+        Destroy(effect, 0.5f);
     }
 }

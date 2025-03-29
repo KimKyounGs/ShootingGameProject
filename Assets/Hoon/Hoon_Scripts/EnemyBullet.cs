@@ -24,6 +24,12 @@ public class EnemyBullet : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Hoon_Player player = collision.gameObject.GetComponent<Hoon_Player>();
+            if (player != null)
+            {
+                player.Damage(1);
+            }
+
             Vector3 vec = new Vector3(0,-0.2f,0);
             Hoon_AudioManager.instance.CryRemoraid();
             GameObject go = Instantiate(hitEffect, transform.position + vec, Quaternion.identity);

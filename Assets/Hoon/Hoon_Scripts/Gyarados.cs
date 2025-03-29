@@ -58,7 +58,7 @@ public class Gyarados : Hoon_Player
         skillUI.fillAmount = 1f;
         skillNameUI.color = new Color(1, 1, 1, 1f);
         
-        Hoon_AudioManager.instance.SFXcooldownRecover();
+        Hoon_AudioManager.instance.CryGyarados();
         StartCoroutine(UIJumpAnimation(skillUI.gameObject));
 
         CanSkill = true;
@@ -130,8 +130,8 @@ public class Gyarados : Hoon_Player
             yield return null;
         }
         
-        EnableHitbox();
         yield return new WaitForSeconds(0.3f);
+        EnableHitbox();
     }
 
     protected override void Update()

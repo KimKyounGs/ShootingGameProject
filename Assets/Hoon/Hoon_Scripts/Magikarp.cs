@@ -58,14 +58,14 @@ public class Magikarp : Hoon_Player
             }
             
             // 각 점프 사이의 짧은 대기 시간
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.01f);
         }
         
         // 원래 y좌표로 부드럽게 돌아가기
         transform.position = new Vector3(transform.position.x, originalPos.y, transform.position.z);
-        
-        EnableHitbox();
         yield return new WaitForSeconds(0.3f);
+
+        EnableHitbox();
     }
 
 }
