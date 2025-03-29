@@ -75,11 +75,51 @@ public class Hoon_Player : MonoBehaviour
             dashUI.fillAmount = fillAmount;
             yield return null;
         }
-         
+        
+        // 쿨타임 회복 시 효과
         dashUI.fillAmount = 1f;
         dashNameUI.color = new Color(1, 1, 1, 1f);
         
+        // 효과음 재생
+        Hoon_AudioManager.instance.SFXcooldownRecover();
+        
+        // UI 점프 애니메이션
+        StartCoroutine(UIJumpAnimation(dashUI.gameObject));
+        
         CanDash = true;
+    }
+
+    // UI 점프 애니메이션을 위한 새로운 코루틴
+    public IEnumerator UIJumpAnimation(GameObject uiElement)
+    {
+        Vector3 originalScale = uiElement.transform.localScale;
+        float jumpDuration = 0.2f;
+        float jumpHeight = 1.2f; // 최대 크기 배수
+        
+        // 커지는 애니메이션
+        float elapsedTime = 0f;
+        while (elapsedTime < jumpDuration / 2)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / (jumpDuration / 2);
+            float currentScale = Mathf.Lerp(1f, jumpHeight, progress);
+            uiElement.transform.localScale = originalScale * currentScale;
+            yield return null;
+        }
+        
+        // 돌아오는 애니메이션
+        elapsedTime = 0f;
+        while (elapsedTime < jumpDuration / 2)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / (jumpDuration / 2);
+            float currentScale = Mathf.Lerp(jumpHeight, 1f, progress);
+            uiElement.transform.localScale = originalScale * currentScale;
+            yield return null;
+        }
+        
+        // 원래 크기로 정확히 복귀
+        uiElement.transform.localScale = originalScale;
     }
 
     public void DisableHitbox()

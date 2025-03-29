@@ -15,6 +15,7 @@ public class Gyarados : Hoon_Player
 
     public TMP_Text skillNameUI;
     public TMP_Text skillButtonUI;
+    private bool isBreathSoundPlaying = false;
 
     void OnEnable()
     {
@@ -32,12 +33,18 @@ public class Gyarados : Hoon_Player
         if (skillBackUI != null) skillBackUI.gameObject.SetActive(false);
         if (skillNameUI != null) skillNameUI.gameObject.SetActive(false);
         if (skillButtonUI != null) skillButtonUI.gameObject.SetActive(false);
+        if (isBreathSoundPlaying)
+        {
+            isBreathSoundPlaying = false;
+            Hoon_AudioManager.instance.PlayLoopingDragonBreath(false);
+        }
     }
 
     IEnumerator SkillCooldown()
     {
         skillUI.fillAmount = 0;
-        
+        skillNameUI.color = new Color(1, 1, 1, 0.5f);
+
         float elapsedTime = 0f;
         
         while (elapsedTime < skillCooldown)
@@ -49,6 +56,11 @@ public class Gyarados : Hoon_Player
         }
          
         skillUI.fillAmount = 1f;
+        skillNameUI.color = new Color(1, 1, 1, 1f);
+        
+        Hoon_AudioManager.instance.SFXcooldownRecover();
+        StartCoroutine(UIJumpAnimation(skillUI.gameObject));
+
         CanSkill = true;
     }
 
@@ -56,7 +68,12 @@ public class Gyarados : Hoon_Player
     protected override void Shoot()
     {
         base.Shoot();
-        Hoon_AudioManager.instance.SFXDragonBreath();
+        // 발사 시작할 때만 효과음 재생 시작
+        if (!isBreathSoundPlaying)
+        {
+            isBreathSoundPlaying = true;
+            Hoon_AudioManager.instance.PlayLoopingDragonBreath(true);
+        }
     }
 
     void Skill()
@@ -120,13 +137,19 @@ public class Gyarados : Hoon_Player
     protected override void Update()
     {
         base.Update();
+        
+        if (Input.GetKeyUp(KeyCode.Space) && isBreathSoundPlaying)
+        {
+            isBreathSoundPlaying = false;
+            Hoon_AudioManager.instance.PlayLoopingDragonBreath(false);
+        }
 
         if(Input.GetKeyDown(KeyCode.E) && CanSkill == true) 
-            {
-                CanSkill = false;
-                StartCoroutine(SkillCooldown());
-                Skill();
-            }
+        {
+            CanSkill = false;
+            StartCoroutine(SkillCooldown());
+            Skill();
+        }
 
     }
 

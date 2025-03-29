@@ -17,11 +17,11 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnLuvdisc", 10, 10f);
+        InvokeRepeating("SpawnLuvdisc", 5, 10f);
         InvokeRepeating("SpawnCarvanha", 1, 1f);
-        InvokeRepeating("SpawnMantine", 10, 3f);
+        InvokeRepeating("SpawnMantine", 10, 5f);
         InvokeRepeating("SpawnSharpedo", 20, 5f);
-        InvokeRepeating("SpawnClampearl", 20, 15f);
+        InvokeRepeating("SpawnClampearl", 15, 16f);
     }
 
     void Update()
@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
 
     public IEnumerator BossSpawn()
     {
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(10f);
         BossBGM.instance.StartBossTimeline();
     }
 

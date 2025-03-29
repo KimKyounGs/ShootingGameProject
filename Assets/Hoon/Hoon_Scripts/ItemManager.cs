@@ -133,7 +133,45 @@ public class ItemManager : MonoBehaviour
         // 마지막에 완전히 채우기
         ToothUI.fillAmount = 1f;
         ScaleUI.fillAmount = 1f;
+
+        Hoon_AudioManager.instance.SFXcooldownRecover();
+
+        StartCoroutine(UIJumpAnimation(ToothUI.gameObject));
+        StartCoroutine(UIJumpAnimation(ScaleUI.gameObject));
+
         isItemCooldown = false;
+    }
+
+        public IEnumerator UIJumpAnimation(GameObject uiElement)
+    {
+        Vector3 originalScale = uiElement.transform.localScale;
+        float jumpDuration = 0.2f;
+        float jumpHeight = 1.5f; // 최대 크기 배수
+        
+        // 커지는 애니메이션
+        float elapsedTime = 0f;
+        while (elapsedTime < jumpDuration / 2)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / (jumpDuration / 2);
+            float currentScale = Mathf.Lerp(1f, jumpHeight, progress);
+            uiElement.transform.localScale = originalScale * currentScale;
+            yield return null;
+        }
+        
+        // 돌아오는 애니메이션
+        elapsedTime = 0f;
+        while (elapsedTime < jumpDuration / 2)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / (jumpDuration / 2);
+            float currentScale = Mathf.Lerp(jumpHeight, 1f, progress);
+            uiElement.transform.localScale = originalScale * currentScale;
+            yield return null;
+        }
+        
+        // 원래 크기로 정확히 복귀
+        uiElement.transform.localScale = originalScale;
     }
 
     IEnumerator HuntailSkill()

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.32
   HP: 10
-  exp: 0.5
+  exp: 1.5
   droprate: 2
   ani: {fileID: 0}
   sr: {fileID: 0}

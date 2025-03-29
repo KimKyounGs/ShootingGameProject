@@ -2809,7 +2809,7 @@ MonoBehaviour:
   lastMoveDirection: {x: 0, y: 1}
   Bullet:
   - {fileID: 3918856680342364063, guid: 3b98639d9fcbe49b996c434198b0df70, type: 3}
-  effectDashInterval: 0.2
+  effectDashInterval: 0.05
   speed: 3
   bulletCooldown: 0.5
   dashCooldown: 8
@@ -2972,8 +2972,10 @@ GameObject:
   m_Component:
   - component: {fileID: 487463902}
   - component: {fileID: 487463901}
-  - component: {fileID: 487463903}
   - component: {fileID: 487463904}
+  - component: {fileID: 487463906}
+  - component: {fileID: 487463905}
+  - component: {fileID: 487463907}
   m_Layer: 0
   m_Name: Hoon_AudioManager
   m_TagString: Untagged
@@ -2993,6 +2995,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd576d9bea31f40eda7ec41c01032959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAudio: {fileID: 487463906}
+  dragonBreathLoop: {fileID: 487463907}
+  dragonBreathLoop2: {fileID: 487463905}
   crunch: {fileID: 8300000, guid: db4769ff740c7487aa1756c2e933298e, type: 3}
   bubble_shoot: {fileID: 8300000, guid: 0ff9227227eee4124862669ee31e53c3, type: 3}
   bubble_pop: {fileID: 8300000, guid: 4a71611309c5a4bc0b02b4718e013b89, type: 3}
@@ -3017,6 +3022,8 @@ MonoBehaviour:
   whirlpool: {fileID: 8300000, guid: 41a6f810759934fc69894069ffd57b6f, type: 3}
   cryKyogre: {fileID: 8300000, guid: a2f0a62c50d1341fbb1f0f99713029c8, type: 3}
   getItem: {fileID: 8300000, guid: 3a1d868775eb74ae2a60b1c621e139db, type: 3}
+  cooldownRecover: {fileID: 8300000, guid: e88f6ca58955048308413a5b08ee707a, type: 3}
+  heal: {fileID: 8300000, guid: 9f72fb1236a764e7bab431b8ed5192b0, type: 3}
 --- !u!4 &487463902
 Transform:
   m_ObjectHideFlags: 0
@@ -3032,7 +3039,134 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &487463903
+--- !u!114 &487463904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487463900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a5b9e50e73f8c413783d0a04b06d866c, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 487463901}
+          m_TargetAssemblyTypeName: Hoon_AudioManager, Assembly-CSharp
+          m_MethodName: BossBGMOn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!82 &487463905
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487463900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b6029cc7cd42548dd952377b7bbd6684, type: 3}
+  m_Resource: {fileID: 8300000, guid: b6029cc7cd42548dd952377b7bbd6684, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &487463906
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3129,36 +3263,103 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &487463904
-MonoBehaviour:
+--- !u!82 &487463907
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487463900}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: a5b9e50e73f8c413783d0a04b06d866c, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 487463901}
-          m_TargetAssemblyTypeName: Hoon_AudioManager, Assembly-CSharp
-          m_MethodName: BossBGMOn
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1d0994920a9e54d0b9411fdec38cc74d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1d0994920a9e54d0b9411fdec38cc74d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &492405332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6231,7 +6432,7 @@ MonoBehaviour:
   sharpedo: {fileID: 9175943797708736923, guid: d65ccaa2119dd4825b55e21a38bf970a, type: 3}
   clampearl: {fileID: 3080436321377624881, guid: 89734add04181424e9725774c2dadc0b, type: 3}
   bossSpawn: 0
-  gameDuration: 90
+  gameDuration: 75
 --- !u!4 &1309808675
 Transform:
   m_ObjectHideFlags: 0
@@ -7459,7 +7660,7 @@ MonoBehaviour:
   level: 1
   expLeft: 1
   centerPos: {x: 0, y: 0, z: 0}
-  evolutionLevel: 2
+  evolutionLevel: 20
   expUI: {fileID: 2129349945}
   levelUI: {fileID: 1848638476}
   nameUI: {fileID: 204723629}
@@ -7971,6 +8172,10 @@ PrefabInstance:
     - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: bulletCooldown
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: effectDashInterval
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4598644692287375819, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: m_LocalPosition.x

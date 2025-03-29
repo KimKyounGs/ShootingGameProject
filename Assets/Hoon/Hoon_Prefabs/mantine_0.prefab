@@ -216,7 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.8
   HP: 5
-  exp: 0.5
+  exp: 0.8
+  droprate: 0
   ani: {fileID: 0}
   sr: {fileID: 0}
   hit: {fileID: 5016089624711569800, guid: 0c93148bda77d4d648d745c2e5a59779, type: 3}

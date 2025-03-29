@@ -4,7 +4,9 @@ public class Hoon_AudioManager : MonoBehaviour
 {
     public static Hoon_AudioManager instance;
 
-    AudioSource myAudio;
+    public AudioSource myAudio;
+    public AudioSource dragonBreathLoop;
+    public AudioSource dragonBreathLoop2;
     public AudioClip crunch;
     public AudioClip bubble_shoot;
     public AudioClip bubble_pop;
@@ -31,6 +33,8 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip cryKyogre;
 
     public AudioClip getItem;
+    public AudioClip cooldownRecover;
+    public AudioClip heal;
 
     private void Awake()
     {
@@ -39,11 +43,28 @@ public class Hoon_AudioManager : MonoBehaviour
             Hoon_AudioManager.instance = this; //자기 자신을 담는다.
         }
     }
-    void Start()
-    {
-        myAudio = GetComponent<AudioSource>();
-    }
 
+    public void PlayLoopingDragonBreath(bool play)
+    {
+        if (play)
+        {
+            if (!dragonBreathLoop.isPlaying)
+            {
+                dragonBreathLoop.loop = true;
+                dragonBreathLoop.Play();
+                dragonBreathLoop2.loop = true;
+                dragonBreathLoop2.Play();
+            }
+        }
+        else
+        {
+            if (dragonBreathLoop.isPlaying)
+            {
+                dragonBreathLoop.Stop();
+                dragonBreathLoop2.Stop();
+            }
+        }
+    }
     public void SFXCrunch()
     {
         myAudio.PlayOneShot(crunch);
@@ -150,6 +171,16 @@ public class Hoon_AudioManager : MonoBehaviour
     public void SFXHit2()
     {
         myAudio.PlayOneShot(hit2);
+    }
+
+    public void SFXcooldownRecover()
+    {
+        myAudio.PlayOneShot(cooldownRecover);
+    }
+
+    public void SFXHeal()
+    {
+        myAudio.PlayOneShot(heal);
     }
 
 }

@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         nameUI.text = "갸라도스";
         dashNameUI.text = "폭포오르기";
+        Hoon_Player.instance.dashUI.fillAmount = 1f;
+        Hoon_Player.instance.dashNameUI.color = new Color(1, 1, 1, 1f);
+        Hoon_Player.instance.CanDash = true;
     }
 
     IEnumerator moveCenter()
