@@ -8,6 +8,10 @@ public class Air_Monster_G : MonoBehaviour
     private Vector3 startPosition;
     bool half;
 
+    //총알발사에 필요한 부분
+    public Transform ms1;
+    public GameObject bullet;
+
     void Start()
     {
         half = false;
@@ -62,5 +66,11 @@ public class Air_Monster_G : MonoBehaviour
         startPosition = -startPosition;
         angle = 0;
         half = true;
+        FireBullet();
+    }
+
+    void FireBullet()
+    {
+        Instantiate(bullet, ms1.position, Quaternion.identity);
     }
 }

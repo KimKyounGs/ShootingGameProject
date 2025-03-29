@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6735204589452035545}
   m_Layer: 0
   m_Name: Boss_Bullet
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7
+  Effect_1: {fileID: 7281343761220753475, guid: 839f7f48d94a92a42b96936b9b529770, type: 3}
 --- !u!58 &7275327516167530545
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -160,8 +161,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.35
+  m_Offset: {x: -0.0023710579, y: -0.009484172}
+  m_Radius: 0.2195929
 --- !u!50 &-6735204589452035545
 Rigidbody2D:
   serializedVersion: 5

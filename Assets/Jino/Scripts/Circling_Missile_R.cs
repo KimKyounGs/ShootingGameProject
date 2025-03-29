@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Circling_Missile_R : MonoBehaviour
 {
@@ -8,6 +7,8 @@ public class Circling_Missile_R : MonoBehaviour
     private float angle;
     private Vector3 startPosition;
     public bool isDown = false;
+
+    public GameObject Effect_1;
 
     void Start()
     {
@@ -63,5 +64,15 @@ public class Circling_Missile_R : MonoBehaviour
     public void SetDown(bool Down)
     {
         isDown = Down;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            GameObject go = Instantiate(Effect_1, transform.position, Quaternion.identity);
+            Destroy(go, 1f);
+            Destroy(gameObject);
+        }
     }
 }

@@ -31,6 +31,15 @@ public class Jino_SpawnManager : MonoBehaviour
         Invoke("StartShake", 12.5f);
         Invoke("first_CrossLazer_L", 19.1f);
         Invoke("first_CrossLazer_R", 19.3f);
+        Invoke("Circling_MonsterL", 22f);
+        Invoke("Circling_MonsterRD", 22f);
+        StartCoroutine("Triple_Circling_R", 30f);
+        Invoke("first_CrossLazer_L", 34.2f);
+        Invoke("first_CrossLazer_R", 34.4f);
+        StartCoroutine("Triple_Circling_L", 44.3f);
+        StartCoroutine("Triple_Circling_R", 44.3f);
+        StartCoroutine("Triple_Circling_ld", 44.3f);
+        StartCoroutine("Triple_Circling_rd", 44.3f);
     }
 
     void MissileLine()
@@ -46,7 +55,6 @@ public class Jino_SpawnManager : MonoBehaviour
     void Lining_Enemy_L()
     {
         Vector2 start = new Vector2(-4f, -4.5f);
-        Instantiate(SideLazer_L, start, Quaternion.identity);
         Instantiate(SideLazer_L, start + new Vector2(0, 1.5f), Quaternion.identity);
         Instantiate(SideLazer_L, start + new Vector2(0, 3f), Quaternion.identity);
     }
@@ -92,6 +100,19 @@ public class Jino_SpawnManager : MonoBehaviour
         missile.SetDown(true);
     }
 
+    IEnumerator Triple_Circling_ld(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Circling_Missile_L missile1 = Instantiate(Circling_Missile_LD, new Vector3(-2.8f, 0, 0), Quaternion.identity).GetComponent<Circling_Missile_L>();
+        missile1.SetDown(true);
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_L missile2 = Instantiate(Circling_Missile_LD, new Vector3(-2.8f, 2f, 0), Quaternion.identity).GetComponent<Circling_Missile_L>();
+        missile2.SetDown(true);
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_L missile3 = Instantiate(Circling_Missile_LD, new Vector3(-2.8f, 4f, 0), Quaternion.identity).GetComponent<Circling_Missile_L>();
+        missile3.SetDown(true);
+    }
+
     void Circling_Missile_r()
     {
         Instantiate(Circling_Missile_R, new Vector3(2.8f, 0, 0), Quaternion.identity);
@@ -111,6 +132,19 @@ public class Jino_SpawnManager : MonoBehaviour
     {
         Circling_Missile_R missile = Instantiate(Circling_Missile_RD, new Vector3(2.8f, 0, 0), Quaternion.identity).GetComponent<Circling_Missile_R>();
         missile.SetDown(true);
+    }
+
+    IEnumerator Triple_Circling_rd(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Circling_Missile_R missile1 = Instantiate(Circling_Missile_RD, new Vector3(2.8f, 0, 0), Quaternion.identity).GetComponent<Circling_Missile_R>();
+        missile1.SetDown(true);
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_R missile2 = Instantiate(Circling_Missile_RD, new Vector3(2.8f, 2f, 0), Quaternion.identity).GetComponent<Circling_Missile_R>();
+        missile2.SetDown(true);
+        yield return new WaitForSeconds(0.2f);
+        Circling_Missile_R missile3 = Instantiate(Circling_Missile_RD, new Vector3(2.8f, 4f, 0), Quaternion.identity).GetComponent<Circling_Missile_R>();
+        missile3.SetDown(true);
     }
 
     void Circling_MonsterL()

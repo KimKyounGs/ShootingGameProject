@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour
     public GameObject mb2;
     public Transform pos1;
     public Transform pos2;
+    public GameObject finale;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class Boss : MonoBehaviour
         Invoke("SantanFireL", 19f);
         Invoke("CircleFire", 23f);
         Invoke("CircleFire", 26.8f);
+        Invoke("SantanFireR", 29.1f);
+        Invoke("SantanFireL", 29.4f);
         Invoke("CircleFire", 30.6f);
         Invoke("CircleFire", 34.4f);
         Invoke("CircleFire", 38.2f);
@@ -40,6 +43,7 @@ public class Boss : MonoBehaviour
         Invoke("CircleFire", 64.8f);
         Invoke("CircleFire", 68.6f);
         Invoke("CircleFire", 72.4f);
+        Invoke("Finale", 73.5f);
     }
 
     
@@ -105,7 +109,7 @@ public class Boss : MonoBehaviour
     }
     void SantanFireR()
     {
-        int count = 40;
+        int count = 20;
 
         float intervalAngle = 160 / count;
         for (int i = 0; i < count; i++)
@@ -117,5 +121,10 @@ public class Boss : MonoBehaviour
             clone2.GetComponent<Santan_Bullet>().Move(new Vector2(-x, -y));
 
         }
+    }
+
+    void Finale()
+    {
+        Instantiate(finale, transform.position, Quaternion.identity);
     }
 }
