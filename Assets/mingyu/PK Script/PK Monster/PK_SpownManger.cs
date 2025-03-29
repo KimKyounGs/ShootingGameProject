@@ -1,15 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
-public class PK_Boss_SpownManger : MonoBehaviour
+public class PK_SpownManger : MonoBehaviour
 {
     public float ss = -2; //몬스터 생성 x값 처음
     public float es = 2;  //몬스터 생성 x값 끝
     public float StartTime = 1; //시작
     public float SpawnStop = 10; //스폰끝나는시간
     public float SpawnStop2 = 10; //몬스터2 스폰 끝나는 시간
+
+    public float SpawnStop3 = 20;
+
     public GameObject monster;
     public GameObject monster2;
+
+    public GameObject MBoss;
     public GameObject Boss;
 
 
@@ -68,9 +73,25 @@ public class PK_Boss_SpownManger : MonoBehaviour
     {
         swi2 = false;
         StopCoroutine("RandomSpawn2");
-        //보스
-        Vector3 pos = new Vector3(0, 2.97f, 0);
-        Instantiate(Boss, pos, Quaternion.identity);
 
+        //중간보스
+        Vector3 pos = new Vector3(0, 3.66f, 0);
+        Instantiate(MBoss, pos, Quaternion.identity);
+
+    }
+
+    public void Stop3()
+    {
+        StartCoroutine("RandomSpawn");
+        //두번째 몬스터 코루틴
+        StartCoroutine("RandomSpawn2");
+
+        Invoke("Stop4", SpawnStop3);
+    }
+
+    public void Stop4()
+    {
+        Vector3 pos = new Vector3(0, 4f, 0);
+        Instantiate(Boss, pos, Quaternion.identity);
     }
 }

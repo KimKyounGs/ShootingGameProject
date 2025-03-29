@@ -84,7 +84,7 @@ public class PK_Monster : MonoBehaviour
     {
         item_Random = Random.Range(0, 11);
 
-        if (item_Random >= 7)
+        if (item_Random >= 9)
         {
             //아이템 생성
             Instantiate(Item, transform.position, Quaternion.identity);

@@ -234,7 +234,7 @@ MonoBehaviour:
   Delay: 1
   M_HP: 5
   ms1: {fileID: 215710271908346163}
-  bullet: {fileID: 7806731060643558899, guid: 492a7a0e7c12e004f950e5a383ce0785, type: 3}
+  bullet: {fileID: 5599820063386902380, guid: db027b6bbf783cd4d9f80209cfadb1b3, type: 3}
   Item: {fileID: 2051847277400686010, guid: 7f1444a8ce61bf94ebb5f31b037f604f, type: 3}
   delay: 0
   item_Random: 0

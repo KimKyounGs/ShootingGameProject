@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PK_Boss : MonoBehaviour
 {
-    float B_HP = 100;
+    float B_HP = 1000;
     public bool Boos_Blood = false; //보스 피가 반이하로 떨어지면 true로 바뀜
 
 
@@ -44,7 +44,7 @@ public class PK_Boss : MonoBehaviour
 
         if (boss_attack == true && cool_time1 >= boss_attack_time)
         {
-            attack_chose = Random.Range(3, 3);
+            attack_chose = Random.Range(1, 6);
 
             if (attack_chose > 0)
             {
@@ -86,7 +86,7 @@ public class PK_Boss : MonoBehaviour
         }
 
 
-        if (B_HP <= 50)
+        if (B_HP <= 500)
         {
             Boos_Blood = true;
             Boss_Spawn.gameObject.SetActive(true);

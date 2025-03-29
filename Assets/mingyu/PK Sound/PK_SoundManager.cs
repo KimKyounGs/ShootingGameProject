@@ -24,6 +24,13 @@ public class PK_SoundManager : MonoBehaviour
     public AudioClip M_bullet1;
 
     public AudioClip M_bullet2;
+    public AudioClip MB_Shadow_On;
+    public AudioClip MB_Shadow_Off;
+
+    public AudioClip MB_bullet_L;
+    public AudioClip MB_bullet_R;
+    public AudioClip MB_bullet2;
+    public AudioClip MB_bullet2_1;
 
     public void Awake()
     {
@@ -90,4 +97,32 @@ public class PK_SoundManager : MonoBehaviour
     {
         myAudio.PlayOneShot(M_bullet2);
     }
+
+    public void MB_Bullet_L()
+    {
+        myAudio.PlayOneShot(MB_bullet_L);
+    }
+    public void MB_Bullet_R()
+    {
+        myAudio.PlayOneShot(MB_bullet_R);
+    }
+
+    public void MB_Bullet2()
+    {
+        myAudio.PlayOneShot(MB_bullet2);
+    }   
+
+    public void MB_Bullet2_1()
+    {
+        myAudio.PlayOneShot(MB_bullet2_1);
+    }   
+
+    public void MB_Shadow_on()
+    {
+        myAudio.PlayOneShot(MB_Shadow_On);
+    }
+    public void MB_Shadow_off()
+    {
+        myAudio.PlayOneShot(MB_Shadow_Off);
+    }   
 }
