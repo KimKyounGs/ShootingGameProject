@@ -3,15 +3,13 @@ using UnityEngine.UI;
 
 public class KK_UIManager : MonoBehaviour
 {
- public static KK_UIManager Instance;
-
-    [Header("🔫 파워 UI")]
-    public Image powerIcon;
-    public Text powerText;
+    public static KK_UIManager Instance;
 
     [Header("❤️ 목숨 UI")]
-    public Image lifeIcon;
     public Text lifeText;
+    [Header("🔫 파워 UI")]
+    public Text powerText;
+
 
     private void Awake()
     {
@@ -21,7 +19,7 @@ public class KK_UIManager : MonoBehaviour
 
     public void UpdatePowerUI(int power)
     {
-        powerText.text = $"x {power}";
+        powerText.text = $"{power} lv";
         // 파워 아이콘 교체하려면 여기에 추가
     }
 
