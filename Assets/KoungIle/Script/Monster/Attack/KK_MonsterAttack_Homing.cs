@@ -27,6 +27,7 @@ public class KK_MonsterAttack_Homing : MonoBehaviour, IMonsterAttack
     {
         GameObject tempBullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
         Vector2 dir = target.transform.position - transform.position; // 쏠 때마다 방향 갱신
+        // 플레이어가 죽엇을 때 바꾸기.
         float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         tempBullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
         //gameObject.GetComponent<KK_MBullet>().Move(direction.normalized);

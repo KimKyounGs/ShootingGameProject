@@ -4,6 +4,8 @@ public class KK_Monster : MonoBehaviour
 {
     public int HP = 100; // 체력
     public int spawnLocation;
+
+    public GameObject monsterDieEffect; // 몬스터 타입
     //아이템 가져오기
     public GameObject item = null;
     [Range(0f, 1f)]public float dropChance = 0.3f;
@@ -36,6 +38,9 @@ public class KK_Monster : MonoBehaviour
         if(HP <=0)
         {
             ItemDrop();
+            KK_SoundManager.Instance.PlayFX(5); // 사망 효과음
+            GameObject effect = Instantiate(monsterDieEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f); // 이펙트 삭제
             Destroy(gameObject);
         }
     }

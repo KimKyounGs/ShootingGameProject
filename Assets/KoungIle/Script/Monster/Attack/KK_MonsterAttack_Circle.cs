@@ -33,5 +33,6 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
             //tempBullet.GetComponent<KK_MBullet>().Move(dir);
         }
         weightAngle += 1;
-    }
+        
+    }   
 }

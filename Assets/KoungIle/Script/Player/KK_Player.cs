@@ -1,13 +1,16 @@
-using System.Linq;
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 
 public class KK_Player : MonoBehaviour
 {   public float speed = 5f;
 
-    public GameObject[] bullet;  //총알배열
-    public Transform bulletPos = null;
-    public int power = 1;
+    public GameObject[] bullet;  // 총알배열
+    public Transform bulletPos = null; // 총알 발사 위치
+    public int power = 1; // 현재 총알 강화 단계
+    public GameObject playerDieEffect; // 사망 효과
+    public bool bplayerInvincibility = false; // 무적 상태
+    public float playerInvincibilityTime = 2f; // 무적 시간
 
     [SerializeField] private float attackCoolTime;
     [SerializeField] private float attackMaxCoolTime = 0.5f;
@@ -17,9 +20,6 @@ public class KK_Player : MonoBehaviour
     private Vector2 maxBounds;
     Animator ani; //애니메이터를 가져올 변수
 
-    //레이져
-    public GameObject lazer;
-    public float gValue = 0;
 
     void Start()
     {
@@ -53,7 +53,6 @@ public class KK_Player : MonoBehaviour
     {
         Move();
         Shoot();
-
     }
 
     void Move()
@@ -104,7 +103,7 @@ public class KK_Player : MonoBehaviour
                 spawnPos += offsetFromPrefab;
                 Instantiate(prefab, spawnPos, Quaternion.identity);
             }
-
+            KK_SoundManager.Instance.PlayFX(0, 0.5f); // 공격 브금 재생 및 사운드 조절
             attackCoolTime = 0f;
         }
     }
@@ -113,6 +112,49 @@ public class KK_Player : MonoBehaviour
     public void IncreasePower()
     {
         power = Mathf.Min(power + 1, 10);
+        KK_SoundManager.Instance.PlayFX(2, 1f); // 레벨업 효과음
         // 파워업 이팩트!
     }
+
+    public void PlayerDie()
+    {
+        gameObject.SetActive(false); // 비활성화 후
+        Invoke("PlayerRevive", 2f); // 2초 후에 PlayerRevive 호출
+        GameObject effct = Instantiate(playerDieEffect, transform.position, Quaternion.identity); // 사망 이펙트 생성
+        Destroy(effct, 1f); // 1초 후에 이펙트 삭제
+        KK_SoundManager.Instance.PlayFX(3, 1f); // 사망 효과음
+    }
+
+    public void PlayerRevive()
+    {
+        transform.position = new Vector3(0, -4, 0); // 초기 위치로 이동
+        gameObject.SetActive(true); // 활성화 후
+        
+        power = 1; // 파워 초기화
+        StartCoroutine(InvincibilityCoroutine()); // 무적 상태 시작
+    }
+
+    IEnumerator InvincibilityCoroutine()
+    {
+        bplayerInvincibility = true;
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        float elapsed = 0f;
+        float blinkInterval = 0.15f;
+
+        while (elapsed < playerInvincibilityTime)
+        {
+            if (spriteRenderer != null)
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+
+            yield return new WaitForSeconds(blinkInterval);
+            elapsed += blinkInterval;
+        }
+
+        if (spriteRenderer != null)
+            spriteRenderer.enabled = true;
+
+        bplayerInvincibility = false;
+    }
+
 }

@@ -10,6 +10,7 @@ public class KK_MonsterMove_Explore : MonoBehaviour, IMonsterMove
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        // 플레이어가 죽었을 때 바꾸기.
     }
 
     public void Move()
@@ -25,14 +26,13 @@ public class KK_MonsterMove_Explore : MonoBehaviour, IMonsterMove
     {
         if (collision.CompareTag("Player"))
         {
-            // 플레이어에게 데미지 주기 등 처리 가능
-            if (explosionEffect != null)
+            GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+            KK_Player player = collision.GetComponent<KK_Player>();
+            if (player.bplayerInvincibility == false)
             {
-                GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-                Destroy(effect, 0.5f);
+                player.PlayerDie();
             }
-                
-
 
             Destroy(gameObject);
         }

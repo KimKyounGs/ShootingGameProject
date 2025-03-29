@@ -18,6 +18,12 @@ public class KK_MBullet : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            KK_Player player = collision.GetComponent<KK_Player>();
+            if (player.bplayerInvincibility == false)
+            {
+                player.PlayerDie();
+            }
+
             //미사일지우기
             Destroy(gameObject);
         }
@@ -32,4 +38,5 @@ public class KK_MBullet : MonoBehaviour
     {
         this.speed = speed;
     }
+
 }

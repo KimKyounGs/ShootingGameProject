@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 30
   spawnLocation: 1
+  monsterDieEffect: {fileID: 1858489287333295451, guid: 09cbbabd0eddc4293ad5baf0032edf82, type: 3}
   item: {fileID: 9018872545914227838, guid: 0c1a614ac88c7194ebf986da3f25a165, type: 3}
   dropChance: 0.3
 --- !u!114 &5626017450998566031
