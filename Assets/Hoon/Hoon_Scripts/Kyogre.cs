@@ -35,7 +35,9 @@ public class Kyogre : Hoon_Monster
     public bool Pattern2 = false;
     public bool Pattern3 = false;
     public bool Pattern4 = false;
+    public GameObject iceBeam;
     public bool Pattern5 = false;
+    public bool LastPattern = false;
     protected override void Start()
     {
         base.Start();
@@ -62,7 +64,7 @@ public class Kyogre : Hoon_Monster
 
     void SpawnSharpedo()
     {
-        for(float i = 0; i<3; i+=0.5f)
+        for(float i = 0; i<6; i++)
         {
             Instantiate(sharpedo, new Vector3(-2.5f + i, 5, 0f), Quaternion.identity);
         }
@@ -79,7 +81,8 @@ public class Kyogre : Hoon_Monster
         
         if (HP < 900 && !Pattern2)
         {
-            InvokeRepeating("SpawnSharpedo", 0, 15);
+            Hoon_AudioManager.instance.CrySharpedo();
+            InvokeRepeating("SpawnSharpedo", 0, 30);
             Pattern2 = true; 
         }
         if (HP < 800 && !Pattern3)
@@ -87,7 +90,13 @@ public class Kyogre : Hoon_Monster
             Invoke("WhirlPool3", 1);
             Pattern3 = true; 
         }
-        if (HP < 650 && !thunderOn)
+        if (HP < 650 && !Pattern4)
+        {
+            CastIceBeam();
+            Pattern4 = true; 
+        }
+
+        if (HP < 500 && !thunderOn)
         {
             Hoon_AudioManager.instance.CryKyogre();
             InvokeRepeating("CastThunder", 1, 4);
@@ -98,15 +107,78 @@ public class Kyogre : Hoon_Monster
                 Cloud = true;
             }
         }
-        if (HP < 500 && !Pattern4)
+
+        if (HP < 350 && !Pattern5)
         {
-            
-            Pattern4 = true; 
+            CastIceBeam();
+            Pattern5 = true; 
+        }
+
+        if (HP < 200 && !LastPattern)
+        {
+            CastSheerCold(); 
         }
 
           
     }
+    void CastSheerCold()
+    {
+        
+    }
+    void CastIceBeam()
+    {
+        Hoon_AudioManager.instance.CryKyogre();
+        StartCoroutine(IceBeam());
+    }
+    void IceDraw()
+    {
+        Instantiate(iceBeam, pos1.position, Quaternion.identity);
+    }
+    IEnumerator IceBeam()
+    {
+        Vector3 startPos = transform.position;  // 현재 위치 저장
+        Vector3 leftPos = new Vector3(-2f, 4.5f, 0f);  // 왼쪽 끝 위치
+        Vector3 rightPos = new Vector3(2.1f, 4.5f, 0f);  // 오른쪽 끝 위치
+        float moveSpeed = 2f;  // 이동 속도
 
+        // 왼쪽으로 이동
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * moveSpeed;
+            transform.position = Vector3.Lerp(startPos, leftPos, elapsedTime);
+            yield return null;
+        }
+
+        // 잠시 대기
+        yield return new WaitForSeconds(1f);
+        
+        // 빔 발사 시작
+        Hoon_AudioManager.instance.SFXIceBeam();
+        InvokeRepeating("IceDraw", 0, 0.15f);
+
+        // 오른쪽으로 천천히 이동하며 빔 발사
+        elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * 0.5f;  // 더 천천히 이동
+            transform.position = Vector3.Lerp(leftPos, rightPos, elapsedTime);
+            yield return null;
+        }
+
+        // 빔 발사 중단
+        CancelInvoke("IceDraw");
+        yield return new WaitForSeconds(1f);
+
+        // 원래 위치로 복귀
+        elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * moveSpeed;
+            transform.position = Vector3.Lerp(rightPos, startPos, elapsedTime);
+            yield return null;
+        }
+    }
 
     void ThunderCloud()
     {
