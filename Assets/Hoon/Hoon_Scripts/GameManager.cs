@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Image expUI;
     public TMP_Text levelUI;
     public TMP_Text nameUI;
+    public TMP_Text dashNameUI;
 
     public void Awake()
     {
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
         expUI.fillAmount = 0;
         levelUI.text = "Lv" + level;
         nameUI.text = "잉어킹";
+        dashNameUI.text = "튀어오르기";
+
     }
 
     public void Update()
@@ -69,6 +72,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         nameUI.text = "갸라도스";
+        dashNameUI.text = "폭포오르기";
+
     }
 
     IEnumerator moveCenter()

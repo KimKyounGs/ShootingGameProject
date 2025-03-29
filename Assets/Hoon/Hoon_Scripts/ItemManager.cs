@@ -1,6 +1,8 @@
 using JetBrains.Annotations;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class ItemManager : MonoBehaviour
     public GameObject gorebyss;
     public GameObject deepseaTooth;
     public GameObject deepseaScale;
+    public Image ToothUI;
+    public Image ScaleUI;
+    public TMP_Text countToothUI;
+    public TMP_Text countScaleUI;
+
 
     // public GameObject huntailCutScene;
     // public GameObject gorebyssCutScene;
@@ -62,11 +69,14 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
+        countToothUI.text = deepseaToothBag.ToString();
+        countScaleUI.text = deepseaScaleBag.ToString();
+
         if (deepseaToothBag >= 1)
         {
             CanHuntail = true;
@@ -104,7 +114,25 @@ public class ItemManager : MonoBehaviour
     IEnumerator ItemCooldown()
     {
         isItemCooldown = true;
-        yield return new WaitForSeconds(itemCooldown);
+        ToothUI.fillAmount = 0;
+        ScaleUI.fillAmount = 0;
+        
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < itemCooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            float fillAmount = elapsedTime / itemCooldown;
+            
+            ToothUI.fillAmount = fillAmount;
+            ScaleUI.fillAmount = fillAmount;
+            
+            yield return null;
+        }
+        
+        // 마지막에 완전히 채우기
+        ToothUI.fillAmount = 1f;
+        ScaleUI.fillAmount = 1f;
         isItemCooldown = false;
     }
 

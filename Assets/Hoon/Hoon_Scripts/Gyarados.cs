@@ -6,6 +6,51 @@ using TMPro;
 
 public class Gyarados : Hoon_Player
 {   
+    public float skillCooldown = 10f;
+    public bool CanSkill = true;
+    public GameObject skill;
+    public Image skillUI;
+    public Image skillBackUI;
+
+    public TMP_Text skillNameUI;
+    public TMP_Text skillButtonUI;
+
+    void OnEnable()
+    {
+        // UI 요소들 활성화
+        if (skillUI != null) skillUI.gameObject.SetActive(true);
+        if (skillBackUI != null) skillBackUI.gameObject.SetActive(true);
+        if (skillNameUI != null) skillNameUI.gameObject.SetActive(true);
+        if (skillButtonUI != null) skillButtonUI.gameObject.SetActive(true);
+    }
+
+    void OnDisable()
+    {
+        // UI 요소들 비활성화
+        if (skillUI != null) skillUI.gameObject.SetActive(false);
+        if (skillBackUI != null) skillBackUI.gameObject.SetActive(false);
+        if (skillNameUI != null) skillNameUI.gameObject.SetActive(false);
+        if (skillButtonUI != null) skillButtonUI.gameObject.SetActive(false);
+    }
+
+    IEnumerator SkillCooldown()
+    {
+        skillUI.fillAmount = 0;
+        
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < skillCooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            float fillAmount = elapsedTime / skillCooldown;
+            dashUI.fillAmount = fillAmount;
+            yield return null;
+        }
+         
+        skillUI.fillAmount = 1f;
+        CanSkill = true;
+    }
+
     public GameObject waterfall;
     protected override void Shoot()
     {
@@ -13,10 +58,20 @@ public class Gyarados : Hoon_Player
         Hoon_AudioManager.instance.SFXDragonBreath();
     }
 
-    protected override void Skill()
+    void Skill()
     {
-        base.Skill();
         Hoon_AudioManager.instance.SFXDragonRage1();
+
+        if(Bullet[1] != null)
+        {
+            StartCoroutine(SkillCooldown());
+            CanSkill = false;
+            Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("스킬이 없습니다.");
+        }
     }
 
     protected override void Dash()
@@ -48,7 +103,7 @@ public class Gyarados : Hoon_Player
             // 현재 위치에 이펙트 생성
             if (Time.time - lastEffectTime >= effectDashInterval)
             {
-                GameObject effect = Instantiate(waterfall, transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0), Quaternion.identity);
+                GameObject effect = Instantiate(waterfall, transform.position + new Vector3(Random.Range(-0.25f, 0.25f), Random.Range(-0.25f, 0.25f), 0), Quaternion.identity);
                 Destroy(effect, 0.5f); // 0.5초 후 이펙트 제거
                 lastEffectTime = Time.time;
             }
@@ -61,9 +116,16 @@ public class Gyarados : Hoon_Player
         yield return new WaitForSeconds(0.3f);
     }
 
-    void Update()
+    protected override void Update()
     {
-           
+        base.Update();
+
+        if(Input.GetKeyDown(KeyCode.E) && CanSkill == true) 
+            {
+                CanSkill = false;
+                StartCoroutine(SkillCooldown());
+                Skill();
+            }
 
     }
 

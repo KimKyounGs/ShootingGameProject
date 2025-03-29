@@ -15,21 +15,22 @@ public class Hoon_Player : MonoBehaviour
     public Transform pos = null;
     public Vector2 lastMoveDirection = Vector2.up;
     public GameObject[] Bullet;
-    public GameObject skill;
     public float effectDashInterval = 0.2f; // 이펙트 생성 간격
 
     [Header("캐릭터 설정")]
     public float speed = 5f; // 잉어킹은 3f
     public float bulletCooldown = 0.15f;
-    public float skillCooldown = 10f;
     public float dashCooldown = 5f;
     
     public bool CanShoot = true;
-    public bool CanSkill = true;
     public bool CanDash = true;
 
     public bool isEvolved = false;
     public bool Firing = false;
+
+    [Header("UI")]
+    public Image dashUI;
+    public TMP_Text dashNameUI;
 
     void Awake()
     {
@@ -46,19 +47,7 @@ public class Hoon_Player : MonoBehaviour
         Instantiate(Bullet[0], pos.transform.position, Quaternion.identity);
     }
 
-    protected virtual void Skill()
-    {
-        if(Bullet[1] != null)
-        {
-            StartCoroutine(SkillCooldown());
-            CanSkill = false;
-            Instantiate(Bullet[1], pos.transform.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.Log("스킬이 없습니다.");
-        }
-    }
+
 
     protected virtual void Dash()
     {
@@ -71,16 +60,28 @@ public class Hoon_Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         CanShoot = true;
     }
-    IEnumerator SkillCooldown()
-    {
-        yield return new WaitForSeconds(skillCooldown);
-        CanSkill = true;
-    }
+
     IEnumerator DashCooldown()
     {
-        yield return new WaitForSeconds(dashCooldown);
+        dashUI.fillAmount = 0;
+        dashNameUI.color = new Color(1, 1, 1, 0.5f);
+
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < dashCooldown)
+        {
+            elapsedTime += Time.deltaTime;
+            float fillAmount = elapsedTime / dashCooldown;
+            dashUI.fillAmount = fillAmount;
+            yield return null;
+        }
+         
+        dashUI.fillAmount = 1f;
+        dashNameUI.color = new Color(1, 1, 1, 1f);
+        
         CanDash = true;
     }
+
     public void DisableHitbox()
     {
         CapsuleCollider.enabled = false;
@@ -107,7 +108,7 @@ public class Hoon_Player : MonoBehaviour
 
     }
 
-    void Update()
+    protected virtual void Update()
     {
         ani.SetBool("Down", false);
         VerticalHitbox();
@@ -145,12 +146,7 @@ public class Hoon_Player : MonoBehaviour
             transform.Translate(moveX, moveY, 0);
             #endregion
 
-            if(Input.GetKeyDown(KeyCode.E) && CanSkill == true) 
-            {
-                CanSkill = false;
-                StartCoroutine(SkillCooldown());
-                Skill();
-            }
+
 
             if(Input.GetKeyDown(KeyCode.LeftShift) && CanDash == true) 
             {

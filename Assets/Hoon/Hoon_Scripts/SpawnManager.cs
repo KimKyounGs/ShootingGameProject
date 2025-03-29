@@ -17,11 +17,11 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnLuvdisc", 10, 15f);
+        InvokeRepeating("SpawnLuvdisc", 10, 10f);
         InvokeRepeating("SpawnCarvanha", 1, 1f);
-        InvokeRepeating("SpawnMantine", 10, 6f);
-        InvokeRepeating("SpawnSharpedo", 25, 10f);
-        InvokeRepeating("SpawnClampearl", 35, 15f);
+        InvokeRepeating("SpawnMantine", 10, 3f);
+        InvokeRepeating("SpawnSharpedo", 20, 5f);
+        InvokeRepeating("SpawnClampearl", 20, 15f);
     }
 
     void Update()
