@@ -11,7 +11,7 @@ public class sharpedo : Hoon_Monster
         base.Start();
         moveSpeed = 0.5f;
         HP = 3;
-        exp = 2f;
+        exp = 3;
         isSpawn = true;
     }
 
@@ -46,6 +46,11 @@ public class sharpedo : Hoon_Monster
     {
         if(collision.CompareTag("Player"))
         {
+            Hoon_Player player = collision.gameObject.GetComponent<Hoon_Player>();
+            if (player != null)
+            {
+                player.Damage(3);
+            }
             moveSpeed = 0;
             GameObject go = Instantiate(bite, collision.transform.position, Quaternion.identity);
             Destroy(go, 0.3f);

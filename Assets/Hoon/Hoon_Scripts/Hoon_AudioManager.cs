@@ -12,6 +12,7 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip bubble_pop;
     public AudioClip cryRemoraid;
     public AudioClip dragonBreath;
+    public AudioClip burn;
     public AudioClip dragonRage1;
     public AudioClip dragonRage2;
     public AudioClip waterfall;
@@ -35,6 +36,9 @@ public class Hoon_AudioManager : MonoBehaviour
     public AudioClip getItem;
     public AudioClip cooldownRecover;
     public AudioClip heal;
+    public AudioClip waterPusle;
+    public AudioClip danger;
+    public AudioClip sharpedo;
 
     private void Awake()
     {
@@ -52,8 +56,6 @@ public class Hoon_AudioManager : MonoBehaviour
             {
                 dragonBreathLoop.loop = true;
                 dragonBreathLoop.Play();
-                dragonBreathLoop2.loop = true;
-                dragonBreathLoop2.Play();
             }
         }
         else
@@ -61,6 +63,23 @@ public class Hoon_AudioManager : MonoBehaviour
             if (dragonBreathLoop.isPlaying)
             {
                 dragonBreathLoop.Stop();
+            }
+        }
+    }
+    public void PlayLoopingDragonBreath2(bool play)
+    {
+        if (play)
+        {
+            if (!dragonBreathLoop2.isPlaying)
+            {
+                dragonBreathLoop2.loop = true;
+                dragonBreathLoop2.Play();
+            }
+        }
+        else
+        {
+            if (dragonBreathLoop2.isPlaying)
+            {
                 dragonBreathLoop2.Stop();
             }
         }
@@ -183,5 +202,24 @@ public class Hoon_AudioManager : MonoBehaviour
         myAudio.PlayOneShot(heal);
     }
 
+    public void SFXWaterPusle()
+    {
+        myAudio.PlayOneShot(waterPusle);
+    }
+
+    public void SFXBurn()
+    {
+        myAudio.PlayOneShot(burn);
+    }
+
+    public void SFXDanger()
+    {
+        myAudio.PlayOneShot(danger);
+    }
+
+    public void CrySharpedo()
+    {
+        myAudio.PlayOneShot(sharpedo);
+    }
 }
 

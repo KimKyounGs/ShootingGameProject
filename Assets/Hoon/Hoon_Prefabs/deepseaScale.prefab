@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 414052517691493634}
   - component: {fileID: 288861364636950599}
   - component: {fileID: -3837277849003571545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: deepseaScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}

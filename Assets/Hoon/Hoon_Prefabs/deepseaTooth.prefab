@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 272857201965984318}
   - component: {fileID: 3008982684751088895}
   - component: {fileID: 8319021129687026414}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: deepseaTooth
   m_TagString: PK_Item
   m_Icon: {fileID: 0}

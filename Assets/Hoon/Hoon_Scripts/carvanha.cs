@@ -18,6 +18,11 @@ public class carvanha : Hoon_Monster
     {
         if(collision.CompareTag("Player"))
         {
+            Hoon_Player player = collision.gameObject.GetComponent<Hoon_Player>();
+            if (player != null)
+            {
+                player.Damage(1);
+            }
             moveSpeed = 0;
             Destroy(gameObject);
             Hoon_AudioManager.instance.SFXCrunch();

@@ -18,6 +18,8 @@ public class Kyogre : Hoon_Monster
     public Transform pos1;
     public Image BossHPUI;
     public GameObject rainEffect;
+    public GameObject clampearl;
+    public GameObject sharpedo;
     List<GameObject> rain = new List<GameObject>();	
 
     // 번개 패턴
@@ -33,7 +35,9 @@ public class Kyogre : Hoon_Monster
     public bool Pattern2 = false;
     public bool Pattern3 = false;
     public bool Pattern4 = false;
+    public GameObject iceBeam;
     public bool Pattern5 = false;
+    public bool LastPattern = false;
     protected override void Start()
     {
         base.Start();
@@ -44,6 +48,7 @@ public class Kyogre : Hoon_Monster
         InvokeRepeating("CastWaterRing", 1, 10);
         Invoke("WhirlPool", 5);
         Invoke("WhirlPool2", 12);
+        InvokeRepeating("SpawnClampearl", 10, 10);
     }
 
     void CastWaterRing()
@@ -51,13 +56,47 @@ public class Kyogre : Hoon_Monster
         Hoon_AudioManager.instance.SFXSurf();
         Instantiate(waterRing, pos1.position, Quaternion.identity);
     }
+    void SpawnClampearl()
+    {
+        float randomX = Random.Range(-2f, 2f);
+        Instantiate(clampearl, new Vector3(randomX, 5, 0f), Quaternion.identity);
+    }
 
+    void SpawnSharpedo()
+    {
+        for(float i = 0; i<6; i++)
+        {
+            Instantiate(sharpedo, new Vector3(-2.5f + i, 5, 0f), Quaternion.identity);
+        }
+        
+    }
     protected override void Update()
     {
         BossHPUI.fillAmount = HP / 1000;
+        if(BossHPUI.fillAmount <= 0)
+        {
+            BossHPUI.fillAmount = 0;
+            WinBoss();
+        }
         
+        if (HP < 900 && !Pattern2)
+        {
+            Hoon_AudioManager.instance.CrySharpedo();
+            InvokeRepeating("SpawnSharpedo", 0, 30);
+            Pattern2 = true; 
+        }
+        if (HP < 800 && !Pattern3)
+        {
+            Invoke("WhirlPool3", 1);
+            Pattern3 = true; 
+        }
+        if (HP < 650 && !Pattern4)
+        {
+            CastIceBeam();
+            Pattern4 = true; 
+        }
 
-        if (HP < 650 && !thunderOn)
+        if (HP < 500 && !thunderOn)
         {
             Hoon_AudioManager.instance.CryKyogre();
             InvokeRepeating("CastThunder", 1, 4);
@@ -68,23 +107,77 @@ public class Kyogre : Hoon_Monster
                 Cloud = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q) && !Pattern3)
+
+        if (HP < 350 && !Pattern5)
         {
-            Invoke("WhirlPool3", 1);
-            Pattern3 = true; 
-        } 
-        // if (Input.GetKeyDown(KeyCode.Alpha1) && !Pattern4)
-        // {
-        //     Invoke("WhirlPool4", 1);
-        //     Pattern4 = true; 
-        // }
-        // if (Input.GetKeyDown(KeyCode.Alpha2) && !Pattern5)
-        // {
-        //     Invoke("WhirlPool5", 1);
-        //     Pattern5 = true; 
-        // }
+            CastIceBeam();
+            Pattern5 = true; 
+        }
+
+        if (HP < 200 && !LastPattern)
+        {
+            CastSheerCold(); 
+        }
 
           
+    }
+    void CastSheerCold()
+    {
+        
+    }
+    void CastIceBeam()
+    {
+        Hoon_AudioManager.instance.CryKyogre();
+        StartCoroutine(IceBeam());
+    }
+    void IceDraw()
+    {
+        Instantiate(iceBeam, pos1.position, Quaternion.identity);
+    }
+    IEnumerator IceBeam()
+    {
+        Vector3 startPos = transform.position;  // 현재 위치 저장
+        Vector3 leftPos = new Vector3(-2f, 4.5f, 0f);  // 왼쪽 끝 위치
+        Vector3 rightPos = new Vector3(2.1f, 4.5f, 0f);  // 오른쪽 끝 위치
+        float moveSpeed = 2f;  // 이동 속도
+
+        // 왼쪽으로 이동
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * moveSpeed;
+            transform.position = Vector3.Lerp(startPos, leftPos, elapsedTime);
+            yield return null;
+        }
+
+        // 잠시 대기
+        yield return new WaitForSeconds(1f);
+        
+        // 빔 발사 시작
+        Hoon_AudioManager.instance.SFXIceBeam();
+        InvokeRepeating("IceDraw", 0, 0.15f);
+
+        // 오른쪽으로 천천히 이동하며 빔 발사
+        elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * 0.5f;  // 더 천천히 이동
+            transform.position = Vector3.Lerp(leftPos, rightPos, elapsedTime);
+            yield return null;
+        }
+
+        // 빔 발사 중단
+        CancelInvoke("IceDraw");
+        yield return new WaitForSeconds(1f);
+
+        // 원래 위치로 복귀
+        elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime * moveSpeed;
+            transform.position = Vector3.Lerp(rightPos, startPos, elapsedTime);
+            yield return null;
+        }
     }
 
     void ThunderCloud()
@@ -93,7 +186,7 @@ public class Kyogre : Hoon_Monster
     }
     public void CastThunder()
     {
-        float thunderX = Random.Range(-2.8f, 2.8f);
+        float thunderX = Hoon_Player.instance.transform.position.x;
         thunderVec = new Vector3(thunderX, 4.5f, 0);
         Hoon_AudioManager.instance.SFXThunder();
         StartCoroutine(thunderTail());
@@ -146,16 +239,6 @@ public class Kyogre : Hoon_Monster
     void WhirlPool3()
     {
         StartCoroutine(WaveBarrage());
-    }
-
-    void WhirlPool4()
-    {
-        StartCoroutine(SpiralCombo());
-    }
-
-    void WhirlPool5()
-    {
-        StartCoroutine(RandomSpread());
     }
 
 
@@ -215,7 +298,7 @@ public class Kyogre : Hoon_Monster
                 if (weightAngle >= 360)
                     weightAngle = 0;
                 else { weightAngle += 15; } 
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.5f);
             }
  
             yield return new WaitForSeconds(attackRate);
@@ -239,82 +322,10 @@ public class Kyogre : Hoon_Monster
         }
     }
 
-    IEnumerator SpiralCombo()
+    void WinBoss()
     {
-        float weightAngle = 0f;
-        while (true)
-        {
-            for (int i = 0; i < 12; i++)
-            {
-                float angle = weightAngle + (360 / 12) * i;
-                Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-                Shoot(direction);
-            }
-            weightAngle += 10;
-            yield return new WaitForSeconds(1f);
-        }
+
     }
 
-    IEnumerator RandomSpread()
-    {
-        while (true)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                float angle = Random.Range(0f, 360f);
-                Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-                Shoot(direction);
-            }
-            yield return new WaitForSeconds(1f);
-        }
-    }
 
-    // void SineWaveShot(float speed, float frequency, float amplitude)
-    // {
-    //     for (int i = 0; i < 10; i++)
-    //     {
-    //         GameObject bullet = Instantiate(whirl, transform.position, Quaternion.identity);
-    //     float x = Mathf.Sin(Time.time * frequency) * amplitude;
-    //     bullet.GetComponent<Whirl>().Move(new Vector3(x, speed * Time.deltaTime, 0));
-    //     }       
-    // }
-
-
-    // IEnumerator TrapShot()
-    // {
-    //     float weightAngle = 0f;
-    //     float attackRate = 8f;
-    //     float intervalAngle = 360 / 8;
-
-    //     while(true)
-    //     {
-    //         Hoon_AudioManager.instance.SFXWhirlpool();
-    //         for(int i = 0; i < 8; i++)
-    //         {
-    //             Hoon_AudioManager.instance.SFXWhirlpool();
-    //             GameObject player = GameObject.FindWithTag("Player");
-
-    //             WhirlPos = player.transform.position;
-    //             GameObject clone = Instantiate(whirl, WhirlPos, Quaternion.identity);
-    //             //발사체 이동 방향(각도)
-    //             clone.GetComponent<CircleCollider2D>().radius = 0;
-    //             float angle = weightAngle + intervalAngle * i;
-    //             //발사체 이동 방향(벡터)
-    //             float x = Mathf.Cos(angle * Mathf.Deg2Rad);
-    //             float y = Mathf.Sin(angle * Mathf.Deg2Rad);
-            
-    //             clone.GetComponent<Whirl>().Move(new Vector2(x,y));
-    //             // }
-    //             // else if(distance >=1.5f)
-    //             // {
-    //             //     clone.GetComponent<CircleCollider2D>().radius = 0.3885524f;
-    //             //     clone.GetComponent<Whirl>().Homing(WhirlPos);
-    //             // }
-    //         }
-    //         weightAngle += 1;
-    //         yield return new WaitForSeconds(attackRate);
-            
-
-    //     }
-    // }
 }

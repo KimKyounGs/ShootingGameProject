@@ -19,6 +19,7 @@ public class dragonbreath : MonoBehaviour
         if(collision.CompareTag("Hoon_Enemy"))
         {
             Hoon_Monster enemy = collision.GetComponent<Hoon_Monster>();
+            Hoon_AudioManager.instance.SFXBurn();
             if (enemy != null)
             {
             enemy.Damage(0.5f);

@@ -77,6 +77,10 @@ public class GameManager : MonoBehaviour
         Hoon_Player.instance.dashUI.fillAmount = 1f;
         Hoon_Player.instance.dashNameUI.color = new Color(1, 1, 1, 1f);
         Hoon_Player.instance.CanDash = true;
+        Hoon_Player.instance.HP = 90;
+        Hoon_Player.instance.maxHP = 90;
+        Hoon_Player.instance.HPLeftUI.text = ($"90 / 90");
+
     }
 
     IEnumerator moveCenter()
