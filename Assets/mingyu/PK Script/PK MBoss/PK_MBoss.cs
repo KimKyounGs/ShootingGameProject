@@ -2,7 +2,9 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Security.Cryptography;
 using TMPro;
+#if UNITY_EDITOR
 using UnityEditor.Search;
+#endif
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 

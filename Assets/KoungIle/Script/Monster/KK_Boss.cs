@@ -1,8 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class KK_Boss : MonoBehaviour
 {
+    public static KK_Boss instance;
+
     [Header("보스 체력")]
     public int maxHP = 1000;
     private int currentHP;
@@ -16,10 +19,22 @@ public class KK_Boss : MonoBehaviour
     public float phase3Threshold = 0.4f; // 40%
 
     private int currentPhase = 1;
-    private bool isDead = false;
+    public bool isDead = false;
 
     private IMonsterAttack[] attackPatterns;
     private IMonsterMove movePattern;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -112,8 +127,15 @@ public class KK_Boss : MonoBehaviour
         isDead = true;
         Debug.Log("보스 사망!");
         // 폭발 이펙트, 클리어 UI 등 처리
+        StartCoroutine("DestroyBoss");
+    }
+
+    IEnumerable DestroyBoss()
+    {
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
+
 
     public int GetPhase()
     {

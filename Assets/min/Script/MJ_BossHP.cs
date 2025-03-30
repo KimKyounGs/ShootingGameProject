@@ -44,23 +44,32 @@ public class MJ_BossHP : MonoBehaviour
     {
         isDead = true;
 
-        Destroy(gameObject);
-
-        if (clearPanel != null)
-        {
-            clearPanel.SetActive(true);
-        }
-
-        Invoke("LoadNextScene", 3f);
-
+        // Collider 비활성화
         Collider col = GetComponent<Collider>();
         if (col != null)
         {
             col.enabled = false;
         }
+
+        // 클리어 패널 활성화
+        if (clearPanel != null)
+        {
+            clearPanel.SetActive(true);
+        }
+
+        // 3초 후에 다음 씬 로드
+        Invoke("LoadNextScene", 3f);
+
+        // 3초 후에 객체 파괴
+        Invoke("DestroyObject", 3.1f);
     }
+
     void LoadNextScene()
     {
         SceneManager.LoadScene("PK_Scene");
+    }
+    void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

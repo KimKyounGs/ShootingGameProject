@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.LightTransport;
+// using UnityEngine.LightTransport;
 using UnityEngine.UI;
 
 public class PK_Swould : MonoBehaviour
