@@ -24,7 +24,7 @@ public class Boss : MonoBehaviour
         Invoke("SantanFireR", 7.9f);
         Invoke("SantanFireL", 15.5f);
         Invoke("SantanFireR", 16f);
-        Invoke("SantanFireL", 17f);
+        Invoke("SantanFireL", 17.1f);
         Invoke("SantanFireR", 17.4f);
         Invoke("SantanFireL", 19f);
         Invoke("CircleFire", 23f);
@@ -44,8 +44,14 @@ public class Boss : MonoBehaviour
         Invoke("SantanFireR", 49f);
         Invoke("CircleFire", 49.6f);
         Invoke("CircleFire", 53.4f);
+        Invoke("SantanFireL", 56.2f);
+        Invoke("SantanFireR", 56.5f);
         Invoke("CircleFire", 57.2f);
+        Invoke("SantanFireL", 60.3f);
+        Invoke("SantanFireR", 60.3f);
         Invoke("CircleFire", 61f);
+        Invoke("SantanFireL", 63.8f);
+        Invoke("SantanFireR", 64.1f);
         Invoke("CircleFire", 64.8f);
         Invoke("CircleFire", 68.6f);
         Invoke("CircleFire", 72.4f);
@@ -55,11 +61,11 @@ public class Boss : MonoBehaviour
     
     void Update()
     {
-        if (transform.position.x >= 1)
+        if (transform.position.x > 1)
         {
             flag *= -1;
         }
-        if (transform.position.x <= -1)
+        if (transform.position.x < -1)
         {
             flag *= -1;
         }
@@ -100,9 +106,9 @@ public class Boss : MonoBehaviour
 
     void SantanFireL()
     {
-        int count = 40;
+        int count = 20;
 
-        float intervalAngle = 160 / count;
+        float intervalAngle = 180 / count;
         for(int i = 0; i < count; i++)
         {
             GameObject clone1 = Instantiate(mb2, pos1.transform.position, Quaternion.identity);
@@ -117,7 +123,7 @@ public class Boss : MonoBehaviour
     {
         int count = 20;
 
-        float intervalAngle = 160 / count;
+        float intervalAngle = 180 / count;
         for (int i = 0; i < count; i++)
         {
             GameObject clone2 = Instantiate(mb2, pos2.transform.position, Quaternion.identity);
