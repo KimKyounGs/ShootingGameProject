@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 6
+  attack: 70
   waterfallEffect: {fileID: 1417240083617969289, guid: 6c888557d91a8410f977ad389a2726c7, type: 3}
   waterfall: {fileID: 7764103906635264906, guid: 8e66100eb9efb44148ce0d31b86fd0bc, type: 3}
 --- !u!61 &5425921750726027865

@@ -7,6 +7,8 @@ public class BossBGM : MonoBehaviour
 {
     public static BossBGM instance;
     public PlayableDirector BossTimeline;
+    public PlayableDirector WinTimeline;
+    public PlayableDirector HallOfFameTimeline;
 
 
     AudioSource myAudio;
@@ -27,6 +29,22 @@ public class BossBGM : MonoBehaviour
     {
         myAudio.Play();
     }
+    public void StopBGM()
+    {
+        myAudio.Stop();
+    }
+
+    public void StartWinTimeline()
+    {
+        WinTimeline.Play();
+        Time.timeScale = 0;
+
+    }
+
+    public void StartHallOfFame()
+    {
+        HallOfFameTimeline.Play();
+    }
 
     public void StartBossTimeline()
     {
@@ -45,11 +63,18 @@ public class BossBGM : MonoBehaviour
         StartCoroutine(MoveCenter());
     }
 
+    public void MoveForward()
+    {
+        StartCoroutine(MoveBeyond());
+    }
     IEnumerator MoveBeyond()
     {
         float moveDuration = 2f;
         float elapsed = 0f;
         Vector3 startPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Down", false);
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Right", false);
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Left", false);
         Vector3 TopPos = new Vector3(0, 6.5f, 0);
         Vector3 BottomPos = new Vector3(0, -6.5f, 0);
 

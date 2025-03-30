@@ -22,7 +22,7 @@ public class dragonbreath : MonoBehaviour
             Hoon_AudioManager.instance.SFXBurn();
             if (enemy != null)
             {
-            enemy.Damage(0.5f);
+            enemy.Damage(1f);
             }
             Destroy(gameObject);
         }

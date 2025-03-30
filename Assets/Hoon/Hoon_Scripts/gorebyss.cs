@@ -19,7 +19,8 @@ public class gorebyss : MonoBehaviour
         {
             // 플레이어의 SpriteRenderer와 Collider2D 컴포넌트 가져오기
             playerSprite = player.GetComponent<SpriteRenderer>();
-            Hoon_Player.instance.DisableHitbox();
+            playerCollider = player.GetComponent<CapsuleCollider2D>();
+
             Hoon_AudioManager.instance.SFXHeal();
 
             // 플레이어 스프라이트 색상을 핑크색으로 변경
@@ -34,47 +35,47 @@ public class gorebyss : MonoBehaviour
                 playerSprite.color = new Color(1f, 0.5f, 0.8f, 1f); // 핑크색
             }
 
-            float playerHP = Hoon_Player.instance.HP;
-            float playerMaxHP = Hoon_Player.instance.maxHP;
+            if (playerCollider != null)
+            {
+                playerCollider.enabled = false;
+            }
+        }
 
-            if (playerMaxHP - playerHP >= 20)
-            {
-                Hoon_Player.instance.HP += 20;
-                playerHP = Hoon_Player.instance.HP;
-                Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
+        float playerHP = Hoon_Player.instance.HP;
+        float playerMaxHP = Hoon_Player.instance.maxHP;
 
-            }
-            else if(playerMaxHP - playerHP <= 0)
-            {
-                Hoon_Player.instance.HPLeftUI.text = ($"DEAD: {playerHP} / {playerMaxHP}");
-            }
-            else if(playerMaxHP - playerHP <= 20)
-            {
-                Hoon_Player.instance.HP = Hoon_Player.instance.maxHP;
-                playerHP = Hoon_Player.instance.HP;
-                Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
-            }
+        if (playerMaxHP - playerHP >= 20)
+        {
+            Hoon_Player.instance.HP += 20;
+            playerHP = Hoon_Player.instance.HP;
+            Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
+
+        }
+        else if(playerMaxHP - playerHP <= 0)
+        {
+            Hoon_Player.instance.HPLeftUI.text = ($"DEAD: {playerHP} / {playerMaxHP}");
+        }
+        else if(playerMaxHP - playerHP <= 20)
+        {
+            Hoon_Player.instance.HP = Hoon_Player.instance.maxHP;
+            playerHP = Hoon_Player.instance.HP;
+            Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
         }
     }
     void OnDestroy()
     {
         // 오브젝트가 파괴될 때 플레이어 상태 복구
-        Hoon_Player.instance.EnableHitbox();
         if (player != null)
         {
             if (playerSprite != null)
             {
                 playerSprite.color = Color.white; // 원래 색상으로 복구
             }
-            else
+            
+            if (playerCollider != null)
             {
-                player = GameObject.FindGameObjectWithTag("Player");
-                playerSprite = player.GetComponent<SpriteRenderer>();
-                playerSprite.color = Color.white;
+                playerCollider.enabled = true; // 콜라이더 다시 활성화
             }
-
-        
-
         }
     }
     void Update()

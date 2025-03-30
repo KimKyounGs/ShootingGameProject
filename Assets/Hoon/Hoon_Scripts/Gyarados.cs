@@ -130,7 +130,7 @@ public class Gyarados : Hoon_Player
             yield return null;
         }
         
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.6f);
         EnableHitbox();
     }
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8701495653719279832}
   m_Layer: 6
   m_Name: waterRing_0
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

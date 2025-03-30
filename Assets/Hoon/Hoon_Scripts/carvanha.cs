@@ -11,7 +11,7 @@ public class carvanha : Hoon_Monster
         base.Start();
         moveSpeed = 2f;
         HP = 1;
-        exp = 0.2f;
+        exp = 0.4f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

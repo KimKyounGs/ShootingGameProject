@@ -23,8 +23,7 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnSharpedo", 20, 5f);
         Invoke("SpawnClampearl", 15);
         Invoke("SpawnClampearl", 25);
-        Invoke("SpawnClampearl", 45);
-        Invoke("SpawnClampearl", 60);
+        Invoke("SpawnClampearl", 35);
     }
 
     void Update()
@@ -42,7 +41,7 @@ public class SpawnManager : MonoBehaviour
 
     public IEnumerator BossSpawn()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(6.5f);
         BossBGM.instance.StartBossTimeline();
     }
 

@@ -98,9 +98,9 @@ public class Hoon_Player : MonoBehaviour
     // UI 점프 애니메이션을 위한 새로운 코루틴
     public IEnumerator UIJumpAnimation(GameObject uiElement)
     {
-        Vector3 originalScale = uiElement.transform.localScale;
+        Vector3 baseScale = new Vector3(2,2,1);
         float jumpDuration = 0.2f;
-        float jumpHeight = 1.2f; // 최대 크기 배수
+        float jumpHeight = 1.2f;
         
         // 커지는 애니메이션
         float elapsedTime = 0f;
@@ -109,7 +109,7 @@ public class Hoon_Player : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float progress = elapsedTime / (jumpDuration / 2);
             float currentScale = Mathf.Lerp(1f, jumpHeight, progress);
-            uiElement.transform.localScale = originalScale * currentScale;
+            uiElement.transform.localScale = baseScale * currentScale;
             yield return null;
         }
         
@@ -120,12 +120,12 @@ public class Hoon_Player : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float progress = elapsedTime / (jumpDuration / 2);
             float currentScale = Mathf.Lerp(jumpHeight, 1f, progress);
-            uiElement.transform.localScale = originalScale * currentScale;
+            uiElement.transform.localScale = baseScale * currentScale;
             yield return null;
         }
         
-        // 원래 크기로 정확히 복귀
-        uiElement.transform.localScale = originalScale;
+        // 정확히 (1,1,1)로 복귀
+        uiElement.transform.localScale = baseScale;
     }
 
     public void DisableHitbox()

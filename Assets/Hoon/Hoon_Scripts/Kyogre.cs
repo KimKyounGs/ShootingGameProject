@@ -38,11 +38,13 @@ public class Kyogre : Hoon_Monster
     public GameObject iceBeam;
     public bool Pattern5 = false;
     public bool LastPattern = false;
+    public float thunderX;
+
     protected override void Start()
     {
         base.Start();
         moveSpeed = 0;
-        HP = 1000;
+        HP = 2000;
         exp = 0;
 
         InvokeRepeating("CastWaterRing", 1, 10);
@@ -72,31 +74,33 @@ public class Kyogre : Hoon_Monster
     }
     protected override void Update()
     {
-        BossHPUI.fillAmount = HP / 1000;
-        if(BossHPUI.fillAmount <= 0)
+        BossHPUI.fillAmount = (HP-1000) / 1000;
+        thunderX = Hoon_Player.instance.transform.position.x;
+
+        if(HP <= 1000)
         {
             BossHPUI.fillAmount = 0;
             WinBoss();
         }
         
-        if (HP < 900 && !Pattern2)
+        if (HP < 1900 && !Pattern2)
         {
             Hoon_AudioManager.instance.CrySharpedo();
             InvokeRepeating("SpawnSharpedo", 0, 30);
             Pattern2 = true; 
         }
-        if (HP < 800 && !Pattern3)
+        if (HP < 1800 && !Pattern3)
         {
             Invoke("WhirlPool3", 1);
             Pattern3 = true; 
         }
-        if (HP < 650 && !Pattern4)
+        if (HP < 1650 && !Pattern4)
         {
             CastIceBeam();
             Pattern4 = true; 
         }
 
-        if (HP < 500 && !thunderOn)
+        if (HP < 1500 && !thunderOn)
         {
             Hoon_AudioManager.instance.CryKyogre();
             InvokeRepeating("CastThunder", 1, 4);
@@ -108,13 +112,13 @@ public class Kyogre : Hoon_Monster
             }
         }
 
-        if (HP < 350 && !Pattern5)
+        if (HP < 1350 && !Pattern5)
         {
             CastIceBeam();
             Pattern5 = true; 
         }
 
-        if (HP < 200 && !LastPattern)
+        if (HP < 1200 && !LastPattern)
         {
             CastSheerCold(); 
         }
@@ -123,11 +127,10 @@ public class Kyogre : Hoon_Monster
     }
     void CastSheerCold()
     {
-        
+
     }
     void CastIceBeam()
     {
-        Hoon_AudioManager.instance.CryKyogre();
         StartCoroutine(IceBeam());
     }
     void IceDraw()
@@ -139,7 +142,7 @@ public class Kyogre : Hoon_Monster
         Vector3 startPos = transform.position;  // 현재 위치 저장
         Vector3 leftPos = new Vector3(-2f, 4.5f, 0f);  // 왼쪽 끝 위치
         Vector3 rightPos = new Vector3(2.1f, 4.5f, 0f);  // 오른쪽 끝 위치
-        float moveSpeed = 2f;  // 이동 속도
+        float moveSpeed = 1f;  // 이동 속도
 
         // 왼쪽으로 이동
         float elapsedTime = 0f;
@@ -155,7 +158,7 @@ public class Kyogre : Hoon_Monster
         
         // 빔 발사 시작
         Hoon_AudioManager.instance.SFXIceBeam();
-        InvokeRepeating("IceDraw", 0, 0.15f);
+        InvokeRepeating("IceDraw", 0, 0.1f);
 
         // 오른쪽으로 천천히 이동하며 빔 발사
         elapsedTime = 0f;
@@ -186,7 +189,6 @@ public class Kyogre : Hoon_Monster
     }
     public void CastThunder()
     {
-        float thunderX = Hoon_Player.instance.transform.position.x;
         thunderVec = new Vector3(thunderX, 4.5f, 0);
         Hoon_AudioManager.instance.SFXThunder();
         StartCoroutine(thunderTail());
@@ -322,9 +324,55 @@ public class Kyogre : Hoon_Monster
         }
     }
 
+    void ClearBattleObjects()
+        {
+        // PlayerBullet 태그를 가진 모든 오브젝트 제거
+        GameObject[] playerBullets = GameObject.FindGameObjectsWithTag("PlayerBullet");
+        foreach (GameObject bullet in playerBullets)
+        {
+            Destroy(bullet);
+        }
+
+        // EnemyBullet 태그를 가진 모든 오브젝트 제거
+        GameObject[] enemyBullets = GameObject.FindGameObjectsWithTag("EnemyBullet");
+        foreach (GameObject bullet in enemyBullets)
+        {
+            Destroy(bullet);
+        }
+
+        // Enemy 태그를 가진 모든 오브젝트 제거 (자신 제외)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Hoon_Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            // 자기 자신이 아닌 경우에만 파괴
+            if (enemy != gameObject)
+            {
+                Destroy(enemy);
+            }
+        }
+    }
+        
+    void ResetPlayerColor()
+    {
+        // 플레이어 찾기
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            // SpriteRenderer 컴포넌트 가져오기
+            SpriteRenderer playerSprite = player.GetComponent<SpriteRenderer>();
+            if (playerSprite != null)
+            {
+                // 스프라이트 색상을 흰색(원래 색상)으로 복구
+                playerSprite.color = Color.white;
+            }
+        }
+    }
     void WinBoss()
     {
-
+        CancelInvoke();
+        ResetPlayerColor();
+        ClearBattleObjects();
+        BossBGM.instance.StartWinTimeline();
     }
 
 

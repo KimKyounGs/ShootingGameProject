@@ -11,7 +11,7 @@ public class sharpedo : Hoon_Monster
         base.Start();
         moveSpeed = 0.5f;
         HP = 3;
-        exp = 3;
+        exp = 4;
         isSpawn = true;
     }
 

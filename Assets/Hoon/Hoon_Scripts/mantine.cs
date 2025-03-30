@@ -16,7 +16,7 @@ public class mantine : Hoon_Monster
         base.Start();
         moveSpeed = 0.8f;
         HP = 5;
-        exp = 0.8f;
+        exp = 2f;
         Invoke("CreateBullet", delay);
     }
     void CreateBullet()

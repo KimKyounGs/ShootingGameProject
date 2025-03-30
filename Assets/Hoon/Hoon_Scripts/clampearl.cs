@@ -8,7 +8,7 @@ public class clampearl : Hoon_Monster
         base.Start();
         moveSpeed = 0.5f;
         HP = 10;
-        exp = 3f;
+        exp = 5f;
         droprate = 2;
     }
 
