@@ -33,8 +33,6 @@ public class Hoon_Player : MonoBehaviour
     public bool isEvolved = false;
     public bool Firing = false;
     public bool isInvincible = false;  // 무적 상태 체크
-    private bool isHit = false;        // 피격 상태 체크
-    private bool isDashing = false;    // 대시 상태 체크
 
     [Header("UI")]
     public Image dashUI;
