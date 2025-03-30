@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MJ_BossHP : MonoBehaviour
@@ -50,10 +51,16 @@ public class MJ_BossHP : MonoBehaviour
             clearPanel.SetActive(true);
         }
 
+        Invoke("LoadNextScene", 3f);
+
         Collider col = GetComponent<Collider>();
         if (col != null)
         {
             col.enabled = false;
         }
+    }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene("PK_Scene");
     }
 }
