@@ -24,10 +24,12 @@ public class Boss : MonoBehaviour
         Invoke("SantanFireR", 7.9f);
         Invoke("SantanFireL", 15.5f);
         Invoke("SantanFireR", 16f);
-        Invoke("SantanFireL", 16.8f);
+        Invoke("SantanFireL", 17f);
         Invoke("SantanFireR", 17.4f);
         Invoke("SantanFireL", 19f);
         Invoke("CircleFire", 23f);
+        Invoke("SantanFireL", 25f);
+        Invoke("SantanFireR", 25f);
         Invoke("CircleFire", 26.8f);
         Invoke("SantanFireR", 29.1f);
         Invoke("SantanFireL", 29.4f);
@@ -36,6 +38,10 @@ public class Boss : MonoBehaviour
         Invoke("CircleFire", 38.2f);
         Invoke("CircleFire", 42f);
         Invoke("CircleFire", 45.8f);
+        Invoke("SantanFireL", 47f);
+        Invoke("SantanFireR", 47.5f);
+        Invoke("SantanFireL", 48.7f);
+        Invoke("SantanFireR", 49f);
         Invoke("CircleFire", 49.6f);
         Invoke("CircleFire", 53.4f);
         Invoke("CircleFire", 57.2f);
