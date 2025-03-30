@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -100,5 +102,6 @@ public class Player : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+        SceneManager.LoadScene("다음씬이름");
     }
 }
