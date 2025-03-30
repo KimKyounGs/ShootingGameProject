@@ -19,7 +19,13 @@ public class PK_SoundManager : MonoBehaviour
 
     public AudioClip P_missile;
 
+    public AudioClip B_bullet1;
+    public AudioClip B_bullet2;
     public AudioClip B_bullet3;
+    public AudioClip B_bullet4;
+    public AudioClip B_bullet4_1;
+    public AudioClip B_bullet5;
+    public AudioClip B_bullet5_1;
 
     public AudioClip M_bullet1;
 
@@ -48,22 +54,22 @@ public class PK_SoundManager : MonoBehaviour
 
     public void PlayerSwould()
     {
-        myAudio.PlayOneShot(Player_Swould);
+        myAudio.PlayOneShot(Player_Swould , 0.5f);
     }
 
     public void S_Gage_Cool()
     {
-        myAudio.PlayOneShot(S_Gage_C);
+        myAudio.PlayOneShot(S_Gage_C , 0.5f);
     }
 
     public void S_Gage_Full()
     {
-        myAudio.PlayOneShot(S_Gage_F);
+        myAudio.PlayOneShot(S_Gage_F , 0.5f);
     }
 
     public void M_Gage_Full()
     {
-        myAudio.PlayOneShot(M_Gage_F);
+        myAudio.PlayOneShot(M_Gage_F , 0.5f);
     }
 
     public void UPGRADE()
@@ -73,21 +79,44 @@ public class PK_SoundManager : MonoBehaviour
 
     public void P_Bullet()
     {
-        float volumeScale = 0.1f; // 볼륨을 50%로 설정 (0.0 ~ 1.0)
-        myAudio.PlayOneShot(P_bullet, volumeScale);
+        myAudio.PlayOneShot(P_bullet, 0.1f);
     }
 
     public void P_Missile()
     {
-        float volumeScale = 0.5f;
-        myAudio.PlayOneShot(P_missile, volumeScale);
+        myAudio.PlayOneShot(P_missile, 0.2f);
+    }
+
+    public void B_Bullet1()
+    {
+        myAudio.PlayOneShot(B_bullet1, 3f);
+    }
+
+    public void B_Bullet2()
+    {
+        myAudio.PlayOneShot(B_bullet2, 3f);
     }
 
     public void B_Bullet3()
     {
         myAudio.PlayOneShot(B_bullet3);
     }
-
+    public void B_Bullet4()
+    {
+        myAudio.PlayOneShot(B_bullet4, 2f);
+    }
+    public void B_Bullet4_1()
+    {
+        myAudio.PlayOneShot(B_bullet4_1);
+    }
+    public void B_Bullet5()
+    {
+        myAudio.PlayOneShot(B_bullet5 , 0.6f);
+    }
+    public void B_Bullet5_1()
+    {
+        myAudio.PlayOneShot(B_bullet5_1 , 0.5f);
+    }
     public void M_Bullet1()
     {
         myAudio.PlayOneShot(M_bullet1);

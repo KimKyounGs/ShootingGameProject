@@ -33,6 +33,7 @@ public class PK_Boss_Bullet5 : MonoBehaviour
             Speed = 0;
             if (a == true)
             {
+                PK_SoundManager.instance.B_Bullet5_1();
                 StartCoroutine(CircleFire());
                 a = false;
             }

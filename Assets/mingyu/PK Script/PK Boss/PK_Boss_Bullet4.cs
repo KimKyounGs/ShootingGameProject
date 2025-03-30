@@ -72,9 +72,16 @@ public class PK_Boss_Bullet4 : MonoBehaviour
         //가중되는 각도(항상 같은 위치로 발사하지 않도록 설정
         float weightAngle = 0f;
 
+        bool a = true;
+
         //원 형태로 방사하는 발사체 생성(count 갯수 만큼)
         while (bullet_count < 6)
-        {
+        {   
+            if(a == true)
+            {
+                PK_SoundManager.instance.B_Bullet4_1(); // 총알 발사 소리 재생
+                a = false;
+            }
 
             for (int i = 0; i < count; ++i)
             {
@@ -94,6 +101,7 @@ public class PK_Boss_Bullet4 : MonoBehaviour
             }
             weightAngle += 90;
             bullet_count++;
+            a = true;
 
             //1초마다 미사일 발사
             yield return new WaitForSeconds(attackRate);

@@ -44,7 +44,7 @@ public class PK_Boss : MonoBehaviour
 
         if (boss_attack == true && cool_time1 >= boss_attack_time)
         {
-            attack_chose = Random.Range(1, 6);
+            attack_chose = Random.Range(5, 5);
 
             if (attack_chose > 0)
             {
@@ -119,6 +119,7 @@ public class PK_Boss : MonoBehaviour
         if (cool_time1 > skill_1_SP_cool_time && cool_time1 < 2)
         {
             Instantiate(Bullet_1, pos1.position, Quaternion.identity);
+            PK_SoundManager.instance.B_Bullet1(); // 총알 발사 소리 재생
             cool_time1 = 0;
         }
 
@@ -180,6 +181,7 @@ public class PK_Boss : MonoBehaviour
         if (skill_2_bullet == true)    //공격 한번만 반복되게 하기
         {
             StartCoroutine(CircleFire());
+            PK_SoundManager.instance.B_Bullet2(); // 총알 발사 소리 재생
             cool_time1 = 0;
             skill_2_bullet = false; //공격 끔
         }
@@ -334,7 +336,7 @@ public class PK_Boss : MonoBehaviour
 
         if (cool_time1 >= skill_4_SP_Speed)
         {
-
+        PK_SoundManager.instance.B_Bullet4();
         Instantiate(Bullet_4, transform.position, Quaternion.identity);
         cool_time1 = 0;
         }
@@ -364,6 +366,7 @@ public class PK_Boss : MonoBehaviour
         if (cool_time1 >= skill_5_SP_Speed) //발사 속도
         {
             Instantiate(Bullet_5, transform.position, Quaternion.identity);
+            PK_SoundManager.instance.B_Bullet5();
             cool_time1 = 0;
         }
 
