@@ -1,20 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MJ_Monster : MonoBehaviour
 {
-    public int HP = 100;
     public float Speed = 3;
     public float Delay = 1f;
     public int x = 1;
     public int y = 1;
-    public int item_max_pb = 100;
-    public AudioClip death;
-
-
+    
     public Transform ms1;
     public Transform ms2;
     public GameObject bullet;
-    public GameObject item = null;
+    
 
     void Start()
     {
@@ -41,28 +38,6 @@ public class MJ_Monster : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
-    }
-
-    //미사일에 따른 데미지 입는 함수
-    public void Damage(int attack)
-    {
-        HP -= attack;
-
-        if (HP <= 0)
-        {
-            ItemDrop();
-            Destroy(gameObject);
-        }
-    }
-
-    public void ItemDrop()
-    {
-        int prob = Random.Range(1, 101);
-
-        if (prob < item_max_pb)
-        {
-            Instantiate(item, transform.position, Quaternion.identity);
-        }
     }
 
 }

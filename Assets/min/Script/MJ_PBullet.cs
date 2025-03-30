@@ -35,7 +35,7 @@ public class MJ_PBullet : MonoBehaviour
             Destroy(go, 1);
 
             //몬스터삭제
-            collision.gameObject.GetComponent<MJ_Monster>().Damage(Attack);
+            collision.gameObject.GetComponent<MJ_MonsterHP>().TakeDamage(Attack);
             //미사일 삭제
             Destroy(gameObject);
 
@@ -50,6 +50,8 @@ public class MJ_PBullet : MonoBehaviour
             //1초뒤에 지우기
             Destroy(go, 1);
 
+            //몬스터삭제
+            collision.gameObject.GetComponent<MJ_BossHP>().TakeDamage(Attack);
             //미사일 삭제
             Destroy(gameObject);
         }
