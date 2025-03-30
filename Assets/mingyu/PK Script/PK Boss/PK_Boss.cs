@@ -44,7 +44,12 @@ public class PK_Boss : MonoBehaviour
 
         if (boss_attack == true && cool_time1 >= boss_attack_time)
         {
-            attack_chose = Random.Range(5, 5);
+            // attack_chose = Random.Range(1, 6);
+            attack_chose += 1;
+            if (attack_chose > 5)
+            {
+                attack_chose = 1;
+            }
 
             if (attack_chose > 0)
             {

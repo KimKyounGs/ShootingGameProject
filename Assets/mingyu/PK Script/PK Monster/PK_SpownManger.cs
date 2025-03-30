@@ -17,6 +17,11 @@ public class PK_SpownManger : MonoBehaviour
     public GameObject MBoss;
     public GameObject Boss;
 
+    public GameObject Story2;
+
+    public GameObject Story2_1;
+    public GameObject Story3;
+
 
     bool swi = true;
     bool swi2 = true;
@@ -71,6 +76,12 @@ public class PK_SpownManger : MonoBehaviour
 
     void Stop2()
     {
+        Story2.SetActive(true);
+        swi2 = false;
+        Invoke("Stop3", 0.5f);
+    }
+    void Stop3()
+    {
         swi2 = false;
         StopCoroutine("RandomSpawn2");
 
@@ -80,17 +91,24 @@ public class PK_SpownManger : MonoBehaviour
 
     }
 
-    public void Stop3()
+    public void Stop4()
     {
+        Story2_1.SetActive(true);
+
+        swi = true;
+        swi2 = true;
         StartCoroutine("RandomSpawn");
         //두번째 몬스터 코루틴
         StartCoroutine("RandomSpawn2");
 
-        Invoke("Stop4", SpawnStop3);
+        Invoke("Stop5", SpawnStop3);
     }
 
-    public void Stop4()
+        public void Stop5()
     {
+        Story3.SetActive(true);
+        swi = false;
+        swi2 = false;
         Vector3 pos = new Vector3(0, 4f, 0);
         Instantiate(Boss, pos, Quaternion.identity);
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Threading;
 
-public class PK_TImeLine_1 : MonoBehaviour
+public class PK_TImeLine_2 : MonoBehaviour
 {
     public GameObject Gage;
 
@@ -21,7 +21,7 @@ public class PK_TImeLine_1 : MonoBehaviour
 
      IEnumerator StartGame()
     {
-        int i = 32;
+        int i = 16;
 
         Time.timeScale = 0;
 

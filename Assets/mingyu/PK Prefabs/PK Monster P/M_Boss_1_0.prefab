@@ -102,15 +102,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ac0c62ecf5d36489fe7c7fa14ecf99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Story2_1: {fileID: 0}
   fadeSpeed: 1
   targetObject1: {fileID: 6484528115768511996, guid: da50cf44d9b8fd74ea4567072d2025bb, type: 3}
   targetObject2: {fileID: 9129669718724330225, guid: 3168f219939f1f34989cc628a5253d90, type: 3}
   targetObject3: {fileID: 2618965956479411867, guid: 5cf29d35ba2d9db42ad6947d0d0c28ba, type: 3}
   targetObject4: {fileID: 4529275542660710418, guid: d4a2df57ad944ba4580966f25137a10a, type: 3}
+  c: 1
+  Move: 0
+  Move1: 0
   bullet1: {fileID: 1255623698324561433, guid: 428d17e3b1b3aae4391328f57ad24f76, type: 3}
   bullet2: {fileID: 1255623698324561433, guid: 63c404587ad835945a0d2d312e7ac5f7, type: 3}
   bullet3: {fileID: 6484528115768511996, guid: d76275212965d724488eac43a0fc3440, type: 3}
   playerMove: 1
+  attack_chose: 0
+  cool_time1: 0
+  cool_time2: 0
+  cool_time3: 0
+  co: 1
+  fadeDuration: 1
+  visibleDuration: 2
 --- !u!61 &545685635839719001
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PK_MBoss : MonoBehaviour
 {
+    
     private SpriteRenderer spriteRenderer; // 스프라이트 렌더러
     public float fadeSpeed = 1f; // 색깔이 줄어드는 속도
     public GameObject targetObject1; // 타겟 오브젝트
@@ -350,7 +351,7 @@ if(time > 3f)
         PK_SpownManger spawner = FindObjectOfType <PK_SpownManger>();
         if (spawner != null)
         {
-            spawner.Stop3(); // 보스 소환
+            spawner.Stop4(); // 다음 소환
         }
     }
 }

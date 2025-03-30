@@ -1,31 +1,10 @@
 fileFormatVersion: 2
-guid: 94be9e592a4d6634c9f174a40278272a
+guid: 1470640b0f35cfb459caffee660004f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8228225765587377697
-    second: Boss_Warning1_0
-  - first:
-      213: -6493641198702057909
-    second: Boss_Warning1_1
-  - first:
-      213: 370293213099655584
-    second: Boss_Warning1_2
-  - first:
-      213: -294276939259322902
-    second: Boss_Warning1_3
-  - first:
-      213: 6178904287437323625
-    second: Boss_Warning1_4
-  - first:
-      213: -3813743922643446478
-    second: Boss_Warning1_5
-  - first:
-      213: 1443595935617627958
-    second: Boss_Warning1_6
-  - first:
-      213: 8006965218158193373
-    second: Boss_Warning1_7
+      213: 594091774209038838
+    second: Boss_Warning2_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_Warning1_0
+      name: Boss_Warning2_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,10 +126,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 41a2e4fc96a02cb46bb1a49c4cb3cf02
-      internalID: 548934903
+      spriteID: 6f916bd2253ae3800800000000000000
+      internalID: 594091774209038838
       vertices: []
       indices: 
       edges: []
@@ -159,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6eab31f92d2798c41835dfd558349706
+    spriteID: 963bd31a0d6c19444ab98079748f3be2
     internalID: 0
     vertices: []
     indices: 
@@ -169,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss_Warning1_0: 548934903
+      Boss_Warning2_1_0: 594091774209038838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

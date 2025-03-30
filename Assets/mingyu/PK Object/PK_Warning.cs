@@ -3,24 +3,23 @@ using System.Collections;
 
 public class PK_Warning : MonoBehaviour
 {
-    public GameObject Warning; //경고 오브젝트
+     public GameObject Gage;
 
     void Start()
     {
-        
+        Gage.SetActive(false); // Gage 오브젝트 비활성화
     }
 
 
     void Update()
     {
-
         StartCoroutine("StartGame");
-
     }
 
-    IEnumerator StartGame()
+
+     IEnumerator StartGame()
     {
-        int i = 10;
+        int i = 4;
 
         Time.timeScale = 0;
 
@@ -33,7 +32,7 @@ public class PK_Warning : MonoBehaviour
             if (i == 0)
             {
                 gameObject.SetActive(false);
-                Warning.SetActive(true);
+                Gage.SetActive(true); // Gage 오브젝트 활성화
                 Time.timeScale = 1;
             }
         }
