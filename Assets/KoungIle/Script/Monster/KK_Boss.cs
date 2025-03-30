@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class KK_Boss : MonoBehaviour
 {
@@ -94,6 +94,7 @@ public class KK_Boss : MonoBehaviour
         if (isDead) return;
 
         currentHP -= damage;
+        KK_SoundManager.Instance.PlayFX(4, 0.1f);
 
         if (currentHP <= 0)
         {
@@ -130,10 +131,16 @@ public class KK_Boss : MonoBehaviour
         StartCoroutine("DestroyBoss");
     }
 
-    IEnumerable DestroyBoss()
+    IEnumerator DestroyBoss()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+        NextStage();
+    }
+
+    public void NextStage()
+    {
+        SceneManager.LoadScene("Hoon_Stage"); // 다음 스테이지로 이동
     }
 
 

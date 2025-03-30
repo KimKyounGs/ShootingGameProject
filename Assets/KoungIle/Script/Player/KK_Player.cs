@@ -74,16 +74,6 @@ public class KK_Player : MonoBehaviour
             // 무적 상태
             bplayerInvincibility = true;
         }
-        
-        if (KK_Boss.instance.isDead == true)
-        {
-            StartCoroutine(SceneLoader());
-        }
-    }
-    IEnumerator SceneLoader()
-    {
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Hoon_Stage");
     }
     void Move()
     {
