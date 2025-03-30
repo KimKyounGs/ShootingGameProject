@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
+        SceneManager.LoadScene("MJ");
         Destroy(gameObject);
-        SceneManager.LoadScene("다음씬이름");
     }
 }
