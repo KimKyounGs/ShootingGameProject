@@ -19,6 +19,7 @@ TagManager:
   - Boss
   - MJ_Item
   - MJ_BossCircle
+  - Boss_HP
   layers:
   - Default
   - TransparentFX

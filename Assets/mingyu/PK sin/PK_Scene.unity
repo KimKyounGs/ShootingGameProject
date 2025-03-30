@@ -1538,7 +1538,7 @@ MonoBehaviour:
   StartTime: 1
   SpawnStop: 20
   SpawnStop2: 20
-  SpawnStop3: 20
+  SpawnStop3: 30
   monster: {fileID: 8656930644919244661, guid: 85c1f768571d4154bbef58a1798c0a28, type: 3}
   monster2: {fileID: 6421097003410215311, guid: c4e19304ba304984f85f3ea6f0f8dd0d, type: 3}
   MBoss: {fileID: 2579083279079726846, guid: 2ab25f27c04709b459b9d3dc05096c36, type: 3}
@@ -3231,7 +3231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &1202057774
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -3742,8 +3742,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6517786993962277778, guid: baa6454340f70f64f94b8c90949ce935, type: 3}
+      propertyPath: P_HP
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517786993962277778, guid: baa6454340f70f64f94b8c90949ce935, type: 3}
       propertyPath: power
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6517786993962277778, guid: baa6454340f70f64f94b8c90949ce935, type: 3}
       propertyPath: Mis_pos
@@ -4633,7 +4637,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

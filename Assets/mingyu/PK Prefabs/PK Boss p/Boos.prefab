@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boos_Blood: 0
+  Boss_Hpp: {fileID: 0}
   Bullet_1: {fileID: 5599820063386902380, guid: 5d89bc6fc1dabd940a673eeac61cfc9c, type: 3}
   Bullet_2: {fileID: 9040495435885128795, guid: 0dff31623482d0a4087a34f6bd99a3bb, type: 3}
   Bullet_3: {fileID: 1281032116627877956, guid: 500c635326c52754985e28b77857f837, type: 3}

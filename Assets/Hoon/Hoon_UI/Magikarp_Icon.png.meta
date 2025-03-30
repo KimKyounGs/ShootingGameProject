@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Magikarp_Icon_0: 1216431483090451603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
