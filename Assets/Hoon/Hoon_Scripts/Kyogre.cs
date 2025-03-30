@@ -38,7 +38,7 @@ public class Kyogre : Hoon_Monster
     public GameObject iceBeam;
     public bool Pattern5 = false;
     public bool LastPattern = false;
-    public float thunderX;
+    
 
     protected override void Start()
     {
@@ -75,7 +75,6 @@ public class Kyogre : Hoon_Monster
     protected override void Update()
     {
         BossHPUI.fillAmount = (HP-1000) / 1000;
-        thunderX = Hoon_Player.instance.transform.position.x;
 
         if(HP <= 1000)
         {
@@ -186,16 +185,51 @@ public class Kyogre : Hoon_Monster
     void ThunderCloud()
     {
         Instantiate(thunderCloud, Vector3.zero, Quaternion.identity);
+        StartCoroutine(RainEffect());
     }
+
+    IEnumerator RainEffect()
+    {
+        while (true)
+        {
+            // 현재 비 이펙트 개수가 20개 미만일 때만 생성
+            if (rain.Count < 20)
+            {
+                float posX = Random.Range(-2.8f, 2.8f);
+                float posY = Random.Range(-5f, 5f);  // 화면 상단에서 생성
+                Vector3 rainPos = new Vector3(posX, posY, 0);
+                
+                GameObject rainDrop = Instantiate(rainEffect, rainPos, Quaternion.identity);
+                rain.Add(rainDrop);
+                
+                // 3초 후에 비 이펙트 제거
+                StartCoroutine(DestroyRainDrop(rainDrop));
+            }
+            
+            yield return new WaitForSeconds(0.2f);  // 0.2초마다 비 생성
+        }
+    }
+
+    IEnumerator DestroyRainDrop(GameObject rainDrop)
+    {
+        yield return new WaitForSeconds(3f);
+        if (rainDrop != null)
+        {
+            rain.Remove(rainDrop);
+            Destroy(rainDrop);
+        }
+    }
+
     public void CastThunder()
     {
-        thunderVec = new Vector3(thunderX, 4.5f, 0);
         Hoon_AudioManager.instance.SFXThunder();
         StartCoroutine(thunderTail());
     }
 
     IEnumerator thunderTail()
     {
+        thunderVec = new Vector3(Random.Range(-2, 2), 4.5f, 0);
+
         for(int i = 0; i < 21; i++)
         {
             Vector3 tailPos = new Vector3(0, i * -0.5f, 0);
@@ -203,7 +237,6 @@ public class Kyogre : Hoon_Monster
             GameObject go = Instantiate(thunder, thunderVec + tailPos, Quaternion.identity);
             Destroy(go, 0.4f);
         }
-        
     }
 
     IEnumerator raindrop()

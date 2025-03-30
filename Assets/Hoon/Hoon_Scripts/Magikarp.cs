@@ -20,7 +20,10 @@ public class Magikarp : Hoon_Player
     }
     IEnumerator Splash()
     {
-        DisableHitbox();
+        if (!isInvincible)  // 무적이 아닐 때만 히트박스 조작
+        {
+            DisableHitbox();
+        }
         
         int jumpCount = 3;  // 점프 횟수
         float jumpHeight = 0.5f;  // 점프 높이
@@ -65,7 +68,10 @@ public class Magikarp : Hoon_Player
         transform.position = new Vector3(transform.position.x, originalPos.y, transform.position.z);
         yield return new WaitForSeconds(0.3f);
 
-        EnableHitbox();
+        if (!isInvincible)
+        {
+            EnableHitbox();
+        }
     }
 
 }

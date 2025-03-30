@@ -650,6 +650,10 @@ PlayableDirector:
     value: {fileID: 46109118}
   - key: {fileID: -6784936880751418363, guid: 3877752b66de44ee39ab5243b1727c40, type: 2}
     value: {fileID: 1220700919}
+  - key: {fileID: -6251449670605639914, guid: 3877752b66de44ee39ab5243b1727c40, type: 2}
+    value: {fileID: 617793668}
+  - key: {fileID: 1336585007400445051, guid: 3877752b66de44ee39ab5243b1727c40, type: 2}
+    value: {fileID: 124021845}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &106784263
@@ -3106,10 +3110,12 @@ MonoBehaviour:
   CanDash: 1
   isEvolved: 0
   Firing: 0
+  isInvincible: 0
   dashUI: {fileID: 394011782}
   HPUI: {fileID: 1236382596}
   dashNameUI: {fileID: 1841235397}
   HPLeftUI: {fileID: 1593482407}
+  StatusUI: {fileID: 1571401053}
 --- !u!50 &408241506
 Rigidbody2D:
   serializedVersion: 5
@@ -6843,7 +6849,6 @@ MonoBehaviour:
   iceBeam: {fileID: 4329632729537743396, guid: 80aa92f89c97547d4ba11203425ba70d, type: 3}
   Pattern5: 0
   LastPattern: 0
-  thunderX: 0
 --- !u!60 &1220700925
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7157,7 +7162,7 @@ MonoBehaviour:
   sharpedo: {fileID: 9175943797708736923, guid: d65ccaa2119dd4825b55e21a38bf970a, type: 3}
   clampearl: {fileID: 3080436321377624881, guid: 89734add04181424e9725774c2dadc0b, type: 3}
   bossSpawn: 0
-  gameDuration: 40
+  gameDuration: 35
 --- !u!4 &1309808675
 Transform:
   m_ObjectHideFlags: 0
@@ -8940,6 +8945,7 @@ GameObject:
   - component: {fileID: 2064743826}
   - component: {fileID: 2064743825}
   - component: {fileID: 2064743828}
+  - component: {fileID: 2064743829}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9118,6 +9124,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2064743829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064743824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!1 &2129349943
 GameObject:
   m_ObjectHideFlags: 0
@@ -9222,6 +9260,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1593482407}
     - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: StatusUI
+      value: 
+      objectReference: {fileID: 1571401053}
+    - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: dashNameUI
       value: 
       objectReference: {fileID: 1841235397}
@@ -9241,6 +9283,10 @@ PrefabInstance:
       propertyPath: skillButtonUI
       value: 
       objectReference: {fileID: 1725283401}
+    - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
+      propertyPath: skillCooldown
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3548656663076342651, guid: 55233ead79f9e47ea996137e7ba99b95, type: 3}
       propertyPath: bulletCooldown
       value: 0.15

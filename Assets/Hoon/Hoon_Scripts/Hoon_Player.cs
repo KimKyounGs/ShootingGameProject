@@ -32,12 +32,16 @@ public class Hoon_Player : MonoBehaviour
 
     public bool isEvolved = false;
     public bool Firing = false;
+    public bool isInvincible = false;  // 무적 상태 체크
+    private bool isHit = false;        // 피격 상태 체크
+    private bool isDashing = false;    // 대시 상태 체크
 
     [Header("UI")]
     public Image dashUI;
     public Image HPUI;
     public TMP_Text dashNameUI;
     public TMP_Text HPLeftUI;
+    public Image StatusUI;
 
     void Awake()
     {
@@ -128,13 +132,31 @@ public class Hoon_Player : MonoBehaviour
         uiElement.transform.localScale = baseScale;
     }
 
+    public void SetInvincible(bool state)
+    {
+        isInvincible = state;
+        UpdateHitboxState();
+    }
+    private void UpdateHitboxState()
+    {
+        // 무적 상태일 때는 항상 히트박스 비활성화
+        CapsuleCollider.enabled = !isInvincible;
+    }
+
     public void DisableHitbox()
     {
-        CapsuleCollider.enabled = false;
+        if (!isInvincible)  // 무적이 아닐 때만 히트박스 비활성화
+        {
+            CapsuleCollider.enabled = false;
+        }
     }
+
     public void EnableHitbox()
     {
-        CapsuleCollider.enabled = true;
+        if (!isInvincible)  // 무적이 아닐 때만 히트박스 활성화
+        {
+            CapsuleCollider.enabled = true;
+        }
     }
     void HorizontalHitbox()
     {
@@ -157,9 +179,21 @@ public class Hoon_Player : MonoBehaviour
     {
         ani.SetBool("Down", false);
         VerticalHitbox();
+        
         HPUI.fillAmount = 1 - HP / maxHP;
         if (HPUI.fillAmount <= 0) {HPUI.fillAmount = 0;}
-
+        
+        if(HP <= 0)
+        {
+            HPLeftUI.text = ($"DEAD: {HP} / {maxHP}");
+            if(HPDanger == false )
+            {
+                Hoon_AudioManager.instance.SFXDanger();
+                HPDanger = true;
+            }
+        }
+        else { HPLeftUI.text = ($"{HP} / {maxHP}"); }
+        
         if(Time.timeScale == 1)
         {
             #region 이동
@@ -234,26 +268,78 @@ public class Hoon_Player : MonoBehaviour
     {
         StartCoroutine(Hit());
         HP -= attack;
-        HPLeftUI.text = ($"{HP} / {maxHP}");
-
-        if(HP <= 0)
-        {
-            HPLeftUI.text = ($"DEAD: {HP} / {maxHP}");
-        }
-
-        if(HP <= HP*0.2f && HPDanger == false )
-        {
-            Hoon_AudioManager.instance.SFXDanger();
-            HPDanger = true;
-        }
     }
     protected virtual IEnumerator Hit()
     {
         Hoon_AudioManager.instance.SFXHit1();
         sr.color = Color.red;
         DisableHitbox();
+        StartCoroutine(ShakeStatusUI());
+        StartCoroutine(ShakeCamera());
+
         yield return new WaitForSeconds(0.5f);
         sr.color = Color.white;
         EnableHitbox();
     }
+    private IEnumerator ShakeCamera()
+    {
+        // 메인 카메라와 원래 위치 가져오기
+        Camera mainCamera = Camera.main;
+        Vector3 originalPosition = new Vector3(0, 0, -10);
+        
+        float elapsed = 0f;
+        float duration = 0.3f;    // 카메라 흔들림 시간
+        float magnitude = 0.3f;   // 카메라 흔들림 강도
+        
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float percentComplete = elapsed / duration;
+            
+            // 시간이 지날수록 흔들림이 줄어듦
+            float damper = 1.0f - Mathf.Clamp01(percentComplete);
+            
+            // 랜덤한 흔들림 생성
+            float x = Random.Range(-1f, 1f) * magnitude * damper;
+            float y = Random.Range(-1f, 1f) * magnitude * damper;
+            
+            mainCamera.transform.position = new Vector3(
+                originalPosition.x + x,
+                originalPosition.y + y,
+                originalPosition.z
+            );
+            
+            yield return null;
+        }
+        
+        // 카메라 원위치
+        mainCamera.transform.position = originalPosition;
+    }
+
+    private IEnumerator ShakeStatusUI()
+    {
+        Vector3 originalPosition = StatusUI.transform.localPosition;
+        float elapsed = 0f;
+        float duration = 0.5f;  // 흔들림 지속 시간
+        float magnitude = 5f;   // 흔들림 강도
+        
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float percentComplete = elapsed / duration;
+            
+            // 시간이 지날수록 흔들림이 줄어듦
+            float damper = 1.0f - Mathf.Clamp01(percentComplete);
+            
+            // 랜덤한 흔들림 생성
+            float x = Random.Range(-1f, 1f) * magnitude * damper;
+            float y = Random.Range(-1f, 1f) * magnitude * damper;
+            
+            StatusUI.transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+            yield return null;
+        }
+        
+        // 원래 위치로 복귀
+        StatusUI.transform.localPosition = originalPosition;
+    }   
 }
