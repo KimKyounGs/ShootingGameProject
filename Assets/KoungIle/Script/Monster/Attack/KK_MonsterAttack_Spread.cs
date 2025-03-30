@@ -34,6 +34,8 @@ public class KK_MonsterAttack_Spread : MonoBehaviour, IMonsterAttack
             return;
         }
         
+
+        KK_SoundManager.Instance.PlayFX(10, 0.25f); // 발사 효과음
         // 중심 방향 : 플레이어를 바라보는 벡터
         Vector2 baseDir = (player.transform.position - transform.position).normalized;
 

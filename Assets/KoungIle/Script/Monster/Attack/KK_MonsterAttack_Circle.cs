@@ -19,7 +19,7 @@ public class KK_MonsterAttack_Circle : MonoBehaviour, IMonsterAttack
 
     void ShootCircle()
     {
-        KK_SoundManager.Instance.PlayFX(9); // 발사 효과음
+        KK_SoundManager.Instance.PlayFX(9,0.25f); // 발사 효과음
         for (int i = 0; i < bulletCount; i ++)
         {
             // 각도를 균등하게 나누고, 보정 각도 추가

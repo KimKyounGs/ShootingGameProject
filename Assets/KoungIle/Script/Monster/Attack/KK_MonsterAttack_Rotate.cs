@@ -31,7 +31,7 @@ public class KK_MonsterAttack_Rotate : MonoBehaviour, IMonsterAttack
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 float visualAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
                 bullet.transform.rotation = Quaternion.Euler(0, 0, visualAngle);
-                KK_SoundManager.Instance.PlayFX(7,0.5f); // 발사 효과음
+                KK_SoundManager.Instance.PlayFX(7,0.25f); // 발사 효과음
                 yield return new WaitForSeconds(fireRate);
             }
 

@@ -121,7 +121,7 @@ public class KK_Player : MonoBehaviour
                 spawnPos += offsetFromPrefab;
                 Instantiate(prefab, spawnPos, Quaternion.identity);
             }
-            KK_SoundManager.Instance.PlayFX(0, 0.5f); // 공격 브금 재생 및 사운드 조절
+            KK_SoundManager.Instance.PlayFX(0, 0.25f); // 공격 브금 재생 및 사운드 조절
             attackCoolTime = 0f;
         }
     }

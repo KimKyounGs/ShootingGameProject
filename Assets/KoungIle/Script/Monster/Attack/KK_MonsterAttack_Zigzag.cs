@@ -46,7 +46,7 @@ public class KK_MonsterAttack_Zigzag : MonoBehaviour, IMonsterAttack
             // 2. 기준 각도 구하기
             float baseAngle = Mathf.Atan2(dirToPlayer.y, dirToPlayer.x) * Mathf.Rad2Deg;
 
-            KK_SoundManager.Instance.PlayFX(6); // 발사 효과음
+            KK_SoundManager.Instance.PlayFX(6, 0.25f); // 발사 효과음
             
             for (int i = 0; i < bulletCount; i ++)
             {
