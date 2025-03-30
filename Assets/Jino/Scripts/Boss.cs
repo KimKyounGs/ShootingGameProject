@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     public Transform pos1;
     public Transform pos2;
     public GameObject finale;
+    bool Fallback = true;
 
     void Start()
     {
@@ -61,16 +62,28 @@ public class Boss : MonoBehaviour
     
     void Update()
     {
-        if (transform.position.x > 1)
+        if(Fallback)
         {
-            flag *= -1;
+            if (transform.position.x > 1)
+            {
+                flag *= -1;
+            }
+            if (transform.position.x < -1)
+            {
+                flag *= -1;
+            }
+
+            transform.Translate(flag * speed * Time.deltaTime, 0, 0);
         }
-        if (transform.position.x < -1)
+        else if(!Fallback)
         {
-            flag *= -1;
+            transform.Translate(new Vector3(0, 10f, 0) * 0.2f * Time.deltaTime);
+            if (transform.position.y > 8f)
+            {
+                Destroy(gameObject);
+            }
         }
 
-        transform.Translate(flag * speed * Time.deltaTime, 0, 0);
     }
 
     IEnumerator Move()
@@ -138,5 +151,6 @@ public class Boss : MonoBehaviour
     void Finale()
     {
         Instantiate(finale, transform.position, Quaternion.identity);
+        Fallback = false;
     }
 }
