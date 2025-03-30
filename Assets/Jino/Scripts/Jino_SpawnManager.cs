@@ -38,20 +38,39 @@ public class Jino_SpawnManager : MonoBehaviour
         Invoke("Lazer_L1", 27.3f);
         Invoke("Lazer_R1", 27.5f);
         StartCoroutine("Triple_Circling_R", 30f);
-        Invoke("Circling_MonsterL", 32.1f);
-        Invoke("Circling_MonsterR", 32.1f);
-        Invoke("Circling_MonsterL", 32.3f);
-        Invoke("Circling_MonsterR", 32.3f);
+        Invoke("Circling_MonsterL", 32.6f);
+        Invoke("Circling_MonsterR", 32.6f);
+        Invoke("Circling_MonsterLD", 32.8f);
+        Invoke("Circling_MonsterRD", 32.8f);
         Invoke("first_CrossLazer_L", 34.2f);
         Invoke("first_CrossLazer_R", 34.4f);
         Invoke("Lazer_R2", 38.8f);
-        Invoke("Lazer_R3", 38.95f);
-        Invoke("Lazer_R4", 39f);
+        Invoke("Lazer_R3", 39f);
+        Invoke("Lazer_R4", 39.2f);
         StartCoroutine("Triple_Circling_L", 44.3f);
         StartCoroutine("Triple_Circling_R", 44.3f);
         StartCoroutine("Triple_Circling_ld", 44.3f);
         StartCoroutine("Triple_Circling_rd", 44.3f);
         Invoke("MissileLine", 50.9f);
+        Invoke("Lining_Enemy_L", 50.8f);
+        Invoke("Circling_MonsterRD", 53.6f);
+        Invoke("Circling_MonsterRD", 53.7f);
+        Invoke("Circling_MonsterLD", 54.3f);
+        Invoke("Circling_MonsterLD", 54.4f);
+        Invoke("MissileLine", 58.7f);
+        Invoke("Lazer_L2", 60.45f);
+        Invoke("Lazer_R5", 60.75f);
+        Invoke("Circling_MonsterLD", 65.2f);
+        Invoke("Circling_MonsterRD", 65.2f);
+        Invoke("Circling_MonsterL", 65.5f);
+        Invoke("Circling_MonsterR", 65.5f);
+        Invoke("MissileLine", 68f);
+        Invoke("Lazer_L2", 67.8f);
+        Invoke("Lazer_R4", 68.6f);
+        Invoke("Lazer_L2", 69.6f);
+        Invoke("Lazer_R4", 70.4f);
+        Invoke("Lazer_L2", 71.4f);
+        Invoke("Lazer_R4", 72.2f);
     }
 
     void MissileLine()
@@ -87,6 +106,16 @@ public class Jino_SpawnManager : MonoBehaviour
         Instantiate(SideLazer_R, new Vector3(4f, -3.8f), Quaternion.identity);
     }
 
+    void Lazer_L2()
+    {
+        Instantiate(SideLazer_L, new Vector3(-4f, -4.5f), Quaternion.identity);
+    }
+
+    void Lazer_R5()
+    {
+        Instantiate(SideLazer_R, new Vector3(4f, -2.8f), Quaternion.identity);
+    }
+
     void Lining_Enemy_L()
     {
         Vector2 start = new Vector2(-4f, -4.5f);
@@ -112,11 +141,6 @@ public class Jino_SpawnManager : MonoBehaviour
     {
         Vector2 start = new Vector2(3.4f, 7.4f);
         Instantiate(CrossLazer_R, start, Quaternion.identity);
-    }
-
-    void Circling_Missile_l()
-    {
-        Instantiate(Circling_Missile_L, new Vector3(-2.8f, 0, 0), Quaternion.identity);
     }
 
     IEnumerator Triple_Circling_L(float delay)
@@ -146,11 +170,6 @@ public class Jino_SpawnManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Circling_Missile_L missile3 = Instantiate(Circling_Missile_LD, new Vector3(-2.8f, 4f, 0), Quaternion.identity).GetComponent<Circling_Missile_L>();
         missile3.SetDown(true);
-    }
-
-    void Circling_Missile_r()
-    {
-        Instantiate(Circling_Missile_R, new Vector3(2.8f, 0, 0), Quaternion.identity);
     }
 
     IEnumerator Triple_Circling_R(float delay)

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -72,10 +73,32 @@ public class Player : MonoBehaviour
             }
         }
 
+        StartCoroutine("MoveBeyond", 78f);
+
         Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
         viewPos.x = Mathf.Clamp01(viewPos.x);
         viewPos.y = Mathf.Clamp01(viewPos.y);
         Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);
         transform.position = worldPos;
+    }
+
+    IEnumerator MoveBeyond(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        float moveDuration = 2f;
+        float elapsed = 0f;
+        Vector3 startPos = transform.position;
+        ani.SetBool("left", false);
+        ani.SetBool("right", false);
+        Vector3 TopPos = new Vector3(0, 8f, 0);
+        Vector3 BottomPos = new Vector3(0, -3.89f, 0);
+
+        while (elapsed < moveDuration)
+        {
+            transform.position = Vector3.Lerp(startPos, TopPos, elapsed / moveDuration);
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }

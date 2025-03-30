@@ -20,12 +20,12 @@ public class deepseaTooth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player"))  // Player 태그 확인
         {
+            // 아이템 획득 처리
             Destroy(gameObject);
             Hoon_AudioManager.instance.SFXGetItem();
             ItemManager.instance.ObtainItem("Deep Sea Tooth");
         }
-
     }
 }

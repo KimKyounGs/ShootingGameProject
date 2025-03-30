@@ -10,17 +10,13 @@ public class gorebyss : MonoBehaviour
     private GameObject player;
     private Vector3 targetPosition;
     private SpriteRenderer playerSprite;
-    private CapsuleCollider2D playerCollider;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null)
         {
-            // 플레이어의 SpriteRenderer와 Collider2D 컴포넌트 가져오기
             playerSprite = player.GetComponent<SpriteRenderer>();
-            playerCollider = player.GetComponent<CapsuleCollider2D>();
-
             Hoon_AudioManager.instance.SFXHeal();
 
             // 플레이어 스프라이트 색상을 핑크색으로 변경
@@ -28,38 +24,38 @@ public class gorebyss : MonoBehaviour
             {
                 playerSprite.color = new Color(1f, 0.5f, 0.8f, 1f); // 핑크색
             }
-            else
+            Hoon_Player currentPlayer = player.GetComponent<Hoon_Player>();
+            if (currentPlayer != null)
             {
-                player = GameObject.FindGameObjectWithTag("Player");
-                playerSprite = player.GetComponent<SpriteRenderer>();
-                playerSprite.color = new Color(1f, 0.5f, 0.8f, 1f); // 핑크색
+                // 무적 설정
+                currentPlayer.SetInvincible(true);
+                
+                // 체력 회복 처리
+                float playerHP = currentPlayer.HP;
+                float playerMaxHP = currentPlayer.maxHP;
+                float healAmount = 20f;
+
+                
+                if (playerMaxHP - playerHP > 20)
+                {
+                    currentPlayer.HPLeftUI.text = $"DEAD: {playerHP} / {playerMaxHP}";
+                }
+                else if (playerMaxHP - playerHP >= healAmount)
+                {
+                    // 20만큼 회복
+                    currentPlayer.HP += healAmount;
+                    playerHP = currentPlayer.HP;
+                    currentPlayer.HPLeftUI.text = $"{playerHP} / {playerMaxHP}";
+                }
+                else if (playerMaxHP - playerHP > 0)
+                {
+                    // 최대체력까지만 회복
+                    currentPlayer.HP = currentPlayer.maxHP;
+                    playerHP = currentPlayer.HP;
+                    currentPlayer.HPLeftUI.text = $"{playerHP} / {playerMaxHP}";
+                }
+                
             }
-
-            if (playerCollider != null)
-            {
-                playerCollider.enabled = false;
-            }
-        }
-
-        float playerHP = Hoon_Player.instance.HP;
-        float playerMaxHP = Hoon_Player.instance.maxHP;
-
-        if (playerMaxHP - playerHP >= 20)
-        {
-            Hoon_Player.instance.HP += 20;
-            playerHP = Hoon_Player.instance.HP;
-            Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
-
-        }
-        else if(playerMaxHP - playerHP <= 0)
-        {
-            Hoon_Player.instance.HPLeftUI.text = ($"DEAD: {playerHP} / {playerMaxHP}");
-        }
-        else if(playerMaxHP - playerHP <= 20)
-        {
-            Hoon_Player.instance.HP = Hoon_Player.instance.maxHP;
-            playerHP = Hoon_Player.instance.HP;
-            Hoon_Player.instance.HPLeftUI.text = ($"{playerHP} / {playerMaxHP}");
         }
     }
     void OnDestroy()
@@ -71,10 +67,11 @@ public class gorebyss : MonoBehaviour
             {
                 playerSprite.color = Color.white; // 원래 색상으로 복구
             }
-            
-            if (playerCollider != null)
+
+            Hoon_Player currentPlayer = player.GetComponent<Hoon_Player>();
+            if (currentPlayer != null)
             {
-                playerCollider.enabled = true; // 콜라이더 다시 활성화
+                currentPlayer.SetInvincible(false);
             }
         }
     }

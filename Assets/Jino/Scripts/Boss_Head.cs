@@ -27,6 +27,7 @@ public class Boss_Head : MonoBehaviour
         Invoke("DownLaunch", 39.5f);
         Invoke("DownLaunch", 41.1f);
         Invoke("DownLaunch", 41.3f);
+        Invoke("DownLaunch", 52.8f);
     }
 
     public void RightDownLaunch()

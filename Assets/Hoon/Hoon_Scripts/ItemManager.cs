@@ -201,7 +201,7 @@ public class ItemManager : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject go = Instantiate(gorebyss, player.transform.position + new Vector3(2f, 3f, 0), Quaternion.identity);
-        Destroy(go, 10f);        
+        Destroy(go, 8f);        
 
         yield return new WaitForSeconds(0.5f);
         

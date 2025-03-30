@@ -27,7 +27,7 @@ public class Whirl : MonoBehaviour
             Hoon_Player player = collision.gameObject.GetComponent<Hoon_Player>();
             if (player != null)
             {
-                player.Damage(2);
+                player.Damage(1);
             }
             Destroy(gameObject);
         }

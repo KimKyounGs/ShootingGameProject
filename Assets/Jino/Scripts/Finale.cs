@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -19,10 +20,10 @@ public class Finale : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, new Vector3(0, 0, 0), speed * Time.deltaTime);
 
-        if(transform.position.y <0.2f)
+        if(transform.position.y <0.2f && !explosion)
         {
             explosion = true;
-            Fireworks();
+            StartCoroutine(TriggerFireworks());
         }
     }
 
@@ -43,8 +44,15 @@ public class Finale : MonoBehaviour
                 GameObject bullet = Instantiate(finaleBulletPrefab, Vector2.zero, Quaternion.identity);
                 bullet.GetComponent<Finale_Bullet>().SetDirection(direction);
             }
-
-            Destroy(gameObject);
         }
+    }
+    IEnumerator TriggerFireworks()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Fireworks();
+            yield return new WaitForSeconds(0.2f);
+        }
+        Destroy(gameObject);
     }
 }

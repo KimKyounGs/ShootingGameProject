@@ -67,19 +67,21 @@ public class Gyarados : Hoon_Player
     public GameObject waterfall;
     protected override void Shoot()
     {
-        base.Shoot();
-        // 발사 시작할 때만 효과음 재생 시작
+        // 무적 상태와 관계없이 효과음 처리
         if (!isBreathSoundPlaying)
         {
             isBreathSoundPlaying = true;
             Hoon_AudioManager.instance.PlayLoopingDragonBreath(true);
         }
+        
+        // 발사 로직
+        base.Shoot();
     }
 
     void Skill()
     {
         Hoon_AudioManager.instance.SFXDragonRage1();
-
+        
         if(Bullet[1] != null)
         {
             StartCoroutine(SkillCooldown());
@@ -109,20 +111,23 @@ public class Gyarados : Hoon_Player
             lastMoveDirection = new Vector2(moveX, moveY).normalized;
         }
 
-        DisableHitbox();
-        
+        // 대시 시작시 무적 상태로 설정
+        SetInvincible(true);
+
+        // 대시 관련 변수들
         float dashSpeed = speed * 2f;
         float dashTime = 0.2f;
         float startTime = Time.time;
         float lastEffectTime = startTime;
 
+        // 대시 진행
         while (Time.time - startTime < dashTime)
         {
-            // 현재 위치에 이펙트 생성
+            // 이펙트 생성
             if (Time.time - lastEffectTime >= effectDashInterval)
             {
                 GameObject effect = Instantiate(waterfall, transform.position + new Vector3(Random.Range(-0.25f, 0.25f), Random.Range(-0.25f, 0.25f), 0), Quaternion.identity);
-                Destroy(effect, 0.5f); // 0.5초 후 이펙트 제거
+                Destroy(effect, 0.5f);
                 lastEffectTime = Time.time;
             }
 
@@ -131,7 +136,9 @@ public class Gyarados : Hoon_Player
         }
         
         yield return new WaitForSeconds(0.6f);
-        EnableHitbox();
+
+        // 대시 종료 후 무적 해제
+        SetInvincible(false);
     }
 
     protected override void Update()
