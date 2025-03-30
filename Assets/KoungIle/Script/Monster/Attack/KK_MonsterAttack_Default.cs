@@ -18,7 +18,7 @@ public class KK_MonsterAttack_Default : MonoBehaviour, IMonsterAttack
 
     void Shoot()
     {
-        KK_SoundManager.Instance.PlayFX(10); // 발사 효과음
+        KK_SoundManager.Instance.PlayFX(10, 0.25f); // 발사 효과음
         GameObject tempBullet = Instantiate(bulletPrefab, bulletPos.position, Quaternion.identity);
         tempBullet.transform.rotation = Quaternion.Euler(0, 0, -90);
     }

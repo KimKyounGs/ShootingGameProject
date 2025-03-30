@@ -42,7 +42,7 @@ public class KK_MonsterAttack_Laser : MonoBehaviour, IMonsterAttack
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
         // 1.효과음 생성
-        KK_SoundManager.Instance.PlayFX(11);
+        KK_SoundManager.Instance.PlayFX(11, 0.25f);
 
         // 2. 효과음 유지
         yield return new WaitForSeconds(chargeTime);
