@@ -24,6 +24,14 @@ public class BossBGM : MonoBehaviour
     {
         myAudio = GetComponent<AudioSource>();        
     }
+    // private void ResetCamera()
+    // {
+    //     Camera mainCamera = Camera.main;
+    //     if (mainCamera != null)
+    //     {
+    //         mainCamera.transform.position = new Vector3(0, 0, -10f);
+    //     }
+    // }
 
     public void PlayBGM()
     {
@@ -36,63 +44,55 @@ public class BossBGM : MonoBehaviour
 
     public void StartWinTimeline()
     {
-        StartCoroutine(VictoryShake());
+        StartCoroutine(StartWinSequence());
+    }
+    private IEnumerator StartWinSequence()
+    {
         WinTimeline.Play();
         Time.timeScale = 0;
-    }
-    private IEnumerator StartHallOfFameSequence()
-    {
-        // 먼저 카메라 흔들기 효과 실행 및 완료 대기
-        yield return StartCoroutine(VictoryShake());
         
-        // 카메라 흔들림이 완전히 끝난 후 타임라인 재생
-        HallOfFameTimeline.Play();
-        ResetPlayerColor();
-        Time.timeScale = 0;
-    }
-
-    private IEnumerator VictoryShake()
-    {
-        // 메인 카메라와 원래 위치 가져오기
         Camera mainCamera = Camera.main;
-        Vector3 originalPosition = new Vector3(0,0, -10f);
+        Vector3 originalPosition = new Vector3(0, 0, -10f);
         mainCamera.transform.position = originalPosition;
-
         
         float elapsed = 0f;
-        float duration = 1.5f;     // 카메라 흔들림 시간
-        float magnitude = 0.5f;  // 카메라 흔들림 강도
+        float duration = 7.133f;    
+        float magnitude = 0.5f;    
         
-        while (elapsed < duration)
+        // 타임라인 시작 시간 저장
+        double startTime = WinTimeline.time;
+
+        while (WinTimeline.time - startTime < duration)
         {
-            elapsed += Time.unscaledDeltaTime; // TimeScale이 0일 때도 작동하도록
-            float percentComplete = elapsed / duration;
+            elapsed += Time.unscaledDeltaTime;
+
+            float remainingTime = duration - (float)(WinTimeline.time - startTime);
+            float currentMagnitude = magnitude * (remainingTime / duration);
             
-            // 시간이 지날수록 흔들림이 강해짐
-            float intensifier = Mathf.Clamp01(percentComplete);
-            
-            // 랜덤한 흔들림 생성
-            float x = Random.Range(-1f, 1f) * magnitude * intensifier;
-            float y = Random.Range(-1f, 1f) * magnitude * intensifier;
-            
+            float x = Random.Range(-1f, 1f) * currentMagnitude;
+            float y = Random.Range(-1f, 1f) * currentMagnitude;
+                
             mainCamera.transform.position = new Vector3(
                 originalPosition.x + x,
                 originalPosition.y + y,
                 originalPosition.z
             );
+            
+            yield return null;
         }
+    
+    // 카메라 원위치
+    StopAllCoroutines();
+    mainCamera.transform.position = originalPosition;
 
-        // 카메라 원위치
-        mainCamera.transform.position = originalPosition;
-        yield return null;
-
-    }
-
-
+}
     public void StartHallOfFame()
-    {       
-        StartCoroutine(StartHallOfFameSequence());
-    }
+    {   
+        StopAllCoroutines(); // 이전 코루틴 완전히 정지    
+        Camera.main.transform.position = new Vector3(0, 0, -10f); // 카메라 강제 초기화
+        HallOfFameTimeline.Play();
+        ResetPlayerColor();
+        Time.timeScale = 0;    }
 
     void ResetPlayerColor()
     {
@@ -132,8 +132,25 @@ public class BossBGM : MonoBehaviour
 
     public void MoveForward()
     {
-        StartCoroutine(MoveBeyond());
+        StartCoroutine(EndMove());
     }
+    IEnumerator EndMove()
+    {
+        float moveDuration = 2f;
+        float elapsed = 0f;
+        Vector3 startPos = GameObject.FindWithTag("Player").GetComponent<Transform>().position;
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Down", false);
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Right", false);
+        GameObject.FindWithTag("Player").GetComponent<Hoon_Player>().ani.SetBool("Left", false);
+        Vector3 TopPos = new Vector3(0, 6.5f, 0);
+        while (elapsed < moveDuration)
+        {
+            GameObject.FindWithTag("Player").GetComponent<Transform>().position = Vector3.Lerp(startPos, TopPos, elapsed / moveDuration);
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+    }
+
     IEnumerator MoveBeyond()
     {
         float moveDuration = 2f;

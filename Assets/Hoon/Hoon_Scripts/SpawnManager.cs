@@ -19,7 +19,7 @@ public class SpawnManager : MonoBehaviour
     {
         InvokeRepeating("SpawnLuvdisc", 5, 5f);
         InvokeRepeating("SpawnCarvanha", 1, 0.5f);
-        InvokeRepeating("SpawnMantine", 10, 3f);
+        InvokeRepeating("SpawnMantine", 3, 6f);
         InvokeRepeating("SpawnSharpedo", 20, 2f);
         Invoke("SpawnClampearl", 5);
         Invoke("SpawnClampearl", 10);

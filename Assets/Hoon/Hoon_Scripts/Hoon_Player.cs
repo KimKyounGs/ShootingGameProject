@@ -274,7 +274,6 @@ public class Hoon_Player : MonoBehaviour
         Hoon_AudioManager.instance.SFXHit1();
         sr.color = Color.red;
         DisableHitbox();
-        StartCoroutine(ShakeStatusUI());
         StartCoroutine(ShakeCamera());
 
         yield return new WaitForSeconds(0.5f);
@@ -316,30 +315,4 @@ public class Hoon_Player : MonoBehaviour
         mainCamera.transform.position = originalPosition;
     }
 
-    private IEnumerator ShakeStatusUI()
-    {
-        Vector3 originalPosition = StatusUI.transform.localPosition;
-        float elapsed = 0f;
-        float duration = 0.5f;  // 흔들림 지속 시간
-        float magnitude = 5f;   // 흔들림 강도
-        
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            float percentComplete = elapsed / duration;
-            
-            // 시간이 지날수록 흔들림이 줄어듦
-            float damper = 1.0f - Mathf.Clamp01(percentComplete);
-            
-            // 랜덤한 흔들림 생성
-            float x = Random.Range(-1f, 1f) * magnitude * damper;
-            float y = Random.Range(-1f, 1f) * magnitude * damper;
-            
-            StatusUI.transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
-            yield return null;
-        }
-        
-        // 원래 위치로 복귀
-        StatusUI.transform.localPosition = originalPosition;
-    }   
 }

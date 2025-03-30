@@ -35,7 +35,12 @@ public class gorebyss : MonoBehaviour
                 float playerMaxHP = currentPlayer.maxHP;
                 float healAmount = 20f;
 
-                if (playerMaxHP - playerHP >= healAmount)
+                
+                if (playerMaxHP - playerHP > 20)
+                {
+                    currentPlayer.HPLeftUI.text = $"DEAD: {playerHP} / {playerMaxHP}";
+                }
+                else if (playerMaxHP - playerHP >= healAmount)
                 {
                     // 20만큼 회복
                     currentPlayer.HP += healAmount;
@@ -49,10 +54,7 @@ public class gorebyss : MonoBehaviour
                     playerHP = currentPlayer.HP;
                     currentPlayer.HPLeftUI.text = $"{playerHP} / {playerMaxHP}";
                 }
-                else if (playerMaxHP - playerHP > 20)
-                {
-                    currentPlayer.HPLeftUI.text = $"DEAD: {playerHP} / {playerMaxHP}";
-                }
+                
             }
         }
     }
