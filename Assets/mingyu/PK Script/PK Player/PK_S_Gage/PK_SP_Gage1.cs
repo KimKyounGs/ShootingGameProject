@@ -9,7 +9,7 @@ public class PK_SP_Gage1 : MonoBehaviour
 
     void Start()
     {
-        
+        PK_SoundManager.instance.PlayerSwould2();
     }
 
 

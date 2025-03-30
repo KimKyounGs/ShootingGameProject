@@ -1,12 +1,15 @@
 using UnityEngine;
-using System.Collections;
 
-public class PK_Warning : MonoBehaviour
+using System.Collections;
+using System.Threading;
+using UnityEngine.SceneManagement;
+
+public class PK_TImeLine_5 : MonoBehaviour
 {
+
 
     void Start()
     {
-        PK_SoundManager.instance.Boss_WArning();
     }
 
 
@@ -18,7 +21,7 @@ public class PK_Warning : MonoBehaviour
 
      IEnumerator StartGame()
     {
-        int i = 2;
+        int i = 8;
 
         Time.timeScale = 0;
 
@@ -28,10 +31,10 @@ public class PK_Warning : MonoBehaviour
             yield return new WaitForSecondsRealtime(1); //게임이 멈춰도 동작하는 대기
             i--;
 
-            if (i == 0)
+            if (i == 4)
             {
-                gameObject.SetActive(false);
-                Time.timeScale = 1;
+                // 씬 전환
+                SceneManager.LoadScene("KyoungIleScean");
             }
         }
 

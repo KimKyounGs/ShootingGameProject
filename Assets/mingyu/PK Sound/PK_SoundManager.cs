@@ -8,6 +8,8 @@ public class PK_SoundManager : MonoBehaviour
     AudioSource myAudio;
 
     public AudioClip Player_Swould;
+
+    public AudioClip Player_Swould2;
     public AudioClip S_Gage_C;
     public AudioClip S_Gage_F;
 
@@ -38,6 +40,10 @@ public class PK_SoundManager : MonoBehaviour
     public AudioClip MB_bullet2;
     public AudioClip MB_bullet2_1;
 
+    public AudioClip Boss_Warning;
+
+    public AudioClip EndGame;
+
     public void Awake()
     {
         if (PK_SoundManager.instance == null)
@@ -55,6 +61,11 @@ public class PK_SoundManager : MonoBehaviour
     public void PlayerSwould()
     {
         myAudio.PlayOneShot(Player_Swould , 0.5f);
+    }
+
+    public void PlayerSwould2()
+    {
+        myAudio.PlayOneShot(Player_Swould2 , 0.5f);
     }
 
     public void S_Gage_Cool()
@@ -154,4 +165,14 @@ public class PK_SoundManager : MonoBehaviour
     {
         myAudio.PlayOneShot(MB_Shadow_Off);
     }   
+
+    public void Boss_WArning()
+    {
+        myAudio.PlayOneShot(Boss_Warning , 0.5f);
+    }
+
+    public void Endgame()
+    {
+        myAudio.PlayOneShot(EndGame , 0.5f);
+    }
 }

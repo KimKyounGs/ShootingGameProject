@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class PK_Boss : MonoBehaviour
 {
-    float B_HP = 1000;
+    public float B_HP = 800;
     public bool Boos_Blood = false; //보스 피가 반이하로 떨어지면 true로 바뀜
 
-
+    public GameObject End;
+    public GameObject Boss_HPB; //보스 피바를 위한 오브젝트
     public GameObject Bullet_1;
     public GameObject Bullet_2;
     public GameObject Bullet_3;
@@ -24,10 +25,9 @@ public class PK_Boss : MonoBehaviour
     public int attack_chose = 0;
     public float cool_time1 = 0;
     public float cool_time2 = 0;
-
+    bool B_HPP = true; //보스 피바를 위한 오브젝트 활성화
     float boss_attack_time = 3; //보스 공격 주기
 
-int dtd = 1;
     private void Update()
     {
         cool_time1 += Time.deltaTime;
@@ -87,10 +87,16 @@ int dtd = 1;
         }
 
 
-        if (B_HP <= 500)
+        if (B_HP <= 400)
         {
             Boos_Blood = true;
             Boss_Spawn.gameObject.SetActive(true);
+            if (B_HPP == true)
+            {
+                Boss_HPB.SetActive(true); //보스 피바를 위한 오브젝트 활성화
+                B_HPP = false; //보스 피바를 위한 오브젝트 활성화
+            }
+            
         }
 
     }
@@ -113,7 +119,7 @@ int dtd = 1;
         if (Boos_Blood == true)
         {
             skill_1_SP_cool_time = 0.08f;
-            skill_1_SP_Turn = 6;
+            skill_1_SP_Turn = 4;
         }
 
 
@@ -390,10 +396,32 @@ int dtd = 1;
     public void Damage(int attack)  //플레이어에게 데미지를 입는 함수
     {
         B_HP -= attack;
+        Debug.Log("보스 피 : " + B_HP);
         if (B_HP <= 0)
         {
+            StopMainCameraAudio(); // 메인 카메라의 오디오 정지
+            
+            End.SetActive(true); //게임 오버 화면 활성화
+            PK_SoundManager.instance.Endgame();
+            cool_time1 = -99999;
             Boss_Spawn.gameObject.SetActive(false);
-            Destroy(gameObject);
+        }
+    }
+
+    void StopMainCameraAudio()
+    {
+        // 메인 카메라의 AudioSource 가져오기
+        AudioSource cameraAudio = Camera.main.GetComponent<AudioSource>();
+
+        if (cameraAudio != null)
+        {
+            // 오디오 정지
+            cameraAudio.Stop();
+            Debug.Log("메인 카메라의 오디오가 멈췄습니다.");
+        }
+        else
+        {
+            Debug.LogError("메인 카메라에 AudioSource가 없습니다.");
         }
     }
 }

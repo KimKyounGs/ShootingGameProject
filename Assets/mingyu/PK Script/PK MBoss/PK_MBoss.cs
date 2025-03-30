@@ -8,7 +8,7 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class PK_MBoss : MonoBehaviour
 {
-    
+    public GameObject Boss_HPB; //보스 피바를 위한 오브젝트
     private SpriteRenderer spriteRenderer; // 스프라이트 렌더러
     public float fadeSpeed = 1f; // 색깔이 줄어드는 속도
     public GameObject targetObject1; // 타겟 오브젝트
@@ -29,11 +29,11 @@ public class PK_MBoss : MonoBehaviour
     private float time = 0f;
     public bool playerMove = true; // 플레이어 이동 여부
 
+    bool BPP = true;
 
 
 
-
-    float B_HP = 500;
+    float B_HP = 300;
     bool Boos_Blood = false;
     bool boss_attack = true;
     public int attack_chose = 0;
@@ -148,10 +148,15 @@ if(time > 3f)
         }
 
 
-        if (B_HP <= 250)
+        if (B_HP <= 150)
         {
             Boos_Blood = true;
             c = 3;
+            if (BPP == true)
+            {
+                Boss_HPB.SetActive(true); //보스 피바를 위한 오브젝트 활성화
+                BPP = false; //보스 피바를 위한 오브젝트 활성화
+            }
         }
 
 
