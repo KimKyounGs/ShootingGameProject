@@ -25,7 +25,6 @@ public class PK_Monster_Bullet2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PK_Player>().Damage(+1);
 
             //미사일지우기
             Destroy(gameObject);
