@@ -1,6 +1,8 @@
 using System.Collections;
 using TMPro;
+#if UNITY_EDITOR
 using UnityEditor.Timeline.Actions;
+#endif
 using UnityEngine;
 
 public class PK_Boss : MonoBehaviour

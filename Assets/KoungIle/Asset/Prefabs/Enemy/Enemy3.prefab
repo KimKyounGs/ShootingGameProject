@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 800371539382878632, guid: 92a05fc77f168f54da3bedbbe45407de, type: 3}
   bulletPos: {fileID: 7296215068009923678}
-  delay: 1
+  delay: 0.5
 --- !u!1 &8983461849364428761
 GameObject:
   m_ObjectHideFlags: 0

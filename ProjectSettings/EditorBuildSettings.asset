@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Jino/Scene/Jino_Scene.unity
+    guid: f5e7a68997c890545baf99510de3fd7a
+  - enabled: 1
+    path: Assets/min/Scene/MJ.unity
+    guid: e282c858e408ca74ab0c6a8b5e733101
+  - enabled: 1
+    path: Assets/mingyu/PK sin/PK_Scene.unity
+    guid: 5b439ff7790070b488a57bf0dedc2a23
+  - enabled: 1
+    path: Assets/KoungIle/KyoungIleScean.unity
+    guid: 4665bf7dfbc002749b9321ee6ce62229
+  - enabled: 1
     path: Assets/Hoon/Hoon_Stage.unity
     guid: b9965a86cad8c4b73b25afc9bd365161
   m_configObjects:

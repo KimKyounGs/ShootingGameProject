@@ -254,11 +254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290e92b63b7d2a0459e49f9f62e09db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
+  maxHP: 3000
   canAttack: 00000000
   attackCount: 2
   phase2Threshold: 0.7
   phase3Threshold: 0.4
+  isDead: 0
 --- !u!114 &5818734218846461219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +291,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3608887515924841787, guid: 97a9e2a767c34bb488fe29c1e74df7ac, type: 3}
   bulletCount: 10
   fireRate: 3
+  bulletPos: {fileID: 0}
 --- !u!114 &5602764222451867966
 MonoBehaviour:
   m_ObjectHideFlags: 0

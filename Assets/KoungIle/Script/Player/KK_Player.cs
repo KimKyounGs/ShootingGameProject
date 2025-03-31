@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class KK_Player : MonoBehaviour
 {   
@@ -54,6 +56,7 @@ public class KK_Player : MonoBehaviour
         KK_UIManager.Instance.UpdatePowerUI(power); 
     }
 
+
     void Update()
     {
         Move();
@@ -72,7 +75,6 @@ public class KK_Player : MonoBehaviour
             bplayerInvincibility = true;
         }
     }
-
     void Move()
     {
         // 플레이어 이동

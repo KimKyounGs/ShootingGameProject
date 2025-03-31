@@ -114,6 +114,7 @@ public class KK_SpawnManaer : MonoBehaviour
     {
         if (isBossSpawned) return;
 
+        KK_SoundManager.Instance.PlayBGM(1); // 보스 소환 효과음
         isBossSpawned = true;
         textBossWarning.SetActive(true);
         Destroy(textBossWarning, 2.5f);

@@ -19,7 +19,6 @@ public class KK_SoundManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -47,11 +46,14 @@ public class KK_SoundManager : MonoBehaviour
     public void PlayBGM(int index)
     {
         if (index < 0 || index >= bgmClips.Length) return;
-        if (bgmSource.clip == bgmClips[index]) return;
+        if (bgmSource.isPlaying)
+        {
+            bgmSource.Stop(); // 현재 재생 중이면 즉시 정지
+        }
 
         bgmSource.clip = bgmClips[index];
         bgmSource.loop = true;
-        bgmSource.Play();
+        bgmSource.Play(); // 새로운 음악 재생
     }
 
     public void StopBGM() => bgmSource.Stop();
