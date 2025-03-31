@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Jino/Scene/Jino_Scene.unity
     guid: f5e7a68997c890545baf99510de3fd7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/min/Scene/MJ.unity
     guid: e282c858e408ca74ab0c6a8b5e733101
   - enabled: 1
