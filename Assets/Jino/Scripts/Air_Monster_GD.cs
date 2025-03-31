@@ -36,7 +36,7 @@ public class Air_Monster_GD : MonoBehaviour
     void MoveInSineWave()
     {
         // 각도 증가
-        angle += FlySpeed * Time.timeScale;
+        angle += FlySpeed * Time.deltaTime;
 
         float radian = angle * Mathf.Deg2Rad;
 
@@ -50,7 +50,7 @@ public class Air_Monster_GD : MonoBehaviour
     void MoveInCosineWave()
     {
         // 각도 증가
-        angle += FlySpeed * Time.timeScale;
+        angle += FlySpeed * Time.deltaTime;
 
         float radian = angle * Mathf.Deg2Rad;
 
