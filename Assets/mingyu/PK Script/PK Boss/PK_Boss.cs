@@ -4,11 +4,14 @@ using TMPro;
 using UnityEditor.Timeline.Actions;
 #endif
 using UnityEngine;
+using UnityEngine.Playables;
+
 
 public class PK_Boss : MonoBehaviour
 {
     public float B_HP = 800;
     public bool Boos_Blood = false; //보스 피가 반이하로 떨어지면 true로 바뀜
+    public PlayableDirector EndTimeline;
 
     public GameObject End;
     public GameObject Boss_HPB; //보스 피바를 위한 오브젝트
@@ -406,7 +409,9 @@ public class PK_Boss : MonoBehaviour
             End.SetActive(true); //게임 오버 화면 활성화
             PK_SoundManager.instance.Endgame();
             cool_time1 = -99999;
+            
             Boss_Spawn.gameObject.SetActive(false);
+            EndTimeline.Play();
         }
     }
 

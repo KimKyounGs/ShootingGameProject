@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 
 public class Player : MonoBehaviour
@@ -17,17 +18,18 @@ public class Player : MonoBehaviour
     public float rValue = 0f;
     public Image Gage;
     bool Ready = true;
-
+    public bool startGame = false;
+    
 
     void Start()
     {
         ani = GetComponent<Animator>();
-
     }
 
 
     void Update()
     {
+        
         float moveX = moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
         float moveY = moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 

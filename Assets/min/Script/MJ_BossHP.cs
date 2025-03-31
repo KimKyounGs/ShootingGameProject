@@ -10,15 +10,10 @@ public class MJ_BossHP : MonoBehaviour
     private float currentHP;
     private bool isDead = false; // 몬스터가 죽었는지 체크
 
-    public GameObject clearPanel; // 클리어 메시지 패널
 
     void Start()
     {
         currentHP = maxHP;
-        if (clearPanel != null)
-        {
-            clearPanel.SetActive(false); // 시작 시 비활성화
-        }
     }
 
     public void TakeDamage(float damage)
@@ -50,13 +45,7 @@ public class MJ_BossHP : MonoBehaviour
         {
             col.enabled = false;
         }
-
-        // 클리어 패널 활성화
-        if (clearPanel != null)
-        {
-            clearPanel.SetActive(true);
-        }
-
+        MJ_Pllayer.instance.ClearOn();
         // 3초 후에 다음 씬 로드
         Invoke("LoadNextScene", 3f);
 

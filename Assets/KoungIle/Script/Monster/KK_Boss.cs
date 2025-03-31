@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KK_Boss : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class KK_Boss : MonoBehaviour
 
     private IMonsterAttack[] attackPatterns;
     private IMonsterMove movePattern;
+    public Image screenUI;
+    public Text clearText;
 
     void Awake()
     {
@@ -127,6 +130,7 @@ public class KK_Boss : MonoBehaviour
     {
         isDead = true;
         Debug.Log("보스 사망!");
+        
         // 폭발 이펙트, 클리어 UI 등 처리
         StartCoroutine("DestroyBoss");
     }

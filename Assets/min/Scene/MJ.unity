@@ -592,6 +592,8 @@ MonoBehaviour:
   - {fileID: 987735077234792010, guid: 441147b268b06b14a98ba22caf42d807, type: 3}
   - {fileID: 526881037836060827, guid: ae97b91e64c357d47a5a5ae3168d1b71, type: 3}
   pos: {fileID: 2052989005}
+  clearPanel: {fileID: 1334504285}
+  clearText: {fileID: 1019313680}
   powerup: {fileID: 5319675962343012076, guid: 411dc591a7ba3104db2046103323aeb4, type: 3}
   power: 0
 --- !u!61 &595972921
@@ -1718,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1334504284
 RectTransform:
   m_ObjectHideFlags: 0

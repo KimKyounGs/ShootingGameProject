@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 
 public class BossBGM : MonoBehaviour
@@ -24,14 +25,6 @@ public class BossBGM : MonoBehaviour
     {
         myAudio = GetComponent<AudioSource>();        
     }
-    // private void ResetCamera()
-    // {
-    //     Camera mainCamera = Camera.main;
-    //     if (mainCamera != null)
-    //     {
-    //         mainCamera.transform.position = new Vector3(0, 0, -10f);
-    //     }
-    // }
 
     public void PlayBGM()
     {
@@ -90,9 +83,13 @@ public class BossBGM : MonoBehaviour
     {   
         StopAllCoroutines(); // 이전 코루틴 완전히 정지    
         Camera.main.transform.position = new Vector3(0, 0, -10f); // 카메라 강제 초기화
-        HallOfFameTimeline.Play();
+        // HallOfFameTimeline.Play();
         ResetPlayerColor();
-        Time.timeScale = 0;    }
+        
+        SceneManager.LoadScene("HallOfFame");
+
+        Time.timeScale = 0;
+    }
 
     void ResetPlayerColor()
     {

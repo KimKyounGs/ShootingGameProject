@@ -9,7 +9,7 @@ public class PK_Player : MonoBehaviour
     public float Speed = 5.0f;
 
     // 플레이어 체력
-    public int P_HP = 1000;
+    public int P_HP = 10000;
 
     // 총알 및 발사 위치
     public GameObject[] bullet;

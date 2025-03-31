@@ -1,9 +1,12 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MJ_Pllayer : MonoBehaviour
 {
-
+    public static MJ_Pllayer instance;
     public float moveSpeed = 5f;
 
     Animator animator; //애니메이터 생성
@@ -12,15 +15,31 @@ public class MJ_Pllayer : MonoBehaviour
 
     public GameObject[] bullet;  //총알 4개 배열
     public Transform pos;
+    public Image clearPanel;
+    public TMP_Text clearText;
 
     public GameObject powerup;
 
     public int power = 0;
 
+    private void Awake()
+    {
+        if(instance == null) //인스턴스 있는지 검사
+        {
+            instance = this; //자기 자신을 담는다.
+        }
+    }
     void Start()
     {
         animator = GetComponent<Animator>(); //GetComponet로 애니메이터 가져오기
         audioSource = GetComponent<AudioSource>();
+        if (clearPanel != null)
+        {
+            clearPanel.color = new Color(0,0,0,0);
+            clearText.color = new Color(0,0,0,0);
+
+        }
+        
     }
 
     
@@ -66,7 +85,7 @@ public class MJ_Pllayer : MonoBehaviour
         viewPos.y = Mathf.Clamp01(viewPos.y); //y값을 0이상, 1이하로 제한한다.
         Vector3 worldPos = Camera.main.ViewportToWorldPoint(viewPos);//다시월드좌표로 변환
         transform.position = worldPos; //좌표를 적용한다.
-
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -85,4 +104,15 @@ public class MJ_Pllayer : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    public void ClearOn()
+    {
+        // 클리어 패널 활성화
+        if (clearPanel != null)
+        {
+            clearPanel.color = new Color(1, 1, 1, 1);
+            clearText.color = new Color(1,1,1,1);
+
+        }
+    }
+        
 }

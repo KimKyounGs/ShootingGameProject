@@ -768,6 +768,7 @@ MonoBehaviour:
   pos: {fileID: 95015595}
   rValue: 15
   Gage: {fileID: 1493992902}
+  startGame: 0
 --- !u!58 &646071066
 CircleCollider2D:
   m_ObjectHideFlags: 0

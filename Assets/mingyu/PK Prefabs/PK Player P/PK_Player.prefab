@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  P_HP: 3
+  P_HP: 10000
   bullet:
   - {fileID: 8393644635260138630, guid: da7462bb77d71b345bb5a885c71f6344, type: 3}
   - {fileID: 8393644635260138630, guid: da7462bb77d71b345bb5a885c71f6344, type: 3}
@@ -414,9 +414,12 @@ MonoBehaviour:
   Swould: {fileID: 5415820596691808453}
   Swould_Ani: {fileID: 2226769226695573298}
   SPSwould: {fileID: 0}
+  Missile_Gage: {fileID: 0}
+  Missile: {fileID: 0}
   power: 0
   powerup: {fileID: 2051847277400686010, guid: 7f1444a8ce61bf94ebb5f31b037f604f, type: 3}
   swould_sound: 1
+  Missile_sound: 1
 --- !u!50 &4781365192731190512
 Rigidbody2D:
   serializedVersion: 5
