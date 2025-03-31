@@ -34,7 +34,7 @@ public class Circling_Missile_R : MonoBehaviour
     void Circling()
     {
         //각도 증가
-        angle += FlySpeed * Time.timeScale;
+        angle += FlySpeed * Time.deltaTime;
 
         //각도를 라디안으로 변환
         float radian = angle * Mathf.Deg2Rad;
@@ -49,7 +49,7 @@ public class Circling_Missile_R : MonoBehaviour
     void Circling_Down()
     {
         // 각도 증가
-        angle += FlySpeed * Time.timeScale;
+        angle += FlySpeed * Time.deltaTime;
 
         // 각도를 라디안으로 변환
         float radian = angle * Mathf.Deg2Rad;

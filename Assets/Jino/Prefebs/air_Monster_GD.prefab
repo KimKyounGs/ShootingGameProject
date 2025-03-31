@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867d0a21d00fd334e9a67de95806c8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlySpeed: 0.282
+  FlySpeed: 121
   Radius: 2.8
   ms1: {fileID: 1534812622433321111}
   bullet: {fileID: 797771400621434981, guid: 5e4fcd83c57e4e74b9dd7d9cd37208d2, type: 3}

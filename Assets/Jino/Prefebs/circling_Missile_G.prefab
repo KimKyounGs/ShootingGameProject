@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0341caba762b542bd0c5b2bf9c7620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlySpeed: 0.3
+  FlySpeed: 130
   Radius: 4
   isDown: 0
   Effect_1: {fileID: 7281343761220753475, guid: 839f7f48d94a92a42b96936b9b529770, type: 3}

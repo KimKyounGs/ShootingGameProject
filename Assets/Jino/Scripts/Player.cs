@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
         Vector3 startPos = transform.position;
         ani.SetBool("left", false);
         ani.SetBool("right", false);
-        Vector3 TopPos = new Vector3(0, 8f, 0);
+        Vector3 TopPos = new Vector3(0, 10f, 0);
         Vector3 BottomPos = new Vector3(0, -3.89f, 0);
 
         while (elapsed < moveDuration)
