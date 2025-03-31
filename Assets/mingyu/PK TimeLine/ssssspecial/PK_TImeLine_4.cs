@@ -34,9 +34,7 @@ public class PK_TImeLine_4 : MonoBehaviour
 
             if(i == 3)
             {
-                
-                // 씬 전환
-                SceneManager.LoadScene("KyoungIleScean");
+            
                 Time.timeScale = 1;
             }
             if (i == 0)
